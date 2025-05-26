@@ -46,3 +46,10 @@
 [2025-05-26 02:12:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"file.heic"}
 [2025-05-26 02:12:07] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"file.heic","error":"Input file not found"}
 [2025-05-26 02:12:07] INFO: HEIC module test completed | Context: {"imagemagick_available":true,"heic_support":true}
+[2025-05-26 02:23:13] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 02:23:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 02:23:13] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file.docx"}
+[2025-05-26 02:23:13] DEBUG: Executing command | Context: {"command":"libreoffice --version","timeout":10}
+[2025-05-26 02:23:13] WARNING: LibreOffice not available | Context: {"path":"libreoffice"}
+[2025-05-26 02:23:13] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"file.docx","error":"Tool 'libreoffice' not available"}
+[2025-05-26 02:23:13] INFO: DOCX module test completed | Context: {"libreoffice_available":false,"headless_support":false}
