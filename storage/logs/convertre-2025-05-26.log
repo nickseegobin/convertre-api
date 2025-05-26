@@ -14,3 +14,23 @@
 [2025-05-26 01:54:35] DEBUG: RateLimitService initialized
 [2025-05-26 01:54:35] DEBUG: Rate limit check passed | Context: {"api_key":"test_rate_...","requests":1,"limit":60}
 [2025-05-26 01:54:35] INFO: Complete test suite finished | Context: {"phase_1_3":true,"phase_2_1":true,"phase_2_2":true,"ready_for_phase_3":true}
+[2025-05-26 02:02:24] INFO: Conversion started | Context: {"from_format":"test","to_format":"mock","filename":"test_inputaasqbppje2rp8v3nPfF"}
+[2025-05-26 02:02:24] INFO: Conversion completed successfully | Context: {"from_format":"test","to_format":"mock","filename":"test_inputaasqbppje2rp8v3nPfF","processing_time":"0.00092792510986328s"}
+[2025-05-26 02:02:24] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 02:02:24] DEBUG: Registered module | Context: {"conversion":"test_to_mock","class":"MockConversionModule"}
+[2025-05-26 02:02:24] INFO: Conversion started | Context: {"from_format":"fail","to_format":"test","filename":"test_inputaasqbppje2rp8v3nPfF"}
+[2025-05-26 02:02:24] ERROR: Conversion failed | Context: {"from_format":"fail","to_format":"test","filename":"test_inputaasqbppje2rp8v3nPfF","error":"Tool 'failTool' not available"}
+[2025-05-26 02:02:24] INFO: Conversion started | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputaasqbppje2rp8v3nPfF"}
+[2025-05-26 02:02:24] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
+[2025-05-26 02:02:24] ERROR: Conversion failed | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputaasqbppje2rp8v3nPfF","error":"Output file not generated"}
+[2025-05-26 02:02:24] INFO: Abstract module system test completed successfully
+[2025-05-26 02:04:17] INFO: Conversion started | Context: {"from_format":"test","to_format":"mock","filename":"test_inputs8bpp3p25ekgbC2mhED"}
+[2025-05-26 02:04:17] INFO: Conversion completed successfully | Context: {"from_format":"test","to_format":"mock","filename":"test_inputs8bpp3p25ekgbC2mhED","processing_time":"0.0012938976287842s"}
+[2025-05-26 02:04:17] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 02:04:17] DEBUG: Registered module | Context: {"conversion":"test_to_mock","class":"MockConversionModule"}
+[2025-05-26 02:04:17] INFO: Conversion started | Context: {"from_format":"fail","to_format":"test","filename":"test_inputs8bpp3p25ekgbC2mhED"}
+[2025-05-26 02:04:17] ERROR: Conversion failed | Context: {"from_format":"fail","to_format":"test","filename":"test_inputs8bpp3p25ekgbC2mhED","error":"Tool 'failTool' not available"}
+[2025-05-26 02:04:17] INFO: Conversion started | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputs8bpp3p25ekgbC2mhED"}
+[2025-05-26 02:04:17] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
+[2025-05-26 02:04:17] INFO: Conversion completed successfully | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputs8bpp3p25ekgbC2mhED","processing_time":"0.17270994186401s"}
+[2025-05-26 02:04:17] INFO: Abstract module system test completed successfully
