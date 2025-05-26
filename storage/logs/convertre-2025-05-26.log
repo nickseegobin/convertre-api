@@ -2,3 +2,15 @@
 [2025-05-26 00:27:21] DEBUG: This is a debug message | Context: {"test":true}
 [2025-05-26 00:27:21] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"test.heic"}
 [2025-05-26 00:27:21] INFO: Test suite completed - Core utilities working, authentication working
+[2025-05-26 01:20:43] INFO: Core utilities test started
+[2025-05-26 01:20:43] DEBUG: This is a debug message | Context: {"test":true}
+[2025-05-26 01:20:43] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"test.heic"}
+[2025-05-26 01:20:43] INFO: Test suite completed - Core utilities working, authentication working
+[2025-05-26 01:48:29] INFO: Simple validation test completed successfully
+[2025-05-26 01:54:35] INFO: Core utilities test started
+[2025-05-26 01:54:35] DEBUG: This is a debug message | Context: {"test":true}
+[2025-05-26 01:54:35] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"test.heic"}
+[2025-05-26 01:54:35] DEBUG: FileValidationService initialized
+[2025-05-26 01:54:35] DEBUG: RateLimitService initialized
+[2025-05-26 01:54:35] DEBUG: Rate limit check passed | Context: {"api_key":"test_rate_...","requests":1,"limit":60}
+[2025-05-26 01:54:35] INFO: Complete test suite finished | Context: {"phase_1_3":true,"phase_2_1":true,"phase_2_2":true,"ready_for_phase_3":true}
