@@ -34,3 +34,15 @@
 [2025-05-26 02:04:17] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
 [2025-05-26 02:04:17] INFO: Conversion completed successfully | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputs8bpp3p25ekgbC2mhED","processing_time":"0.17270994186401s"}
 [2025-05-26 02:04:17] INFO: Abstract module system test completed successfully
+[2025-05-26 02:12:07] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"convert","identify_path":"identify","errors":[]}
+[2025-05-26 02:12:07] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 02:12:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 02:12:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"heic_test_kd9jtppqc4rd4viffgU.png"}
+[2025-05-26 02:12:07] DEBUG: Executing command | Context: {"command":"convert -version","timeout":5}
+[2025-05-26 02:12:07] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 02:12:07] DEBUG: ImageMagick HEIC conversion | Context: {"input":"heic_test_kd9jtppqc4rd4viffgU.png","output":"heic_output_gkugddldecbc6lB6Y6D.jpg","quality":85}
+[2025-05-26 02:12:07] DEBUG: Executing command | Context: {"command":"convert '/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/heic_test_kd9jtppqc4rd4viffgU.png' -strip -auto-orient -colorspace sRGB -quality 85 '/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/heic_output_gkugddldecbc6lB6Y6D.jpg'","timeout":60}
+[2025-05-26 02:12:07] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"heic_test_kd9jtppqc4rd4viffgU.png","processing_time":"0.28594899177551s"}
+[2025-05-26 02:12:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"file.heic"}
+[2025-05-26 02:12:07] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"file.heic","error":"Input file not found"}
+[2025-05-26 02:12:07] INFO: HEIC module test completed | Context: {"imagemagick_available":true,"heic_support":true}
