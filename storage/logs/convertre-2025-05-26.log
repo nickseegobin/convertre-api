@@ -382,3 +382,155 @@
 [2025-05-26 14:46:50] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:46:50"}
 [2025-05-26 14:46:50] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.002s","errors":0}
 [2025-05-26 14:46:50] INFO: Manual cleanup executed via API | Context: {"uploads_cleaned":0,"converted_cleaned":0,"total_cleaned":0,"storage_freed":0,"errors":[]}
+[2025-05-26 15:38:50] DEBUG: RateLimitService initialized
+[2025-05-26 15:38:50] DEBUG: Rate limit check passed | Context: {"api_key":"ck_c309c44...","requests":1,"limit":60}
+[2025-05-26 15:38:50] DEBUG: FileValidationService initialized
+[2025-05-26 15:38:50] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 15:38:50] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 15:38:50] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 15:38:50] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 15:38:50] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 15:38:50] DEBUG: File operation: upload | Context: {"filename":"sample1_1748273930_d0de5ea4.heic","success":true}
+[2025-05-26 15:38:50] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748273930_d0de5ea4.heic"}
+[2025-05-26 15:38:50] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 15:38:50] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 15:38:50] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748273930_d0de5ea4.heic","output":"sample1_1748273930_ce7167c5.jpg","quality":85}
+[2025-05-26 15:38:50] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748273930_d0de5ea4.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748273930_ce7167c5.jpg'","timeout":60}
+[2025-05-26 15:38:50] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748273930_d0de5ea4.heic","processing_time":"0.467041015625s"}
+[2025-05-26 15:38:50] DEBUG: File operation: delete | Context: {"filename":"sample1_1748273930_d0de5ea4.heic","success":true}
+[2025-05-26 15:39:07] DEBUG: Files received in $_FILES | Context: {"file1":{"name":"sample1.heic","full_path":"sample1.heic","type":"image/heic","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phpta56ecao6grn7hKQxYa","error":0,"size":293608},"file2":{"name":"soundboard.heic","full_path":"soundboard.heic","type":"image/heic","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phppuvqn4mlk9ml59LAuxm","error":0,"size":1220221}}
+[2025-05-26 15:39:07] DEBUG: Looking for individual file fields
+[2025-05-26 15:39:07] DEBUG: Found individual file | Context: {"field":"file1","name":"sample1.heic"}
+[2025-05-26 15:39:07] DEBUG: Found individual file | Context: {"field":"file2","name":"soundboard.heic"}
+[2025-05-26 15:39:07] DEBUG: Final files processed for batch | Context: {"file_count":2}
+[2025-05-26 15:39:07] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":2}}
+[2025-05-26 15:39:07] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 15:39:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 15:39:07] DEBUG: File operation: upload | Context: {"filename":"sample1_1748273947_cdd7461e.heic","success":true}
+[2025-05-26 15:39:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748273947_cdd7461e.heic"}
+[2025-05-26 15:39:07] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 15:39:07] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 15:39:07] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748273947_cdd7461e.heic","output":"sample1_1748273947_1d47972f.jpg","quality":85}
+[2025-05-26 15:39:07] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748273947_cdd7461e.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748273947_1d47972f.jpg'","timeout":60}
+[2025-05-26 15:39:07] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748273947_cdd7461e.heic","processing_time":"0.48578691482544s"}
+[2025-05-26 15:39:07] DEBUG: File operation: delete | Context: {"filename":"sample1_1748273947_cdd7461e.heic","success":true}
+[2025-05-26 15:39:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 15:39:07] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748273947_b1767250.heic","success":true}
+[2025-05-26 15:39:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748273947_b1767250.heic"}
+[2025-05-26 15:39:07] DEBUG: ImageMagick HEIC conversion | Context: {"input":"soundboard_1748273947_b1767250.heic","output":"soundboard_1748273947_09489160.jpg","quality":85}
+[2025-05-26 15:39:07] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748273947_b1767250.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748273947_09489160.jpg'","timeout":60}
+[2025-05-26 15:39:08] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748273947_b1767250.heic","processing_time":"0.58826303482056s"}
+[2025-05-26 15:39:08] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748273947_b1767250.heic","success":true}
+[2025-05-26 15:39:33] DEBUG: RateLimitService initialized
+[2025-05-26 15:39:33] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 15:39:33] DEBUG: FileValidationService initialized
+[2025-05-26 15:39:33] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.docx","size":111303,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-05-26 15:39:33] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 15:39:33] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-26 15:39:33] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 15:39:33] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 15:39:33] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748273973_802c1761.docx","success":true}
+[2025-05-26 15:39:33] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748273973_802c1761.docx"}
+[2025-05-26 15:39:33] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 15:39:34] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 15:39:34] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_100kB_1748273973_802c1761.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b361e26a","timeout":300}
+[2025-05-26 15:39:34] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b361e26a' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748273973_802c1761.docx'","timeout":300}
+[2025-05-26 15:39:35] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b361e26a"}
+[2025-05-26 15:39:35] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748273973_802c1761.docx","processing_time":"1.7479548454285s"}
+[2025-05-26 15:39:35] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748273973_802c1761.docx","success":true}
+[2025-05-26 15:39:45] DEBUG: Files received in $_FILES | Context: {"file1":{"name":"file-sample_100kB.docx","full_path":"file-sample_100kB.docx","type":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/php52q9fd1ak1e96OUYeUJ","error":0,"size":111303},"file2":{"name":"file-sample_100kB_2.docx","full_path":"file-sample_100kB_2.docx","type":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phppu3khkklfej64t3t21R","error":0,"size":111303}}
+[2025-05-26 15:39:45] DEBUG: Looking for individual file fields
+[2025-05-26 15:39:45] DEBUG: Found individual file | Context: {"field":"file1","name":"file-sample_100kB.docx"}
+[2025-05-26 15:39:45] DEBUG: Found individual file | Context: {"field":"file2","name":"file-sample_100kB_2.docx"}
+[2025-05-26 15:39:45] DEBUG: Final files processed for batch | Context: {"file_count":2}
+[2025-05-26 15:39:45] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"pdf","file_count":2}}
+[2025-05-26 15:39:45] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 15:39:45] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 15:39:45] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748273985_1dc461e3.docx","success":true}
+[2025-05-26 15:39:45] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748273985_1dc461e3.docx"}
+[2025-05-26 15:39:45] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 15:39:45] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 15:39:45] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_100kB_1748273985_1dc461e3.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b41b4a1e","timeout":300}
+[2025-05-26 15:39:45] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b41b4a1e' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748273985_1dc461e3.docx'","timeout":300}
+[2025-05-26 15:39:46] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b41b4a1e"}
+[2025-05-26 15:39:46] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748273985_1dc461e3.docx","processing_time":"1.0364239215851s"}
+[2025-05-26 15:39:46] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748273985_1dc461e3.docx","success":true}
+[2025-05-26 15:39:46] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 15:39:46] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_2_1748273986_210dac2d.docx","success":true}
+[2025-05-26 15:39:46] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_2_1748273986_210dac2d.docx"}
+[2025-05-26 15:39:46] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_100kB_2_1748273986_210dac2d.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b42680da","timeout":300}
+[2025-05-26 15:39:46] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b42680da' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_2_1748273986_210dac2d.docx'","timeout":300}
+[2025-05-26 15:39:47] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68348b42680da"}
+[2025-05-26 15:39:47] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_2_1748273986_210dac2d.docx","processing_time":"0.60677599906921s"}
+[2025-05-26 15:39:47] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_2_1748273986_210dac2d.docx","success":true}
+[2025-05-26 15:39:53] DEBUG: CleanupService initialized
+[2025-05-26 16:22:17] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx"}
+[2025-05-26 16:22:17] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 16:22:17] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 16:22:17] DEBUG: LibreOffice DOCX conversion | Context: {"input":"test_document.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68349539a9d90","timeout":300}
+[2025-05-26 16:22:17] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68349539a9d90' '/opt/homebrew/var/www/convertre-api/storage/test_document.docx'","timeout":300}
+[2025-05-26 16:22:18] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68349539a9d90"}
+[2025-05-26 16:22:18] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68349539a9d90"}
+[2025-05-26 16:22:18] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx","error":"Conversion process failed"}
+[2025-05-26 16:25:17] DEBUG: FileValidationService initialized
+[2025-05-26 16:25:17] DEBUG: CleanupService initialized
+[2025-05-26 16:25:17] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:25:17] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:25:18] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:25:18"}
+[2025-05-26 16:25:18] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:26:07] DEBUG: FileValidationService initialized
+[2025-05-26 16:26:07] DEBUG: CleanupService initialized
+[2025-05-26 16:26:07] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:26:08] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:26:08] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:26:08"}
+[2025-05-26 16:26:08] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:26:09] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:26:09] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:26:09] DEBUG: FileValidationService initialized
+[2025-05-26 16:26:09] DEBUG: CleanupService initialized
+[2025-05-26 16:26:10] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:26:10] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:26:10] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:26:10"}
+[2025-05-26 16:26:10] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:33:56] DEBUG: FileValidationService initialized
+[2025-05-26 16:33:56] DEBUG: CleanupService initialized
+[2025-05-26 16:33:57] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:33:57] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:33:57] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:33:57"}
+[2025-05-26 16:33:57] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:33:58] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:33:58] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:33:58] DEBUG: FileValidationService initialized
+[2025-05-26 16:33:58] DEBUG: CleanupService initialized
+[2025-05-26 16:33:59] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:33:59] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:33:59] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:33:59"}
+[2025-05-26 16:33:59] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:43:34] DEBUG: FileValidationService initialized
+[2025-05-26 16:43:34] DEBUG: CleanupService initialized
+[2025-05-26 16:43:35] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:43:35] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:43:35] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:43:35"}
+[2025-05-26 16:43:35] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:43:36] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:43:37] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:43:37] DEBUG: FileValidationService initialized
+[2025-05-26 16:43:37] DEBUG: CleanupService initialized
+[2025-05-26 16:43:37] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:43:37] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:43:37] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:43:37"}
+[2025-05-26 16:43:37] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-26 16:44:14] DEBUG: FileValidationService initialized
+[2025-05-26 16:44:14] DEBUG: CleanupService initialized
+[2025-05-26 16:44:14] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:44:14] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:44:14] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:44:14"}
+[2025-05-26 16:44:14] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 16:44:16] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:44:16] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:44:16] DEBUG: FileValidationService initialized
+[2025-05-26 16:44:16] DEBUG: CleanupService initialized
+[2025-05-26 16:44:16] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 16:44:17] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 16:44:17] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:44:17"}
+[2025-05-26 16:44:17] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}

@@ -1,0 +1,849 @@
+{
+  "info": {
+    "name": "Convertre API Test Collection",
+    "description": "Comprehensive test collection for Convertre API validation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{api_key}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost/convertre-api/public",
+      "type": "string"
+    },
+    {
+      "key": "api_key",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. System Health Tests",
+      "item": [
+        {
+          "name": "Health Check",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Response has correct structure', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('status', 'ok');",
+                  "    pm.expect(response).to.have.property('timestamp');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        },
+        {
+          "name": "API Info",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Response has API info', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('name', 'Convertre API');",
+                  "    pm.expect(response).to.have.property('version', '1.0.0-MVP');",
+                  "    pm.expect(response).to.have.property('endpoints');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/info",
+              "host": ["{{base_url}}"],
+              "path": ["info"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Authentication Tests",
+      "item": [
+        {
+          "name": "Generate API Key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('API key generated successfully', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('api_key');",
+                  "    pm.expect(response.api_key).to.match(/^ck_[a-f0-9]{32}$/);",
+                  "    ",
+                  "    // Save API key for subsequent requests",
+                  "    pm.collectionVariables.set('api_key', response.api_key);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "user_id",
+                  "value": "postman_test",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "Postman Test Key",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/generate-key",
+              "host": ["{{base_url}}"],
+              "path": ["generate-key"]
+            }
+          }
+        },
+        {
+          "name": "Validate API Key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('API key validation successful', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('valid', true);",
+                  "    pm.expect(response).to.have.property('user_id', 'postman_test');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "api_key",
+                  "value": "{{api_key}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/validate-key",
+              "host": ["{{base_url}}"],
+              "path": ["validate-key"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Error Handling Tests",
+      "item": [
+        {
+          "name": "Invalid Endpoint",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});",
+                  "",
+                  "pm.test('Error response structure', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', false);",
+                  "    pm.expect(response).to.have.property('error');",
+                  "    pm.expect(response).to.have.property('error_code');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/nonexistent",
+              "host": ["{{base_url}}"],
+              "path": ["nonexistent"]
+            }
+          }
+        },
+        {
+          "name": "Unauthorized Request",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 401', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  "",
+                  "pm.test('Unauthorized error response', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', false);",
+                  "    pm.expect(response).to.have.property('error_code', 'UNAUTHORIZED');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "to",
+                  "value": "jpg",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        },
+        {
+          "name": "Invalid API Key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 401', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  "",
+                  "pm.test('Invalid key error response', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', false);",
+                  "    pm.expect(response).to.have.property('error_code', 'UNAUTHORIZED');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "invalid_key_123",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "to",
+                  "value": "jpg",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Conversion Tests",
+      "item": [
+        {
+          "name": "HEIC to JPG Conversion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Conversion successful', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('download_url');",
+                  "    pm.expect(response).to.have.property('original_filename');",
+                  "    pm.expect(response).to.have.property('converted_filename');",
+                  "    pm.expect(response).to.have.property('expires_at');",
+                  "    pm.expect(response).to.have.property('processing_time');",
+                  "});",
+                  "",
+                  "pm.test('Processing time reasonable', function () {",
+                  "    const response = pm.response.json();",
+                  "    const processingTime = parseFloat(response.processing_time.replace('s', ''));",
+                  "    pm.expect(processingTime).to.be.below(5);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": [],
+                  "description": "Upload a sample HEIC file here"
+                },
+                {
+                  "key": "to",
+                  "value": "jpg",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        },
+        {
+          "name": "DOCX to PDF Conversion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Document conversion successful', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('download_url');",
+                  "    pm.expect(response.converted_filename).to.include('.pdf');",
+                  "});",
+                  "",
+                  "pm.test('Processing time acceptable for document', function () {",
+                  "    const response = pm.response.json();",
+                  "    const processingTime = parseFloat(response.processing_time.replace('s', ''));",
+                  "    pm.expect(processingTime).to.be.below(30);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": [],
+                  "description": "Upload a sample DOCX file here"
+                },
+                {
+                  "key": "to",
+                  "value": "pdf",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        },
+        {
+          "name": "Batch HEIC to JPG Conversion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Batch conversion successful', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "    pm.expect(response).to.have.property('files');",
+                  "    pm.expect(response).to.have.property('count');",
+                  "    pm.expect(response.files).to.be.an('array');",
+                  "    pm.expect(response.files.length).to.be.above(0);",
+                  "});",
+                  "",
+                  "pm.test('All files processed successfully', function () {",
+                  "    const response = pm.response.json();",
+                  "    response.files.forEach(file => {",
+                  "        pm.expect(file).to.have.property('success', true);",
+                  "        pm.expect(file).to.have.property('download_url');",
+                  "        pm.expect(file).to.have.property('original_filename');",
+                  "        pm.expect(file).to.have.property('converted_filename');",
+                  "    });",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file1",
+                  "type": "file",
+                  "src": [],
+                  "description": "Upload first HEIC file"
+                },
+                {
+                  "key": "file2",
+                  "type": "file",
+                  "src": [],
+                  "description": "Upload second HEIC file"
+                },
+                {
+                  "key": "to",
+                  "value": "jpg",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert-batch",
+              "host": ["{{base_url}}"],
+              "path": ["convert-batch"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. File Validation Tests",
+      "item": [
+        {
+          "name": "Missing File Parameter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "",
+                  "pm.test('Validation error for missing file', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', false);",
+                  "    pm.expect(response).to.have.property('error_code', 'VALIDATION_ERROR');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "to",
+                  "value": "jpg",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        },
+        {
+          "name": "Missing Target Format",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "",
+                  "pm.test('Validation error for missing target format', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', false);",
+                  "    pm.expect(response).to.have.property('error_code', 'VALIDATION_ERROR');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        },
+        {
+          "name": "Unsupported Format",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 400', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "",
+                  "pm.test('Unsupported format error', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', false);",
+                  "    pm.expect(response).to.have.property('error_code', 'VALIDATION_ERROR');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "to",
+                  "value": "unsupported",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/convert",
+              "host": ["{{base_url}}"],
+              "path": ["convert"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Cleanup Tests",
+      "item": [
+        {
+          "name": "Get Cleanup Status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Cleanup status response', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/cleanup/status",
+              "host": ["{{base_url}}"],
+              "path": ["cleanup", "status"]
+            }
+          }
+        },
+        {
+          "name": "Run Cleanup",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Cleanup execution successful', function () {",
+                  "    const response = pm.response.json();",
+                  "    pm.expect(response).to.have.property('success', true);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/cleanup/run",
+              "host": ["{{base_url}}"],
+              "path": ["cleanup", "run"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Performance Tests",
+      "item": [
+        {
+          "name": "Response Time - Health Check",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Response time is less than 200ms', function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test('Response is valid JSON', function () {",
+                  "    pm.response.to.be.json;",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        },
+        {
+          "name": "Response Time - API Info",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Response time is less than 300ms', function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(300);",
+                  "});",
+                  "",
+                  "pm.test('Response size is reasonable', function () {",
+                  "    pm.expect(pm.response.responseSize).to.be.below(5000);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/info",
+              "host": ["{{base_url}}"],
+              "path": ["info"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "8. Security Tests",
+      "item": [
+        {
+          "name": "SQL Injection Attempt",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Server handles SQL injection safely', function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([400, 401, 404]);",
+                  "});",
+                  "",
+                  "pm.test('No SQL error in response', function () {",
+                  "    const responseText = pm.response.text();",
+                  "    pm.expect(responseText).to.not.include('SQL');",
+                  "    pm.expect(responseText).to.not.include('mysql');",
+                  "    pm.expect(responseText).to.not.include('database');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "user_id",
+                  "value": "'; DROP TABLE users; --",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/generate-key",
+              "host": ["{{base_url}}"],
+              "path": ["generate-key"]
+            }
+          }
+        },
+        {
+          "name": "XSS Attempt",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Server handles XSS safely', function () {",
+                  "    const responseText = pm.response.text();",
+                  "    pm.expect(responseText).to.not.include('<script>');",
+                  "    pm.expect(responseText).to.not.include('javascript:');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "<script>alert('XSS')</script>",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/generate-key",
+              "host": ["{{base_url}}"],
+              "path": ["generate-key"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

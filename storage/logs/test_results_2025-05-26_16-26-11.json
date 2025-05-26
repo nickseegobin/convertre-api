@@ -1,0 +1,65 @@
+{
+    "timestamp": "2025-05-26 16:26:11",
+    "test_results": {
+        "environment": {
+            "PHP Version": true,
+            "Required Extensions": true,
+            "Directory Permissions": true,
+            "ImageMagick": true,
+            "LibreOffice": true,
+            "Web Server": false
+        },
+        "unit_tests": {
+            "status": "completed",
+            "output": "\ud83e\uddea Running Unit Tests...\n  \u2705 ConfigLoader - Load API config\n  \u2705 ConfigLoader - Dot notation access\n  \u2705 ConfigLoader - Non-existent config\n  \u2705 ResponseFormatter - Success response\n\nWarning: http_response_code(): Cannot set response code - headers already sent (output started at \/opt\/homebrew\/var\/www\/convertre-api\/tests\/run_tests.php:39) in \/opt\/homebrew\/var\/www\/convertre-api\/src\/Utils\/ResponseFormatter.php on line 120\n  \u2705 ResponseFormatter - Error response\n  \u2705 ResponseFormatter - Conversion success\n  \u2705 FileHandler - Sanitize filename\n  \u2705 FileHandler - Generate unique filename\n  \u2705 FileHandler - Human file size\n  \u2705 AuthenticationService - Generate API key\n  \u2705 AuthenticationService - Validate API key\n  \u2705 AuthenticationService - Invalid API key\n  \u2705 FileValidationService - Initialize\n  \u2705 CleanupService - Initialize\n  \u2705 CleanupService - Get storage stats\n  \u2705 ImageMagickChecker - Check installation\n  \u2705 LibreOfficeChecker - Check installation\n\n\ud83d\udd17 Running Integration Tests...\n  \u2705 API - Health endpoint\n  \u2705 API - Info endpoint\n  \u2705 API - Generate key endpoint\n  \u274c Conversion - Module factory availability - Test returned false\n  \u274c Conversion - Abstract module exists - Test returned false\n  \u2705 Batch - File limit validation\n  \u2705 Cleanup - Run cleanup without errors\n\n\u26a1 Running Performance Tests...\n  \u2705 Performance - Config loading speed\n  \u2705 Performance - Response formatting speed\n\n\ud83d\udee1\ufe0f Running Security Tests...\n  \u2705 Security - Filename sanitization\n  \u2705 Security - Path traversal prevention\n  \u2705 Security - API key format\n\n==================================================\nTEST SUMMARY\n==================================================\nTotal Tests: 29\n\u2705 Passed: 27\n\u274c Failed: 2\n\n\u26a0\ufe0f  Some tests failed. Please review and fix issues before deployment.\nSuccess Rate: 93.1%\n==================================================\n"
+        },
+        "integration_tests": {
+            "API Health Endpoint": true,
+            "API Info Endpoint": true,
+            "Key Generation": true,
+            "Authentication Flow": false,
+            "Error Handling": true
+        },
+        "load_tests": {
+            "status": "completed",
+            "output": "=== Convertre API Load Testing ===\n\n\ud83c\udfe5 Testing concurrent health checks (50 requests)...\n   Results for Health Check Load Test:\n   \u251c\u2500 Total requests: 50\n   \u251c\u2500 Successful: 0 (0%)\n   \u251c\u2500 Total time: 0.102s\n   \u251c\u2500 Requests\/second: 489.56\n   \u251c\u2500 Avg response time: 77.52ms\n   \u251c\u2500 Min response time: 49.35ms\n   \u2514\u2500 Max response time: 95.34ms\n\n\ud83d\udccb Testing concurrent API info requests (30 requests)...\n   Results for API Info Load Test:\n   \u251c\u2500 Total requests: 30\n   \u251c\u2500 Successful: 0 (0%)\n   \u251c\u2500 Total time: 0.056s\n   \u251c\u2500 Requests\/second: 536.38\n   \u251c\u2500 Avg response time: 45.44ms\n   \u251c\u2500 Min response time: 37.9ms\n   \u2514\u2500 Max response time: 52.76ms\n\n\ud83d\udd11 Testing concurrent key generation (20 requests)...\n   Results for Key Generation Load Test:\n   \u251c\u2500 Total requests: 20\n   \u251c\u2500 Successful: 0 (0%)\n   \u251c\u2500 Total time: 0.054s\n   \u251c\u2500 Requests\/second: 370.92\n   \u251c\u2500 Avg response time: 49.45ms\n   \u251c\u2500 Min response time: 43.03ms\n   \u2514\u2500 Max response time: 52.13ms\n\n\ud83d\udd10 Testing authentication performance (100 requests)...\n   Total time: 0.038s\n   Average per request: 0.38ms\n   Success rate: 0%\n   Requests per second: 2654.62\n\n\u23f1\ufe0f Testing rate limiting (70 requests in 30 seconds)...\n   Total time: 1s\n   Successful requests: 70\n   Rate limiting working: \u274c No\n\n============================================================\nLOAD TEST SUMMARY\n============================================================\n\nHealth Check Load Test:\n  Success Rate: 0%\n  Requests\/sec: 489.56\n  Avg Response: 77.52ms\n\nAPI Info Load Test:\n  Success Rate: 0%\n  Requests\/sec: 536.38\n  Avg Response: 45.44ms\n\nKey Generation Load Test:\n  Success Rate: 0%\n  Requests\/sec: 370.92\n  Avg Response: 49.45ms\n\n============================================================\n\ud83d\udcca Load testing completed!\nReview the results above to identify any performance issues.\n"
+        },
+        "manual_tests": {
+            "1. HEIC to JPG Conversion": [
+                "Upload a sample HEIC file",
+                "Verify JPG output quality",
+                "Check download link works",
+                "Confirm file expires after 3 hours"
+            ],
+            "2. DOCX to PDF Conversion": [
+                "Upload a sample DOCX file",
+                "Verify PDF formatting preserved",
+                "Check processing time < 30 seconds",
+                "Confirm file accessibility"
+            ],
+            "3. Batch Processing": [
+                "Upload multiple HEIC files",
+                "Verify all files processed",
+                "Check batch response format",
+                "Test with mixed file types"
+            ],
+            "4. File Cleanup": [
+                "Run cleanup endpoint",
+                "Verify old files removed",
+                "Check storage statistics",
+                "Test automatic cleanup (wait 3+ hours)"
+            ],
+            "5. Error Scenarios": [
+                "Test with invalid file types",
+                "Test with oversized files",
+                "Test with corrupted files",
+                "Test rate limiting (60+ requests\/minute)"
+            ]
+        }
+    },
+    "summary": {
+        "total_tests": 0,
+        "passed_tests": 0,
+        "success_rate": 0
+    }
+}
