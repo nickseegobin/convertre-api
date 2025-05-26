@@ -352,3 +352,33 @@
 [2025-05-26 14:14:17] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68347739416fe"}
 [2025-05-26 14:14:17] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_2_1748268857_69fa8f84.docx","processing_time":"0.57941699028015s"}
 [2025-05-26 14:14:17] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_2_1748268857_69fa8f84.docx","success":true}
+[2025-05-26 14:36:11] DEBUG: CleanupService initialized
+[2025-05-26 14:36:11] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:36:11"}
+[2025-05-26 14:36:11] DEBUG: File cleaned up | Context: {"file":"test_upload_1.txt","size":"51 B","age":"4h"}
+[2025-05-26 14:36:11] DEBUG: File cleaned up | Context: {"file":"test_upload_2.txt","size":"51 B","age":"4h"}
+[2025-05-26 14:36:11] INFO: Cleanup completed | Context: {"files_cleaned":2,"storage_freed":"102 B","processing_time":"0.001s","errors":0}
+[2025-05-26 14:36:25] DEBUG: CleanupService initialized
+[2025-05-26 14:36:25] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:36:25"}
+[2025-05-26 14:36:25] DEBUG: File cleaned up | Context: {"file":"test_upload_1.txt","size":"51 B","age":"4h"}
+[2025-05-26 14:36:25] DEBUG: File cleaned up | Context: {"file":"test_upload_2.txt","size":"51 B","age":"4h"}
+[2025-05-26 14:36:25] INFO: Cleanup completed | Context: {"files_cleaned":2,"storage_freed":"102 B","processing_time":"0.002s","errors":0}
+[2025-05-26 14:41:14] DEBUG: CleanupService initialized
+[2025-05-26 14:42:24] DEBUG: CleanupService initialized
+[2025-05-26 14:42:24] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:42:24"}
+[2025-05-26 14:42:24] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-26 14:42:24] INFO: Manual cleanup executed via API | Context: {"uploads_cleaned":0,"converted_cleaned":0,"total_cleaned":0,"storage_freed":0,"errors":[]}
+[2025-05-26 14:44:10] DEBUG: CleanupService initialized
+[2025-05-26 14:44:10] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:44:10"}
+[2025-05-26 14:44:10] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.006s","errors":0}
+[2025-05-26 14:44:10] INFO: Manual cleanup executed via API | Context: {"uploads_cleaned":0,"converted_cleaned":0,"total_cleaned":0,"storage_freed":0,"errors":[]}
+[2025-05-26 14:44:15] DEBUG: CleanupService initialized
+[2025-05-26 14:46:50] DEBUG: CleanupService initialized
+[2025-05-26 14:46:50] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:46:50"}
+[2025-05-26 14:46:50] DEBUG: File cleaned up | Context: {"file":"test_upload_1.txt","size":"51 B","age":"4h"}
+[2025-05-26 14:46:50] DEBUG: File cleaned up | Context: {"file":"test_upload_2.txt","size":"51 B","age":"4h"}
+[2025-05-26 14:46:50] INFO: Cleanup completed | Context: {"files_cleaned":2,"storage_freed":"102 B","processing_time":"0.004s","errors":0}
+[2025-05-26 14:46:50] DEBUG: CleanupService initialized
+[2025-05-26 14:46:50] DEBUG: CleanupService initialized
+[2025-05-26 14:46:50] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 11:46:50"}
+[2025-05-26 14:46:50] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.002s","errors":0}
+[2025-05-26 14:46:50] INFO: Manual cleanup executed via API | Context: {"uploads_cleaned":0,"converted_cleaned":0,"total_cleaned":0,"storage_freed":0,"errors":[]}

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Convertre API - Main Router - FIXED for Batch Conversion
+ * Convertre API - Main Router - WITH CLEANUP ROUTES
  */
 
 // Error reporting for development
@@ -43,6 +43,16 @@ if (file_exists($basePath . 'Services/Modules/DocxToPdfModule.php')) {
 // Only include ConversionController if it exists
 if (file_exists($basePath . 'Controllers/ConversionController.php')) {
     require_once $basePath . 'Controllers/ConversionController.php';
+}
+
+// Only include CleanupController if it exists
+if (file_exists($basePath . 'Controllers/CleanupController.php')) {
+    require_once $basePath . 'Controllers/CleanupController.php';
+}
+
+// Only include CleanupService if it exists
+if (file_exists($basePath . 'Services/CleanupService.php')) {
+    require_once $basePath . 'Services/CleanupService.php';
 }
 
 use Convertre\Utils\ConfigLoader;
@@ -130,7 +140,9 @@ try {
                         'GET /health' => 'Health check',
                         'POST /generate-key' => 'Generate API key',
                         'POST /convert' => 'Single file conversion',
-                        'POST /convert-batch' => 'Batch file conversion'
+                        'POST /convert-batch' => 'Batch file conversion',
+                        'GET /cleanup/status' => 'Storage statistics',
+                        'POST /cleanup/run' => 'Manual cleanup'
                     ]
                 ];
                 ResponseFormatter::sendJson(ResponseFormatter::success($info));
@@ -195,6 +207,18 @@ try {
 
         case '/convert-batch':
             if ($requestMethod === 'POST') {
+                // DEBUG: Let's see what we're getting
+                if (isset($_GET['debug'])) {
+                    ResponseFormatter::sendJson([
+                        'debug' => true,
+                        'FILES_structure' => $_FILES,
+                        'POST_data' => $_POST,
+                        'files_count' => count($_FILES),
+                        'files_keys' => array_keys($_FILES)
+                    ]);
+                    return;
+                }
+                
                 // Check if ConversionController exists
                 if (class_exists('Convertre\\Controllers\\ConversionController')) {
                     \Convertre\Controllers\ConversionController::convertBatch();
@@ -210,7 +234,54 @@ try {
             }
             break;
 
-        // Handle download route - FIXED pattern matching
+        case '/cleanup/status':
+            if ($requestMethod === 'GET') {
+                if (class_exists('Convertre\\Controllers\\CleanupController')) {
+                    \Convertre\Controllers\CleanupController::getStatus();
+                } else {
+                    ResponseFormatter::sendJson(
+                        ResponseFormatter::error('Cleanup module not available', 'MODULE_UNAVAILABLE', 503)
+                    );
+                }
+            } else {
+                ResponseFormatter::sendJson(
+                    ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
+                );
+            }
+            break;
+
+        case '/cleanup/run':
+            if ($requestMethod === 'POST') {
+                if (class_exists('Convertre\\Controllers\\CleanupController')) {
+                    \Convertre\Controllers\CleanupController::runCleanup();
+                } else {
+                    ResponseFormatter::sendJson(
+                        ResponseFormatter::error('Cleanup module not available', 'MODULE_UNAVAILABLE', 503)
+                    );
+                }
+            } else {
+                ResponseFormatter::sendJson(
+                    ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
+                );
+            }
+            break;
+
+        case '/cleanup/force':
+            if ($requestMethod === 'POST') {
+                if (class_exists('Convertre\\Controllers\\CleanupController')) {
+                    \Convertre\Controllers\CleanupController::forceCleanup();
+                } else {
+                    ResponseFormatter::sendJson(
+                        ResponseFormatter::error('Cleanup module not available', 'MODULE_UNAVAILABLE', 503)
+                    );
+                }
+            } else {
+                ResponseFormatter::sendJson(
+                    ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
+                );
+            }
+            break;
+
         default:
             if (preg_match('/^\/download\/(.+)$/', $path, $matches)) {
                 if ($requestMethod === 'GET') {
