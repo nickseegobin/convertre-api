@@ -1,0 +1,4 @@
+[2025-05-26 00:27:21] INFO: Core utilities test started
+[2025-05-26 00:27:21] DEBUG: This is a debug message | Context: {"test":true}
+[2025-05-26 00:27:21] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"test.heic"}
+[2025-05-26 00:27:21] INFO: Test suite completed - Core utilities working, authentication working

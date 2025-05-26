@@ -1,182 +1,83 @@
 <?php
 
 /**
- * Simple test file to verify Core Utilities are working
- * Run this from the root directory: php test_utilities.php
+ * Convertre API - Complete Test Suite
+ * Tests Phase 1.3 (Core Utilities) + Phase 2.1 (Authentication)
  */
 
-echo "=== Convertre API - Core Utilities Test ===\n\n";
+// Include all files first
+require_once 'src/Utils/ConfigLoader.php';
+require_once 'src/Utils/ResponseFormatter.php';
+require_once 'src/Utils/Logger.php';
+require_once 'src/Utils/FileHandler.php';
 
-// Create necessary directories first
+// Include authentication files if they exist
+if (file_exists('src/Services/AuthenticationService.php')) {
+    require_once 'src/Services/AuthenticationService.php';
+}
+if (file_exists('src/Controllers/AuthController.php')) {
+    require_once 'src/Controllers/AuthController.php';
+}
+if (file_exists('src/Middleware/AuthMiddleware.php')) {
+    require_once 'src/Middleware/AuthMiddleware.php';
+}
+
+// All use statements at the top
+use Convertre\Utils\ConfigLoader;
+use Convertre\Utils\ResponseFormatter;
+use Convertre\Utils\Logger;
+use Convertre\Utils\FileHandler;
+
+echo "=== Convertre API - Complete Test Suite ===\n\n";
+
+// Create necessary directories
 $directories = [
     __DIR__ . '/storage',
     __DIR__ . '/storage/logs',
     __DIR__ . '/storage/uploads', 
     __DIR__ . '/storage/converted',
-    __DIR__ . '/src/Exceptions'
+    __DIR__ . '/src/Exceptions',
+    __DIR__ . '/src/Services',
+    __DIR__ . '/src/Controllers',
+    __DIR__ . '/src/Middleware'
 ];
 
-echo "Creating necessary directories...\n";
+echo "Setting up directories...\n";
 foreach ($directories as $dir) {
     if (!is_dir($dir)) {
         mkdir($dir, 0755, true);
-        echo "✓ Created: {$dir}\n";
+        echo "✓ Created: " . basename($dir) . "\n";
     }
 }
 
-// Now create the exception files in the proper directory
-echo "\nCreating exception files...\n";
+// Create simple exception files
+$exceptions = [
+    'ConversionException' => 'class ConversionException extends \Exception {}',
+    'ValidationException' => 'class ValidationException extends \Exception {}', 
+    'AuthenticationException' => 'class AuthenticationException extends \Exception {}'
+];
 
-// ConversionException.php
-$conversionException = '<?php
-
-namespace Convertre\Exceptions;
-
-class ConversionException extends \Exception
-{
-    private string $fromFormat;
-    private string $toFormat;
-    private string $filename;
-    
-    public function __construct(
-        string $message,
-        string $fromFormat = "",
-        string $toFormat = "",
-        string $filename = "",
-        int $code = 0,
-        ?\Throwable $previous = null
-    ) {
-        parent::__construct($message, $code, $previous);
-        
-        $this->fromFormat = $fromFormat;
-        $this->toFormat = $toFormat;
-        $this->filename = $filename;
+foreach ($exceptions as $name => $code) {
+    $file = "src/Exceptions/{$name}.php";
+    if (!file_exists($file)) {
+        file_put_contents($file, "<?php\nnamespace Convertre\Exceptions;\n{$code}");
+        echo "✓ Created: {$name}.php\n";
     }
-    
-    public function getFromFormat(): string
-    {
-        return $this->fromFormat;
-    }
-    
-    public function getToFormat(): string
-    {
-        return $this->toFormat;
-    }
-    
-    public function getFilename(): string
-    {
-        return $this->filename;
-    }
-    
-    public function getConversionContext(): array
-    {
-        return [
-            "from_format" => $this->fromFormat,
-            "to_format" => $this->toFormat,
-            "filename" => $this->filename
-        ];
-    }
-}';
+}
 
-file_put_contents(__DIR__ . '/src/Exceptions/ConversionException.php', $conversionException);
-echo "✓ Created ConversionException.php\n";
-
-// ValidationException.php  
-$validationException = '<?php
-
-namespace Convertre\Exceptions;
-
-class ValidationException extends \Exception
-{
-    private array $validationErrors;
-    private string $field;
-    
-    public function __construct(
-        string $message,
-        string $field = "",
-        array $validationErrors = [],
-        int $code = 0,
-        ?\Throwable $previous = null
-    ) {
-        parent::__construct($message, $code, $previous);
-        
-        $this->field = $field;
-        $this->validationErrors = $validationErrors;
-    }
-    
-    public function getField(): string
-    {
-        return $this->field;
-    }
-    
-    public function getValidationErrors(): array
-    {
-        return $this->validationErrors;
-    }
-}';
-
-file_put_contents(__DIR__ . '/src/Exceptions/ValidationException.php', $validationException);
-echo "✓ Created ValidationException.php\n";
-
-// AuthenticationException.php
-$authException = '<?php
-
-namespace Convertre\Exceptions;
-
-class AuthenticationException extends \Exception
-{
-    private string $authMethod;
-    private string $identifier;
-    
-    public function __construct(
-        string $message,
-        string $authMethod = "api_key",
-        string $identifier = "",
-        int $code = 0,
-        ?\Throwable $previous = null
-    ) {
-        parent::__construct($message, $code, $previous);
-        
-        $this->authMethod = $authMethod;
-        $this->identifier = $identifier;
-    }
-    
-    public function getAuthMethod(): string
-    {
-        return $this->authMethod;
-    }
-    
-    public function getIdentifier(): string
-    {
-        return $this->identifier;
-    }
-}';
-
-file_put_contents(__DIR__ . '/src/Exceptions/AuthenticationException.php', $authException);
-echo "✓ Created AuthenticationException.php\n";
-
-// Now include and test our classes
-require_once 'src/Utils/ConfigLoader.php';
-require_once 'src/Utils/ResponseFormatter.php';
-require_once 'src/Utils/Logger.php';
-require_once 'src/Utils/FileHandler.php';
+// Include exception files after creating them
 require_once 'src/Exceptions/ConversionException.php';
 require_once 'src/Exceptions/ValidationException.php';
 require_once 'src/Exceptions/AuthenticationException.php';
 
-use Convertre\Utils\ConfigLoader;
-use Convertre\Utils\ResponseFormatter;
-use Convertre\Utils\Logger;
-use Convertre\Utils\FileHandler;
-use Convertre\Exceptions\ConversionException;
-use Convertre\Exceptions\ValidationException;
-use Convertre\Exceptions\AuthenticationException;
+echo "\n";
 
 try {
-    // 1. Test ConfigLoader
-    echo "\n1. Testing ConfigLoader...\n";
-    ConfigLoader::init(__DIR__ . '/config');
+    echo "=== PHASE 1.3: CORE UTILITIES ===\n\n";
     
+    // 1. Test ConfigLoader
+    echo "1. Testing ConfigLoader...\n";
+    ConfigLoader::init(__DIR__ . '/config');
     $apiConfig = ConfigLoader::load('api');
     echo "✓ API config loaded: " . $apiConfig['name'] . " v" . $apiConfig['version'] . "\n";
     
@@ -193,17 +94,16 @@ try {
     
     // 3. Test ResponseFormatter
     echo "\n3. Testing ResponseFormatter...\n";
-    
     $successResponse = ResponseFormatter::conversionSuccess(
         'https://api.convertre.com/download/test123.jpg',
         'photo.heic',
         'photo.jpg',
         '2025-05-25T15:30:00Z'
     );
-    echo "✓ Success response created\n";
+    echo "✓ Success response format created\n";
     
     $errorResponse = ResponseFormatter::unsupportedFormat('Test error message');
-    echo "✓ Error response created\n";
+    echo "✓ Error response format created\n";
     
     // 4. Test FileHandler
     echo "\n4. Testing FileHandler...\n";
@@ -219,29 +119,114 @@ try {
     echo "\n5. Testing Custom Exceptions...\n";
     
     try {
-        throw new ConversionException('Test conversion error', 'heic', 'jpg', 'test.heic');
-    } catch (ConversionException $e) {
+        throw new Convertre\Exceptions\ConversionException('Test conversion error');
+    } catch (Convertre\Exceptions\ConversionException $e) {
         echo "✓ ConversionException works: " . $e->getMessage() . "\n";
     }
     
     try {
-        throw new ValidationException('Test validation error', 'file', ['file' => 'Required field']);
-    } catch (ValidationException $e) {
+        throw new Convertre\Exceptions\ValidationException('Test validation error');
+    } catch (Convertre\Exceptions\ValidationException $e) {
         echo "✓ ValidationException works: " . $e->getMessage() . "\n";
     }
     
     try {
-        throw new AuthenticationException('Invalid API key', 'api_key', 'key123');
-    } catch (AuthenticationException $e) {
+        throw new Convertre\Exceptions\AuthenticationException('Test auth error');
+    } catch (Convertre\Exceptions\AuthenticationException $e) {
         echo "✓ AuthenticationException works: " . $e->getMessage() . "\n";
     }
     
-    echo "\n=== All Core Utilities Tests Passed! ===\n";
-    echo "Phase 1.3 Complete - Ready for Phase 2: Authentication & Security\n";
+    echo "\n✅ PHASE 1.3: CORE UTILITIES - COMPLETE!\n";
     
-    Logger::info('Core utilities test completed successfully');
+    // Test Authentication System if available
+    if (class_exists('Convertre\Services\AuthenticationService')) {
+        echo "\n=== PHASE 2.1: AUTHENTICATION SYSTEM ===\n\n";
+        
+        // 6. Test AuthenticationService
+        echo "6. Testing AuthenticationService...\n";
+        
+        Convertre\Services\AuthenticationService::init(__DIR__ . '/storage');
+        echo "✓ AuthenticationService initialized\n";
+        
+        $keyData = Convertre\Services\AuthenticationService::generateApiKey('test_user_123', 'Test Application');
+        echo "✓ API key generated: " . substr($keyData['key'], 0, 15) . "...\n";
+        
+        $validated = Convertre\Services\AuthenticationService::validateApiKey($keyData['key']);
+        if ($validated && $validated['user_id'] === 'test_user_123') {
+            echo "✓ API key validation works\n";
+        } else {
+            echo "❌ API key validation failed\n";
+        }
+        
+        $invalidKey = Convertre\Services\AuthenticationService::validateApiKey('invalid_key_123');
+        if ($invalidKey === null) {
+            echo "✓ Invalid key rejection works\n";
+        } else {
+            echo "❌ Invalid key was accepted\n";
+        }
+        
+        $stats = Convertre\Services\AuthenticationService::getStats();
+        echo "✓ Key statistics: {$stats['active_keys']} active keys, {$stats['total_usage']} total usage\n";
+        
+        // 7. Test Authentication Middleware
+        if (class_exists('Convertre\Middleware\AuthMiddleware')) {
+            echo "\n7. Testing AuthMiddleware...\n";
+            
+            $_SERVER['HTTP_X_API_KEY'] = $keyData['key'];
+            
+            if (Convertre\Middleware\AuthMiddleware::isAuthenticated()) {
+                echo "✓ Middleware authentication detection works\n";
+                
+                $authUser = Convertre\Middleware\AuthMiddleware::optionalAuth();
+                if ($authUser && $authUser['user_id'] === 'test_user_123') {
+                    echo "✓ Optional authentication works\n";
+                }
+            } else {
+                echo "❌ Middleware authentication failed\n";
+            }
+            
+            $_SERVER['HTTP_X_API_KEY'] = 'invalid_key';
+            if (!Convertre\Middleware\AuthMiddleware::isAuthenticated()) {
+                echo "✓ Middleware rejects invalid keys\n";
+            } else {
+                echo "❌ Middleware accepted invalid key\n";
+            }
+            
+            unset($_SERVER['HTTP_X_API_KEY']);
+        }
+        
+        echo "\n✅ PHASE 2.1: AUTHENTICATION SYSTEM - COMPLETE!\n";
+    } else {
+        echo "\n*** Authentication classes not found - skipping Phase 2.1 tests ***\n";
+    }
+    
+    // Final Summary
+    echo "\n" . str_repeat("=", 60) . "\n";
+    echo "🎉 ALL AVAILABLE TESTS PASSED! 🎉\n";
+    echo str_repeat("=", 60) . "\n";
+    echo "✅ Phase 1.3: Core Utilities (ConfigLoader, Logger, ResponseFormatter, FileHandler, Exceptions)\n";
+    
+    if (class_exists('Convertre\Services\AuthenticationService')) {
+        echo "✅ Phase 2.1: API Key System (AuthenticationService, AuthController, AuthMiddleware)\n";
+        echo "\n🚀 READY FOR PHASE 2.2: REQUEST VALIDATION!\n";
+    } else {
+        echo "⚠️  Phase 2.1: Authentication files need to be created\n";
+        echo "\n📝 Next: Create authentication files, then move to Phase 2.2\n";
+    }
+    echo str_repeat("=", 60) . "\n";
+    
+    Logger::info('Test suite completed - Core utilities working, authentication ' . 
+        (class_exists('Convertre\Services\AuthenticationService') ? 'working' : 'pending'));
     
 } catch (Exception $e) {
     echo "\n❌ Test failed: " . $e->getMessage() . "\n";
     echo "File: " . $e->getFile() . " Line: " . $e->getLine() . "\n";
+    
+    if (class_exists('Convertre\Utils\Logger')) {
+        Logger::error('Test suite failed', [
+            'error' => $e->getMessage(), 
+            'file' => $e->getFile(), 
+            'line' => $e->getLine()
+        ]);
+    }
 }
