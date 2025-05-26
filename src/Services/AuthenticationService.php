@@ -4,19 +4,31 @@ namespace Convertre\Services;
 
 class AuthenticationService
 {
-    private static $keys = [];
     private static $initialized = false;
     
     public static function init($storagePath)
     {
-        self::$initialized = true;
-        self::$keys = [];
+        if (!self::$initialized) {
+            // Start session to persist keys
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
+            
+            // Initialize keys array in session if not exists
+            if (!isset($_SESSION['api_keys'])) {
+                $_SESSION['api_keys'] = [];
+            }
+            
+            self::$initialized = true;
+        }
     }
     
     public static function generateApiKey($userId, $name = 'API Key')
     {
+        self::init('');
+        
         $key = 'ck_' . bin2hex(random_bytes(16));
-        self::$keys[$key] = [
+        $keyData = [
             'key' => $key,
             'user_id' => $userId,
             'name' => $name,
@@ -24,14 +36,20 @@ class AuthenticationService
             'usage_count' => 0,
             'active' => true
         ];
-        return self::$keys[$key];
+        
+        // Store in session
+        $_SESSION['api_keys'][$key] = $keyData;
+        
+        return $keyData;
     }
     
     public static function validateApiKey($apiKey)
     {
-        if (isset(self::$keys[$apiKey]) && self::$keys[$apiKey]['active']) {
-            self::$keys[$apiKey]['usage_count']++;
-            return self::$keys[$apiKey];
+        self::init('');
+        
+        if (isset($_SESSION['api_keys'][$apiKey]) && $_SESSION['api_keys'][$apiKey]['active']) {
+            $_SESSION['api_keys'][$apiKey]['usage_count']++;
+            return $_SESSION['api_keys'][$apiKey];
         }
         return null;
     }
@@ -53,17 +71,28 @@ class AuthenticationService
     
     public static function getStats()
     {
+        self::init('');
+        
+        $keys = $_SESSION['api_keys'] ?? [];
         $active = 0;
         $totalUsage = 0;
-        foreach (self::$keys as $data) {
+        
+        foreach ($keys as $data) {
             if ($data['active']) $active++;
             $totalUsage += $data['usage_count'];
         }
         
         return [
-            'total_keys' => count(self::$keys),
+            'total_keys' => count($keys),
             'active_keys' => $active,
             'total_usage' => $totalUsage
         ];
+    }
+    
+    // Debug method - remove in production
+    public static function getAllKeys()
+    {
+        self::init('');
+        return $_SESSION['api_keys'] ?? [];
     }
 }

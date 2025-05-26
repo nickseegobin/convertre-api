@@ -1,7 +1,7 @@
 <?php
 
 /**
- * External Tools Configuration
+ * External Tools Configuration - Fixed for macOS
  * 
  * Paths and settings for ImageMagick and LibreOffice
  */
@@ -9,9 +9,9 @@
 return [
     // ImageMagick Configuration
     'imagemagick' => [
-        'binary_path' => 'convert', // Will use PATH by default
-        'identify_path' => 'identify',
-        'version_check' => 'convert -version',
+        'binary_path' => 'magick', // Updated for ImageMagick 7
+        'identify_path' => 'magick identify',
+        'version_check' => 'magick convert -version',
         'required_version' => '7.0',
         'timeout' => 60, // seconds
         'memory_limit' => '256MB',
@@ -27,11 +27,11 @@ return [
         ]
     ],
     
-    // LibreOffice Configuration
+    // LibreOffice Configuration - FIXED
     'libreoffice' => [
-        'binary_path' => 'libreoffice', // Will use PATH by default
+        'binary_path' => 'soffice', // CHANGED: Use 'soffice' instead of 'libreoffice'
         'headless_mode' => true,
-        'version_check' => 'libreoffice --version',
+        'version_check' => 'soffice --version',
         'required_version' => '7.0',
         'timeout' => 300, // 5 minutes for document conversion
         'temp_profile_dir' => sys_get_temp_dir() . '/libreoffice_profiles',
@@ -67,6 +67,20 @@ return [
         'libreoffice' => [
             'C:\Program Files\LibreOffice\program\soffice.exe',
             'C:\Program Files (x86)\LibreOffice\program\soffice.exe'
+        ]
+    ],
+    
+    // macOS paths (detected from diagnostic)
+    'macos_paths' => [
+        'imagemagick' => [
+            '/opt/homebrew/bin/magick',
+            '/usr/local/bin/magick',
+            '/opt/local/bin/magick'
+        ],
+        'libreoffice' => [
+            '/opt/homebrew/bin/soffice', // Homebrew installation - WORKING
+            '/Applications/LibreOffice.app/Contents/MacOS/soffice', // App installation - WORKING
+            '/usr/local/bin/soffice'
         ]
     ],
     

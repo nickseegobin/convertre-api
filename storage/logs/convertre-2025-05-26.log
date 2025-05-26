@@ -53,3 +53,302 @@
 [2025-05-26 02:23:13] WARNING: LibreOffice not available | Context: {"path":"libreoffice"}
 [2025-05-26 02:23:13] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"file.docx","error":"Tool 'libreoffice' not available"}
 [2025-05-26 02:23:13] INFO: DOCX module test completed | Context: {"libreoffice_available":false,"headless_support":false}
+[2025-05-26 02:30:40] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
+[2025-05-26 02:30:41] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 02:30:41] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 02:30:41] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"docx_test_sq88khsj55e27TsizcP.txt"}
+[2025-05-26 02:30:41] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 02:30:42] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 02:30:42] DEBUG: LibreOffice DOCX conversion | Context: {"input":"docx_test_sq88khsj55e27TsizcP.txt","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6833d25227922","timeout":300}
+[2025-05-26 02:30:42] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6833d25227922' '/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/docx_test_sq88khsj55e27TsizcP.txt'","timeout":300}
+[2025-05-26 02:30:42] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6833d25227922"}
+[2025-05-26 02:30:42] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"docx_test_sq88khsj55e27TsizcP.txt","processing_time":"0.90370392799377s"}
+[2025-05-26 02:30:42] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file.docx"}
+[2025-05-26 02:30:42] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"file.docx","error":"Input file not found"}
+[2025-05-26 02:30:42] INFO: DOCX module test completed | Context: {"libreoffice_available":true,"headless_support":true}
+[2025-05-26 02:39:21] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_0565e2e..."}
+[2025-05-26 02:41:46] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_7f4a2af..."}
+[2025-05-26 02:41:48] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_b619642..."}
+[2025-05-26 02:41:56] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_a1b4f9d..."}
+[2025-05-26 02:43:51] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_09304bb..."}
+[2025-05-26 02:43:52] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_c9d8af2..."}
+[2025-05-26 02:44:00] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_11bca5b..."}
+[2025-05-26 12:02:16] INFO: Core utilities test started
+[2025-05-26 12:02:16] DEBUG: This is a debug message | Context: {"test":true}
+[2025-05-26 12:02:16] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"test.heic"}
+[2025-05-26 12:02:16] DEBUG: FileValidationService initialized
+[2025-05-26 12:02:16] DEBUG: RateLimitService initialized
+[2025-05-26 12:02:16] DEBUG: Rate limit check passed | Context: {"api_key":"test_rate_...","requests":1,"limit":60}
+[2025-05-26 12:02:16] INFO: Complete test suite finished | Context: {"phase_1_3":true,"phase_2_1":true,"phase_2_2":true,"ready_for_phase_3":true}
+[2025-05-26 12:02:21] DEBUG: ImageMagick installation check | Context: {"available":true,"version":"7.1.1","heic_support":true,"convert_path":"magick","identify_path":"magick identify","errors":[]}
+[2025-05-26 12:02:21] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 12:02:21] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 12:02:21] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"heic_test_db5lutb9915pacMR6zX.png"}
+[2025-05-26 12:02:21] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 12:02:21] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 12:02:21] DEBUG: ImageMagick HEIC conversion | Context: {"input":"heic_test_db5lutb9915pacMR6zX.png","output":"heic_output_mboiics03dqf8FxPLQb.jpg","quality":85}
+[2025-05-26 12:02:21] DEBUG: Executing command | Context: {"command":"magick '/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/heic_test_db5lutb9915pacMR6zX.png' -strip -auto-orient -colorspace sRGB -quality 85 '/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/heic_output_mboiics03dqf8FxPLQb.jpg'","timeout":60}
+[2025-05-26 12:02:22] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"heic_test_db5lutb9915pacMR6zX.png","processing_time":"0.2685980796814s"}
+[2025-05-26 12:02:22] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"file.heic"}
+[2025-05-26 12:02:22] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"file.heic","error":"Input file not found"}
+[2025-05-26 12:02:22] INFO: HEIC module test completed | Context: {"imagemagick_available":true,"heic_support":true}
+[2025-05-26 12:02:25] INFO: Conversion started | Context: {"from_format":"test","to_format":"mock","filename":"test_inputhcdvep10o49p1IVwv3D"}
+[2025-05-26 12:02:25] INFO: Conversion completed successfully | Context: {"from_format":"test","to_format":"mock","filename":"test_inputhcdvep10o49p1IVwv3D","processing_time":"0.0011718273162842s"}
+[2025-05-26 12:02:25] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 12:02:25] DEBUG: Registered module | Context: {"conversion":"test_to_mock","class":"MockConversionModule"}
+[2025-05-26 12:02:25] INFO: Conversion started | Context: {"from_format":"fail","to_format":"test","filename":"test_inputhcdvep10o49p1IVwv3D"}
+[2025-05-26 12:02:25] ERROR: Conversion failed | Context: {"from_format":"fail","to_format":"test","filename":"test_inputhcdvep10o49p1IVwv3D","error":"Tool 'failTool' not available"}
+[2025-05-26 12:02:25] INFO: Conversion started | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputhcdvep10o49p1IVwv3D"}
+[2025-05-26 12:02:25] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
+[2025-05-26 12:02:25] INFO: Conversion completed successfully | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputhcdvep10o49p1IVwv3D","processing_time":"0.18308305740356s"}
+[2025-05-26 12:02:25] INFO: Abstract module system test completed successfully
+[2025-05-26 12:02:28] INFO: API endpoints test completed | Context: {"api_responding":false,"test_api_key":"ck_030f4ee..."}
+[2025-05-26 12:45:56] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-26 12:49:10] DEBUG: RateLimitService initialized
+[2025-05-26 12:49:10] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 12:49:10] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-26 12:52:58] DEBUG: RateLimitService initialized
+[2025-05-26 12:52:58] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 12:52:58] DEBUG: FileValidationService initialized
+[2025-05-26 12:52:58] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 12:52:58] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 12:52:58] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 12:52:58] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 12:52:58] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 12:52:58] DEBUG: File operation: upload | Context: {"filename":"sample1_1748263978_2beaedee.heic","success":true}
+[2025-05-26 12:52:58] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748263978_2beaedee.heic"}
+[2025-05-26 12:52:58] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 12:52:58] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 12:52:58] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748263978_2beaedee.heic","output":"sample1_1748263978_6cb0651f.jpg","quality":85}
+[2025-05-26 12:52:58] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748263978_2beaedee.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748263978_6cb0651f.jpg'","timeout":60}
+[2025-05-26 12:52:58] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748263978_2beaedee.heic","processing_time":"0.4197781085968s"}
+[2025-05-26 12:52:58] DEBUG: File operation: delete | Context: {"filename":"sample1_1748263978_2beaedee.heic","success":true}
+[2025-05-26 13:06:16] DEBUG: RateLimitService initialized
+[2025-05-26 13:06:16] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 13:06:16] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-26 13:09:03] DEBUG: RateLimitService initialized
+[2025-05-26 13:09:03] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 13:09:03] DEBUG: FileValidationService initialized
+[2025-05-26 13:09:03] DEBUG: File validation passed | Context: {"filename":"soundboard.heic","size":1220221,"mime":"image/heic"}
+[2025-05-26 13:09:03] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 13:09:15] DEBUG: RateLimitService initialized
+[2025-05-26 13:09:15] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 13:09:15] DEBUG: FileValidationService initialized
+[2025-05-26 13:09:15] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 13:09:15] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 13:09:26] DEBUG: RateLimitService initialized
+[2025-05-26 13:09:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 13:09:26] DEBUG: FileValidationService initialized
+[2025-05-26 13:09:26] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 13:09:26] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 13:15:11] DEBUG: RateLimitService initialized
+[2025-05-26 13:15:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 13:15:11] DEBUG: FileValidationService initialized
+[2025-05-26 13:15:11] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 13:15:11] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 13:15:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 13:15:11] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:15:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:15:11] DEBUG: File operation: upload | Context: {"filename":"sample1_1748265311_07c1e94d.heic","success":true}
+[2025-05-26 13:15:11] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748265311_07c1e94d.heic"}
+[2025-05-26 13:15:11] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:15:11] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:15:11] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748265311_07c1e94d.heic","output":"sample1_1748265311_8404cf3a.jpg","quality":85}
+[2025-05-26 13:15:11] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748265311_07c1e94d.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748265311_8404cf3a.jpg'","timeout":60}
+[2025-05-26 13:15:12] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748265311_07c1e94d.heic","processing_time":"0.47195100784302s"}
+[2025-05-26 13:15:12] DEBUG: File operation: delete | Context: {"filename":"sample1_1748265311_07c1e94d.heic","success":true}
+[2025-05-26 13:31:42] DEBUG: RateLimitService initialized
+[2025-05-26 13:31:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 13:31:42] DEBUG: FileValidationService initialized
+[2025-05-26 13:31:42] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 13:31:42] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 13:42:10] DEBUG: RateLimitService initialized
+[2025-05-26 13:42:10] DEBUG: Rate limit check passed | Context: {"api_key":"ck_c309c44...","requests":1,"limit":60}
+[2025-05-26 13:42:10] DEBUG: FileValidationService initialized
+[2025-05-26 13:42:10] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 13:42:10] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 13:42:10] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 13:42:10] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:42:10] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:42:10] DEBUG: File operation: upload | Context: {"filename":"sample1_1748266930_2061c917.heic","success":true}
+[2025-05-26 13:42:10] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748266930_2061c917.heic"}
+[2025-05-26 13:42:10] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:42:10] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:42:10] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748266930_2061c917.heic","output":"sample1_1748266930_e222ac87.jpg","quality":85}
+[2025-05-26 13:42:10] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748266930_2061c917.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748266930_e222ac87.jpg'","timeout":60}
+[2025-05-26 13:42:10] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748266930_2061c917.heic","processing_time":"0.51901197433472s"}
+[2025-05-26 13:42:10] DEBUG: File operation: delete | Context: {"filename":"sample1_1748266930_2061c917.heic","success":true}
+[2025-05-26 13:43:54] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:43:54] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:43:54] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:43:54] DEBUG: File operation: upload | Context: {"filename":"sample1_1748267034_a4f18042.heic","success":true}
+[2025-05-26 13:43:54] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748267034_a4f18042.heic"}
+[2025-05-26 13:43:54] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:43:55] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:43:55] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748267034_a4f18042.heic","output":"sample1_1748267034_ac96d8d5.jpg","quality":85}
+[2025-05-26 13:43:55] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748267034_a4f18042.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748267034_ac96d8d5.jpg'","timeout":60}
+[2025-05-26 13:43:55] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748267034_a4f18042.heic","processing_time":"0.3537380695343s"}
+[2025-05-26 13:43:55] DEBUG: File operation: delete | Context: {"filename":"sample1_1748267034_a4f18042.heic","success":true}
+[2025-05-26 13:44:56] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:44:56] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:44:56] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:44:56] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748267096_0d79842f.heic","success":true}
+[2025-05-26 13:44:56] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267096_0d79842f.heic"}
+[2025-05-26 13:44:56] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:44:56] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:44:56] DEBUG: ImageMagick HEIC conversion | Context: {"input":"soundboard_1748267096_0d79842f.heic","output":"soundboard_1748267096_4115b434.jpg","quality":85}
+[2025-05-26 13:44:56] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748267096_0d79842f.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748267096_4115b434.jpg'","timeout":60}
+[2025-05-26 13:44:56] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267096_0d79842f.heic","processing_time":"0.80298209190369s"}
+[2025-05-26 13:44:56] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748267096_0d79842f.heic","success":true}
+[2025-05-26 13:45:08] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:45:08] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:45:08] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:45:08] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748267108_5b296caf.heic","success":true}
+[2025-05-26 13:45:08] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267108_5b296caf.heic"}
+[2025-05-26 13:45:08] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:45:09] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:45:09] DEBUG: ImageMagick HEIC conversion | Context: {"input":"soundboard_1748267108_5b296caf.heic","output":"soundboard_1748267108_a537bdba.jpg","quality":85}
+[2025-05-26 13:45:09] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748267108_5b296caf.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748267108_a537bdba.jpg'","timeout":60}
+[2025-05-26 13:45:09] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267108_5b296caf.heic","processing_time":"0.64313292503357s"}
+[2025-05-26 13:45:09] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748267108_5b296caf.heic","success":true}
+[2025-05-26 13:45:30] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:45:30] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:45:30] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:45:30] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748267130_69da3e3a.heic","success":true}
+[2025-05-26 13:45:30] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267130_69da3e3a.heic"}
+[2025-05-26 13:45:30] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:45:30] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:45:30] DEBUG: ImageMagick HEIC conversion | Context: {"input":"soundboard_1748267130_69da3e3a.heic","output":"soundboard_1748267130_99c481c9.jpg","quality":85}
+[2025-05-26 13:45:30] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748267130_69da3e3a.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748267130_99c481c9.jpg'","timeout":60}
+[2025-05-26 13:45:30] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267130_69da3e3a.heic","processing_time":"0.66649198532104s"}
+[2025-05-26 13:45:30] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748267130_69da3e3a.heic","success":true}
+[2025-05-26 13:46:00] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:46:00] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:46:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:46:00] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748267160_18ea6193.heic","success":true}
+[2025-05-26 13:46:00] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267160_18ea6193.heic"}
+[2025-05-26 13:46:00] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:46:00] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:46:00] DEBUG: ImageMagick HEIC conversion | Context: {"input":"soundboard_1748267160_18ea6193.heic","output":"soundboard_1748267160_ccf09ba4.jpg","quality":85}
+[2025-05-26 13:46:00] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748267160_18ea6193.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748267160_ccf09ba4.jpg'","timeout":60}
+[2025-05-26 13:46:01] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267160_18ea6193.heic","processing_time":"0.57082605361938s"}
+[2025-05-26 13:46:01] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748267160_18ea6193.heic","success":true}
+[2025-05-26 13:46:17] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:46:17] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:46:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:46:17] DEBUG: File operation: upload | Context: {"filename":"greyhounds-looking-for-a-table_1748267177_c1c9e824.heic","success":true}
+[2025-05-26 13:46:17] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"greyhounds-looking-for-a-table_1748267177_c1c9e824.heic"}
+[2025-05-26 13:46:17] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:46:17] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:46:17] DEBUG: ImageMagick HEIC conversion | Context: {"input":"greyhounds-looking-for-a-table_1748267177_c1c9e824.heic","output":"greyhounds-looking-for-a-table_1748267177_0de696c7.jpg","quality":85}
+[2025-05-26 13:46:17] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/greyhounds-looking-for-a-table_1748267177_c1c9e824.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/greyhounds-looking-for-a-table_1748267177_0de696c7.jpg'","timeout":60}
+[2025-05-26 13:46:17] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"greyhounds-looking-for-a-table_1748267177_c1c9e824.heic","processing_time":"0.62057900428772s"}
+[2025-05-26 13:46:17] DEBUG: File operation: delete | Context: {"filename":"greyhounds-looking-for-a-table_1748267177_c1c9e824.heic","success":true}
+[2025-05-26 13:51:24] DEBUG: Files received in $_FILES | Context: {"files":{"name":"greyhounds-looking-for-a-table.heic","full_path":"greyhounds-looking-for-a-table.heic","type":"image/heic","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phppb8gjitutbl0dlTBPAN","error":0,"size":1721433}}
+[2025-05-26 13:51:24] DEBUG: Files processed for batch | Context: {"file_count":1}
+[2025-05-26 13:51:24] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":1}}
+[2025-05-26 13:51:24] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:51:24] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:51:24] DEBUG: File operation: upload | Context: {"filename":"greyhounds-looking-for-a-table_1748267484_d2df361b.heic","success":true}
+[2025-05-26 13:51:24] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"greyhounds-looking-for-a-table_1748267484_d2df361b.heic"}
+[2025-05-26 13:51:24] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:51:24] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:51:24] DEBUG: ImageMagick HEIC conversion | Context: {"input":"greyhounds-looking-for-a-table_1748267484_d2df361b.heic","output":"greyhounds-looking-for-a-table_1748267484_19e06472.jpg","quality":85}
+[2025-05-26 13:51:24] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/greyhounds-looking-for-a-table_1748267484_d2df361b.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/greyhounds-looking-for-a-table_1748267484_19e06472.jpg'","timeout":60}
+[2025-05-26 13:51:24] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"greyhounds-looking-for-a-table_1748267484_d2df361b.heic","processing_time":"0.75239491462708s"}
+[2025-05-26 13:51:24] DEBUG: File operation: delete | Context: {"filename":"greyhounds-looking-for-a-table_1748267484_d2df361b.heic","success":true}
+[2025-05-26 13:57:13] DEBUG: Files received in $_FILES | Context: {"file1":{"name":"sample1.heic","full_path":"sample1.heic","type":"image/heic","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phpqi9bocor460i1R9S6dc","error":0,"size":293608},"file2":{"name":"soundboard.heic","full_path":"soundboard.heic","type":"image/heic","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phpp4s3laun2rcb8kY34qk","error":0,"size":1220221}}
+[2025-05-26 13:57:13] DEBUG: Looking for individual file fields
+[2025-05-26 13:57:13] DEBUG: Found individual file | Context: {"field":"file1","name":"sample1.heic"}
+[2025-05-26 13:57:13] DEBUG: Found individual file | Context: {"field":"file2","name":"soundboard.heic"}
+[2025-05-26 13:57:13] DEBUG: Final files processed for batch | Context: {"file_count":2}
+[2025-05-26 13:57:13] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":2}}
+[2025-05-26 13:57:13] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 13:57:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:57:13] DEBUG: File operation: upload | Context: {"filename":"sample1_1748267833_38c7045d.heic","success":true}
+[2025-05-26 13:57:13] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748267833_38c7045d.heic"}
+[2025-05-26 13:57:13] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 13:57:13] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 13:57:13] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748267833_38c7045d.heic","output":"sample1_1748267833_dae05718.jpg","quality":85}
+[2025-05-26 13:57:13] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748267833_38c7045d.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748267833_dae05718.jpg'","timeout":60}
+[2025-05-26 13:57:13] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748267833_38c7045d.heic","processing_time":"0.44383883476257s"}
+[2025-05-26 13:57:13] DEBUG: File operation: delete | Context: {"filename":"sample1_1748267833_38c7045d.heic","success":true}
+[2025-05-26 13:57:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 13:57:13] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748267833_1fbde0d7.heic","success":true}
+[2025-05-26 13:57:13] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267833_1fbde0d7.heic"}
+[2025-05-26 13:57:13] DEBUG: ImageMagick HEIC conversion | Context: {"input":"soundboard_1748267833_1fbde0d7.heic","output":"soundboard_1748267833_90e1b656.jpg","quality":85}
+[2025-05-26 13:57:13] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748267833_1fbde0d7.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748267833_90e1b656.jpg'","timeout":60}
+[2025-05-26 13:57:13] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748267833_1fbde0d7.heic","processing_time":"0.40604496002197s"}
+[2025-05-26 13:57:13] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748267833_1fbde0d7.heic","success":true}
+[2025-05-26 14:02:32] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx"}
+[2025-05-26 14:02:32] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 14:02:32] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 14:02:32] DEBUG: LibreOffice DOCX conversion | Context: {"input":"test_document.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474786fb63","timeout":300}
+[2025-05-26 14:02:32] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474786fb63' '/opt/homebrew/var/www/convertre-api/storage/test_document.docx'","timeout":300}
+[2025-05-26 14:02:33] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474786fb63"}
+[2025-05-26 14:02:33] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474786fb63"}
+[2025-05-26 14:03:26] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx"}
+[2025-05-26 14:03:26] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 14:03:26] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 14:03:26] DEBUG: LibreOffice DOCX conversion | Context: {"input":"test_document.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474aef2c00","timeout":300}
+[2025-05-26 14:03:26] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474aef2c00' '/opt/homebrew/var/www/convertre-api/storage/test_document.docx'","timeout":300}
+[2025-05-26 14:03:27] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474aef2c00"}
+[2025-05-26 14:03:27] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683474aef2c00"}
+[2025-05-26 14:04:58] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx"}
+[2025-05-26 14:04:58] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 14:04:58] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 14:04:58] DEBUG: LibreOffice DOCX conversion | Context: {"input":"test_document.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834750aea5be","timeout":300}
+[2025-05-26 14:04:58] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834750aea5be' '/opt/homebrew/var/www/convertre-api/storage/test_document.docx'","timeout":300}
+[2025-05-26 14:04:59] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834750aea5be"}
+[2025-05-26 14:04:59] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834750aea5be"}
+[2025-05-26 14:04:59] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx","error":"Conversion process failed"}
+[2025-05-26 14:05:09] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx"}
+[2025-05-26 14:05:09] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 14:05:10] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 14:05:10] DEBUG: LibreOffice DOCX conversion | Context: {"input":"test_document.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834751631daa","timeout":300}
+[2025-05-26 14:05:10] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834751631daa' '/opt/homebrew/var/www/convertre-api/storage/test_document.docx'","timeout":300}
+[2025-05-26 14:05:10] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834751631daa"}
+[2025-05-26 14:05:10] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834751631daa"}
+[2025-05-26 14:05:10] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"test_document.docx","error":"Conversion process failed"}
+[2025-05-26 14:10:18] DEBUG: RateLimitService initialized
+[2025-05-26 14:10:18] DEBUG: Rate limit check passed | Context: {"api_key":"ck_b8e415e...","requests":1,"limit":60}
+[2025-05-26 14:10:18] DEBUG: FileValidationService initialized
+[2025-05-26 14:10:18] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.docx","size":111303,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-05-26 14:10:18] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 14:10:18] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-26 14:10:18] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 14:10:18] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 14:10:18] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748268618_160f834c.docx","success":true}
+[2025-05-26 14:10:18] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748268618_160f834c.docx"}
+[2025-05-26 14:10:18] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 14:10:18] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 14:10:18] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_100kB_1748268618_160f834c.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834764ae3526","timeout":300}
+[2025-05-26 14:10:18] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834764ae3526' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748268618_160f834c.docx'","timeout":300}
+[2025-05-26 14:10:19] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834764ae3526"}
+[2025-05-26 14:10:19] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748268618_160f834c.docx","processing_time":"1.1366760730743s"}
+[2025-05-26 14:10:19] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748268618_160f834c.docx","success":true}
+[2025-05-26 14:14:16] DEBUG: Files received in $_FILES | Context: {"file1":{"name":"file-sample_100kB.docx","full_path":"file-sample_100kB.docx","type":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phpupdoah6rs80vd3eT0dQ","error":0,"size":111303},"file2":{"name":"file-sample_100kB_2.docx","full_path":"file-sample_100kB_2.docx","type":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","tmp_name":"/private/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/phpoj13v8gssnee2ivCuTZ","error":0,"size":111303}}
+[2025-05-26 14:14:16] DEBUG: Looking for individual file fields
+[2025-05-26 14:14:16] DEBUG: Found individual file | Context: {"field":"file1","name":"file-sample_100kB.docx"}
+[2025-05-26 14:14:16] DEBUG: Found individual file | Context: {"field":"file2","name":"file-sample_100kB_2.docx"}
+[2025-05-26 14:14:16] DEBUG: Final files processed for batch | Context: {"file_count":2}
+[2025-05-26 14:14:16] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"pdf","file_count":2}}
+[2025-05-26 14:14:16] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 14:14:16] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 14:14:16] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748268856_b6532710.docx","success":true}
+[2025-05-26 14:14:16] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748268856_b6532710.docx"}
+[2025-05-26 14:14:16] DEBUG: Executing command | Context: {"command":"soffice --version","timeout":10}
+[2025-05-26 14:14:16] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-26 14:14:16] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_100kB_1748268856_b6532710.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834773898262","timeout":300}
+[2025-05-26 14:14:16] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834773898262' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748268856_b6532710.docx'","timeout":300}
+[2025-05-26 14:14:17] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_6834773898262"}
+[2025-05-26 14:14:17] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_1748268856_b6532710.docx","processing_time":"0.82521605491638s"}
+[2025-05-26 14:14:17] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748268856_b6532710.docx","success":true}
+[2025-05-26 14:14:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-26 14:14:17] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_2_1748268857_69fa8f84.docx","success":true}
+[2025-05-26 14:14:17] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_2_1748268857_69fa8f84.docx"}
+[2025-05-26 14:14:17] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_100kB_2_1748268857_69fa8f84.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68347739416fe","timeout":300}
+[2025-05-26 14:14:17] DEBUG: Executing command | Context: {"command":"soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68347739416fe' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_2_1748268857_69fa8f84.docx'","timeout":300}
+[2025-05-26 14:14:17] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68347739416fe"}
+[2025-05-26 14:14:17] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_100kB_2_1748268857_69fa8f84.docx","processing_time":"0.57941699028015s"}
+[2025-05-26 14:14:17] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_2_1748268857_69fa8f84.docx","success":true}

@@ -126,6 +126,8 @@ class RequestValidator
         
         return $files;
     }
+
+    
     
     /**
      * Validate conversion parameters

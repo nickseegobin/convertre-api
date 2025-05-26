@@ -1,0 +1,53 @@
+# Convertre API - Apache Configuration
+# Enhanced URL rewriting
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Debug rewrite (remove in production)
+# RewriteLog "/tmp/rewrite.log"
+# RewriteLogLevel 3
+
+# Block access to sensitive files
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to PHP config files
+<Files ~ "\.(ini|conf|config)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Set upload limits
+php_value upload_max_filesize 50M
+php_value post_max_size 500M
+php_value max_execution_time 300
+php_value memory_limit 256M
+
+# API Routes - Enhanced rewriting
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+
+# Alternative fallback rule
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L,E=PATH_INFO:/$1]
+
+# Security headers
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# CORS headers for API
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, X-API-Key"
+
+# Cache control for downloads
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf|webp)$">
+    Header set Cache-Control "private, max-age=10800"
+</FilesMatch>
