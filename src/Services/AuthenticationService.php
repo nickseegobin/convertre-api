@@ -5,22 +5,42 @@ namespace Convertre\Services;
 class AuthenticationService
 {
     private static $initialized = false;
+    private static $keysFilePath = '';
     
     public static function init($storagePath)
     {
         if (!self::$initialized) {
-            // Start session to persist keys
-            if (session_status() === PHP_SESSION_NONE) {
-                session_start();
+            self::$keysFilePath = $storagePath . '/api_keys.json';
+            
+            // Create the storage directory if it doesn't exist
+            if (!is_dir($storagePath)) {
+                mkdir($storagePath, 0755, true);
             }
             
-            // Initialize keys array in session if not exists
-            if (!isset($_SESSION['api_keys'])) {
-                $_SESSION['api_keys'] = [];
+            // Create the file if it doesn't exist
+            if (!file_exists(self::$keysFilePath)) {
+                file_put_contents(self::$keysFilePath, json_encode([]));
             }
             
             self::$initialized = true;
         }
+    }
+    
+    private static function loadKeys()
+    {
+        if (!file_exists(self::$keysFilePath)) {
+            return [];
+        }
+        
+        $content = file_get_contents(self::$keysFilePath);
+        $keys = json_decode($content, true);
+        
+        return $keys ?: [];
+    }
+    
+    private static function saveKeys($keys)
+    {
+        file_put_contents(self::$keysFilePath, json_encode($keys, JSON_PRETTY_PRINT));
     }
     
     public static function generateApiKey($userId, $name = 'API Key')
@@ -37,8 +57,14 @@ class AuthenticationService
             'active' => true
         ];
         
-        // Store in session
-        $_SESSION['api_keys'][$key] = $keyData;
+        // Load existing keys
+        $keys = self::loadKeys();
+        
+        // Add new key
+        $keys[$key] = $keyData;
+        
+        // Save back to file
+        self::saveKeys($keys);
         
         return $keyData;
     }
@@ -47,10 +73,18 @@ class AuthenticationService
     {
         self::init('');
         
-        if (isset($_SESSION['api_keys'][$apiKey]) && $_SESSION['api_keys'][$apiKey]['active']) {
-            $_SESSION['api_keys'][$apiKey]['usage_count']++;
-            return $_SESSION['api_keys'][$apiKey];
+        $keys = self::loadKeys();
+        
+        if (isset($keys[$apiKey]) && $keys[$apiKey]['active']) {
+            // Increment usage count
+            $keys[$apiKey]['usage_count']++;
+            
+            // Save updated keys
+            self::saveKeys($keys);
+            
+            return $keys[$apiKey];
         }
+        
         return null;
     }
     
@@ -73,7 +107,7 @@ class AuthenticationService
     {
         self::init('');
         
-        $keys = $_SESSION['api_keys'] ?? [];
+        $keys = self::loadKeys();
         $active = 0;
         $totalUsage = 0;
         
@@ -93,6 +127,6 @@ class AuthenticationService
     public static function getAllKeys()
     {
         self::init('');
-        return $_SESSION['api_keys'] ?? [];
+        return self::loadKeys();
     }
 }

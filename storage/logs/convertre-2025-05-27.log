@@ -1169,3 +1169,46 @@
 [2025-05-27 19:37:08] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68361461df974"}
 [2025-05-27 19:37:08] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx","processing_time":"3.1426339149475s"}
 [2025-05-27 19:37:08] DEBUG: File operation: delete | Context: {"filename":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx","success":true}
+[2025-05-27 21:57:09] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 21:57:13] DEBUG: RateLimitService initialized
+[2025-05-27 21:57:13] DEBUG: Rate limit check passed | Context: {"api_key":"ck_68184a5...","requests":1,"limit":60}
+[2025-05-27 21:57:13] DEBUG: FileValidationService initialized
+[2025-05-27 21:57:13] DEBUG: File validation passed | Context: {"filename":"Convertre_Plugin_Specification.docx","size":38201,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-05-27 21:57:13] INFO: Request validation completed | Context: {"user_id":"wordpress","type":"single","file_count":1}
+[2025-05-27 21:57:13] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"wordpress","target_format":"pdf","file_count":1}}
+[2025-05-27 21:57:13] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 21:57:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-27 21:57:13] DEBUG: File operation: upload | Context: {"filename":"Convertre_Plugin_Specification_1748383033_601af018.docx","success":true}
+[2025-05-27 21:57:13] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748383033_601af018.docx"}
+[2025-05-27 21:57:13] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 21:57:13] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 21:57:13] DEBUG: LibreOffice DOCX conversion | Context: {"input":"Convertre_Plugin_Specification_1748383033_601af018.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68363539dd1ee","timeout":300}
+[2025-05-27 21:57:13] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68363539dd1ee' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Convertre_Plugin_Specification_1748383033_601af018.docx'","timeout":300}
+[2025-05-27 21:57:16] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68363539dd1ee"}
+[2025-05-27 21:57:16] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748383033_601af018.docx","processing_time":"3.132936000824s"}
+[2025-05-27 21:57:16] DEBUG: File operation: delete | Context: {"filename":"Convertre_Plugin_Specification_1748383033_601af018.docx","success":true}
+[2025-05-27 22:03:53] DEBUG: RateLimitService initialized
+[2025-05-27 22:03:53] DEBUG: Rate limit check passed | Context: {"api_key":"ck_68184a5...","requests":1,"limit":60}
+[2025-05-27 22:03:53] DEBUG: FileValidationService initialized
+[2025-05-27 22:03:53] DEBUG: File validation passed | Context: {"filename":"Convertre_Plugin_Specification.docx","size":38201,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-05-27 22:03:53] INFO: Request validation completed | Context: {"user_id":"wordpress","type":"single","file_count":1}
+[2025-05-27 22:03:53] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"wordpress","target_format":"jpg","file_count":1}}
+[2025-05-27 22:03:53] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 22:03:53] ERROR: Conversion endpoint error | Context: {"error":"No module available for docx to jpg conversion","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":40}
+[2025-05-27 22:04:11] DEBUG: RateLimitService initialized
+[2025-05-27 22:04:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_68184a5...","requests":1,"limit":60}
+[2025-05-27 22:04:11] DEBUG: FileValidationService initialized
+[2025-05-27 22:04:11] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.gif","size":194757,"mime":"image/gif"}
+[2025-05-27 22:04:11] INFO: Request validation completed | Context: {"user_id":"wordpress","type":"single","file_count":1}
+[2025-05-27 22:04:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"wordpress","target_format":"jpg","file_count":1}}
+[2025-05-27 22:04:11] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 22:04:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-05-27 22:04:11] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748383451_3f4d8eef.gif","success":true}
+[2025-05-27 22:04:11] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748383451_3f4d8eef.gif"}
+[2025-05-27 22:04:11] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 22:04:12] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 22:04:14] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-05-27 22:04:14] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"sample_640__426_1748383451_3f4d8eef.gif","output":"sample_640__426_1748383451_799bea8d.jpg","quality":85}
+[2025-05-27 22:04:14] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748383451_3f4d8eef.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748383451_799bea8d.jpg'","timeout":60}
+[2025-05-27 22:04:14] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748383451_3f4d8eef.gif","processing_time":"2.3355090618134s"}
+[2025-05-27 22:04:14] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748383451_3f4d8eef.gif","success":true}

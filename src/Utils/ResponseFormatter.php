@@ -183,3 +183,4 @@ class ResponseFormatter
         return self::error($message, 'INTERNAL_ERROR', 500);
     }
 }
+

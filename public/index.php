@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Convertre API - Main Router - WITH CLEANUP ROUTES
+ * Convertre API - Main Router
+ * Production Version - Clean & Optimized
  */
 
-// Error reporting for development
+// Error reporting for development - disable in production
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -28,116 +29,75 @@ require_once $basePath . 'Exceptions/ValidationException.php';
 require_once $basePath . 'Exceptions/AuthenticationException.php';
 require_once $basePath . '../Middleware/AuthMiddleware.php';
 
-
-//MODULES START
-// Only include middleware if it exists
+// MIDDLEWARE
 if (file_exists($basePath . 'Middleware/ValidationMiddleware.php')) {
     require_once $basePath . 'Middleware/ValidationMiddleware.php';
 }
 
-// IMAGES
-// Only include conversion modules if they exist
-// HEIC MultiFormatModule Support
+// IMAGE CONVERSION MODULES
 if (file_exists($basePath . 'Services/Modules/HeicMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/HeicMultiFormatModule.php';
 }
-
-// JPEG MultiFormatModule Support
-// Only include conversion modules if they exist
 if (file_exists($basePath . 'Services/Modules/JpgMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/JpgMultiFormatModule.php';
 }
-
-// PNG MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/PngMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/PngMultiFormatModule.php';
 }
-
-// WebP MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/WebpMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/WebpMultiFormatModule.php';
 }
-
-// GIF MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/GifMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/GifMultiFormatModule.php';
 }
-// SVG MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/SvgMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/SvgMultiFormatModule.php';
 }
-// BMP MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/BmpMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/BmpMultiFormatModule.php';
 }
-// TIFF MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/TiffMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/TiffMultiFormatModule.php';
 }
-
-// PDF MultiFormatModule Support
 if (file_exists($basePath . 'Services/Modules/PdfMultiFormatModule.php')) {
     require_once $basePath . 'Services/Modules/PdfMultiFormatModule.php';
 }
-// IMAGES END
 
-//DOCUMENTS
-// Only include conversion modules if they exist
-// DOCX to PDF Module Support
+// DOCUMENT CONVERSION MODULES
 if (file_exists($basePath . 'Services/Modules/DocxToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/DocxToPdfModule.php';
 }
-
-// DOC to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/DocToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/DocToPdfModule.php';
 }
-
-// ODT to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/OdtToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/OdtToPdfModule.php';
 }
-
-// XLSX to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/XlsxToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/XlsxToPdfModule.php';
 }
-
-// PPTX to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/PptxToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/PptxToPdfModule.php';
 }
-
-// EPUB to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/EpubToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/EpubToPdfModule.php';
 }
-
-// RTF to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/RtfToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/RtfToPdfModule.php';
 }
-// TXT to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/TxtToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/TxtToPdfModule.php';
 }
 
-
-
-//MODULES END
-
-
-// Only include ConversionController if it exists
+// CONTROLLERS
 if (file_exists($basePath . 'Controllers/ConversionController.php')) {
     require_once $basePath . 'Controllers/ConversionController.php';
 }
-
-// Only include CleanupController if it exists
 if (file_exists($basePath . 'Controllers/CleanupController.php')) {
     require_once $basePath . 'Controllers/CleanupController.php';
 }
 
-// Only include CleanupService if it exists
+// SERVICES
 if (file_exists($basePath . 'Services/CleanupService.php')) {
     require_once $basePath . 'Services/CleanupService.php';
 }
@@ -162,7 +122,7 @@ try {
     );
 }
 
-// Set headers
+// Set CORS headers
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
@@ -174,25 +134,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-// Get request path - ENHANCED VERSION
+// Get request path
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
 
-// Try multiple path extraction methods
+// Extract path from URI
 $path = '';
-
-// Method 1: Check PATH_INFO (when using index.php/route)
 if (isset($_SERVER['PATH_INFO'])) {
     $path = $_SERVER['PATH_INFO'];
-}
-// Method 2: Parse from REQUEST_URI
-else {
+} else {
     $fullPath = parse_url($requestUri, PHP_URL_PATH);
-    
-    // Remove base paths
     $fullPath = str_replace('/convertre-api/public', '', $fullPath);
     $fullPath = str_replace('/index.php', '', $fullPath);
-    
     $path = $fullPath ?: '/';
 }
 
@@ -200,20 +153,7 @@ else {
 $path = '/' . trim($path, '/');
 if ($path === '/') $path = '/info';
 
-// Debug - remove in production
-if (isset($_GET['debug'])) {
-    ResponseFormatter::sendJson([
-        'debug' => true,
-        'REQUEST_URI' => $_SERVER['REQUEST_URI'] ?? 'not set',
-        'PATH_INFO' => $_SERVER['PATH_INFO'] ?? 'not set',
-        'extracted_path' => $path,
-        'method' => $requestMethod,
-        'files_count' => count($_FILES),
-        'files_debug' => array_keys($_FILES)
-    ]);
-}
-
-// Simple routing
+// Route handling
 try {
     switch ($path) {
         case '/':
@@ -227,6 +167,7 @@ try {
                         'GET /info' => 'API information',
                         'GET /health' => 'Health check',
                         'POST /generate-key' => 'Generate API key',
+                        'POST /validate-key' => 'Validate API key',
                         'POST /convert' => 'Single file conversion',
                         'POST /convert-batch' => 'Batch file conversion',
                         'GET /cleanup/status' => 'Storage statistics',
@@ -266,33 +207,18 @@ try {
             }
             break;
 
-       case '/validate-key':
-        if ($requestMethod === 'POST') {
-            try {
-                // Use AuthMiddleware to check header-based authentication (consistent with other endpoints)
-                $authResult = AuthMiddleware::requireAuth();
-                
+        case '/validate-key':
+            if ($requestMethod === 'POST') {
+                AuthController::validateKey();
+            } else {
                 ResponseFormatter::sendJson(
-                    ResponseFormatter::success([
-                        'message' => 'API key is valid',
-                        'user_id' => $authResult['user_id'] ?? null,
-                        'authenticated' => true,
-                        
-                    ])
-                );
-            } catch (Exception $e) {
-                ResponseFormatter::sendJson(
-                    ResponseFormatter::unauthorized('Invalid or missing API key: ' . $e->getMessage())
+                    ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
                 );
             }
-        }
-   
-     
-        break;
+            break;
 
         case '/convert':
             if ($requestMethod === 'POST') {
-                // Check if ConversionController exists
                 if (class_exists('Convertre\\Controllers\\ConversionController')) {
                     \Convertre\Controllers\ConversionController::convert();
                 } else {
@@ -309,19 +235,6 @@ try {
 
         case '/convert-batch':
             if ($requestMethod === 'POST') {
-                // DEBUG: Let's see what we're getting
-                if (isset($_GET['debug'])) {
-                    ResponseFormatter::sendJson([
-                        'debug' => true,
-                        'FILES_structure' => $_FILES,
-                        'POST_data' => $_POST,
-                        'files_count' => count($_FILES),
-                        'files_keys' => array_keys($_FILES)
-                    ]);
-                    return;
-                }
-                
-                // Check if ConversionController exists
                 if (class_exists('Convertre\\Controllers\\ConversionController')) {
                     \Convertre\Controllers\ConversionController::convertBatch();
                 } else {
@@ -385,6 +298,7 @@ try {
             break;
 
         default:
+            // Handle download URLs
             if (preg_match('/^\/download\/(.+)$/', $path, $matches)) {
                 if ($requestMethod === 'GET') {
                     if (class_exists('Convertre\\Controllers\\ConversionController')) {
