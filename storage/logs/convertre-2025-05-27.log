@@ -1,0 +1,1154 @@
+[2025-05-27 00:16:11] DEBUG: RateLimitService initialized
+[2025-05-27 00:16:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:16:11] DEBUG: FileValidationService initialized
+[2025-05-27 00:16:11] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:16:11] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:16:11] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:16:13] DEBUG: RateLimitService initialized
+[2025-05-27 00:16:13] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:16:13] DEBUG: FileValidationService initialized
+[2025-05-27 00:16:13] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:16:13] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:16:13] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:19:04] DEBUG: RateLimitService initialized
+[2025-05-27 00:19:04] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:19:04] DEBUG: FileValidationService initialized
+[2025-05-27 00:19:04] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:19:04] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:19:04] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:39:55] DEBUG: RateLimitService initialized
+[2025-05-27 00:39:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:39:55] DEBUG: FileValidationService initialized
+[2025-05-27 00:39:55] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:39:55] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:39:55] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:40:03] DEBUG: RateLimitService initialized
+[2025-05-27 00:40:03] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:40:03] DEBUG: FileValidationService initialized
+[2025-05-27 00:40:03] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:40:03] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:40:03] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 00:40:03] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:40:03] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-05-27 00:40:03] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306403_27d74b86.jpg","success":true}
+[2025-05-27 00:40:03] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306403_27d74b86.jpg"}
+[2025-05-27 00:40:03] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:40:04] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 00:40:04] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-27 00:40:04] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748306403_27d74b86.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748306403_a2d03983.pdf","compression":9}
+[2025-05-27 00:40:04] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748306403_27d74b86.jpg' -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748306403_a2d03983.pdf'","timeout":60}
+[2025-05-27 00:40:04] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306403_27d74b86.jpg","processing_time":"0.75803089141846s"}
+[2025-05-27 00:40:04] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306403_27d74b86.jpg","success":true}
+[2025-05-27 00:40:09] DEBUG: RateLimitService initialized
+[2025-05-27 00:40:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:40:09] DEBUG: FileValidationService initialized
+[2025-05-27 00:40:09] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:40:09] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:40:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 00:40:09] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:40:09] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-05-27 00:40:09] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306409_6557fd00.jpg","success":true}
+[2025-05-27 00:40:09] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306409_6557fd00.jpg"}
+[2025-05-27 00:40:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:40:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 00:40:10] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-27 00:40:10] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748306409_6557fd00.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748306409_2fb87d89.png","compression":9}
+[2025-05-27 00:40:10] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748306409_6557fd00.jpg' -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748306409_2fb87d89.png'","timeout":60}
+[2025-05-27 00:40:10] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306409_6557fd00.jpg","processing_time":"0.64176416397095s"}
+[2025-05-27 00:40:10] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306409_6557fd00.jpg","success":true}
+[2025-05-27 00:42:47] DEBUG: RateLimitService initialized
+[2025-05-27 00:42:47] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:42:47] DEBUG: FileValidationService initialized
+[2025-05-27 00:42:47] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:42:47] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:42:47] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 00:42:47] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:42:47] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-05-27 00:42:47] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306567_a87a2c23.jpg","success":true}
+[2025-05-27 00:42:47] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306567_a87a2c23.jpg"}
+[2025-05-27 00:42:47] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:42:47] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 00:42:48] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-27 00:42:48] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748306567_a87a2c23.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748306567_34c64c08.png","compression":9}
+[2025-05-27 00:42:48] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748306567_a87a2c23.jpg' -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748306567_34c64c08.png'","timeout":60}
+[2025-05-27 00:42:48] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306567_a87a2c23.jpg","processing_time":"0.87571907043457s"}
+[2025-05-27 00:42:48] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306567_a87a2c23.jpg","success":true}
+[2025-05-27 00:42:54] DEBUG: RateLimitService initialized
+[2025-05-27 00:42:54] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:42:54] DEBUG: FileValidationService initialized
+[2025-05-27 00:42:54] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:42:54] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:42:54] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 00:42:54] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:42:54] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-05-27 00:42:54] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306574_da3df1a9.jpg","success":true}
+[2025-05-27 00:42:54] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"pdf","filename":"6ac29b65b32703305084c4936fd8402e_1748306574_da3df1a9.jpg"}
+[2025-05-27 00:42:54] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:42:54] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 00:42:55] DEBUG: ImageMagick available for JPG to pdf conversion
+[2025-05-27 00:42:55] DEBUG: ImageMagick JPG to PDF conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748306574_da3df1a9.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748306574_4d771967.pdf","quality":85}
+[2025-05-27 00:42:55] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748306574_da3df1a9.jpg' -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748306574_4d771967.pdf'","timeout":120}
+[2025-05-27 00:42:55] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"pdf","filename":"6ac29b65b32703305084c4936fd8402e_1748306574_da3df1a9.jpg","processing_time":"0.72332692146301s"}
+[2025-05-27 00:42:55] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306574_da3df1a9.jpg","success":true}
+[2025-05-27 00:42:59] DEBUG: RateLimitService initialized
+[2025-05-27 00:42:59] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:42:59] DEBUG: FileValidationService initialized
+[2025-05-27 00:42:59] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:42:59] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:42:59] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:48:37] DEBUG: RateLimitService initialized
+[2025-05-27 00:48:37] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:48:37] DEBUG: FileValidationService initialized
+[2025-05-27 00:48:37] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:48:37] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:48:37] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:48:41] DEBUG: RateLimitService initialized
+[2025-05-27 00:48:41] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:48:41] DEBUG: FileValidationService initialized
+[2025-05-27 00:48:41] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:48:41] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:48:41] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:49:16] DEBUG: RateLimitService initialized
+[2025-05-27 00:49:16] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:49:16] DEBUG: FileValidationService initialized
+[2025-05-27 00:49:16] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:49:16] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:49:16] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 00:49:16] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:49:16] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-05-27 00:49:16] DEBUG: JpgMultiFormatModule created | Context: {"target_format":"png","tool":"imagemagick"}
+[2025-05-27 00:49:16] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg","success":true}
+[2025-05-27 00:49:16] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg"}
+[2025-05-27 00:49:16] DEBUG: Checking tool availability | Context: {"tool":"/opt/homebrew/bin/magick","format":"png"}
+[2025-05-27 00:49:16] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:49:16] DEBUG: ImageMagick version | Context: {"output":"Version: ImageMagick 7.1.1-47 Q16-HDRI aarch64 22763 https://imagemagick.org\nCopyright: (C) 1999 ImageMagick Studio LLC\nLicense: https://imagemagick.org/script/license.php\nFeatures: Cipher DPC HDRI Modules OpenMP \nDelegates (built-in): bzlib fontconfig freetype heic jng jp2 jpeg jxl lcms lqr ltdl lzma openexr png raw tiff webp xml zlib zstd\nCompiler: clang (16.0.0)\n"}
+[2025-05-27 00:49:16] DEBUG: Tool available for format | Context: {"tool":"/opt/homebrew/bin/magick","format":"png"}
+[2025-05-27 00:49:16] DEBUG: Starting conversion | Context: {"from":"jpg","to":"png","input":"6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748306956_f666c04b.png","convert_path":"/opt/homebrew/bin/magick"}
+[2025-05-27 00:49:16] DEBUG: ImageMagick JPG to PNG conversion | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg' -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748306956_f666c04b.png'"}
+[2025-05-27 00:49:16] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg' -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748306956_f666c04b.png'","timeout":60}
+[2025-05-27 00:49:16] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg","processing_time":"0.31371212005615s"}
+[2025-05-27 00:49:16] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748306956_9cdff96b.jpg","success":true}
+[2025-05-27 00:49:26] DEBUG: RateLimitService initialized
+[2025-05-27 00:49:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:49:26] DEBUG: FileValidationService initialized
+[2025-05-27 00:49:26] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:49:26] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:49:26] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:51:00] DEBUG: RateLimitService initialized
+[2025-05-27 00:51:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:51:00] DEBUG: FileValidationService initialized
+[2025-05-27 00:51:00] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:51:00] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:51:00] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:54:49] DEBUG: RateLimitService initialized
+[2025-05-27 00:54:49] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:54:49] DEBUG: FileValidationService initialized
+[2025-05-27 00:54:49] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:54:49] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:54:49] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:55:55] DEBUG: RateLimitService initialized
+[2025-05-27 00:55:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:55:55] DEBUG: FileValidationService initialized
+[2025-05-27 00:55:55] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:55:55] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:55:55] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-27 00:56:04] DEBUG: RateLimitService initialized
+[2025-05-27 00:56:04] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:56:04] DEBUG: FileValidationService initialized
+[2025-05-27 00:56:04] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:56:04] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:56:04] INFO: Validation failed | Context: {"error":"Unsupported target format: bmp","field":""}
+[2025-05-27 00:56:09] DEBUG: RateLimitService initialized
+[2025-05-27 00:56:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:56:09] DEBUG: FileValidationService initialized
+[2025-05-27 00:56:09] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:56:09] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:56:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 00:56:09] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:56:09] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-05-27 00:56:09] DEBUG: JpgMultiFormatModule created | Context: {"target_format":"pdf","tool":"imagemagick"}
+[2025-05-27 00:56:09] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg","success":true}
+[2025-05-27 00:56:09] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"pdf","filename":"6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg"}
+[2025-05-27 00:56:09] DEBUG: Checking tool availability | Context: {"tool":"/opt/homebrew/bin/magick","format":"pdf"}
+[2025-05-27 00:56:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:56:09] DEBUG: ImageMagick version | Context: {"output":"Version: ImageMagick 7.1.1-47 Q16-HDRI aarch64 22763 https://imagemagick.org\nCopyright: (C) 1999 ImageMagick Studio LLC\nLicense: https://imagemagick.org/script/license.php\nFeatures: Cipher DPC HDRI Modules OpenMP \nDelegates (built-in): bzlib fontconfig freetype heic jng jp2 jpeg jxl lcms lqr ltdl lzma openexr png raw tiff webp xml zlib zstd\nCompiler: clang (16.0.0)\n"}
+[2025-05-27 00:56:09] DEBUG: Tool available for format | Context: {"tool":"/opt/homebrew/bin/magick","format":"pdf"}
+[2025-05-27 00:56:09] DEBUG: Starting conversion | Context: {"from":"jpg","to":"pdf","input":"6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748307369_bee61372.pdf","convert_path":"/opt/homebrew/bin/magick"}
+[2025-05-27 00:56:09] DEBUG: ImageMagick JPG to PDF conversion | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg' -quality 85 -page A4 -gravity center '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748307369_bee61372.pdf'"}
+[2025-05-27 00:56:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg' -quality 85 -page A4 -gravity center '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748307369_bee61372.pdf'","timeout":120}
+[2025-05-27 00:56:09] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"pdf","filename":"6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg","processing_time":"0.35478401184082s"}
+[2025-05-27 00:56:09] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307369_9de695e1.jpg","success":true}
+[2025-05-27 00:58:39] DEBUG: RateLimitService initialized
+[2025-05-27 00:58:39] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 00:58:39] DEBUG: FileValidationService initialized
+[2025-05-27 00:58:39] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 00:58:39] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 00:58:39] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"webp","file_count":1}}
+[2025-05-27 00:58:39] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 00:58:39] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgToWebpModule","conversion":"jpg_to_webp"}
+[2025-05-27 00:58:39] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307519_21807c85.jpg","success":true}
+[2025-05-27 00:58:39] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748307519_21807c85.jpg"}
+[2025-05-27 00:58:39] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 00:58:39] DEBUG: ImageMagick JPG to WEBP conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748307519_21807c85.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748307519_f976cbdc.webp"}
+[2025-05-27 00:58:39] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748307519_21807c85.jpg' -strip -auto-orient -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748307519_f976cbdc.webp'","timeout":60}
+[2025-05-27 00:58:39] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748307519_21807c85.jpg","processing_time":"0.35925388336182s"}
+[2025-05-27 00:58:39] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307519_21807c85.jpg","success":true}
+[2025-05-27 01:01:27] DEBUG: RateLimitService initialized
+[2025-05-27 01:01:27] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:01:27] DEBUG: FileValidationService initialized
+[2025-05-27 01:01:27] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:01:27] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:01:27] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"webp","file_count":1}}
+[2025-05-27 01:01:27] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-27 01:01:27] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_webp"}
+[2025-05-27 01:01:27] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307687_502446ee.jpg","success":true}
+[2025-05-27 01:01:27] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748307687_502446ee.jpg"}
+[2025-05-27 01:01:27] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:01:27] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:01:28] DEBUG: ImageMagick available for JPG to webp conversion
+[2025-05-27 01:01:28] DEBUG: ImageMagick JPG to WEBP conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748307687_502446ee.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748307687_a9fa1cc2.webp","quality":80}
+[2025-05-27 01:01:28] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748307687_502446ee.jpg' -strip -auto-orient -colorspace sRGB -quality 80 -define webp:lossless=false '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748307687_a9fa1cc2.webp'","timeout":60}
+[2025-05-27 01:01:28] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748307687_502446ee.jpg","processing_time":"0.98356914520264s"}
+[2025-05-27 01:01:28] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307687_502446ee.jpg","success":true}
+[2025-05-27 01:04:00] DEBUG: RateLimitService initialized
+[2025-05-27 01:04:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:04:00] DEBUG: FileValidationService initialized
+[2025-05-27 01:04:00] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:04:00] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:04:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"bmp","file_count":1}}
+[2025-05-27 01:04:00] DEBUG: ModuleFactory initialized with 7 modules
+[2025-05-27 01:04:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_bmp"}
+[2025-05-27 01:04:00] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307840_a564de59.jpg","success":true}
+[2025-05-27 01:04:00] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"bmp","filename":"6ac29b65b32703305084c4936fd8402e_1748307840_a564de59.jpg"}
+[2025-05-27 01:04:00] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:04:00] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:04:01] DEBUG: ImageMagick available for JPG to bmp conversion
+[2025-05-27 01:04:01] ERROR: Unsupported conversion format | Context: {"format":"bmp"}
+[2025-05-27 01:04:01] ERROR: Conversion failed | Context: {"from_format":"jpg","to_format":"bmp","filename":"6ac29b65b32703305084c4936fd8402e_1748307840_a564de59.jpg","error":"Conversion process failed"}
+[2025-05-27 01:04:01] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307840_a564de59.jpg","success":true}
+[2025-05-27 01:05:08] DEBUG: RateLimitService initialized
+[2025-05-27 01:05:08] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:05:08] DEBUG: FileValidationService initialized
+[2025-05-27 01:05:08] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:05:08] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:05:08] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"tiff","file_count":1}}
+[2025-05-27 01:05:08] DEBUG: ModuleFactory initialized with 7 modules
+[2025-05-27 01:05:08] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_tiff"}
+[2025-05-27 01:05:08] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307908_bc0d2a12.jpg","success":true}
+[2025-05-27 01:05:08] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"tiff","filename":"6ac29b65b32703305084c4936fd8402e_1748307908_bc0d2a12.jpg"}
+[2025-05-27 01:05:08] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:05:08] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:05:09] DEBUG: ImageMagick available for JPG to tiff conversion
+[2025-05-27 01:05:09] ERROR: Unsupported conversion format | Context: {"format":"tiff"}
+[2025-05-27 01:05:09] ERROR: Conversion failed | Context: {"from_format":"jpg","to_format":"tiff","filename":"6ac29b65b32703305084c4936fd8402e_1748307908_bc0d2a12.jpg","error":"Conversion process failed"}
+[2025-05-27 01:05:09] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307908_bc0d2a12.jpg","success":true}
+[2025-05-27 01:05:19] DEBUG: RateLimitService initialized
+[2025-05-27 01:05:19] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:05:19] DEBUG: FileValidationService initialized
+[2025-05-27 01:05:19] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:05:19] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:05:19] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"webp","file_count":1}}
+[2025-05-27 01:05:19] DEBUG: ModuleFactory initialized with 7 modules
+[2025-05-27 01:05:19] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_webp"}
+[2025-05-27 01:05:19] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307919_ddc26d55.jpg","success":true}
+[2025-05-27 01:05:19] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748307919_ddc26d55.jpg"}
+[2025-05-27 01:05:19] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:05:19] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:05:20] DEBUG: ImageMagick available for JPG to webp conversion
+[2025-05-27 01:05:20] DEBUG: ImageMagick JPG to WEBP conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748307919_ddc26d55.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748307919_4ccf63ec.webp","quality":80}
+[2025-05-27 01:05:20] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748307919_ddc26d55.jpg' -strip -auto-orient -colorspace sRGB -quality 80 -define webp:lossless=false '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748307919_4ccf63ec.webp'","timeout":60}
+[2025-05-27 01:05:20] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748307919_ddc26d55.jpg","processing_time":"0.79401612281799s"}
+[2025-05-27 01:05:20] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307919_ddc26d55.jpg","success":true}
+[2025-05-27 01:05:26] DEBUG: RateLimitService initialized
+[2025-05-27 01:05:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:05:26] DEBUG: FileValidationService initialized
+[2025-05-27 01:05:26] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:05:26] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:05:26] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"tiff","file_count":1}}
+[2025-05-27 01:05:26] DEBUG: ModuleFactory initialized with 7 modules
+[2025-05-27 01:05:26] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_tiff"}
+[2025-05-27 01:05:26] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307926_abfca308.jpg","success":true}
+[2025-05-27 01:05:26] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"tiff","filename":"6ac29b65b32703305084c4936fd8402e_1748307926_abfca308.jpg"}
+[2025-05-27 01:05:26] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:05:26] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:05:27] DEBUG: ImageMagick available for JPG to tiff conversion
+[2025-05-27 01:05:27] ERROR: Unsupported conversion format | Context: {"format":"tiff"}
+[2025-05-27 01:05:27] ERROR: Conversion failed | Context: {"from_format":"jpg","to_format":"tiff","filename":"6ac29b65b32703305084c4936fd8402e_1748307926_abfca308.jpg","error":"Conversion process failed"}
+[2025-05-27 01:05:27] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748307926_abfca308.jpg","success":true}
+[2025-05-27 01:17:24] DEBUG: RateLimitService initialized
+[2025-05-27 01:17:24] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:17:24] DEBUG: FileValidationService initialized
+[2025-05-27 01:17:24] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:17:24] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:17:24] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"webp","file_count":1}}
+[2025-05-27 01:17:24] DEBUG: ModuleFactory initialized with 5 modules
+[2025-05-27 01:17:24] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_webp"}
+[2025-05-27 01:17:24] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748308644_c9fba168.jpg","success":true}
+[2025-05-27 01:17:24] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748308644_c9fba168.jpg"}
+[2025-05-27 01:17:24] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:17:24] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:17:24] DEBUG: ImageMagick available for JPG to webp conversion
+[2025-05-27 01:17:24] DEBUG: ImageMagick JPG to WEBP conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748308644_c9fba168.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748308644_bc5e37de.webp","quality":80}
+[2025-05-27 01:17:24] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748308644_c9fba168.jpg' -strip -auto-orient -colorspace sRGB -quality 80 -define webp:lossless=false '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748308644_bc5e37de.webp'","timeout":60}
+[2025-05-27 01:17:24] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"webp","filename":"6ac29b65b32703305084c4936fd8402e_1748308644_c9fba168.jpg","processing_time":"0.70551013946533s"}
+[2025-05-27 01:17:24] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748308644_c9fba168.jpg","success":true}
+[2025-05-27 01:17:30] DEBUG: RateLimitService initialized
+[2025-05-27 01:17:30] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:17:30] DEBUG: FileValidationService initialized
+[2025-05-27 01:17:30] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:17:30] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:17:30] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 01:17:30] DEBUG: ModuleFactory initialized with 5 modules
+[2025-05-27 01:17:30] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-05-27 01:17:30] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748308650_a0bb8621.jpg","success":true}
+[2025-05-27 01:17:30] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748308650_a0bb8621.jpg"}
+[2025-05-27 01:17:30] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:17:30] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:17:30] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-27 01:17:30] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748308650_a0bb8621.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748308650_3a675f7a.png","compression":9}
+[2025-05-27 01:17:30] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748308650_a0bb8621.jpg' -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748308650_3a675f7a.png'","timeout":60}
+[2025-05-27 01:17:31] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748308650_a0bb8621.jpg","processing_time":"0.69251704216003s"}
+[2025-05-27 01:17:31] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748308650_a0bb8621.jpg","success":true}
+[2025-05-27 01:17:37] DEBUG: RateLimitService initialized
+[2025-05-27 01:17:37] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:17:37] DEBUG: FileValidationService initialized
+[2025-05-27 01:17:37] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-27 01:17:37] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:17:37] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:17:37] DEBUG: ModuleFactory initialized with 5 modules
+[2025-05-27 01:17:37] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-05-27 01:17:37] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748308657_72fa9a9b.jpg","success":true}
+[2025-05-27 01:17:37] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"pdf","filename":"6ac29b65b32703305084c4936fd8402e_1748308657_72fa9a9b.jpg"}
+[2025-05-27 01:17:37] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:17:37] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:17:37] DEBUG: ImageMagick available for JPG to pdf conversion
+[2025-05-27 01:17:37] DEBUG: ImageMagick JPG to PDF conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748308657_72fa9a9b.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748308657_ef0442b1.pdf","quality":85}
+[2025-05-27 01:17:37] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748308657_72fa9a9b.jpg' -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748308657_ef0442b1.pdf'","timeout":120}
+[2025-05-27 01:17:37] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"pdf","filename":"6ac29b65b32703305084c4936fd8402e_1748308657_72fa9a9b.jpg","processing_time":"0.68897008895874s"}
+[2025-05-27 01:17:37] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748308657_72fa9a9b.jpg","success":true}
+[2025-05-27 01:21:53] DEBUG: RateLimitService initialized
+[2025-05-27 01:21:53] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:21:53] DEBUG: FileValidationService initialized
+[2025-05-27 01:21:53] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-27 01:21:53] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:21:53] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:21:53] DEBUG: ModuleFactory initialized with 8 modules
+[2025-05-27 01:21:53] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_pdf"}
+[2025-05-27 01:21:53] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748308913_09fdecf4.png","success":true}
+[2025-05-27 01:21:53] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748308913_09fdecf4.png"}
+[2025-05-27 01:21:53] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:21:53] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:21:54] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-27 01:21:54] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"tile-2_1748308913_09fdecf4.png","output":"tile-2_1748308913_de9011f3.pdf","quality":85}
+[2025-05-27 01:21:54] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748308913_09fdecf4.png' -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748308913_de9011f3.pdf'","timeout":60}
+[2025-05-27 01:21:54] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748308913_09fdecf4.png","processing_time":"0.69185996055603s"}
+[2025-05-27 01:21:54] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748308913_09fdecf4.png","success":true}
+[2025-05-27 01:22:01] DEBUG: RateLimitService initialized
+[2025-05-27 01:22:01] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:22:01] DEBUG: FileValidationService initialized
+[2025-05-27 01:22:01] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-27 01:22:01] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:22:01] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 01:22:01] DEBUG: ModuleFactory initialized with 8 modules
+[2025-05-27 01:22:01] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-27 01:22:01] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748308921_a8fb5cbe.png","success":true}
+[2025-05-27 01:22:01] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748308921_a8fb5cbe.png"}
+[2025-05-27 01:22:01] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:22:01] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:22:01] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-27 01:22:01] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"tile-2_1748308921_a8fb5cbe.png","output":"tile-2_1748308921_4f2d0472.jpg","quality":85}
+[2025-05-27 01:22:01] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748308921_a8fb5cbe.png' -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748308921_4f2d0472.jpg'","timeout":60}
+[2025-05-27 01:22:01] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748308921_a8fb5cbe.png","processing_time":"0.69374418258667s"}
+[2025-05-27 01:22:01] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748308921_a8fb5cbe.png","success":true}
+[2025-05-27 01:22:09] DEBUG: RateLimitService initialized
+[2025-05-27 01:22:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:22:09] DEBUG: FileValidationService initialized
+[2025-05-27 01:22:09] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-27 01:22:09] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:22:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"webp","file_count":1}}
+[2025-05-27 01:22:09] DEBUG: ModuleFactory initialized with 8 modules
+[2025-05-27 01:22:09] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_webp"}
+[2025-05-27 01:22:09] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748308929_14bb255d.png","success":true}
+[2025-05-27 01:22:09] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748308929_14bb255d.png"}
+[2025-05-27 01:22:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:22:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:22:09] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-27 01:22:09] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"tile-2_1748308929_14bb255d.png","output":"tile-2_1748308929_d6629e0d.webp","quality":85}
+[2025-05-27 01:22:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748308929_14bb255d.png' -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748308929_d6629e0d.webp'","timeout":60}
+[2025-05-27 01:22:10] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748308929_14bb255d.png","processing_time":"0.87836480140686s"}
+[2025-05-27 01:22:10] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748308929_14bb255d.png","success":true}
+[2025-05-27 01:26:57] DEBUG: RateLimitService initialized
+[2025-05-27 01:26:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:26:57] DEBUG: FileValidationService initialized
+[2025-05-27 01:26:57] INFO: Validation failed | Context: {"error":"Unsupported format: webp","field":"format"}
+[2025-05-27 01:27:04] DEBUG: RateLimitService initialized
+[2025-05-27 01:27:04] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:27:04] DEBUG: FileValidationService initialized
+[2025-05-27 01:27:04] INFO: Validation failed | Context: {"error":"Unsupported format: webp","field":"format"}
+[2025-05-27 01:28:56] DEBUG: RateLimitService initialized
+[2025-05-27 01:28:56] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:28:56] DEBUG: FileValidationService initialized
+[2025-05-27 01:28:56] DEBUG: File validation passed | Context: {"filename":"tile-2_1748308929_d6629e0d.webp","size":46618,"mime":"image/webp"}
+[2025-05-27 01:28:56] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:28:56] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 01:28:56] DEBUG: ModuleFactory initialized with 11 modules
+[2025-05-27 01:28:56] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\WebpMultiFormatModule","conversion":"webp_to_png"}
+[2025-05-27 01:28:56] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748308929_d6629e0d_1748309336_d9d0a1eb.webp","success":true}
+[2025-05-27 01:28:56] INFO: Conversion started | Context: {"from_format":"webp","to_format":"jpg","filename":"tile-2_1748308929_d6629e0d_1748309336_d9d0a1eb.webp"}
+[2025-05-27 01:28:56] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:28:57] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i webp","timeout":10}
+[2025-05-27 01:28:57] DEBUG: WEBP input support confirmed
+[2025-05-27 01:28:57] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:28:57] DEBUG: ImageMagick available for WEBP to jpg conversion
+[2025-05-27 01:28:57] DEBUG: ImageMagick WEBP to JPG conversion | Context: {"input":"tile-2_1748308929_d6629e0d_1748309336_d9d0a1eb.webp","output":"tile-2_1748308929_d6629e0d_1748309336_2917b19d.png","quality":85}
+[2025-05-27 01:28:57] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748308929_d6629e0d_1748309336_d9d0a1eb.webp' -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748308929_d6629e0d_1748309336_2917b19d.png'","timeout":60}
+[2025-05-27 01:28:57] INFO: Conversion completed successfully | Context: {"from_format":"webp","to_format":"jpg","filename":"tile-2_1748308929_d6629e0d_1748309336_d9d0a1eb.webp","processing_time":"1.0455181598663s"}
+[2025-05-27 01:28:57] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748308929_d6629e0d_1748309336_d9d0a1eb.webp","success":true}
+[2025-05-27 01:29:05] DEBUG: RateLimitService initialized
+[2025-05-27 01:29:05] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:29:05] DEBUG: FileValidationService initialized
+[2025-05-27 01:29:05] DEBUG: File validation passed | Context: {"filename":"tile-2_1748308929_d6629e0d.webp","size":46618,"mime":"image/webp"}
+[2025-05-27 01:29:05] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:29:05] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 01:29:05] DEBUG: ModuleFactory initialized with 11 modules
+[2025-05-27 01:29:05] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\WebpMultiFormatModule","conversion":"webp_to_jpg"}
+[2025-05-27 01:29:05] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748308929_d6629e0d_1748309345_2c54433f.webp","success":true}
+[2025-05-27 01:29:05] INFO: Conversion started | Context: {"from_format":"webp","to_format":"jpg","filename":"tile-2_1748308929_d6629e0d_1748309345_2c54433f.webp"}
+[2025-05-27 01:29:05] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:29:05] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i webp","timeout":10}
+[2025-05-27 01:29:05] DEBUG: WEBP input support confirmed
+[2025-05-27 01:29:05] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:29:05] DEBUG: ImageMagick available for WEBP to jpg conversion
+[2025-05-27 01:29:05] DEBUG: ImageMagick WEBP to JPG conversion | Context: {"input":"tile-2_1748308929_d6629e0d_1748309345_2c54433f.webp","output":"tile-2_1748308929_d6629e0d_1748309345_c386321e.jpg","quality":85}
+[2025-05-27 01:29:05] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748308929_d6629e0d_1748309345_2c54433f.webp' -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748308929_d6629e0d_1748309345_c386321e.jpg'","timeout":60}
+[2025-05-27 01:29:06] INFO: Conversion completed successfully | Context: {"from_format":"webp","to_format":"jpg","filename":"tile-2_1748308929_d6629e0d_1748309345_2c54433f.webp","processing_time":"0.94490098953247s"}
+[2025-05-27 01:29:06] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748308929_d6629e0d_1748309345_2c54433f.webp","success":true}
+[2025-05-27 01:29:11] DEBUG: RateLimitService initialized
+[2025-05-27 01:29:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:29:11] DEBUG: FileValidationService initialized
+[2025-05-27 01:29:11] DEBUG: File validation passed | Context: {"filename":"tile-2_1748308929_d6629e0d.webp","size":46618,"mime":"image/webp"}
+[2025-05-27 01:29:11] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:29:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:29:11] DEBUG: ModuleFactory initialized with 11 modules
+[2025-05-27 01:29:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\WebpMultiFormatModule","conversion":"webp_to_pdf"}
+[2025-05-27 01:29:11] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748308929_d6629e0d_1748309351_affeb540.webp","success":true}
+[2025-05-27 01:29:11] INFO: Conversion started | Context: {"from_format":"webp","to_format":"jpg","filename":"tile-2_1748308929_d6629e0d_1748309351_affeb540.webp"}
+[2025-05-27 01:29:11] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:29:11] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i webp","timeout":10}
+[2025-05-27 01:29:11] DEBUG: WEBP input support confirmed
+[2025-05-27 01:29:11] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:29:12] DEBUG: ImageMagick available for WEBP to jpg conversion
+[2025-05-27 01:29:12] DEBUG: ImageMagick WEBP to JPG conversion | Context: {"input":"tile-2_1748308929_d6629e0d_1748309351_affeb540.webp","output":"tile-2_1748308929_d6629e0d_1748309351_2ad02f96.pdf","quality":85}
+[2025-05-27 01:29:12] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748308929_d6629e0d_1748309351_affeb540.webp' -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748308929_d6629e0d_1748309351_2ad02f96.pdf'","timeout":60}
+[2025-05-27 01:29:12] INFO: Conversion completed successfully | Context: {"from_format":"webp","to_format":"jpg","filename":"tile-2_1748308929_d6629e0d_1748309351_affeb540.webp","processing_time":"0.77754187583923s"}
+[2025-05-27 01:29:12] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748308929_d6629e0d_1748309351_affeb540.webp","success":true}
+[2025-05-27 01:34:35] DEBUG: RateLimitService initialized
+[2025-05-27 01:34:35] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:34:35] DEBUG: FileValidationService initialized
+[2025-05-27 01:34:35] DEBUG: File validation passed | Context: {"filename":"soundboard.heic","size":1220221,"mime":"image/heic"}
+[2025-05-27 01:34:35] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:34:35] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:34:35] DEBUG: ModuleFactory initialized with 13 modules
+[2025-05-27 01:34:35] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_pdf"}
+[2025-05-27 01:34:35] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748309675_505ec58c.heic","success":true}
+[2025-05-27 01:34:35] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748309675_505ec58c.heic"}
+[2025-05-27 01:34:35] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:34:35] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i heic","timeout":10}
+[2025-05-27 01:34:36] DEBUG: HEIC input support confirmed
+[2025-05-27 01:34:36] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:34:36] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-05-27 01:34:36] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"soundboard_1748309675_505ec58c.heic","output":"soundboard_1748309675_85d73698.pdf","quality":85}
+[2025-05-27 01:34:36] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748309675_505ec58c.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748309675_85d73698.pdf'","timeout":60}
+[2025-05-27 01:34:37] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748309675_505ec58c.heic","processing_time":"2.0670139789581s"}
+[2025-05-27 01:34:37] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748309675_505ec58c.heic","success":true}
+[2025-05-27 01:34:42] DEBUG: RateLimitService initialized
+[2025-05-27 01:34:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:34:42] DEBUG: FileValidationService initialized
+[2025-05-27 01:34:42] DEBUG: File validation passed | Context: {"filename":"soundboard.heic","size":1220221,"mime":"image/heic"}
+[2025-05-27 01:34:42] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:34:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 01:34:42] DEBUG: ModuleFactory initialized with 13 modules
+[2025-05-27 01:34:42] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-05-27 01:34:42] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748309682_cc97faf8.heic","success":true}
+[2025-05-27 01:34:42] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748309682_cc97faf8.heic"}
+[2025-05-27 01:34:42] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:34:42] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i heic","timeout":10}
+[2025-05-27 01:34:43] DEBUG: HEIC input support confirmed
+[2025-05-27 01:34:43] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:34:43] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-05-27 01:34:43] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"soundboard_1748309682_cc97faf8.heic","output":"soundboard_1748309682_763d9eae.jpg","quality":85}
+[2025-05-27 01:34:43] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748309682_cc97faf8.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748309682_763d9eae.jpg'","timeout":60}
+[2025-05-27 01:34:43] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748309682_cc97faf8.heic","processing_time":"1.266263961792s"}
+[2025-05-27 01:34:43] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748309682_cc97faf8.heic","success":true}
+[2025-05-27 01:34:50] DEBUG: RateLimitService initialized
+[2025-05-27 01:34:50] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:34:50] DEBUG: FileValidationService initialized
+[2025-05-27 01:34:50] DEBUG: File validation passed | Context: {"filename":"soundboard.heic","size":1220221,"mime":"image/heic"}
+[2025-05-27 01:34:50] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:34:50] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 01:34:50] DEBUG: ModuleFactory initialized with 13 modules
+[2025-05-27 01:34:50] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_png"}
+[2025-05-27 01:34:50] DEBUG: File operation: upload | Context: {"filename":"soundboard_1748309690_05fd3741.heic","success":true}
+[2025-05-27 01:34:50] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748309690_05fd3741.heic"}
+[2025-05-27 01:34:50] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 01:34:50] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i heic","timeout":10}
+[2025-05-27 01:34:51] DEBUG: HEIC input support confirmed
+[2025-05-27 01:34:51] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 01:34:51] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-05-27 01:34:51] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"soundboard_1748309690_05fd3741.heic","output":"soundboard_1748309690_e5cd658a.png","quality":85}
+[2025-05-27 01:34:51] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/soundboard_1748309690_05fd3741.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/soundboard_1748309690_e5cd658a.png'","timeout":60}
+[2025-05-27 01:35:04] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"soundboard_1748309690_05fd3741.heic","processing_time":"14.041320085526s"}
+[2025-05-27 01:35:04] DEBUG: File operation: delete | Context: {"filename":"soundboard_1748309690_05fd3741.heic","success":true}
+[2025-05-27 01:42:30] DEBUG: RateLimitService initialized
+[2025-05-27 01:42:30] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:42:30] DEBUG: FileValidationService initialized
+[2025-05-27 01:42:30] INFO: Validation failed | Context: {"error":"Unsupported format: doc","field":"format"}
+[2025-05-27 01:43:10] DEBUG: RateLimitService initialized
+[2025-05-27 01:43:10] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:43:10] DEBUG: FileValidationService initialized
+[2025-05-27 01:43:10] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-05-27 01:43:10] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:43:10] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:43:10] DEBUG: ModuleFactory initialized with 14 modules
+[2025-05-27 01:43:10] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-05-27 01:43:10] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748310190_2905327b.doc","success":true}
+[2025-05-27 01:43:10] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748310190_2905327b.doc"}
+[2025-05-27 01:43:10] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 01:43:11] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 01:43:11] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748310190_2905327b.doc","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683518af367f7","timeout":300}
+[2025-05-27 01:43:11] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683518af367f7' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748310190_2905327b.doc'","timeout":300}
+[2025-05-27 01:43:12] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683518af367f7"}
+[2025-05-27 01:43:12] INFO: Conversion completed successfully | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748310190_2905327b.doc","processing_time":"1.580090045929s"}
+[2025-05-27 01:43:12] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748310190_2905327b.doc","success":true}
+[2025-05-27 01:45:41] DEBUG: RateLimitService initialized
+[2025-05-27 01:45:41] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:45:41] DEBUG: FileValidationService initialized
+[2025-05-27 01:45:41] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-05-27 01:45:41] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:45:41] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:45:41] DEBUG: ModuleFactory initialized with 15 modules
+[2025-05-27 01:45:41] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-05-27 01:45:41] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748310341_e0f2f58e.odt","success":true}
+[2025-05-27 01:45:41] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748310341_e0f2f58e.odt"}
+[2025-05-27 01:45:41] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 01:45:41] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 01:45:41] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748310341_e0f2f58e.odt","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351945b4d3f","timeout":300}
+[2025-05-27 01:45:41] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351945b4d3f' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748310341_e0f2f58e.odt'","timeout":300}
+[2025-05-27 01:45:42] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351945b4d3f"}
+[2025-05-27 01:45:42] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748310341_e0f2f58e.odt","processing_time":"0.70824313163757s"}
+[2025-05-27 01:45:42] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748310341_e0f2f58e.odt","success":true}
+[2025-05-27 01:48:17] DEBUG: RateLimitService initialized
+[2025-05-27 01:48:17] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:48:17] DEBUG: FileValidationService initialized
+[2025-05-27 01:48:17] DEBUG: File validation passed | Context: {"filename":"file_example_XLSX_10.xlsx","size":5425,"mime":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}
+[2025-05-27 01:48:17] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:48:17] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:48:17] DEBUG: ModuleFactory initialized with 16 modules
+[2025-05-27 01:48:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\XlsxToPdfModule","conversion":"xlsx_to_pdf"}
+[2025-05-27 01:48:17] DEBUG: File operation: upload | Context: {"filename":"file_example_XLSX_10_1748310497_8b4f701a.xlsx","success":true}
+[2025-05-27 01:48:17] INFO: Conversion started | Context: {"from_format":"xlsx","to_format":"pdf","filename":"file_example_XLSX_10_1748310497_8b4f701a.xlsx"}
+[2025-05-27 01:48:17] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 01:48:17] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 01:48:17] DEBUG: LibreOffice XLSX conversion | Context: {"input":"file_example_XLSX_10_1748310497_8b4f701a.xlsx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683519e1b56ef","timeout":300}
+[2025-05-27 01:48:17] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683519e1b56ef' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file_example_XLSX_10_1748310497_8b4f701a.xlsx'","timeout":300}
+[2025-05-27 01:48:18] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_683519e1b56ef"}
+[2025-05-27 01:48:18] INFO: Conversion completed successfully | Context: {"from_format":"xlsx","to_format":"pdf","filename":"file_example_XLSX_10_1748310497_8b4f701a.xlsx","processing_time":"1.1512610912323s"}
+[2025-05-27 01:48:18] DEBUG: File operation: delete | Context: {"filename":"file_example_XLSX_10_1748310497_8b4f701a.xlsx","success":true}
+[2025-05-27 01:50:58] DEBUG: RateLimitService initialized
+[2025-05-27 01:50:58] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:50:58] DEBUG: FileValidationService initialized
+[2025-05-27 01:50:58] DEBUG: File validation passed | Context: {"filename":"sample1.pptx","size":34789,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-05-27 01:50:58] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:50:58] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:50:58] DEBUG: ModuleFactory initialized with 17 modules
+[2025-05-27 01:50:58] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-05-27 01:50:58] DEBUG: File operation: upload | Context: {"filename":"sample1_1748310658_3448f3d3.pptx","success":true}
+[2025-05-27 01:50:58] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample1_1748310658_3448f3d3.pptx"}
+[2025-05-27 01:50:59] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 01:50:59] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 01:50:59] DEBUG: LibreOffice PPTX conversion | Context: {"input":"sample1_1748310658_3448f3d3.pptx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351a832fc4f","timeout":300}
+[2025-05-27 01:50:59] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351a832fc4f' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748310658_3448f3d3.pptx'","timeout":300}
+[2025-05-27 01:51:00] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351a832fc4f"}
+[2025-05-27 01:51:00] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample1_1748310658_3448f3d3.pptx","processing_time":"1.3053779602051s"}
+[2025-05-27 01:51:00] DEBUG: File operation: delete | Context: {"filename":"sample1_1748310658_3448f3d3.pptx","success":true}
+[2025-05-27 01:53:42] DEBUG: RateLimitService initialized
+[2025-05-27 01:53:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:53:42] DEBUG: FileValidationService initialized
+[2025-05-27 01:53:42] INFO: Validation failed | Context: {"error":"Unsupported format: epub","field":"format"}
+[2025-05-27 01:54:03] DEBUG: RateLimitService initialized
+[2025-05-27 01:54:03] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 01:54:03] DEBUG: FileValidationService initialized
+[2025-05-27 01:54:03] DEBUG: File validation passed | Context: {"filename":"accessible_epub_3.epub","size":4051892,"mime":"application/epub+zip"}
+[2025-05-27 01:54:03] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 01:54:03] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 01:54:03] DEBUG: ModuleFactory initialized with 18 modules
+[2025-05-27 01:54:03] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\EpubToPdfModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:05:57] DEBUG: RateLimitService initialized
+[2025-05-27 02:05:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:05:57] DEBUG: FileValidationService initialized
+[2025-05-27 02:05:57] INFO: Validation failed | Context: {"error":"Unsupported format: rtf","field":"format"}
+[2025-05-27 02:06:15] DEBUG: RateLimitService initialized
+[2025-05-27 02:06:15] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:06:15] DEBUG: FileValidationService initialized
+[2025-05-27 02:06:15] INFO: Validation failed | Context: {"error":"Unsupported format: rtf","field":"format"}
+[2025-05-27 02:06:56] DEBUG: RateLimitService initialized
+[2025-05-27 02:06:56] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:06:56] DEBUG: FileValidationService initialized
+[2025-05-27 02:06:56] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.rtf","size":100605,"mime":"text/rtf"}
+[2025-05-27 02:06:56] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:06:56] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:06:56] DEBUG: ModuleFactory initialized with 19 modules
+[2025-05-27 02:06:56] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\RtfToPdfModule","conversion":"rtf_to_pdf"}
+[2025-05-27 02:06:56] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748311616_c7b4db83.rtf","success":true}
+[2025-05-27 02:06:56] INFO: Conversion started | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748311616_c7b4db83.rtf"}
+[2025-05-27 02:06:56] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:06:56] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 02:06:56] DEBUG: LibreOffice RTF conversion | Context: {"input":"file-sample_100kB_1748311616_c7b4db83.rtf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351e40afb7d","timeout":300}
+[2025-05-27 02:06:56] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351e40afb7d' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/file-sample_100kB_1748311616_c7b4db83.rtf'","timeout":300}
+[2025-05-27 02:06:57] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351e40afb7d"}
+[2025-05-27 02:06:57] INFO: Conversion completed successfully | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748311616_c7b4db83.rtf","processing_time":"1.657341003418s"}
+[2025-05-27 02:06:57] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748311616_c7b4db83.rtf","success":true}
+[2025-05-27 02:09:17] DEBUG: RateLimitService initialized
+[2025-05-27 02:09:17] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:09:17] DEBUG: FileValidationService initialized
+[2025-05-27 02:09:17] DEBUG: File validation passed | Context: {"filename":"sample3.txt","size":3541,"mime":"text/plain"}
+[2025-05-27 02:09:17] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:09:17] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:09:17] DEBUG: ModuleFactory initialized with 19 modules
+[2025-05-27 02:09:17] ERROR: Conversion endpoint error | Context: {"error":"No module available for txt to pdf conversion","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":40}
+[2025-05-27 02:09:43] DEBUG: RateLimitService initialized
+[2025-05-27 02:09:43] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:09:43] DEBUG: FileValidationService initialized
+[2025-05-27 02:09:43] DEBUG: File validation passed | Context: {"filename":"sample3.txt","size":3541,"mime":"text/plain"}
+[2025-05-27 02:09:43] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:09:43] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:09:43] DEBUG: ModuleFactory initialized with 20 modules
+[2025-05-27 02:09:43] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TxtToPdfModule","conversion":"txt_to_pdf"}
+[2025-05-27 02:09:43] DEBUG: File operation: upload | Context: {"filename":"sample3_1748311783_c9ac3335.txt","success":true}
+[2025-05-27 02:09:43] INFO: Conversion started | Context: {"from_format":"txt","to_format":"pdf","filename":"sample3_1748311783_c9ac3335.txt"}
+[2025-05-27 02:09:43] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:09:43] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 02:09:43] DEBUG: LibreOffice TXT conversion | Context: {"input":"sample3_1748311783_c9ac3335.txt","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351ee762248","timeout":300}
+[2025-05-27 02:09:43] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351ee762248' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample3_1748311783_c9ac3335.txt'","timeout":300}
+[2025-05-27 02:09:43] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68351ee762248"}
+[2025-05-27 02:09:43] INFO: Conversion completed successfully | Context: {"from_format":"txt","to_format":"pdf","filename":"sample3_1748311783_c9ac3335.txt","processing_time":"0.62487196922302s"}
+[2025-05-27 02:09:43] DEBUG: File operation: delete | Context: {"filename":"sample3_1748311783_c9ac3335.txt","success":true}
+[2025-05-27 02:17:11] DEBUG: RateLimitService initialized
+[2025-05-27 02:17:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:17:11] DEBUG: FileValidationService initialized
+[2025-05-27 02:17:11] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.gif","size":194757,"mime":"image/gif"}
+[2025-05-27 02:17:11] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:17:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:17:11] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:17:11] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\GifMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:18:26] DEBUG: RateLimitService initialized
+[2025-05-27 02:18:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:18:26] DEBUG: FileValidationService initialized
+[2025-05-27 02:18:26] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.gif","size":194757,"mime":"image/gif"}
+[2025-05-27 02:18:26] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:18:26] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:18:26] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:18:26] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_png"}
+[2025-05-27 02:18:26] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312306_91594c19.gif","success":true}
+[2025-05-27 02:18:26] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748312306_91594c19.gif"}
+[2025-05-27 02:18:26] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:18:26] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:18:27] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-05-27 02:18:27] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"sample_640__426_1748312306_91594c19.gif","output":"sample_640__426_1748312306_4e1bfa1a.png","quality":85}
+[2025-05-27 02:18:27] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312306_91594c19.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312306_4e1bfa1a.png'","timeout":60}
+[2025-05-27 02:18:27] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748312306_91594c19.gif","processing_time":"0.86425399780273s"}
+[2025-05-27 02:18:27] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312306_91594c19.gif","success":true}
+[2025-05-27 02:18:32] DEBUG: RateLimitService initialized
+[2025-05-27 02:18:32] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:18:32] DEBUG: FileValidationService initialized
+[2025-05-27 02:18:32] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.gif","size":194757,"mime":"image/gif"}
+[2025-05-27 02:18:32] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:18:32] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:18:32] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:18:32] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-05-27 02:18:32] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312312_b5d204a7.gif","success":true}
+[2025-05-27 02:18:32] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748312312_b5d204a7.gif"}
+[2025-05-27 02:18:32] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:18:32] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:18:32] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-05-27 02:18:32] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"sample_640__426_1748312312_b5d204a7.gif","output":"sample_640__426_1748312312_b55bd048.jpg","quality":85}
+[2025-05-27 02:18:32] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312312_b5d204a7.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312312_b55bd048.jpg'","timeout":60}
+[2025-05-27 02:18:32] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748312312_b5d204a7.gif","processing_time":"0.69902920722961s"}
+[2025-05-27 02:18:32] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312312_b5d204a7.gif","success":true}
+[2025-05-27 02:18:40] DEBUG: RateLimitService initialized
+[2025-05-27 02:18:40] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:18:40] DEBUG: FileValidationService initialized
+[2025-05-27 02:18:40] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.gif","size":194757,"mime":"image/gif"}
+[2025-05-27 02:18:40] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:18:40] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:18:40] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:18:40] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_pdf"}
+[2025-05-27 02:18:40] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312320_0d235e20.gif","success":true}
+[2025-05-27 02:18:40] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748312320_0d235e20.gif"}
+[2025-05-27 02:18:40] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:18:41] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:18:41] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-05-27 02:18:41] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"sample_640__426_1748312320_0d235e20.gif","output":"sample_640__426_1748312320_6a1f16e6.pdf","quality":85}
+[2025-05-27 02:18:41] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312320_0d235e20.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312320_6a1f16e6.pdf'","timeout":60}
+[2025-05-27 02:18:41] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"sample_640__426_1748312320_0d235e20.gif","processing_time":"0.6297299861908s"}
+[2025-05-27 02:18:41] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312320_0d235e20.gif","success":true}
+[2025-05-27 02:20:45] DEBUG: RateLimitService initialized
+[2025-05-27 02:20:45] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:20:45] DEBUG: FileValidationService initialized
+[2025-05-27 02:20:45] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.bmp","size":818058,"mime":"image/bmp"}
+[2025-05-27 02:20:45] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:20:45] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:20:45] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:20:45] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\BmpMultiFormatModule","conversion":"bmp_to_pdf"}
+[2025-05-27 02:20:45] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312445_0bd7ef0b.bmp","success":true}
+[2025-05-27 02:20:45] INFO: Conversion started | Context: {"from_format":"bmp","to_format":"jpg","filename":"sample_640__426_1748312445_0bd7ef0b.bmp"}
+[2025-05-27 02:20:45] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:20:45] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:20:46] DEBUG: ImageMagick available for BMP to jpg conversion
+[2025-05-27 02:20:46] DEBUG: ImageMagick BMP to JPG conversion | Context: {"input":"sample_640__426_1748312445_0bd7ef0b.bmp","output":"sample_640__426_1748312445_da61c273.pdf","quality":85}
+[2025-05-27 02:20:46] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312445_0bd7ef0b.bmp' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312445_da61c273.pdf'","timeout":60}
+[2025-05-27 02:20:46] INFO: Conversion completed successfully | Context: {"from_format":"bmp","to_format":"jpg","filename":"sample_640__426_1748312445_0bd7ef0b.bmp","processing_time":"0.71173405647278s"}
+[2025-05-27 02:20:46] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312445_0bd7ef0b.bmp","success":true}
+[2025-05-27 02:20:50] DEBUG: RateLimitService initialized
+[2025-05-27 02:20:50] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:20:50] DEBUG: FileValidationService initialized
+[2025-05-27 02:20:50] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.bmp","size":818058,"mime":"image/bmp"}
+[2025-05-27 02:20:50] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:20:50] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:20:50] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:20:50] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\BmpMultiFormatModule","conversion":"bmp_to_jpg"}
+[2025-05-27 02:20:50] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312450_f3461c3b.bmp","success":true}
+[2025-05-27 02:20:50] INFO: Conversion started | Context: {"from_format":"bmp","to_format":"jpg","filename":"sample_640__426_1748312450_f3461c3b.bmp"}
+[2025-05-27 02:20:50] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:20:50] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:20:51] DEBUG: ImageMagick available for BMP to jpg conversion
+[2025-05-27 02:20:51] DEBUG: ImageMagick BMP to JPG conversion | Context: {"input":"sample_640__426_1748312450_f3461c3b.bmp","output":"sample_640__426_1748312450_a5aa8396.jpg","quality":85}
+[2025-05-27 02:20:51] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312450_f3461c3b.bmp' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312450_a5aa8396.jpg'","timeout":60}
+[2025-05-27 02:20:51] INFO: Conversion completed successfully | Context: {"from_format":"bmp","to_format":"jpg","filename":"sample_640__426_1748312450_f3461c3b.bmp","processing_time":"0.6725480556488s"}
+[2025-05-27 02:20:51] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312450_f3461c3b.bmp","success":true}
+[2025-05-27 02:20:55] DEBUG: RateLimitService initialized
+[2025-05-27 02:20:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:20:55] DEBUG: FileValidationService initialized
+[2025-05-27 02:20:55] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.bmp","size":818058,"mime":"image/bmp"}
+[2025-05-27 02:20:55] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:20:55] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:20:55] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:20:55] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\BmpMultiFormatModule","conversion":"bmp_to_png"}
+[2025-05-27 02:20:55] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312455_0e516228.bmp","success":true}
+[2025-05-27 02:20:55] INFO: Conversion started | Context: {"from_format":"bmp","to_format":"jpg","filename":"sample_640__426_1748312455_0e516228.bmp"}
+[2025-05-27 02:20:55] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:20:55] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:20:55] DEBUG: ImageMagick available for BMP to jpg conversion
+[2025-05-27 02:20:55] DEBUG: ImageMagick BMP to JPG conversion | Context: {"input":"sample_640__426_1748312455_0e516228.bmp","output":"sample_640__426_1748312455_a6e8486a.png","quality":85}
+[2025-05-27 02:20:55] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312455_0e516228.bmp' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312455_a6e8486a.png'","timeout":60}
+[2025-05-27 02:20:55] INFO: Conversion completed successfully | Context: {"from_format":"bmp","to_format":"jpg","filename":"sample_640__426_1748312455_0e516228.bmp","processing_time":"0.62615609169006s"}
+[2025-05-27 02:20:55] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312455_0e516228.bmp","success":true}
+[2025-05-27 02:22:23] DEBUG: RateLimitService initialized
+[2025-05-27 02:22:23] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:22:23] DEBUG: FileValidationService initialized
+[2025-05-27 02:22:23] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.tiff","size":818184,"mime":"image/tiff"}
+[2025-05-27 02:22:23] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:22:23] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:22:23] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:22:23] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_png"}
+[2025-05-27 02:22:23] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312543_8d92ed27.tiff","success":true}
+[2025-05-27 02:22:23] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"jpg","filename":"sample_640__426_1748312543_8d92ed27.tiff"}
+[2025-05-27 02:22:23] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:22:23] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:22:24] DEBUG: ImageMagick available for TIFF to jpg conversion
+[2025-05-27 02:22:24] DEBUG: ImageMagick TIFF to JPG conversion | Context: {"input":"sample_640__426_1748312543_8d92ed27.tiff","output":"sample_640__426_1748312543_2b36d910.png","quality":85}
+[2025-05-27 02:22:24] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312543_8d92ed27.tiff'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312543_2b36d910.png'","timeout":60}
+[2025-05-27 02:22:24] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"jpg","filename":"sample_640__426_1748312543_8d92ed27.tiff","processing_time":"0.8240430355072s"}
+[2025-05-27 02:22:24] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312543_8d92ed27.tiff","success":true}
+[2025-05-27 02:22:29] DEBUG: RateLimitService initialized
+[2025-05-27 02:22:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:22:29] DEBUG: FileValidationService initialized
+[2025-05-27 02:22:29] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.tiff","size":818184,"mime":"image/tiff"}
+[2025-05-27 02:22:29] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:22:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:22:29] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:22:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_pdf"}
+[2025-05-27 02:22:29] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312549_a44ac9f2.tiff","success":true}
+[2025-05-27 02:22:29] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"jpg","filename":"sample_640__426_1748312549_a44ac9f2.tiff"}
+[2025-05-27 02:22:29] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:22:30] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:22:30] DEBUG: ImageMagick available for TIFF to jpg conversion
+[2025-05-27 02:22:30] DEBUG: ImageMagick TIFF to JPG conversion | Context: {"input":"sample_640__426_1748312549_a44ac9f2.tiff","output":"sample_640__426_1748312549_dd949c6c.pdf","quality":85}
+[2025-05-27 02:22:30] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312549_a44ac9f2.tiff'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312549_dd949c6c.pdf'","timeout":60}
+[2025-05-27 02:22:30] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"jpg","filename":"sample_640__426_1748312549_a44ac9f2.tiff","processing_time":"0.70533514022827s"}
+[2025-05-27 02:22:30] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312549_a44ac9f2.tiff","success":true}
+[2025-05-27 02:22:42] DEBUG: RateLimitService initialized
+[2025-05-27 02:22:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:22:42] DEBUG: FileValidationService initialized
+[2025-05-27 02:22:42] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.tiff","size":818184,"mime":"image/tiff"}
+[2025-05-27 02:22:42] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:22:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:22:42] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:22:42] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_jpg"}
+[2025-05-27 02:22:42] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312562_f3ddfe44.tiff","success":true}
+[2025-05-27 02:22:42] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"jpg","filename":"sample_640__426_1748312562_f3ddfe44.tiff"}
+[2025-05-27 02:22:42] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:22:42] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:22:42] DEBUG: ImageMagick available for TIFF to jpg conversion
+[2025-05-27 02:22:42] DEBUG: ImageMagick TIFF to JPG conversion | Context: {"input":"sample_640__426_1748312562_f3ddfe44.tiff","output":"sample_640__426_1748312562_4c915e9b.jpg","quality":85}
+[2025-05-27 02:22:42] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312562_f3ddfe44.tiff'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312562_4c915e9b.jpg'","timeout":60}
+[2025-05-27 02:22:43] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"jpg","filename":"sample_640__426_1748312562_f3ddfe44.tiff","processing_time":"0.81098413467407s"}
+[2025-05-27 02:22:43] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312562_f3ddfe44.tiff","success":true}
+[2025-05-27 02:24:06] DEBUG: RateLimitService initialized
+[2025-05-27 02:24:06] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:24:06] DEBUG: FileValidationService initialized
+[2025-05-27 02:24:06] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.svg","size":119951,"mime":"image/svg+xml"}
+[2025-05-27 02:24:06] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:24:06] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:24:06] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:24:06] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\SvgMultiFormatModule","conversion":"svg_to_jpg"}
+[2025-05-27 02:24:06] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312646_f2db69b3.svg","success":true}
+[2025-05-27 02:24:06] INFO: Conversion started | Context: {"from_format":"svg","to_format":"png","filename":"sample_640__426_1748312646_f2db69b3.svg"}
+[2025-05-27 02:24:06] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:24:07] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i svg","timeout":10}
+[2025-05-27 02:24:07] DEBUG: SVG input support confirmed
+[2025-05-27 02:24:07] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:24:07] DEBUG: ImageMagick available for SVG to png conversion
+[2025-05-27 02:24:07] DEBUG: ImageMagick SVG to PNG conversion | Context: {"input":"sample_640__426_1748312646_f2db69b3.svg","output":"sample_640__426_1748312646_9f37bd66.jpg","compression":9,"density":300}
+[2025-05-27 02:24:07] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -density 300 '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312646_f2db69b3.svg' -strip -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312646_9f37bd66.jpg'","timeout":120}
+[2025-05-27 02:24:08] INFO: Conversion completed successfully | Context: {"from_format":"svg","to_format":"png","filename":"sample_640__426_1748312646_f2db69b3.svg","processing_time":"1.2944710254669s"}
+[2025-05-27 02:24:08] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312646_f2db69b3.svg","success":true}
+[2025-05-27 02:24:14] DEBUG: RateLimitService initialized
+[2025-05-27 02:24:14] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:24:14] DEBUG: FileValidationService initialized
+[2025-05-27 02:24:14] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.svg","size":119951,"mime":"image/svg+xml"}
+[2025-05-27 02:24:14] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:24:14] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:24:14] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:24:14] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\SvgMultiFormatModule","conversion":"svg_to_png"}
+[2025-05-27 02:24:14] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312654_bb9e61ae.svg","success":true}
+[2025-05-27 02:24:14] INFO: Conversion started | Context: {"from_format":"svg","to_format":"png","filename":"sample_640__426_1748312654_bb9e61ae.svg"}
+[2025-05-27 02:24:14] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:24:14] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i svg","timeout":10}
+[2025-05-27 02:24:15] DEBUG: SVG input support confirmed
+[2025-05-27 02:24:15] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:24:15] DEBUG: ImageMagick available for SVG to png conversion
+[2025-05-27 02:24:15] DEBUG: ImageMagick SVG to PNG conversion | Context: {"input":"sample_640__426_1748312654_bb9e61ae.svg","output":"sample_640__426_1748312654_73bbfb30.png","compression":9,"density":300}
+[2025-05-27 02:24:15] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -density 300 '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312654_bb9e61ae.svg' -strip -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312654_73bbfb30.png'","timeout":120}
+[2025-05-27 02:24:15] INFO: Conversion completed successfully | Context: {"from_format":"svg","to_format":"png","filename":"sample_640__426_1748312654_bb9e61ae.svg","processing_time":"1.1627240180969s"}
+[2025-05-27 02:24:15] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312654_bb9e61ae.svg","success":true}
+[2025-05-27 02:24:21] DEBUG: RateLimitService initialized
+[2025-05-27 02:24:21] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:24:21] DEBUG: FileValidationService initialized
+[2025-05-27 02:24:21] DEBUG: File validation passed | Context: {"filename":"sample_640\u00d7426.svg","size":119951,"mime":"image/svg+xml"}
+[2025-05-27 02:24:21] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:24:21] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 02:24:21] DEBUG: ModuleFactory initialized with 32 modules
+[2025-05-27 02:24:21] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\SvgMultiFormatModule","conversion":"svg_to_pdf"}
+[2025-05-27 02:24:21] DEBUG: File operation: upload | Context: {"filename":"sample_640__426_1748312661_24af2efb.svg","success":true}
+[2025-05-27 02:24:21] INFO: Conversion started | Context: {"from_format":"svg","to_format":"png","filename":"sample_640__426_1748312661_24af2efb.svg"}
+[2025-05-27 02:24:21] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:24:21] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i svg","timeout":10}
+[2025-05-27 02:24:21] DEBUG: SVG input support confirmed
+[2025-05-27 02:24:21] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format","timeout":10}
+[2025-05-27 02:24:22] DEBUG: ImageMagick available for SVG to png conversion
+[2025-05-27 02:24:22] DEBUG: ImageMagick SVG to PNG conversion | Context: {"input":"sample_640__426_1748312661_24af2efb.svg","output":"sample_640__426_1748312661_4e951c4a.pdf","compression":9,"density":300}
+[2025-05-27 02:24:22] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -density 300 '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample_640__426_1748312661_24af2efb.svg' -strip -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample_640__426_1748312661_4e951c4a.pdf'","timeout":120}
+[2025-05-27 02:24:22] INFO: Conversion completed successfully | Context: {"from_format":"svg","to_format":"png","filename":"sample_640__426_1748312661_24af2efb.svg","processing_time":"1.2162141799927s"}
+[2025-05-27 02:24:22] DEBUG: File operation: delete | Context: {"filename":"sample_640__426_1748312661_24af2efb.svg","success":true}
+[2025-05-27 02:28:40] DEBUG: RateLimitService initialized
+[2025-05-27 02:28:40] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:28:40] DEBUG: FileValidationService initialized
+[2025-05-27 02:28:40] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:28:40] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:28:40] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:28:40] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:28:40] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfToWebpModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:29:51] DEBUG: RateLimitService initialized
+[2025-05-27 02:29:51] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:29:51] DEBUG: FileValidationService initialized
+[2025-05-27 02:29:51] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:29:51] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:29:51] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:29:51] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:29:51] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfToWebpModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:30:09] DEBUG: RateLimitService initialized
+[2025-05-27 02:30:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:30:09] DEBUG: FileValidationService initialized
+[2025-05-27 02:30:09] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:30:09] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:30:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:30:09] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:30:09] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:30:38] DEBUG: RateLimitService initialized
+[2025-05-27 02:30:38] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:30:38] DEBUG: FileValidationService initialized
+[2025-05-27 02:30:38] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:30:38] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:30:38] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:30:38] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:30:38] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-27 02:30:38] DEBUG: File operation: upload | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313038_2bd65a4b.pdf","success":true}
+[2025-05-27 02:30:38] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313038_2bd65a4b.pdf"}
+[2025-05-27 02:30:38] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:30:38] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i pdf","timeout":10}
+[2025-05-27 02:30:38] DEBUG: PDF input support confirmed
+[2025-05-27 02:30:38] DEBUG: ImageMagick available for PDF to jpg conversion
+[2025-05-27 02:30:38] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313038_2bd65a4b.pdf'","timeout":30}
+[2025-05-27 02:30:38] WARNING: Could not identify PDF pages | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313038_2bd65a4b.pdf'","error":"sh: gs: command not found\nidentify: FailedToExecuteCommand `'gs' -sstdout=%stderr -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 '-sDEVICE=png16malpha' -dTextAlphaBits=4 -dGraphicsAlphaBits=4 '-r2.0x2.0' -dPrinted=false  '-sOutputFile=/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-lbfDws2mcJqI5AqS6XGZXdQnz_c6gGDW%d' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-gcrSSHg03Y9f8QxLZ03t9GH4Crothciy' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-rqYUQWo3nk1MfHFk0eWM2LhVhnb8nfmN'' (32512) @ error/ghostscript-private.h/ExecuteGhostscriptCommand/75.\n"}
+[2025-05-27 02:30:38] ERROR: Could not determine PDF page count or PDF is empty
+[2025-05-27 02:30:38] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313038_2bd65a4b.pdf","error":"Conversion process failed"}
+[2025-05-27 02:30:38] DEBUG: File operation: delete | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313038_2bd65a4b.pdf","success":true}
+[2025-05-27 02:30:46] DEBUG: RateLimitService initialized
+[2025-05-27 02:30:46] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:30:46] DEBUG: FileValidationService initialized
+[2025-05-27 02:30:46] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:30:46] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:30:46] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:30:46] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:30:46] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_png"}
+[2025-05-27 02:30:46] DEBUG: File operation: upload | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313046_9f691f9c.pdf","success":true}
+[2025-05-27 02:30:46] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313046_9f691f9c.pdf"}
+[2025-05-27 02:30:46] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:30:47] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i pdf","timeout":10}
+[2025-05-27 02:30:47] DEBUG: PDF input support confirmed
+[2025-05-27 02:30:47] DEBUG: ImageMagick available for PDF to jpg conversion
+[2025-05-27 02:30:47] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313046_9f691f9c.pdf'","timeout":30}
+[2025-05-27 02:30:47] WARNING: Could not identify PDF pages | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313046_9f691f9c.pdf'","error":"sh: gs: command not found\nidentify: FailedToExecuteCommand `'gs' -sstdout=%stderr -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 '-sDEVICE=png16malpha' -dTextAlphaBits=4 -dGraphicsAlphaBits=4 '-r2.0x2.0' -dPrinted=false  '-sOutputFile=/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-mx-Ed4tj71-psiypcVeUJOlT-x0VNadl%d' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-gRODvLdR2iMEGJA9-PMi35_6PyMC41p2' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-SA3AP4V6qe_z_SdU3Xv4XaPenSehfGOg'' (32512) @ error/ghostscript-private.h/ExecuteGhostscriptCommand/75.\n"}
+[2025-05-27 02:30:47] ERROR: Could not determine PDF page count or PDF is empty
+[2025-05-27 02:30:47] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313046_9f691f9c.pdf","error":"Conversion process failed"}
+[2025-05-27 02:30:47] DEBUG: File operation: delete | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313046_9f691f9c.pdf","success":true}
+[2025-05-27 02:31:07] DEBUG: RateLimitService initialized
+[2025-05-27 02:31:07] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:31:07] DEBUG: FileValidationService initialized
+[2025-05-27 02:31:07] DEBUG: File validation passed | Context: {"filename":"Nick Seegobin Resume GD.pdf","size":435431,"mime":"application/pdf"}
+[2025-05-27 02:31:07] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:31:07] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:31:07] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:31:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_png"}
+[2025-05-27 02:31:07] DEBUG: File operation: upload | Context: {"filename":"Nick_Seegobin_Resume_GD_1748313067_1a14436a.pdf","success":true}
+[2025-05-27 02:31:07] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_GD_1748313067_1a14436a.pdf"}
+[2025-05-27 02:31:07] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:31:07] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i pdf","timeout":10}
+[2025-05-27 02:31:08] DEBUG: PDF input support confirmed
+[2025-05-27 02:31:08] DEBUG: ImageMagick available for PDF to jpg conversion
+[2025-05-27 02:31:08] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_GD_1748313067_1a14436a.pdf'","timeout":30}
+[2025-05-27 02:31:08] WARNING: Could not identify PDF pages | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_GD_1748313067_1a14436a.pdf'","error":"sh: gs: command not found\nidentify: FailedToExecuteCommand `'gs' -sstdout=%stderr -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 '-sDEVICE=pamcmyk32' -dTextAlphaBits=4 -dGraphicsAlphaBits=4 '-r2.0x2.0' -dPrinted=false  '-sOutputFile=/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-XU078Dpwsq5kdY0-zw56YBuxzZ2qSQXz%d' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-w3uZX87geGDLZEHCTauVNJqhGOCtCqe8' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-3_cYt_lmbfR32RAcdRUkHol_5rvzGMix'' (32512) @ error/ghostscript-private.h/ExecuteGhostscriptCommand/75.\n"}
+[2025-05-27 02:31:08] ERROR: Could not determine PDF page count or PDF is empty
+[2025-05-27 02:31:08] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_GD_1748313067_1a14436a.pdf","error":"Conversion process failed"}
+[2025-05-27 02:31:08] DEBUG: File operation: delete | Context: {"filename":"Nick_Seegobin_Resume_GD_1748313067_1a14436a.pdf","success":true}
+[2025-05-27 02:31:13] DEBUG: RateLimitService initialized
+[2025-05-27 02:31:13] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:31:13] DEBUG: FileValidationService initialized
+[2025-05-27 02:31:13] DEBUG: File validation passed | Context: {"filename":"Nick Seegobin Resume GD.pdf","size":435431,"mime":"application/pdf"}
+[2025-05-27 02:31:13] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:31:13] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:31:13] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:31:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-27 02:31:13] DEBUG: File operation: upload | Context: {"filename":"Nick_Seegobin_Resume_GD_1748313073_1fa5ff5b.pdf","success":true}
+[2025-05-27 02:31:13] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_GD_1748313073_1fa5ff5b.pdf"}
+[2025-05-27 02:31:13] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:31:13] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -list format | grep -i pdf","timeout":10}
+[2025-05-27 02:31:14] DEBUG: PDF input support confirmed
+[2025-05-27 02:31:14] DEBUG: ImageMagick available for PDF to jpg conversion
+[2025-05-27 02:31:14] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_GD_1748313073_1fa5ff5b.pdf'","timeout":30}
+[2025-05-27 02:31:14] WARNING: Could not identify PDF pages | Context: {"command":"/opt/homebrew/bin/magick identify '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_GD_1748313073_1fa5ff5b.pdf'","error":"sh: gs: command not found\nidentify: FailedToExecuteCommand `'gs' -sstdout=%stderr -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 '-sDEVICE=pamcmyk32' -dTextAlphaBits=4 -dGraphicsAlphaBits=4 '-r2.0x2.0' -dPrinted=false  '-sOutputFile=/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-jLtLaUEZXtB_n12VkaQmRcRT6sGXzOO4%d' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-8VX2QAvVdgDInYfx9H-fWVZE24xw4gTN' '-f/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/magick-_2qGA7TbemZVFxD8OCc943CyA9AcV5Au'' (32512) @ error/ghostscript-private.h/ExecuteGhostscriptCommand/75.\n"}
+[2025-05-27 02:31:14] ERROR: Could not determine PDF page count or PDF is empty
+[2025-05-27 02:31:14] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_GD_1748313073_1fa5ff5b.pdf","error":"Conversion process failed"}
+[2025-05-27 02:31:14] DEBUG: File operation: delete | Context: {"filename":"Nick_Seegobin_Resume_GD_1748313073_1fa5ff5b.pdf","success":true}
+[2025-05-27 02:34:09] DEBUG: RateLimitService initialized
+[2025-05-27 02:34:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:34:09] DEBUG: FileValidationService initialized
+[2025-05-27 02:34:09] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:34:09] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:34:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:34:09] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:34:09] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-27 02:34:09] DEBUG: File operation: upload | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf","success":true}
+[2025-05-27 02:34:09] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf"}
+[2025-05-27 02:34:09] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:34:10] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:34:10] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-27 02:34:10] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524a23ce36","command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524a23ce36' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf'"}
+[2025-05-27 02:34:10] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524a23ce36' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf'","timeout":300}
+[2025-05-27 02:34:11] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.png"]}
+[2025-05-27 02:34:11] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-27 02:34:11] DEBUG: ImageMagick optimization | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.png","output":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d6aa0798.jpg","format":"jpg"}
+[2025-05-27 02:34:11] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524a23ce36/Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/opt/homebrew/var/www/convertre-api/public/../storage/converted/Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d6aa0798.jpg'","timeout":60}
+[2025-05-27 02:34:11] DEBUG: Cleaned up temp PNG file | Context: {"file":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.png"}
+[2025-05-27 02:34:11] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683524a23ce36"}
+[2025-05-27 02:34:11] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf","processing_time":"1.9490070343018s"}
+[2025-05-27 02:34:11] DEBUG: File operation: delete | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313249_d3fc4a6a.pdf","success":true}
+[2025-05-27 02:34:21] DEBUG: RateLimitService initialized
+[2025-05-27 02:34:21] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:34:21] DEBUG: FileValidationService initialized
+[2025-05-27 02:34:21] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:34:21] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:34:21] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-27 02:34:21] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:34:21] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_png"}
+[2025-05-27 02:34:21] DEBUG: File operation: upload | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf","success":true}
+[2025-05-27 02:34:21] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf"}
+[2025-05-27 02:34:21] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:34:21] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:34:21] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-27 02:34:21] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ad6407d","command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ad6407d' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf'"}
+[2025-05-27 02:34:21] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ad6407d' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf'","timeout":300}
+[2025-05-27 02:34:22] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.png"]}
+[2025-05-27 02:34:22] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-27 02:34:22] DEBUG: ImageMagick optimization | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.png","output":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_52195c9a.png","format":"jpg"}
+[2025-05-27 02:34:22] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ad6407d/Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/opt/homebrew/var/www/convertre-api/public/../storage/converted/Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_52195c9a.png'","timeout":60}
+[2025-05-27 02:34:22] DEBUG: Cleaned up temp PNG file | Context: {"file":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.png"}
+[2025-05-27 02:34:22] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683524ad6407d"}
+[2025-05-27 02:34:22] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf","processing_time":"1.8370809555054s"}
+[2025-05-27 02:34:22] DEBUG: File operation: delete | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313261_57436cdd.pdf","success":true}
+[2025-05-27 02:34:33] DEBUG: RateLimitService initialized
+[2025-05-27 02:34:33] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:34:33] DEBUG: FileValidationService initialized
+[2025-05-27 02:34:33] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:34:33] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:34:33] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"bmp","file_count":1}}
+[2025-05-27 02:34:33] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:34:33] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_bmp"}
+[2025-05-27 02:34:33] DEBUG: File operation: upload | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf","success":true}
+[2025-05-27 02:34:33] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf"}
+[2025-05-27 02:34:33] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:34:33] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:34:34] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-27 02:34:34] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ba0b3e4","command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ba0b3e4' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf'"}
+[2025-05-27 02:34:34] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ba0b3e4' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf'","timeout":300}
+[2025-05-27 02:34:34] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.png"]}
+[2025-05-27 02:34:34] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-27 02:34:34] DEBUG: ImageMagick optimization | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.png","output":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_347582ea.bmp","format":"jpg"}
+[2025-05-27 02:34:34] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524ba0b3e4/Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/opt/homebrew/var/www/convertre-api/public/../storage/converted/Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_347582ea.bmp'","timeout":60}
+[2025-05-27 02:34:35] DEBUG: Cleaned up temp PNG file | Context: {"file":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.png"}
+[2025-05-27 02:34:35] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683524ba0b3e4"}
+[2025-05-27 02:34:35] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf","processing_time":"1.4119718074799s"}
+[2025-05-27 02:34:35] DEBUG: File operation: delete | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313273_f9d3a358.pdf","success":true}
+[2025-05-27 02:34:45] DEBUG: RateLimitService initialized
+[2025-05-27 02:34:45] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:34:45] DEBUG: FileValidationService initialized
+[2025-05-27 02:34:45] DEBUG: File validation passed | Context: {"filename":"Nick Seegobin Resume.pdf","size":509078,"mime":"application/pdf"}
+[2025-05-27 02:34:45] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:34:45] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"bmp","file_count":1}}
+[2025-05-27 02:34:45] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:34:45] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_bmp"}
+[2025-05-27 02:34:45] DEBUG: File operation: upload | Context: {"filename":"Nick_Seegobin_Resume_1748313285_b28cbd38.pdf","success":true}
+[2025-05-27 02:34:45] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_1748313285_b28cbd38.pdf"}
+[2025-05-27 02:34:45] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:34:45] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:34:46] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-27 02:34:46] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Nick_Seegobin_Resume_1748313285_b28cbd38.pdf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524c607f86","command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524c607f86' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_1748313285_b28cbd38.pdf'"}
+[2025-05-27 02:34:46] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524c607f86' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_1748313285_b28cbd38.pdf'","timeout":300}
+[2025-05-27 02:34:48] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Nick_Seegobin_Resume_1748313285_b28cbd38.png"]}
+[2025-05-27 02:34:48] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-27 02:34:48] DEBUG: ImageMagick optimization | Context: {"input":"Nick_Seegobin_Resume_1748313285_b28cbd38.png","output":"Nick_Seegobin_Resume_1748313285_dea1f88e.bmp","format":"jpg"}
+[2025-05-27 02:34:48] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524c607f86/Nick_Seegobin_Resume_1748313285_b28cbd38.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/opt/homebrew/var/www/convertre-api/public/../storage/converted/Nick_Seegobin_Resume_1748313285_dea1f88e.bmp'","timeout":60}
+[2025-05-27 02:34:49] DEBUG: Cleaned up temp PNG file | Context: {"file":"Nick_Seegobin_Resume_1748313285_b28cbd38.png"}
+[2025-05-27 02:34:49] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683524c607f86"}
+[2025-05-27 02:34:49] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_1748313285_b28cbd38.pdf","processing_time":"3.3335380554199s"}
+[2025-05-27 02:34:49] DEBUG: File operation: delete | Context: {"filename":"Nick_Seegobin_Resume_1748313285_b28cbd38.pdf","success":true}
+[2025-05-27 02:35:12] DEBUG: RateLimitService initialized
+[2025-05-27 02:35:12] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:35:12] DEBUG: FileValidationService initialized
+[2025-05-27 02:35:12] DEBUG: File validation passed | Context: {"filename":"Nick Seegobin Resume.pdf","size":509078,"mime":"application/pdf"}
+[2025-05-27 02:35:12] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:35:12] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:35:12] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:35:12] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-27 02:35:12] DEBUG: File operation: upload | Context: {"filename":"Nick_Seegobin_Resume_1748313312_ede9f202.pdf","success":true}
+[2025-05-27 02:35:12] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_1748313312_ede9f202.pdf"}
+[2025-05-27 02:35:12] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:35:13] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:35:13] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-27 02:35:13] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Nick_Seegobin_Resume_1748313312_ede9f202.pdf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524e13fdda","command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524e13fdda' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_1748313312_ede9f202.pdf'"}
+[2025-05-27 02:35:13] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524e13fdda' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Nick_Seegobin_Resume_1748313312_ede9f202.pdf'","timeout":300}
+[2025-05-27 02:35:14] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Nick_Seegobin_Resume_1748313312_ede9f202.png"]}
+[2025-05-27 02:35:14] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-27 02:35:14] DEBUG: ImageMagick optimization | Context: {"input":"Nick_Seegobin_Resume_1748313312_ede9f202.png","output":"Nick_Seegobin_Resume_1748313312_35218092.jpg","format":"jpg"}
+[2025-05-27 02:35:14] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683524e13fdda/Nick_Seegobin_Resume_1748313312_ede9f202.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/opt/homebrew/var/www/convertre-api/public/../storage/converted/Nick_Seegobin_Resume_1748313312_35218092.jpg'","timeout":60}
+[2025-05-27 02:35:14] DEBUG: Cleaned up temp PNG file | Context: {"file":"Nick_Seegobin_Resume_1748313312_ede9f202.png"}
+[2025-05-27 02:35:14] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683524e13fdda"}
+[2025-05-27 02:35:14] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Nick_Seegobin_Resume_1748313312_ede9f202.pdf","processing_time":"2.0200579166412s"}
+[2025-05-27 02:35:14] DEBUG: File operation: delete | Context: {"filename":"Nick_Seegobin_Resume_1748313312_ede9f202.pdf","success":true}
+[2025-05-27 02:40:43] DEBUG: RateLimitService initialized
+[2025-05-27 02:40:43] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:40:43] DEBUG: FileValidationService initialized
+[2025-05-27 02:40:43] DEBUG: File validation passed | Context: {"filename":"Nick Seegobin Resume.pdf","size":509078,"mime":"application/pdf"}
+[2025-05-27 02:40:43] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:40:43] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:40:43] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:40:43] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:40:55] DEBUG: RateLimitService initialized
+[2025-05-27 02:40:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:40:55] DEBUG: FileValidationService initialized
+[2025-05-27 02:40:55] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:40:55] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:40:55] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:40:55] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:40:55] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:41:42] DEBUG: RateLimitService initialized
+[2025-05-27 02:41:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:41:42] DEBUG: FileValidationService initialized
+[2025-05-27 02:41:42] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:41:42] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:41:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:41:42] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:41:42] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:42:05] DEBUG: RateLimitService initialized
+[2025-05-27 02:42:05] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:42:05] DEBUG: FileValidationService initialized
+[2025-05-27 02:42:05] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:42:05] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:42:05] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:42:05] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:42:05] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:43:13] DEBUG: RateLimitService initialized
+[2025-05-27 02:43:13] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:43:13] DEBUG: FileValidationService initialized
+[2025-05-27 02:43:13] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:43:13] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:43:13] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:43:13] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:43:13] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PdfMultiFormatModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":50}
+[2025-05-27 02:43:57] DEBUG: RateLimitService initialized
+[2025-05-27 02:43:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 02:43:57] DEBUG: FileValidationService initialized
+[2025-05-27 02:43:57] DEBUG: File validation passed | Context: {"filename":"Bmobile Concent Letter Denelle Furlonge.pdf","size":139793,"mime":"application/pdf"}
+[2025-05-27 02:43:57] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 02:43:57] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-27 02:43:57] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 02:43:57] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-27 02:43:57] DEBUG: File operation: upload | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf","success":true}
+[2025-05-27 02:43:57] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf"}
+[2025-05-27 02:43:57] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 02:43:57] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick -version","timeout":5}
+[2025-05-27 02:43:57] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-27 02:43:57] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683526eddf1fb","command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683526eddf1fb' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf'"}
+[2025-05-27 02:43:57] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683526eddf1fb' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf'","timeout":300}
+[2025-05-27 02:43:58] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.png"]}
+[2025-05-27 02:43:58] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-27 02:43:58] DEBUG: ImageMagick optimization | Context: {"input":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.png","output":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_40699d08.jpg","format":"jpg"}
+[2025-05-27 02:43:58] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/magick '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_pdf_683526eddf1fb/Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/opt/homebrew/var/www/convertre-api/public/../storage/converted/Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_40699d08.jpg'","timeout":60}
+[2025-05-27 02:43:59] DEBUG: Cleaned up temp PNG file | Context: {"file":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.png"}
+[2025-05-27 02:43:59] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683526eddf1fb"}
+[2025-05-27 02:43:59] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf","processing_time":"1.944787979126s"}
+[2025-05-27 02:43:59] DEBUG: File operation: delete | Context: {"filename":"Bmobile_Concent_Letter_Denelle_Furlonge_1748313837_f33c7d7d.pdf","success":true}
+[2025-05-27 03:19:20] DEBUG: RateLimitService initialized
+[2025-05-27 03:19:20] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 03:19:20] DEBUG: FileValidationService initialized
+[2025-05-27 03:19:20] DEBUG: File validation passed | Context: {"filename":"Convertre_Plugin_Specification.docx","size":38201,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-05-27 03:19:20] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 03:19:20] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 03:19:20] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 03:19:20] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-27 03:19:20] DEBUG: File operation: upload | Context: {"filename":"Convertre_Plugin_Specification_1748315960_d1ee406d.docx","success":true}
+[2025-05-27 03:19:20] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748315960_d1ee406d.docx"}
+[2025-05-27 03:19:20] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 03:19:20] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 03:19:20] DEBUG: LibreOffice DOCX conversion | Context: {"input":"Convertre_Plugin_Specification_1748315960_d1ee406d.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68352f3883e7d","timeout":300}
+[2025-05-27 03:19:20] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68352f3883e7d' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Convertre_Plugin_Specification_1748315960_d1ee406d.docx'","timeout":300}
+[2025-05-27 03:19:23] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68352f3883e7d"}
+[2025-05-27 03:19:23] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748315960_d1ee406d.docx","processing_time":"3.4706501960754s"}
+[2025-05-27 03:19:23] DEBUG: File operation: delete | Context: {"filename":"Convertre_Plugin_Specification_1748315960_d1ee406d.docx","success":true}
+[2025-05-27 04:51:24] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 04:59:52] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 05:02:26] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 05:06:47] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 13:05:54] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 13:07:06] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}

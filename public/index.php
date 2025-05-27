@@ -27,18 +27,104 @@ require_once $basePath . 'Exceptions/ConversionException.php';
 require_once $basePath . 'Exceptions/ValidationException.php';
 require_once $basePath . 'Exceptions/AuthenticationException.php';
 
+
+//MODULES START
 // Only include middleware if it exists
 if (file_exists($basePath . 'Middleware/ValidationMiddleware.php')) {
     require_once $basePath . 'Middleware/ValidationMiddleware.php';
 }
 
+// IMAGES
 // Only include conversion modules if they exist
-if (file_exists($basePath . 'Services/Modules/HeicToJpgModule.php')) {
-    require_once $basePath . 'Services/Modules/HeicToJpgModule.php';
+// HEIC MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/HeicMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/HeicMultiFormatModule.php';
 }
+
+// JPEG MultiFormatModule Support
+// Only include conversion modules if they exist
+if (file_exists($basePath . 'Services/Modules/JpgMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/JpgMultiFormatModule.php';
+}
+
+// PNG MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/PngMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/PngMultiFormatModule.php';
+}
+
+// WebP MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/WebpMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/WebpMultiFormatModule.php';
+}
+
+// GIF MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/GifMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/GifMultiFormatModule.php';
+}
+// SVG MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/SvgMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/SvgMultiFormatModule.php';
+}
+// BMP MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/BmpMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/BmpMultiFormatModule.php';
+}
+// TIFF MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/TiffMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/TiffMultiFormatModule.php';
+}
+
+// PDF MultiFormatModule Support
+if (file_exists($basePath . 'Services/Modules/PdfMultiFormatModule.php')) {
+    require_once $basePath . 'Services/Modules/PdfMultiFormatModule.php';
+}
+// IMAGES END
+
+//DOCUMENTS
+// Only include conversion modules if they exist
+// DOCX to PDF Module Support
 if (file_exists($basePath . 'Services/Modules/DocxToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/DocxToPdfModule.php';
 }
+
+// DOC to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/DocToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/DocToPdfModule.php';
+}
+
+// ODT to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/OdtToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/OdtToPdfModule.php';
+}
+
+// XLSX to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/XlsxToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/XlsxToPdfModule.php';
+}
+
+// PPTX to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/PptxToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/PptxToPdfModule.php';
+}
+
+// EPUB to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/EpubToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/EpubToPdfModule.php';
+}
+
+// RTF to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/RtfToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/RtfToPdfModule.php';
+}
+// TXT to PDF Module Support
+if (file_exists($basePath . 'Services/Modules/TxtToPdfModule.php')) {
+    require_once $basePath . 'Services/Modules/TxtToPdfModule.php';
+}
+
+
+
+//MODULES END
+
 
 // Only include ConversionController if it exists
 if (file_exists($basePath . 'Controllers/ConversionController.php')) {

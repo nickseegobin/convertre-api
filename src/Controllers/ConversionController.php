@@ -39,6 +39,7 @@ class ConversionController
             ModuleFactory::init();
             $module = ModuleFactory::getModule($sourceFormat, $targetFormat);
             
+            
             // Handle file upload and get paths
             $uploadResult = FileHandler::handleUpload($_FILES['file']);
             $inputPath = $uploadResult['path'];

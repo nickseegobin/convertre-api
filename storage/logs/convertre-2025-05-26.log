@@ -534,3 +534,314 @@
 [2025-05-26 16:44:17] DEBUG: LibreOffice installation check | Context: {"available":true,"version":"25.2.3","headless_support":true,"libreoffice_path":"soffice","errors":[]}
 [2025-05-26 16:44:17] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 13:44:17"}
 [2025-05-26 16:44:17] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0s","errors":0}
+[2025-05-26 19:54:27] INFO: Simple validation test completed successfully
+[2025-05-26 19:54:52] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-26 20:08:24] WARNING: Authentication failed | Context: {"error":"API key required in X-API-Key header","ip":"::1"}
+[2025-05-26 20:08:37] WARNING: Authentication failed | Context: {"error":"API key required in X-API-Key header","ip":"::1"}
+[2025-05-26 20:08:54] DEBUG: RateLimitService initialized
+[2025-05-26 20:08:54] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:08:54] DEBUG: FileValidationService initialized
+[2025-05-26 20:08:54] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 20:08:54] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:08:54] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:08:54] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:08:54] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 20:08:54] DEBUG: File operation: upload | Context: {"filename":"sample1_1748290134_bd2b4934.heic","success":true}
+[2025-05-26 20:08:54] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748290134_bd2b4934.heic"}
+[2025-05-26 20:08:54] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 20:08:54] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 20:08:54] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748290134_bd2b4934.heic","output":"sample1_1748290134_954295b7.jpg","quality":85}
+[2025-05-26 20:08:54] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748290134_bd2b4934.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748290134_954295b7.jpg'","timeout":60}
+[2025-05-26 20:08:54] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748290134_bd2b4934.heic","processing_time":"0.48895287513733s"}
+[2025-05-26 20:08:54] DEBUG: File operation: delete | Context: {"filename":"sample1_1748290134_bd2b4934.heic","success":true}
+[2025-05-26 20:28:56] DEBUG: CleanupService initialized
+[2025-05-26 20:28:56] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-26 17:28:56"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":".DS_Store","size":"6 KB","age":"5h"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":"file-sample_100kB_1748273973_38955ae3.pdf","size":"181.91 KB","age":"5h"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":"file-sample_100kB_1748273985_97dbe38f.pdf","size":"181.91 KB","age":"5h"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":"file-sample_100kB_2_1748273986_06e1a673.pdf","size":"181.91 KB","age":"5h"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":"sample1_1748273930_ce7167c5.jpg","size":"476.53 KB","age":"5h"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":"sample1_1748273947_1d47972f.jpg","size":"476.53 KB","age":"5h"}
+[2025-05-26 20:28:56] DEBUG: File cleaned up | Context: {"file":"soundboard_1748273947_09489160.jpg","size":"1.22 MB","age":"5h"}
+[2025-05-26 20:28:56] INFO: Cleanup completed | Context: {"files_cleaned":7,"storage_freed":"2.69 MB","processing_time":"0.009s","errors":0}
+[2025-05-26 20:28:56] INFO: Manual cleanup executed via API | Context: {"uploads_cleaned":0,"converted_cleaned":7,"total_cleaned":7,"storage_freed":2823524,"errors":[]}
+[2025-05-26 20:29:03] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-26 20:29:21] DEBUG: RateLimitService initialized
+[2025-05-26 20:29:21] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:29:21] DEBUG: FileValidationService initialized
+[2025-05-26 20:29:21] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 20:29:21] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:29:21] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:29:21] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:29:21] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 20:29:21] DEBUG: File operation: upload | Context: {"filename":"sample1_1748291361_dfb68a46.heic","success":true}
+[2025-05-26 20:29:21] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748291361_dfb68a46.heic"}
+[2025-05-26 20:29:21] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 20:29:21] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 20:29:21] DEBUG: ImageMagick HEIC conversion | Context: {"input":"sample1_1748291361_dfb68a46.heic","output":"sample1_1748291361_f3e9acef.jpg","quality":85}
+[2025-05-26 20:29:21] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/sample1_1748291361_dfb68a46.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/sample1_1748291361_f3e9acef.jpg'","timeout":60}
+[2025-05-26 20:29:21] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1_1748291361_dfb68a46.heic","processing_time":"0.39449405670166s"}
+[2025-05-26 20:29:21] DEBUG: File operation: delete | Context: {"filename":"sample1_1748291361_dfb68a46.heic","success":true}
+[2025-05-26 20:29:34] DEBUG: RateLimitService initialized
+[2025-05-26 20:29:34] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:29:34] DEBUG: FileValidationService initialized
+[2025-05-26 20:29:34] DEBUG: File validation passed | Context: {"filename":"sample1.heic","size":293608,"mime":"image/heif"}
+[2025-05-26 20:29:34] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:29:34] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-26 20:29:34] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:29:34] ERROR: Conversion endpoint error | Context: {"error":"No module available for heic to png conversion","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":46}
+[2025-05-26 20:29:57] DEBUG: RateLimitService initialized
+[2025-05-26 20:29:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:29:57] DEBUG: FileValidationService initialized
+[2025-05-26 20:29:57] DEBUG: File validation passed | Context: {"filename":"PHOTO-2025-05-15-14-32-52.jpg","size":21078,"mime":"image/jpeg"}
+[2025-05-26 20:29:57] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:29:57] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-26 20:29:57] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:29:57] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\JpgToPngModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:36:26] DEBUG: RateLimitService initialized
+[2025-05-26 20:36:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:36:26] DEBUG: FileValidationService initialized
+[2025-05-26 20:36:26] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:36:26] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:36:26] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:36:26] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:36:26] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:38:16] DEBUG: RateLimitService initialized
+[2025-05-26 20:38:16] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:38:16] DEBUG: FileValidationService initialized
+[2025-05-26 20:38:16] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:38:16] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:38:16] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:38:16] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:38:16] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:38:27] DEBUG: RateLimitService initialized
+[2025-05-26 20:38:27] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:38:27] DEBUG: FileValidationService initialized
+[2025-05-26 20:38:27] DEBUG: File validation passed | Context: {"filename":"greyhounds-looking-for-a-table.heic","size":1721433,"mime":"image/heic"}
+[2025-05-26 20:38:27] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:38:27] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:38:27] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:38:27] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"heic_to_jpg"}
+[2025-05-26 20:38:27] DEBUG: File operation: upload | Context: {"filename":"greyhounds-looking-for-a-table_1748291907_d57f1358.heic","success":true}
+[2025-05-26 20:38:27] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"greyhounds-looking-for-a-table_1748291907_d57f1358.heic"}
+[2025-05-26 20:38:27] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 20:38:27] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 20:38:27] DEBUG: ImageMagick HEIC conversion | Context: {"input":"greyhounds-looking-for-a-table_1748291907_d57f1358.heic","output":"greyhounds-looking-for-a-table_1748291907_e42527c5.jpg","quality":85}
+[2025-05-26 20:38:27] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/greyhounds-looking-for-a-table_1748291907_d57f1358.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/greyhounds-looking-for-a-table_1748291907_e42527c5.jpg'","timeout":60}
+[2025-05-26 20:38:28] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"greyhounds-looking-for-a-table_1748291907_d57f1358.heic","processing_time":"0.6790931224823s"}
+[2025-05-26 20:38:28] DEBUG: File operation: delete | Context: {"filename":"greyhounds-looking-for-a-table_1748291907_d57f1358.heic","success":true}
+[2025-05-26 20:38:51] DEBUG: RateLimitService initialized
+[2025-05-26 20:38:51] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:38:51] DEBUG: FileValidationService initialized
+[2025-05-26 20:38:51] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:38:51] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:38:51] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:38:51] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:38:51] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:39:32] DEBUG: RateLimitService initialized
+[2025-05-26 20:39:32] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:39:32] DEBUG: FileValidationService initialized
+[2025-05-26 20:39:33] DEBUG: File validation passed | Context: {"filename":"greyhounds-looking-for-a-table.heic","size":1721433,"mime":"image/heic"}
+[2025-05-26 20:39:33] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:39:33] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:39:33] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:39:33] ERROR: Conversion endpoint error | Context: {"error":"No module available for heic to jpg conversion","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":46}
+[2025-05-26 20:39:42] DEBUG: RateLimitService initialized
+[2025-05-26 20:39:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:39:42] DEBUG: FileValidationService initialized
+[2025-05-26 20:39:42] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:39:42] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:39:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:39:42] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:39:42] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:40:45] DEBUG: RateLimitService initialized
+[2025-05-26 20:40:45] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:40:45] DEBUG: FileValidationService initialized
+[2025-05-26 20:40:45] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:40:45] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:40:45] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:40:45] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:40:45] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:44:55] DEBUG: RateLimitService initialized
+[2025-05-26 20:44:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:44:55] DEBUG: FileValidationService initialized
+[2025-05-26 20:44:55] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:44:55] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:44:55] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:44:55] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:44:55] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:47:45] INFO: Conversion started | Context: {"from_format":"test","to_format":"mock","filename":"test_inputade97four63tcHM6FV6"}
+[2025-05-26 20:47:45] INFO: Conversion completed successfully | Context: {"from_format":"test","to_format":"mock","filename":"test_inputade97four63tcHM6FV6","processing_time":"0.0013439655303955s"}
+[2025-05-26 20:47:45] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:47:45] DEBUG: Registered module | Context: {"conversion":"test_to_mock","class":"MockConversionModule"}
+[2025-05-26 20:47:45] INFO: Conversion started | Context: {"from_format":"fail","to_format":"test","filename":"test_inputade97four63tcHM6FV6"}
+[2025-05-26 20:47:45] ERROR: Conversion failed | Context: {"from_format":"fail","to_format":"test","filename":"test_inputade97four63tcHM6FV6","error":"Tool 'failTool' not available"}
+[2025-05-26 20:47:45] INFO: Conversion started | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputade97four63tcHM6FV6"}
+[2025-05-26 20:47:45] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
+[2025-05-26 20:47:46] INFO: Conversion completed successfully | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputade97four63tcHM6FV6","processing_time":"0.18143200874329s"}
+[2025-05-26 20:47:46] INFO: Abstract module system test completed successfully
+[2025-05-26 20:49:24] INFO: Conversion started | Context: {"from_format":"test","to_format":"mock","filename":"test_inputk6jjf561ibkpcLdP1yp"}
+[2025-05-26 20:49:24] INFO: Conversion completed successfully | Context: {"from_format":"test","to_format":"mock","filename":"test_inputk6jjf561ibkpcLdP1yp","processing_time":"0.00052094459533691s"}
+[2025-05-26 20:49:24] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:49:24] DEBUG: Registered module | Context: {"conversion":"test_to_mock","class":"MockConversionModule"}
+[2025-05-26 20:49:24] INFO: Conversion started | Context: {"from_format":"fail","to_format":"test","filename":"test_inputk6jjf561ibkpcLdP1yp"}
+[2025-05-26 20:49:24] ERROR: Conversion failed | Context: {"from_format":"fail","to_format":"test","filename":"test_inputk6jjf561ibkpcLdP1yp","error":"Tool 'failTool' not available"}
+[2025-05-26 20:49:24] INFO: Conversion started | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputk6jjf561ibkpcLdP1yp"}
+[2025-05-26 20:49:24] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
+[2025-05-26 20:49:24] INFO: Conversion completed successfully | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputk6jjf561ibkpcLdP1yp","processing_time":"0.10330820083618s"}
+[2025-05-26 20:49:24] INFO: Abstract module system test completed successfully
+[2025-05-26 20:50:33] INFO: Conversion started | Context: {"from_format":"test","to_format":"mock","filename":"test_inputmkim7a0mm6g931Yzp9s"}
+[2025-05-26 20:50:33] INFO: Conversion completed successfully | Context: {"from_format":"test","to_format":"mock","filename":"test_inputmkim7a0mm6g931Yzp9s","processing_time":"0.00044393539428711s"}
+[2025-05-26 20:50:33] DEBUG: ModuleFactory initialized with 2 modules
+[2025-05-26 20:50:33] DEBUG: Registered module | Context: {"conversion":"test_to_mock","class":"MockConversionModule"}
+[2025-05-26 20:50:33] INFO: Conversion started | Context: {"from_format":"fail","to_format":"test","filename":"test_inputmkim7a0mm6g931Yzp9s"}
+[2025-05-26 20:50:33] ERROR: Conversion failed | Context: {"from_format":"fail","to_format":"test","filename":"test_inputmkim7a0mm6g931Yzp9s","error":"Tool 'failTool' not available"}
+[2025-05-26 20:50:33] INFO: Conversion started | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputmkim7a0mm6g931Yzp9s"}
+[2025-05-26 20:50:33] DEBUG: Executing command | Context: {"command":"echo \"test command\"","timeout":5}
+[2025-05-26 20:50:33] INFO: Conversion completed successfully | Context: {"from_format":"cmd","to_format":"test","filename":"test_inputmkim7a0mm6g931Yzp9s","processing_time":"0.10333108901978s"}
+[2025-05-26 20:50:33] INFO: Abstract module system test completed successfully
+[2025-05-26 20:51:11] DEBUG: RateLimitService initialized
+[2025-05-26 20:51:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:51:11] DEBUG: FileValidationService initialized
+[2025-05-26 20:51:11] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:51:11] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:51:11] INFO: Validation failed | Context: {"error":"Unsupported target format: ","field":""}
+[2025-05-26 20:51:18] DEBUG: RateLimitService initialized
+[2025-05-26 20:51:18] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:51:18] DEBUG: FileValidationService initialized
+[2025-05-26 20:51:18] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:51:18] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:51:18] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-26 20:51:18] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:51:18] ERROR: Conversion endpoint error | Context: {"error":"No module available for png to png conversion","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":46}
+[2025-05-26 20:51:24] DEBUG: RateLimitService initialized
+[2025-05-26 20:51:24] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:51:24] DEBUG: FileValidationService initialized
+[2025-05-26 20:51:24] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:51:24] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:51:24] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:51:24] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:51:24] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:51:57] DEBUG: RateLimitService initialized
+[2025-05-26 20:51:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:51:57] DEBUG: FileValidationService initialized
+[2025-05-26 20:51:57] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:51:57] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:51:57] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:51:57] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:51:57] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PnToJModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:53:07] DEBUG: RateLimitService initialized
+[2025-05-26 20:53:07] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:53:07] DEBUG: FileValidationService initialized
+[2025-05-26 20:53:07] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:53:07] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:53:07] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:53:07] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:53:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicToJpgModule","conversion":"png_to_jpg"}
+[2025-05-26 20:53:07] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748292787_545d2a31.png","success":true}
+[2025-05-26 20:53:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"tile-2_1748292787_545d2a31.png"}
+[2025-05-26 20:53:07] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 20:53:08] DEBUG: ImageMagick with HEIC support available
+[2025-05-26 20:53:08] DEBUG: ImageMagick HEIC conversion | Context: {"input":"tile-2_1748292787_545d2a31.png","output":"tile-2_1748292787_7446a1c0.jpg","quality":85}
+[2025-05-26 20:53:08] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748292787_545d2a31.png' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748292787_7446a1c0.jpg'","timeout":60}
+[2025-05-26 20:53:08] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"tile-2_1748292787_545d2a31.png","processing_time":"0.52956700325012s"}
+[2025-05-26 20:53:08] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748292787_545d2a31.png","success":true}
+[2025-05-26 20:56:41] DEBUG: RateLimitService initialized
+[2025-05-26 20:56:41] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:56:41] DEBUG: FileValidationService initialized
+[2025-05-26 20:56:41] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:56:41] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:56:41] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:56:41] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:56:41] ERROR: Conversion endpoint error | Context: {"error":"Module class not found: Convertre\\Services\\Modules\\PngToJpgModule","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":56}
+[2025-05-26 20:58:30] DEBUG: RateLimitService initialized
+[2025-05-26 20:58:30] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:58:30] DEBUG: FileValidationService initialized
+[2025-05-26 20:58:30] DEBUG: File validation passed | Context: {"filename":"tile-2.png","size":130446,"mime":"image/png"}
+[2025-05-26 20:58:30] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:58:30] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 20:58:30] DEBUG: ModuleFactory initialized with 3 modules
+[2025-05-26 20:58:30] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngToJpgModule","conversion":"png_to_jpg"}
+[2025-05-26 20:58:30] DEBUG: File operation: upload | Context: {"filename":"tile-2_1748293110_e5db5a1e.png","success":true}
+[2025-05-26 20:58:30] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748293110_e5db5a1e.png"}
+[2025-05-26 20:58:30] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 20:58:30] DEBUG: ImageMagick with PNG support available
+[2025-05-26 20:58:30] DEBUG: ImageMagick PNG conversion | Context: {"input":"tile-2_1748293110_e5db5a1e.png","output":"tile-2_1748293110_70abd34f.jpg","quality":85}
+[2025-05-26 20:58:30] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/tile-2_1748293110_e5db5a1e.png' -strip -auto-orient -colorspace sRGB -quality 85 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/tile-2_1748293110_70abd34f.jpg'","timeout":60}
+[2025-05-26 20:58:31] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"tile-2_1748293110_e5db5a1e.png","processing_time":"0.37310695648193s"}
+[2025-05-26 20:58:31] DEBUG: File operation: delete | Context: {"filename":"tile-2_1748293110_e5db5a1e.png","success":true}
+[2025-05-26 20:59:52] DEBUG: RateLimitService initialized
+[2025-05-26 20:59:52] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 20:59:52] DEBUG: FileValidationService initialized
+[2025-05-26 20:59:52] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 20:59:52] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 20:59:52] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-26 20:59:52] DEBUG: ModuleFactory initialized with 4 modules
+[2025-05-26 20:59:52] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgToPngModule","conversion":"jpg_to_png"}
+[2025-05-26 20:59:52] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748293192_001666ac.jpg","success":true}
+[2025-05-26 20:59:52] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748293192_001666ac.jpg"}
+[2025-05-26 20:59:52] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-05-26 20:59:52] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748293192_001666ac.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748293192_c45411c0.png"}
+[2025-05-26 20:59:52] DEBUG: Executing command | Context: {"command":"magick '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748293192_001666ac.jpg' -strip -auto-orient -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748293192_c45411c0.png'","timeout":60}
+[2025-05-26 20:59:52] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748293192_001666ac.jpg","processing_time":"0.3521990776062s"}
+[2025-05-26 20:59:52] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748293192_001666ac.jpg","success":true}
+[2025-05-26 23:50:24] DEBUG: RateLimitService initialized
+[2025-05-26 23:50:24] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 23:50:24] DEBUG: FileValidationService initialized
+[2025-05-26 23:50:24] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 23:50:24] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 23:50:24] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"png","file_count":1}}
+[2025-05-26 23:50:24] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-26 23:50:24] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-05-26 23:50:24] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748303424_e394ceab.jpg","success":true}
+[2025-05-26 23:50:24] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748303424_e394ceab.jpg"}
+[2025-05-26 23:50:24] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/convert -version","timeout":5}
+[2025-05-26 23:50:24] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/convert -list format","timeout":10}
+[2025-05-26 23:50:25] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-26 23:50:25] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748303424_e394ceab.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748303424_e987916a.png","compression":9}
+[2025-05-26 23:50:25] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/convert '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748303424_e394ceab.jpg' -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748303424_e987916a.png'","timeout":60}
+[2025-05-26 23:50:26] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748303424_e394ceab.jpg","processing_time":"1.4097929000854s"}
+[2025-05-26 23:50:26] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748303424_e394ceab.jpg","success":true}
+[2025-05-26 23:50:35] DEBUG: RateLimitService initialized
+[2025-05-26 23:50:35] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 23:50:35] DEBUG: FileValidationService initialized
+[2025-05-26 23:50:35] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 23:50:35] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 23:50:35] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-26 23:50:35] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-26 23:50:35] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-05-26 23:50:35] DEBUG: File operation: upload | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748303435_c1753db5.jpg","success":true}
+[2025-05-26 23:50:35] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748303435_c1753db5.jpg"}
+[2025-05-26 23:50:35] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/convert -version","timeout":5}
+[2025-05-26 23:50:35] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/convert -list format","timeout":10}
+[2025-05-26 23:50:36] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-26 23:50:36] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"6ac29b65b32703305084c4936fd8402e_1748303435_c1753db5.jpg","output":"6ac29b65b32703305084c4936fd8402e_1748303435_faedb349.pdf","compression":9}
+[2025-05-26 23:50:36] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/convert '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/6ac29b65b32703305084c4936fd8402e_1748303435_c1753db5.jpg' -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/opt/homebrew/var/www/convertre-api/public/../storage/converted/6ac29b65b32703305084c4936fd8402e_1748303435_faedb349.pdf'","timeout":60}
+[2025-05-26 23:50:36] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"6ac29b65b32703305084c4936fd8402e_1748303435_c1753db5.jpg","processing_time":"0.76293611526489s"}
+[2025-05-26 23:50:36] DEBUG: File operation: delete | Context: {"filename":"6ac29b65b32703305084c4936fd8402e_1748303435_c1753db5.jpg","success":true}
+[2025-05-26 23:50:44] DEBUG: RateLimitService initialized
+[2025-05-26 23:50:44] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 23:50:44] DEBUG: FileValidationService initialized
+[2025-05-26 23:50:44] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 23:50:44] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 23:50:44] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}
+[2025-05-26 23:51:09] DEBUG: RateLimitService initialized
+[2025-05-26 23:51:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 23:51:09] DEBUG: FileValidationService initialized
+[2025-05-26 23:51:09] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 23:51:09] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 23:51:09] INFO: Validation failed | Context: {"error":"Unsupported target format: web","field":""}
+[2025-05-26 23:51:18] DEBUG: RateLimitService initialized
+[2025-05-26 23:51:18] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 23:51:18] DEBUG: FileValidationService initialized
+[2025-05-26 23:51:18] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 23:51:18] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 23:51:18] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"jpg","file_count":1}}
+[2025-05-26 23:51:18] DEBUG: ModuleFactory initialized with 6 modules
+[2025-05-26 23:51:18] ERROR: Conversion endpoint error | Context: {"error":"No module available for jpg to jpg conversion","file":"/opt/homebrew/var/www/convertre-api/src/Services/ModuleFactory.php","line":46}
+[2025-05-26 23:51:49] DEBUG: RateLimitService initialized
+[2025-05-26 23:51:49] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-26 23:51:49] DEBUG: FileValidationService initialized
+[2025-05-26 23:51:49] DEBUG: File validation passed | Context: {"filename":"6ac29b65b32703305084c4936fd8402e.jpg","size":51353,"mime":"image/jpeg"}
+[2025-05-26 23:51:49] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-26 23:51:49] INFO: Validation failed | Context: {"error":"Unsupported target format: webp","field":""}

@@ -143,7 +143,7 @@ class RequestValidator
         $targetFormat = strtolower(trim($targetFormat));
         
         // MVP formats only
-        $allowedTargets = ['jpg', 'jpeg', 'png', 'pdf'];
+        $allowedTargets = ['jpg', 'jpeg', 'png', 'pdf', 'webp', 'heic', 'gif', 'svg', 'tiff', 'bmp', 'docx', 'xlsx', 'pptx', 'txt', 'csv', 'odt', 'ods', 'odp'];
         if (!in_array($targetFormat, $allowedTargets)) {
             throw new ValidationException("Unsupported target format: {$targetFormat}");
         }

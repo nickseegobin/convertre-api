@@ -7,32 +7,26 @@ use Convertre\Utils\Logger;
 use Convertre\Exceptions\ConversionException;
 
 /**
- * ModuleFactory - Creates and manages conversion modules
- * Simple factory - gets the right module for the job
+ * ModuleFactory - FIXED for JpgMultiFormatModule
  */
 class ModuleFactory
 {
     private static array $modules = [];
     private static bool $initialized = false;
     
-    /**
-     * Initialize factory and register available modules
-     */
     public static function init(): void
     {
         if (self::$initialized) {
             return;
         }
         
-        // Register MVP modules (will be created in Phase 4)
         self::registerAvailableModules();
-        
         self::$initialized = true;
         Logger::debug('ModuleFactory initialized with ' . count(self::$modules) . ' modules');
     }
     
     /**
-     * Get module for specific conversion
+     * FIXED: Get module for specific conversion with proper instantiation
      */
     public static function getModule(string $fromFormat, string $toFormat): AbstractConversionModule
     {
@@ -62,61 +56,83 @@ class ModuleFactory
         
         Logger::debug("Creating module", ['class' => $moduleClass, 'conversion' => $key]);
         
+        // FIXED: Handle JpgMultiFormatModule special case
+        if ($moduleClass === 'Convertre\\Services\\Modules\\JpgMultiFormatModule') {
+            return new $moduleClass($toFormat); // Pass target format to constructor
+        }
+        
+        // Standard modules (no constructor parameters)
         return new $moduleClass();
     }
     
     /**
-     * Check if conversion is supported
-     */
-    public static function isSupported(string $fromFormat, string $toFormat): bool
-    {
-        if (!self::$initialized) {
-            self::init();
-        }
-        
-        $key = strtolower($fromFormat) . '_to_' . strtolower($toFormat);
-        return isset(self::$modules[$key]) && class_exists(self::$modules[$key]);
-    }
-    
-    /**
-     * Get all supported conversions
-     */
-    public static function getSupportedConversions(): array
-    {
-        if (!self::$initialized) {
-            self::init();
-        }
-        
-        $supported = [];
-        foreach (self::$modules as $key => $class) {
-            if (class_exists($class)) {
-                $parts = explode('_to_', $key);
-                $supported[] = [
-                    'from' => $parts[0],
-                    'to' => $parts[1],
-                    'module' => $class
-                ];
-            }
-        }
-        
-        return $supported;
-    }
-    
-    /**
-     * Register available modules (MVP only for now)
+     * Register available modules
      */
     private static function registerAvailableModules(): void
     {
-        // MVP Module registrations (Phase 4 will create these classes)
         self::$modules = [
-            'heic_to_jpg' => 'Convertre\\Services\\Modules\\HeicToJpgModule',
-            'docx_to_pdf' => 'Convertre\\Services\\Modules\\DocxToPdfModule'
+            // Standard modules
+            // Documents Modules
+            'docx_to_pdf' => 'Convertre\\Services\\Modules\\DocxToPdfModule',
+            'doc_to_pdf' => 'Convertre\\Services\\Modules\\DocToPdfModule',
+            'odt_to_pdf' => 'Convertre\\Services\\Modules\\OdtToPdfModule',
+            'xlsx_to_pdf' => 'Convertre\\Services\\Modules\\XlsxToPdfModule',
+            'pptx_to_pdf' => 'Convertre\\Services\\Modules\\PptxToPdfModule',
+            'epub_to_pdf' => 'Convertre\\Services\\Modules\\EpubToPdfModule',
+            'rtf_to_pdf' => 'Convertre\\Services\\Modules\\RtfToPdfModule',
+            'txt_to_pdf' => 'Convertre\\Services\\Modules\\TxtToPdfModule',
+            
+            
+            // Advanced Modules
+            // Image Modules
+            //Multi-Format Heic Module
+            'heic_to_jpg' => 'Convertre\\Services\\Modules\\HeicMultiFormatModule',
+            'heic_to_png' => 'Convertre\\Services\\Modules\\HeicMultiFormatModule',
+            'heic_to_pdf' => 'Convertre\\Services\\Modules\\HeicMultiFormatModule',
+
+            // Multi-format module (same class, different target formats)
+            'jpg_to_png' => 'Convertre\\Services\\Modules\\JpgMultiFormatModule',
+            'jpg_to_webp' => 'Convertre\\Services\\Modules\\JpgMultiFormatModule', 
+            'jpg_to_pdf' => 'Convertre\\Services\\Modules\\JpgMultiFormatModule',
+
+            // PNG MultiFormatModule
+            'png_to_jpg' => 'Convertre\\Services\\Modules\\PngMultiFormatModule',
+            'png_to_webp' => 'Convertre\\Services\\Modules\\PngMultiFormatModule',
+            'png_to_pdf' => 'Convertre\\Services\\Modules\\PngMultiFormatModule',
+
+            // WepP MultiFormatModule
+            'webp_to_jpg' => 'Convertre\\Services\\Modules\\WebpMultiFormatModule',
+            'webp_to_png' => 'Convertre\\Services\\Modules\\WebpMultiFormatModule',
+            'webp_to_pdf' => 'Convertre\\Services\\Modules\\WebpMultiFormatModule',
+
+            //GIF MultiFormatModule
+            'gif_to_jpg' => 'Convertre\\Services\\Modules\\GifMultiFormatModule',
+            'gif_to_png' => 'Convertre\\Services\\Modules\\GifMultiFormatModule',
+            'gif_to_pdf' => 'Convertre\\Services\\Modules\\GifMultiFormatModule',
+
+            // BMP MultiFormatModule
+            'bmp_to_jpg' => 'Convertre\\Services\\Modules\\BmpMultiFormatModule',
+            'bmp_to_png' => 'Convertre\\Services\\Modules\\BmpMultiFormatModule',
+            'bmp_to_pdf' => 'Convertre\\Services\\Modules\\BmpMultiFormatModule',
+            
+            // SVG MultiFormatModule
+            'svg_to_jpg' => 'Convertre\\Services\\Modules\\SvgMultiFormatModule',
+            'svg_to_png' => 'Convertre\\Services\\Modules\\SvgMultiFormatModule',
+            'svg_to_pdf' => 'Convertre\\Services\\Modules\\SvgMultiFormatModule',
+
+            //TIFF MultiFormatModule
+            'tiff_to_jpg' => 'Convertre\\Services\\Modules\\TiffMultiFormatModule',
+            'tiff_to_png' => 'Convertre\\Services\\Modules\\TiffMultiFormatModule',
+            'tiff_to_pdf' => 'Convertre\\Services\\Modules\\TiffMultiFormatModule',
+
+            //pdf_to_jpg' => 'Convertre\\Services\\Modules\\PdfToJpgModule',
+            'pdf_to_png' => 'Convertre\\Services\\Modules\\PdfMultiFormatModule',
+            'pdf_to_jpg' => 'Convertre\\Services\\Modules\\PdfMultiFormatModule',
+            'pdf_to_bmp' => 'Convertre\\Services\\Modules\\PdfMultiFormatModule',
+
+            
+
         ];
-        
-        // Future modules can be added here
-        // 'jpg_to_png' => 'Convertre\\Services\\Modules\\JpgToPngModule',
-        // 'png_to_jpg' => 'Convertre\\Services\\Modules\\PngToJpgModule',
-        // etc.
     }
     
     /**

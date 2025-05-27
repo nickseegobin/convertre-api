@@ -145,7 +145,22 @@ class FileValidationService
             'jpg' => ['image/jpeg'],
             'jpeg' => ['image/jpeg'],
             'png' => ['image/png'],
-            'pdf' => ['application/pdf']
+            'pdf' => ['application/pdf'],
+            'webp' => ['image/webp'],
+            'gif' => ['image/gif'],
+            'svg' => ['image/svg+xml'],
+            'tiff' => ['image/tiff'],
+            'bmp' => ['image/bmp'],
+            'docx' => ['application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+            'odt' => ['application/vnd.oasis.opendocument.text'],
+            'doc' => ['application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+            'xlsx' => ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'],
+            'pptx' => ['application/vnd.openxmlformats-officedocument.presentationml.presentation'],
+            'txt' => ['text/plain'],
+            'epub' => ['application/epub+zip'],
+            'rtf' => ['application/rtf', 'text/rtf'],
+            
+            
         ];
         
         if (!isset($supportedFormats[$extension])) {
