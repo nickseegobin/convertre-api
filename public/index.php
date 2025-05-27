@@ -26,6 +26,7 @@ require_once $basePath . 'Controllers/AuthController.php';
 require_once $basePath . 'Exceptions/ConversionException.php';
 require_once $basePath . 'Exceptions/ValidationException.php';
 require_once $basePath . 'Exceptions/AuthenticationException.php';
+require_once $basePath . '../Middleware/AuthMiddleware.php';
 
 
 //MODULES START
@@ -147,6 +148,7 @@ use Convertre\Utils\FileHandler;
 use Convertre\Utils\ResponseFormatter;
 use Convertre\Services\AuthenticationService;
 use Convertre\Controllers\AuthController;
+use Convertre\Middleware\AuthMiddleware;
 
 // Initialize systems
 try {
@@ -264,15 +266,29 @@ try {
             }
             break;
 
-        case '/validate-key':
-            if ($requestMethod === 'POST') {
-                AuthController::validateKey();
-            } else {
+       case '/validate-key':
+        if ($requestMethod === 'POST') {
+            try {
+                // Use AuthMiddleware to check header-based authentication (consistent with other endpoints)
+                $authResult = AuthMiddleware::requireAuth();
+                
                 ResponseFormatter::sendJson(
-                    ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
+                    ResponseFormatter::success([
+                        'message' => 'API key is valid',
+                        'user_id' => $authResult['user_id'] ?? null,
+                        'authenticated' => true,
+                        
+                    ])
+                );
+            } catch (Exception $e) {
+                ResponseFormatter::sendJson(
+                    ResponseFormatter::unauthorized('Invalid or missing API key: ' . $e->getMessage())
                 );
             }
-            break;
+        }
+   
+     
+        break;
 
         case '/convert':
             if ($requestMethod === 'POST') {

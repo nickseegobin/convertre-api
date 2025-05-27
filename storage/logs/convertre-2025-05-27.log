@@ -1152,3 +1152,20 @@
 [2025-05-27 05:06:47] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
 [2025-05-27 13:05:54] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
 [2025-05-27 13:07:06] WARNING: Authentication failed | Context: {"error":"Invalid API key","ip":"::1"}
+[2025-05-27 19:37:05] DEBUG: RateLimitService initialized
+[2025-05-27 19:37:05] DEBUG: Rate limit check passed | Context: {"api_key":"ck_2e049a8...","requests":1,"limit":60}
+[2025-05-27 19:37:05] DEBUG: FileValidationService initialized
+[2025-05-27 19:37:05] DEBUG: File validation passed | Context: {"filename":"Convertre_Plugin_Specification.docx","size":38201,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-05-27 19:37:05] INFO: Request validation completed | Context: {"user_id":"test123","type":"single","file_count":1}
+[2025-05-27 19:37:05] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"test123","target_format":"pdf","file_count":1}}
+[2025-05-27 19:37:05] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-27 19:37:05] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-05-27 19:37:05] DEBUG: File operation: upload | Context: {"filename":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx","success":true}
+[2025-05-27 19:37:05] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx"}
+[2025-05-27 19:37:05] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --version","timeout":10}
+[2025-05-27 19:37:05] DEBUG: LibreOffice available | Context: {"version":"25.2.3"}
+[2025-05-27 19:37:05] DEBUG: LibreOffice DOCX conversion | Context: {"input":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx","temp_dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68361461df974","timeout":300}
+[2025-05-27 19:37:05] DEBUG: Executing command | Context: {"command":"/opt/homebrew/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68361461df974' '/opt/homebrew/var/www/convertre-api/public/../storage/uploads/Convertre_Plugin_Specification_1748374625_3b0a879a.docx'","timeout":300}
+[2025-05-27 19:37:08] DEBUG: Cleaned up temp directory | Context: {"dir":"/var/folders/tv/pp4mcrrs7zl683rh9d3c20rh0000gn/T/convertre_68361461df974"}
+[2025-05-27 19:37:08] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx","processing_time":"3.1426339149475s"}
+[2025-05-27 19:37:08] DEBUG: File operation: delete | Context: {"filename":"Convertre_Plugin_Specification_1748374625_3b0a879a.docx","success":true}
