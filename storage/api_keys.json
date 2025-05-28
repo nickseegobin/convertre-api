@@ -6,5 +6,253 @@
         "created_at": "2025-05-27 21:50:37",
         "usage_count": 9,
         "active": true
+    },
+    "ck_709c3df29e94c77bb4a9e0300faf5d62": {
+        "key": "ck_709c3df29e94c77bb4a9e0300faf5d62",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 02:53:02",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_c09787ea39460e7b6c2e6fd495ee14d7": {
+        "key": "ck_c09787ea39460e7b6c2e6fd495ee14d7",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:53:02",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_25827ee1de9fd9641c60587f2bc8d212": {
+        "key": "ck_25827ee1de9fd9641c60587f2bc8d212",
+        "user_id": "load_test",
+        "name": "Load Test Key",
+        "created_at": "2025-05-28 02:53:02",
+        "usage_count": 100,
+        "active": true
+    },
+    "ck_952a12f5d7fc43324956b05acc374047": {
+        "key": "ck_952a12f5d7fc43324956b05acc374047",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 02:53:06",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_7f8b749fcb1431a9df4ec0cc418ca824": {
+        "key": "ck_7f8b749fcb1431a9df4ec0cc418ca824",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:53:06",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_15b2fd3a5de7348ea9c2431a312c5768": {
+        "key": "ck_15b2fd3a5de7348ea9c2431a312c5768",
+        "user_id": "test_runner",
+        "name": "Test Runner Key",
+        "created_at": "2025-05-28 02:53:06",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_5e83c2c76ef1c3eed6c27075e2b7caaa": {
+        "key": "ck_5e83c2c76ef1c3eed6c27075e2b7caaa",
+        "user_id": "auth_test",
+        "name": "Auth Test Key",
+        "created_at": "2025-05-28 02:53:06",
+        "usage_count": 1,
+        "active": true
+    },
+    "ck_aa53c4d8d5baf8081f4c319ec855b378": {
+        "key": "ck_aa53c4d8d5baf8081f4c319ec855b378",
+        "user_id": "load_test",
+        "name": "Load Test Key",
+        "created_at": "2025-05-28 02:53:06",
+        "usage_count": 100,
+        "active": true
+    },
+    "ck_ac3d1ec658e59a2bd64fff6b502f61cb": {
+        "key": "ck_ac3d1ec658e59a2bd64fff6b502f61cb",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:57:03",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_e19b38c434a17fbf073cfabb068c46ce": {
+        "key": "ck_e19b38c434a17fbf073cfabb068c46ce",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:57:18",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_cb446b8c172d183d620973178b200dce": {
+        "key": "ck_cb446b8c172d183d620973178b200dce",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:57:42",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_61c2d2f6ceee7ac7a76f6fc99d92d610": {
+        "key": "ck_61c2d2f6ceee7ac7a76f6fc99d92d610",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:58:16",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_f53aa75fb00e97c2c67ae51e10c0726c": {
+        "key": "ck_f53aa75fb00e97c2c67ae51e10c0726c",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 02:59:20",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_bbc57f6a33ff9f608202125a72e24040": {
+        "key": "ck_bbc57f6a33ff9f608202125a72e24040",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:59:20",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_0cb6b83b29db641aacd93a266ac18a8f": {
+        "key": "ck_0cb6b83b29db641aacd93a266ac18a8f",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 02:59:24",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_302f10b2cb718015f28b2562b2dd549c": {
+        "key": "ck_302f10b2cb718015f28b2562b2dd549c",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:59:24",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_f4369d77c4418983c609ab2a05d325bf": {
+        "key": "ck_f4369d77c4418983c609ab2a05d325bf",
+        "user_id": "load_test",
+        "name": "Load Test Key",
+        "created_at": "2025-05-28 02:59:24",
+        "usage_count": 100,
+        "active": true
+    },
+    "ck_50f4de7935f74fa93867d4b6c9d33973": {
+        "key": "ck_50f4de7935f74fa93867d4b6c9d33973",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 02:59:27",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_e307527d53324659e9db2130c7899a71": {
+        "key": "ck_e307527d53324659e9db2130c7899a71",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 04:59:27",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_1e68504f995c9d76ce68219f022b29db": {
+        "key": "ck_1e68504f995c9d76ce68219f022b29db",
+        "user_id": "test_runner",
+        "name": "Test Runner Key",
+        "created_at": "2025-05-28 02:59:27",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_2d99eb8f6c5a91b5813bbca33d7c00c8": {
+        "key": "ck_2d99eb8f6c5a91b5813bbca33d7c00c8",
+        "user_id": "auth_test",
+        "name": "Auth Test Key",
+        "created_at": "2025-05-28 02:59:27",
+        "usage_count": 1,
+        "active": true
+    },
+    "ck_777e89c74f66cd7636f5daeaf95e9dbc": {
+        "key": "ck_777e89c74f66cd7636f5daeaf95e9dbc",
+        "user_id": "load_test",
+        "name": "Load Test Key",
+        "created_at": "2025-05-28 02:59:27",
+        "usage_count": 100,
+        "active": true
+    },
+    "ck_fb007d2d93f15bd289f957a02c671c6f": {
+        "key": "ck_fb007d2d93f15bd289f957a02c671c6f",
+        "user_id": "user_68367cb61a70f",
+        "name": "API Key",
+        "created_at": "2025-05-28 03:02:14",
+        "usage_count": 7,
+        "active": true
+    },
+    "ck_3ae9a678f5a1dc19339deee26686da8f": {
+        "key": "ck_3ae9a678f5a1dc19339deee26686da8f",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 03:47:08",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_7a44a6a91e40922d68716626f1873a4e": {
+        "key": "ck_7a44a6a91e40922d68716626f1873a4e",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 03:47:08",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_dd06fc9ada3c26e44b4665fd5bfee1cd": {
+        "key": "ck_dd06fc9ada3c26e44b4665fd5bfee1cd",
+        "user_id": "load_test",
+        "name": "Load Test Key",
+        "created_at": "2025-05-28 03:47:08",
+        "usage_count": 100,
+        "active": true
+    },
+    "ck_12ba74179d20ef297a9bd5cadef2a3e2": {
+        "key": "ck_12ba74179d20ef297a9bd5cadef2a3e2",
+        "user_id": "test_integration",
+        "name": "Integration Test Key",
+        "created_at": "2025-05-28 03:47:13",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_70325c913bb5280920b907458f9e3763": {
+        "key": "ck_70325c913bb5280920b907458f9e3763",
+        "user_id": "security_test",
+        "name": "Security Test",
+        "created_at": "2025-05-28 03:47:13",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_56c38f4f292460d268e0c7d1f53c6694": {
+        "key": "ck_56c38f4f292460d268e0c7d1f53c6694",
+        "user_id": "test_runner",
+        "name": "Test Runner Key",
+        "created_at": "2025-05-28 03:47:13",
+        "usage_count": 0,
+        "active": true
+    },
+    "ck_de49f8c3ac382b2d75ea36eb1ef2e98e": {
+        "key": "ck_de49f8c3ac382b2d75ea36eb1ef2e98e",
+        "user_id": "auth_test",
+        "name": "Auth Test Key",
+        "created_at": "2025-05-28 03:47:13",
+        "usage_count": 1,
+        "active": true
+    },
+    "ck_7fbd2f791722eca0f53e2891521ccdd0": {
+        "key": "ck_7fbd2f791722eca0f53e2891521ccdd0",
+        "user_id": "load_test",
+        "name": "Load Test Key",
+        "created_at": "2025-05-28 03:47:13",
+        "usage_count": 100,
+        "active": true
     }
 }

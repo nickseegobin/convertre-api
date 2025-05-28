@@ -1,0 +1,69 @@
+[2025-05-28 04:53:02] DEBUG: FileValidationService initialized
+[2025-05-28 04:53:02] DEBUG: CleanupService initialized
+[2025-05-28 04:53:02] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:53:02"}
+[2025-05-28 04:53:02] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:53:05] DEBUG: FileValidationService initialized
+[2025-05-28 04:53:05] DEBUG: CleanupService initialized
+[2025-05-28 04:53:06] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:53:06"}
+[2025-05-28 04:53:06] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:57:03] DEBUG: FileValidationService initialized
+[2025-05-28 04:57:03] DEBUG: CleanupService initialized
+[2025-05-28 04:57:03] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:57:03"}
+[2025-05-28 04:57:03] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:57:18] DEBUG: FileValidationService initialized
+[2025-05-28 04:57:18] DEBUG: CleanupService initialized
+[2025-05-28 04:57:18] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:57:18"}
+[2025-05-28 04:57:18] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:57:42] DEBUG: FileValidationService initialized
+[2025-05-28 04:57:42] DEBUG: CleanupService initialized
+[2025-05-28 04:57:42] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:57:42"}
+[2025-05-28 04:57:42] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:58:15] DEBUG: FileValidationService initialized
+[2025-05-28 04:58:15] DEBUG: CleanupService initialized
+[2025-05-28 04:58:16] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:58:16"}
+[2025-05-28 04:58:16] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:59:20] DEBUG: FileValidationService initialized
+[2025-05-28 04:59:20] DEBUG: CleanupService initialized
+[2025-05-28 04:59:20] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:59:20"}
+[2025-05-28 04:59:20] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:59:24] DEBUG: FileValidationService initialized
+[2025-05-28 04:59:24] DEBUG: CleanupService initialized
+[2025-05-28 04:59:24] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:59:24"}
+[2025-05-28 04:59:24] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:59:27] DEBUG: FileValidationService initialized
+[2025-05-28 04:59:27] DEBUG: CleanupService initialized
+[2025-05-28 04:59:27] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 01:59:27"}
+[2025-05-28 04:59:27] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 03:47:07] DEBUG: FileValidationService initialized
+[2025-05-28 03:47:07] DEBUG: CleanupService initialized
+[2025-05-28 03:47:08] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 00:47:08"}
+[2025-05-28 03:47:08] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 03:47:12] DEBUG: FileValidationService initialized
+[2025-05-28 03:47:12] DEBUG: CleanupService initialized
+[2025-05-28 03:47:13] INFO: Starting automatic cleanup | Context: {"retention_hours":3,"cutoff_time":"2025-05-28 00:47:13"}
+[2025-05-28 03:47:13] INFO: Cleanup completed | Context: {"files_cleaned":0,"storage_freed":"0 B","processing_time":"0.001s","errors":0}
+[2025-05-28 04:01:46] DEBUG: RateLimitService initialized
+[2025-05-28 04:01:46] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-28 04:01:46] DEBUG: FileValidationService initialized
+[2025-05-28 04:01:46] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-05-28 04:01:46] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-28 04:01:46] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-05-28 04:01:46] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 04:01:46] ERROR: Conversion endpoint error | Context: {"error":"No module available for png to png conversion","file":"C:\\laragon\\www\\convertre-api\\src\\Services\\ModuleFactory.php","line":40}
+[2025-05-28 04:01:59] DEBUG: RateLimitService initialized
+[2025-05-28 04:01:59] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-28 04:01:59] DEBUG: FileValidationService initialized
+[2025-05-28 04:01:59] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-05-28 04:01:59] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-28 04:01:59] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-28 04:01:59] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 04:01:59] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-28 04:01:59] DEBUG: File operation: upload | Context: {"filename":"check_1748404919_4d536aaf.png","success":true}
+[2025-05-28 04:01:59] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748404919_4d536aaf.png"}
+[2025-05-28 04:01:59] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-28 04:02:00] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-28 04:02:02] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-28 04:02:02] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"check_1748404919_4d536aaf.png","output":"check_1748404919_1517382c.jpg","quality":85}
+[2025-05-28 04:02:02] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748404919_4d536aaf.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748404919_1517382c.jpg\"","timeout":60}
+[2025-05-28 04:02:02] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748404919_4d536aaf.png","processing_time":"3.0266268253326s"}
+[2025-05-28 04:02:02] DEBUG: File operation: delete | Context: {"filename":"check_1748404919_4d536aaf.png","success":true}
