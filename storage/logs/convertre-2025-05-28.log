@@ -67,3 +67,94 @@
 [2025-05-28 04:02:02] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748404919_4d536aaf.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748404919_1517382c.jpg\"","timeout":60}
 [2025-05-28 04:02:02] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748404919_4d536aaf.png","processing_time":"3.0266268253326s"}
 [2025-05-28 04:02:02] DEBUG: File operation: delete | Context: {"filename":"check_1748404919_4d536aaf.png","success":true}
+[2025-05-28 04:36:52] DEBUG: RateLimitService initialized
+[2025-05-28 04:36:52] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-28 04:36:52] DEBUG: FileValidationService initialized
+[2025-05-28 04:36:52] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-05-28 04:36:52] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-28 04:36:52] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-28 04:36:52] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 04:36:52] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-28 04:36:52] DEBUG: File operation: upload | Context: {"filename":"check_1748407012_0db8d7bd.png","success":true}
+[2025-05-28 04:36:52] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748407012_0db8d7bd.png"}
+[2025-05-28 04:36:52] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-28 04:36:52] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-28 04:36:52] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-28 04:36:52] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"check_1748407012_0db8d7bd.png","output":"check_1748407012_68e8d48f.jpg","quality":85}
+[2025-05-28 04:36:52] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748407012_0db8d7bd.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748407012_68e8d48f.jpg\"","timeout":60}
+[2025-05-28 04:36:52] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748407012_0db8d7bd.png","processing_time":"0.57256293296814s"}
+[2025-05-28 04:36:52] DEBUG: File operation: delete | Context: {"filename":"check_1748407012_0db8d7bd.png","success":true}
+[2025-05-28 04:40:15] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 04:40:15] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 04:45:29] DEBUG: Files received in $_FILES | Context: {"file1":{"name":"pngimg.com - whatsapp_PNG16.png","full_path":"pngimg.com - whatsapp_PNG16.png","type":"image/png","tmp_name":"C:\\Users\\nicks\\AppData\\Local\\Temp\\phpB541.tmp","error":0,"size":7320},"file2":{"name":"check.png","full_path":"check.png","type":"image/png","tmp_name":"C:\\Users\\nicks\\AppData\\Local\\Temp\\phpB542.tmp","error":0,"size":6641}}
+[2025-05-28 04:45:29] DEBUG: Looking for individual file fields
+[2025-05-28 04:45:29] DEBUG: Found individual file | Context: {"field":"file1","name":"pngimg.com - whatsapp_PNG16.png"}
+[2025-05-28 04:45:29] DEBUG: Found individual file | Context: {"field":"file2","name":"check.png"}
+[2025-05-28 04:45:29] DEBUG: Final files processed for batch | Context: {"file_count":2}
+[2025-05-28 04:45:29] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"jpg","file_count":2}}
+[2025-05-28 04:45:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 04:45:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-28 04:45:29] DEBUG: File operation: upload | Context: {"filename":"pngimg.com_-_whatsapp_PNG16_1748407529_2262d2d9.png","success":true}
+[2025-05-28 04:45:29] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"pngimg.com_-_whatsapp_PNG16_1748407529_2262d2d9.png"}
+[2025-05-28 04:45:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-28 04:45:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-28 04:45:29] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-28 04:45:29] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"pngimg.com_-_whatsapp_PNG16_1748407529_2262d2d9.png","output":"pngimg.com_-_whatsapp_PNG16_1748407529_f6d41b73.jpg","quality":85}
+[2025-05-28 04:45:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/pngimg.com_-_whatsapp_PNG16_1748407529_2262d2d9.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/pngimg.com_-_whatsapp_PNG16_1748407529_f6d41b73.jpg\"","timeout":60}
+[2025-05-28 04:45:29] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"pngimg.com_-_whatsapp_PNG16_1748407529_2262d2d9.png","processing_time":"0.56924796104431s"}
+[2025-05-28 04:45:29] DEBUG: File operation: delete | Context: {"filename":"pngimg.com_-_whatsapp_PNG16_1748407529_2262d2d9.png","success":true}
+[2025-05-28 04:45:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-28 04:45:29] DEBUG: File operation: upload | Context: {"filename":"check_1748407529_42b79124.png","success":true}
+[2025-05-28 04:45:29] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748407529_42b79124.png"}
+[2025-05-28 04:45:29] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"check_1748407529_42b79124.png","output":"check_1748407529_e62308d6.jpg","quality":85}
+[2025-05-28 04:45:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748407529_42b79124.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748407529_e62308d6.jpg\"","timeout":60}
+[2025-05-28 04:45:29] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748407529_42b79124.png","processing_time":"0.15610885620117s"}
+[2025-05-28 04:45:29] DEBUG: File operation: delete | Context: {"filename":"check_1748407529_42b79124.png","success":true}
+[2025-05-28 04:47:25] DEBUG: Files received in $_FILES | Context: {"file1":{"name":"pngimg.com - whatsapp_PNG16.png","full_path":"pngimg.com - whatsapp_PNG16.png","type":"image/png","tmp_name":"C:\\Users\\nicks\\AppData\\Local\\Temp\\php7B4E.tmp","error":0,"size":7320},"file2":{"name":"check.png","full_path":"check.png","type":"image/png","tmp_name":"C:\\Users\\nicks\\AppData\\Local\\Temp\\php7B4F.tmp","error":0,"size":6641}}
+[2025-05-28 04:47:25] DEBUG: Looking for individual file fields
+[2025-05-28 04:47:25] DEBUG: Found individual file | Context: {"field":"file1","name":"pngimg.com - whatsapp_PNG16.png"}
+[2025-05-28 04:47:25] DEBUG: Found individual file | Context: {"field":"file2","name":"check.png"}
+[2025-05-28 04:47:25] DEBUG: Final files processed for batch | Context: {"file_count":2}
+[2025-05-28 04:47:25] INFO: API request | Context: {"endpoint":"/convert-batch","method":"POST","params":{"target_format":"pdf","file_count":2}}
+[2025-05-28 04:47:25] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 04:47:25] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_pdf"}
+[2025-05-28 04:47:25] DEBUG: File operation: upload | Context: {"filename":"pngimg.com_-_whatsapp_PNG16_1748407645_deb67278.png","success":true}
+[2025-05-28 04:47:25] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"pngimg.com_-_whatsapp_PNG16_1748407645_deb67278.png"}
+[2025-05-28 04:47:25] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-28 04:47:25] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-28 04:47:25] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-28 04:47:25] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"pngimg.com_-_whatsapp_PNG16_1748407645_deb67278.png","output":"pngimg.com_-_whatsapp_PNG16_1748407645_0ff514ba.pdf","quality":85}
+[2025-05-28 04:47:25] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/pngimg.com_-_whatsapp_PNG16_1748407645_deb67278.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/pngimg.com_-_whatsapp_PNG16_1748407645_0ff514ba.pdf\"","timeout":60}
+[2025-05-28 04:47:25] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"pngimg.com_-_whatsapp_PNG16_1748407645_deb67278.png","processing_time":"0.56305313110352s"}
+[2025-05-28 04:47:25] DEBUG: File operation: delete | Context: {"filename":"pngimg.com_-_whatsapp_PNG16_1748407645_deb67278.png","success":true}
+[2025-05-28 04:47:25] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_pdf"}
+[2025-05-28 04:47:25] DEBUG: File operation: upload | Context: {"filename":"check_1748407645_8f864776.png","success":true}
+[2025-05-28 04:47:25] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748407645_8f864776.png"}
+[2025-05-28 04:47:25] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"check_1748407645_8f864776.png","output":"check_1748407645_79e6c366.pdf","quality":85}
+[2025-05-28 04:47:25] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748407645_8f864776.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748407645_79e6c366.pdf\"","timeout":60}
+[2025-05-28 04:47:26] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748407645_8f864776.png","processing_time":"0.15871286392212s"}
+[2025-05-28 04:47:26] DEBUG: File operation: delete | Context: {"filename":"check_1748407645_8f864776.png","success":true}
+[2025-05-28 04:47:43] INFO: File downloaded | Context: {"filename":"check_1748407645_79e6c366.pdf","size":4496}
+[2025-05-28 05:09:24] DEBUG: RateLimitService initialized
+[2025-05-28 05:09:24] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-28 05:09:24] DEBUG: FileValidationService initialized
+[2025-05-28 05:09:24] DEBUG: File validation passed | Context: {"filename":"Health Plan Payment. 2025 e-receipt.pdf","size":23502,"mime":"application/pdf"}
+[2025-05-28 05:09:24] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-28 05:09:24] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-28 05:09:24] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 05:09:24] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-28 05:09:24] DEBUG: File operation: upload | Context: {"filename":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf","success":true}
+[2025-05-28 05:09:24] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf"}
+[2025-05-28 05:09:24] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --version","timeout":10}
+[2025-05-28 05:09:27] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-28 05:09:27] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-28 05:09:27] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf","temp_dir":"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_68369a8794560","command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_68369a8794560\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf\""}
+[2025-05-28 05:09:27] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_68369a8794560\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf\"","timeout":300}
+[2025-05-28 05:09:29] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.png"]}
+[2025-05-28 05:09:29] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-28 05:09:29] DEBUG: ImageMagick optimization | Context: {"input":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.png","output":"Health_Plan_Payment._2025_e-receipt_1748408964_811e343e.jpg","format":"jpg"}
+[2025-05-28 05:09:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_68369a8794560/Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.png\" -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/Health_Plan_Payment._2025_e-receipt_1748408964_811e343e.jpg\"","timeout":60}
+[2025-05-28 05:09:30] DEBUG: Cleaned up temp PNG file | Context: {"file":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.png"}
+[2025-05-28 05:09:30] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_68369a8794560"}
+[2025-05-28 05:09:30] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf","processing_time":"5.8828728199005s"}
+[2025-05-28 05:09:30] DEBUG: File operation: delete | Context: {"filename":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf","success":true}

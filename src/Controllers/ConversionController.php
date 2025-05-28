@@ -241,6 +241,75 @@ class ConversionController
             );
         }
     }
+
+    /**
+     * GET /formats - Get supported conversion formats
+     * 
+     * Query parameters:
+     * - view: simple (default), detailed, category
+     * 
+     * Examples:
+     * - GET /formats
+     * - GET /formats?view=detailed  
+     * - GET /formats?view=category
+     */
+    public static function getFormats(): void
+    {
+        try {
+            $queryParams = $_GET;
+            $view = $queryParams['view'] ?? 'simple'; // simple, detailed, category
+            
+            Logger::apiRequest('/formats', 'GET', ['view' => $view]);
+            
+            // Initialize the module factory
+            ModuleFactory::init();
+            
+            switch ($view) {
+                case 'detailed':
+                    $data = ModuleFactory::getSupportedFormats();
+                    $response = ResponseFormatter::success([
+                        'view' => 'detailed',
+                        'data' => $data,
+                        'statistics' => ModuleFactory::getDetailedStats()
+                    ]);
+                    break;
+                    
+                case 'category':
+                    $categories = ModuleFactory::getFormatsByCategory();
+                    $response = ResponseFormatter::success([
+                        'view' => 'category',
+                        'categories' => $categories,
+                        'total_conversions' => array_sum(array_map('count', $categories))
+                    ]);
+                    break;
+                    
+                case 'simple':
+                default:
+                    $conversions = ModuleFactory::getSupportedFormatsSimple();
+                    $response = ResponseFormatter::success([
+                        'view' => 'simple',
+                        'supported_conversions' => $conversions,
+                        'total_conversions' => count($conversions),
+                        'source_formats' => ModuleFactory::getSupportedSourceFormats(),
+                        'target_formats' => ModuleFactory::getSupportedTargetFormats()
+                    ]);
+                    break;
+            }
+            
+            ResponseFormatter::sendJson($response);
+            
+        } catch (\Exception $e) {
+            Logger::error('Formats endpoint error', [
+                'error' => $e->getMessage(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine()
+            ]);
+            
+            ResponseFormatter::sendJson(
+                ResponseFormatter::internalError('Failed to retrieve supported formats: ' . $e->getMessage())
+            );
+        }
+    }
     
     /**
      * ALTERNATIVE: Get uploaded files - handles both array and individual fields

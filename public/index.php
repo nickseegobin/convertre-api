@@ -156,7 +156,7 @@ if ($path === '/') $path = '/info';
 // Route handling
 try {
     switch ($path) {
-        case '/':
+       case '/':
         case '/info':
             if ($requestMethod === 'GET') {
                 $info = [
@@ -166,12 +166,17 @@ try {
                     'endpoints' => [
                         'GET /info' => 'API information',
                         'GET /health' => 'Health check',
+                        'GET /formats' => 'Supported conversion formats (simple view)',
+                        'GET /formats?view=detailed' => 'Detailed format information with tools and categories',
+                        'GET /formats?view=category' => 'Formats grouped by category (Images/Documents)',
                         'POST /generate-key' => 'Generate API key',
                         'POST /validate-key' => 'Validate API key',
                         'POST /convert' => 'Single file conversion',
                         'POST /convert-batch' => 'Batch file conversion',
+                        'GET /download/{filename}' => 'Download converted file',
                         'GET /cleanup/status' => 'Storage statistics',
-                        'POST /cleanup/run' => 'Manual cleanup'
+                        'POST /cleanup/run' => 'Manual cleanup',
+                        'POST /cleanup/force' => 'Force cleanup (admin)'
                     ]
                 ];
                 ResponseFormatter::sendJson(ResponseFormatter::success($info));
@@ -180,7 +185,23 @@ try {
                     ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
                 );
             }
-            break;
+        break;
+        case '/formats':
+        case '/supported-formats':
+            if ($requestMethod === 'GET') {
+                if (class_exists('Convertre\\Controllers\\ConversionController')) {
+                    \Convertre\Controllers\ConversionController::getFormats();
+                } else {
+                    ResponseFormatter::sendJson(
+                        ResponseFormatter::error('Formats module not available', 'MODULE_UNAVAILABLE', 503)
+                    );
+                }
+            } else {
+                ResponseFormatter::sendJson(
+                    ResponseFormatter::error('Method not allowed', 'METHOD_NOT_ALLOWED', 405)
+                );
+            }
+        break;
 
         case '/health':
             if ($requestMethod === 'GET') {
