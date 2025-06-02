@@ -158,3 +158,23 @@
 [2025-05-28 05:09:30] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_68369a8794560"}
 [2025-05-28 05:09:30] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf","processing_time":"5.8828728199005s"}
 [2025-05-28 05:09:30] DEBUG: File operation: delete | Context: {"filename":"Health_Plan_Payment._2025_e-receipt_1748408964_8c14f45e.pdf","success":true}
+[2025-05-28 05:39:17] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 05:39:17] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 05:39:32] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 05:39:32] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 05:39:38] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-05-28 05:39:38] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 05:39:44] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 05:39:44] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 05:39:54] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 05:39:54] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 15:08:56] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 15:08:56] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 15:08:57] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-05-28 15:08:57] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 15:08:59] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 15:08:59] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 16:23:42] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-28 16:23:42] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-28 17:05:09] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-05-28 17:05:09] DEBUG: ModuleFactory initialized with 35 modules

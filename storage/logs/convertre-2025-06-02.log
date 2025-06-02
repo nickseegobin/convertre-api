@@ -1,0 +1,118 @@
+[2025-06-02 00:02:34] DEBUG: RateLimitService initialized
+[2025-06-02 00:02:34] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-02 00:02:34] DEBUG: FileValidationService initialized
+[2025-06-02 00:02:34] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-02 00:02:34] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-02 00:02:34] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-02 00:02:34] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 00:02:34] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-02 00:02:34] DEBUG: File operation: upload | Context: {"filename":"sample2_1748822554_b3bd3104.heic","success":true}
+[2025-06-02 00:02:34] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748822554_b3bd3104.heic"}
+[2025-06-02 00:02:34] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 00:02:35] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heic","timeout":10}
+[2025-06-02 00:02:35] DEBUG: HEIC input support confirmed
+[2025-06-02 00:02:35] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-02 00:02:35] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-06-02 00:02:35] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"sample2_1748822554_b3bd3104.heic","output":"sample2_1748822554_3e8a6ad3.jpg","quality":85}
+[2025-06-02 00:02:35] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748822554_b3bd3104.heic\" -strip -auto-orient -colorspace sRGB -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748822554_3e8a6ad3.jpg\"","timeout":60}
+[2025-06-02 00:02:35] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748822554_b3bd3104.heic","processing_time":"0.90451502799988s"}
+[2025-06-02 00:02:35] DEBUG: File operation: delete | Context: {"filename":"sample2_1748822554_b3bd3104.heic","success":true}
+[2025-06-02 00:02:47] DEBUG: RateLimitService initialized
+[2025-06-02 00:02:47] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-02 00:02:47] DEBUG: FileValidationService initialized
+[2025-06-02 00:02:47] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-02 00:02:47] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-02 00:02:47] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-02 00:02:47] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 00:02:47] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_png"}
+[2025-06-02 00:02:47] DEBUG: File operation: upload | Context: {"filename":"sample2_1748822567_bfb566bf.heic","success":true}
+[2025-06-02 00:02:47] INFO: Conversion started | Context: {"from_format":"heic","to_format":"png","filename":"sample2_1748822567_bfb566bf.heic"}
+[2025-06-02 00:02:47] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 00:02:47] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heic","timeout":10}
+[2025-06-02 00:02:47] DEBUG: HEIC input support confirmed
+[2025-06-02 00:02:47] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-02 00:02:47] DEBUG: ImageMagick available for HEIC to png conversion
+[2025-06-02 00:02:47] DEBUG: ImageMagick HEIC to PNG conversion | Context: {"input":"sample2_1748822567_bfb566bf.heic","output":"sample2_1748822567_8921fe92.png","compression":9}
+[2025-06-02 00:02:47] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748822567_bfb566bf.heic\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748822567_8921fe92.png\"","timeout":60}
+[2025-06-02 00:02:48] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"png","filename":"sample2_1748822567_bfb566bf.heic","processing_time":"1.0166549682617s"}
+[2025-06-02 00:02:48] DEBUG: File operation: delete | Context: {"filename":"sample2_1748822567_bfb566bf.heic","success":true}
+[2025-06-02 00:02:57] DEBUG: RateLimitService initialized
+[2025-06-02 00:02:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-02 00:02:57] DEBUG: FileValidationService initialized
+[2025-06-02 00:02:57] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-02 00:02:57] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-02 00:02:57] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"pdf","file_count":1}}
+[2025-06-02 00:02:57] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 00:02:57] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_pdf"}
+[2025-06-02 00:02:57] DEBUG: File operation: upload | Context: {"filename":"sample2_1748822577_ebf41c46.heic","success":true}
+[2025-06-02 00:02:57] INFO: Conversion started | Context: {"from_format":"heic","to_format":"pdf","filename":"sample2_1748822577_ebf41c46.heic"}
+[2025-06-02 00:02:57] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 00:02:57] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heic","timeout":10}
+[2025-06-02 00:02:58] DEBUG: HEIC input support confirmed
+[2025-06-02 00:02:58] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-02 00:02:58] DEBUG: ImageMagick available for HEIC to pdf conversion
+[2025-06-02 00:02:58] DEBUG: ImageMagick HEIC to PDF conversion | Context: {"input":"sample2_1748822577_ebf41c46.heic","output":"sample2_1748822577_956ebff5.pdf","quality":85}
+[2025-06-02 00:02:58] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748822577_ebf41c46.heic\" -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748822577_956ebff5.pdf\"","timeout":120}
+[2025-06-02 00:02:58] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"pdf","filename":"sample2_1748822577_ebf41c46.heic","processing_time":"0.89760112762451s"}
+[2025-06-02 00:02:58] DEBUG: File operation: delete | Context: {"filename":"sample2_1748822577_ebf41c46.heic","success":true}
+[2025-06-02 00:04:57] DEBUG: RateLimitService initialized
+[2025-06-02 00:04:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-02 00:04:57] DEBUG: FileValidationService initialized
+[2025-06-02 00:04:57] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-02 00:04:57] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-02 00:04:57] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"pdf","file_count":1}}
+[2025-06-02 00:04:57] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 00:04:57] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_pdf"}
+[2025-06-02 00:04:57] DEBUG: File operation: upload | Context: {"filename":"sample2_1748822697_ab830a30.heic","success":true}
+[2025-06-02 00:04:57] INFO: Conversion started | Context: {"from_format":"heic","to_format":"pdf","filename":"sample2_1748822697_ab830a30.heic"}
+[2025-06-02 00:04:57] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 00:04:58] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heic","timeout":10}
+[2025-06-02 00:04:58] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heif","timeout":10}
+[2025-06-02 00:04:58] DEBUG: HEIC input support confirmed
+[2025-06-02 00:04:58] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-02 00:04:58] DEBUG: ImageMagick available for HEIC to pdf conversion
+[2025-06-02 00:04:58] DEBUG: ImageMagick HEIC to PDF conversion | Context: {"input":"sample2_1748822697_ab830a30.heic","output":"sample2_1748822697_b8e24c40.pdf","quality":85}
+[2025-06-02 00:04:58] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748822697_ab830a30.heic\" -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748822697_b8e24c40.pdf\"","timeout":120}
+[2025-06-02 00:04:59] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"pdf","filename":"sample2_1748822697_ab830a30.heic","processing_time":"1.1309750080109s"}
+[2025-06-02 00:04:59] DEBUG: File operation: delete | Context: {"filename":"sample2_1748822697_ab830a30.heic","success":true}
+[2025-06-02 00:09:27] DEBUG: RateLimitService initialized
+[2025-06-02 00:09:27] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-02 00:09:27] DEBUG: FileValidationService initialized
+[2025-06-02 00:09:27] DEBUG: File validation passed | Context: {"filename":"convertre_683cebb777274.heic","size":351970,"mime":"image/heic"}
+[2025-06-02 00:09:27] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-02 00:09:27] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-02 00:09:27] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 00:09:27] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-02 00:09:27] DEBUG: File operation: upload | Context: {"filename":"convertre_683cebb777274_1748822967_5f10e7ac.heic","success":true}
+[2025-06-02 00:09:27] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683cebb777274_1748822967_5f10e7ac.heic"}
+[2025-06-02 00:09:27] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 00:09:27] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heic","timeout":10}
+[2025-06-02 00:09:27] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heif","timeout":10}
+[2025-06-02 00:09:28] DEBUG: HEIC input support confirmed
+[2025-06-02 00:09:28] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-02 00:09:28] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-06-02 00:09:28] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"convertre_683cebb777274_1748822967_5f10e7ac.heic","output":"convertre_683cebb777274_1748822967_79843295.jpg","quality":85}
+[2025-06-02 00:09:28] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_683cebb777274_1748822967_5f10e7ac.heic\" -strip -auto-orient -colorspace sRGB -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_683cebb777274_1748822967_79843295.jpg\"","timeout":60}
+[2025-06-02 00:09:28] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683cebb777274_1748822967_5f10e7ac.heic","processing_time":"1.0866069793701s"}
+[2025-06-02 00:09:28] DEBUG: File operation: delete | Context: {"filename":"convertre_683cebb777274_1748822967_5f10e7ac.heic","success":true}
+[2025-06-02 00:09:33] INFO: File downloaded | Context: {"filename":"convertre_683cebb777274_1748822967_79843295.jpg","size":443877}
+[2025-06-02 00:09:49] DEBUG: RateLimitService initialized
+[2025-06-02 00:09:49] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-02 00:09:49] DEBUG: FileValidationService initialized
+[2025-06-02 00:09:49] DEBUG: File validation passed | Context: {"filename":"convertre_683cebcd89b54.heic","size":42984,"mime":"image/heic"}
+[2025-06-02 00:09:49] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-02 00:09:49] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"pdf","file_count":1}}
+[2025-06-02 00:09:49] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 00:09:49] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_pdf"}
+[2025-06-02 00:09:49] DEBUG: File operation: upload | Context: {"filename":"convertre_683cebcd89b54_1748822989_e99667be.heic","success":true}
+[2025-06-02 00:09:49] INFO: Conversion started | Context: {"from_format":"heic","to_format":"pdf","filename":"convertre_683cebcd89b54_1748822989_e99667be.heic"}
+[2025-06-02 00:09:49] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 00:09:49] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heic","timeout":10}
+[2025-06-02 00:09:49] DEBUG: Executing command | Context: {"command":"magick -list format | findstr /i heif","timeout":10}
+[2025-06-02 00:09:50] DEBUG: HEIC input support confirmed
+[2025-06-02 00:09:50] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-02 00:09:50] DEBUG: ImageMagick available for HEIC to pdf conversion
+[2025-06-02 00:09:50] DEBUG: ImageMagick HEIC to PDF conversion | Context: {"input":"convertre_683cebcd89b54_1748822989_e99667be.heic","output":"convertre_683cebcd89b54_1748822989_72db8d74.pdf","quality":85}
+[2025-06-02 00:09:50] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_683cebcd89b54_1748822989_e99667be.heic\" -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_683cebcd89b54_1748822989_72db8d74.pdf\"","timeout":120}
+[2025-06-02 00:09:50] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"pdf","filename":"convertre_683cebcd89b54_1748822989_e99667be.heic","processing_time":"0.98013305664062s"}
+[2025-06-02 00:09:50] DEBUG: File operation: delete | Context: {"filename":"convertre_683cebcd89b54_1748822989_e99667be.heic","success":true}

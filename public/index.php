@@ -134,29 +134,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-// Get request path
+// FIXED ROUTING LOGIC - This is the key change
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
 
-// Extract path from URI
-$path = '';
-if (isset($_SERVER['PATH_INFO'])) {
-    $path = $_SERVER['PATH_INFO'];
-} else {
-    $fullPath = parse_url($requestUri, PHP_URL_PATH);
-    $fullPath = str_replace('/convertre-api/public', '', $fullPath);
-    $fullPath = str_replace('/index.php', '', $fullPath);
-    $path = $fullPath ?: '/';
-}
+// Simple path extraction that works with both Apache and Nginx
+$path = parse_url($requestUri, PHP_URL_PATH);
+$path = $path ?: '/';
+
+// Remove common prefixes that might be present in development
+$path = str_replace('/convertre-api/public', '', $path);
+$path = str_replace('/index.php', '', $path);
 
 // Clean up path
 $path = '/' . trim($path, '/');
-if ($path === '/') $path = '/info';
+
+// IMPORTANT: Do NOT force redirect to /info anymore
+// The original problematic line was: if ($path === '/') $path = '/info';
+// This caused ALL endpoints to return the same response
 
 // Route handling
 try {
     switch ($path) {
-       case '/':
+        case '/':
         case '/info':
             if ($requestMethod === 'GET') {
                 $info = [
@@ -186,6 +186,7 @@ try {
                 );
             }
         break;
+
         case '/formats':
         case '/supported-formats':
             if ($requestMethod === 'GET') {

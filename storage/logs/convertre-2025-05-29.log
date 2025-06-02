@@ -1,0 +1,107 @@
+[2025-05-29 02:13:38] DEBUG: RateLimitService initialized
+[2025-05-29 02:13:38] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:13:38] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:17:11] DEBUG: RateLimitService initialized
+[2025-05-29 02:17:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:17:11] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:23:39] DEBUG: RateLimitService initialized
+[2025-05-29 02:23:39] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:23:39] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:24:09] DEBUG: RateLimitService initialized
+[2025-05-29 02:24:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:24:09] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:34:35] DEBUG: RateLimitService initialized
+[2025-05-29 02:34:35] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:34:35] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:35:15] DEBUG: RateLimitService initialized
+[2025-05-29 02:35:15] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:35:15] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:41:50] DEBUG: RateLimitService initialized
+[2025-05-29 02:41:50] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:41:50] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:42:19] DEBUG: RateLimitService initialized
+[2025-05-29 02:42:19] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:42:19] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:43:51] DEBUG: RateLimitService initialized
+[2025-05-29 02:43:51] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:43:51] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 02:54:32] DEBUG: RateLimitService initialized
+[2025-05-29 02:54:32] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:54:32] DEBUG: FileValidationService initialized
+[2025-05-29 02:54:32] DEBUG: File validation passed | Context: {"filename":"Health Plan Payment. 2025 e-receipt.pdf","size":23502,"mime":"application/pdf"}
+[2025-05-29 02:54:32] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-29 02:54:32] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-29 02:54:32] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-29 02:54:32] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-29 02:54:32] DEBUG: File operation: upload | Context: {"filename":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf","success":true}
+[2025-05-29 02:54:32] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf"}
+[2025-05-29 02:54:32] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --version","timeout":10}
+[2025-05-29 02:54:38] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-29 02:54:38] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-29 02:54:38] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf","temp_dir":"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6837cc6e75f4c","command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6837cc6e75f4c\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf\""}
+[2025-05-29 02:54:38] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6837cc6e75f4c\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf\"","timeout":300}
+[2025-05-29 02:54:40] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.png"]}
+[2025-05-29 02:54:40] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-29 02:54:40] DEBUG: ImageMagick optimization | Context: {"input":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.png","output":"Health_Plan_Payment._2025_e-receipt_1748487272_2050a2e6.jpg","format":"jpg"}
+[2025-05-29 02:54:40] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6837cc6e75f4c/Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.png\" -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/Health_Plan_Payment._2025_e-receipt_1748487272_2050a2e6.jpg\"","timeout":60}
+[2025-05-29 02:54:41] DEBUG: Cleaned up temp PNG file | Context: {"file":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.png"}
+[2025-05-29 02:54:41] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_6837cc6e75f4c"}
+[2025-05-29 02:54:41] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf","processing_time":"8.9130599498749s"}
+[2025-05-29 02:54:41] DEBUG: File operation: delete | Context: {"filename":"Health_Plan_Payment._2025_e-receipt_1748487272_465942f0.pdf","success":true}
+[2025-05-29 02:55:57] DEBUG: RateLimitService initialized
+[2025-05-29 02:55:57] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 02:55:57] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 03:03:16] DEBUG: RateLimitService initialized
+[2025-05-29 03:03:16] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 03:03:16] INFO: Validation failed | Context: {"error":"No files uploaded","field":""}
+[2025-05-29 03:06:09] DEBUG: RateLimitService initialized
+[2025-05-29 03:06:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 03:06:09] DEBUG: FileValidationService initialized
+[2025-05-29 03:06:09] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-05-29 03:06:09] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-29 03:06:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-29 03:06:09] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-29 03:06:09] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-05-29 03:06:09] DEBUG: File operation: upload | Context: {"filename":"sample2_1748487969_caacdeb7.heic","success":true}
+[2025-05-29 03:06:09] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748487969_caacdeb7.heic"}
+[2025-05-29 03:06:09] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-29 03:06:09] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-05-29 03:06:10] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-05-29 03:06:10] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-05-29 03:06:10] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748487969_caacdeb7.heic","error":"Tool 'imagemagick' not available"}
+[2025-05-29 03:06:10] DEBUG: File operation: delete | Context: {"filename":"sample2_1748487969_caacdeb7.heic","success":true}
+[2025-05-29 03:06:35] DEBUG: RateLimitService initialized
+[2025-05-29 03:06:35] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 03:06:35] DEBUG: FileValidationService initialized
+[2025-05-29 03:06:35] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-05-29 03:06:35] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-29 03:06:35] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-29 03:06:35] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-29 03:06:35] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-05-29 03:06:35] DEBUG: File operation: upload | Context: {"filename":"sample2_1748487995_369ce50f.heic","success":true}
+[2025-05-29 03:06:35] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748487995_369ce50f.heic"}
+[2025-05-29 03:06:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-29 03:06:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-05-29 03:06:36] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-05-29 03:06:36] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-05-29 03:06:36] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748487995_369ce50f.heic","error":"Tool 'imagemagick' not available"}
+[2025-05-29 03:06:36] DEBUG: File operation: delete | Context: {"filename":"sample2_1748487995_369ce50f.heic","success":true}
+[2025-05-29 03:15:15] DEBUG: RateLimitService initialized
+[2025-05-29 03:15:15] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-29 03:15:15] DEBUG: FileValidationService initialized
+[2025-05-29 03:15:15] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-05-29 03:15:15] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-29 03:15:15] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-05-29 03:15:15] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-29 03:15:15] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-05-29 03:15:15] DEBUG: File operation: upload | Context: {"filename":"sample2_1748488515_2673d5fb.jpg","success":true}
+[2025-05-29 03:15:15] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748488515_2673d5fb.jpg"}
+[2025-05-29 03:15:15] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-29 03:15:15] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-29 03:15:18] DEBUG: ImageMagick available for JPG to png conversion
+[2025-05-29 03:15:18] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748488515_2673d5fb.jpg","output":"sample2_1748488515_ac7d4b3d.png","compression":9}
+[2025-05-29 03:15:18] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748488515_2673d5fb.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748488515_ac7d4b3d.png\"","timeout":60}
+[2025-05-29 03:15:18] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748488515_2673d5fb.jpg","processing_time":"3.2729210853577s"}
+[2025-05-29 03:15:18] DEBUG: File operation: delete | Context: {"filename":"sample2_1748488515_2673d5fb.jpg","success":true}
+[2025-05-29 03:19:24] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-29 03:19:24] DEBUG: ModuleFactory initialized with 35 modules

@@ -1,0 +1,133 @@
+[2025-05-30 12:21:51] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-05-30 12:21:51] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 12:22:23] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-05-30 12:22:23] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 12:22:28] DEBUG: RateLimitService initialized
+[2025-05-30 12:22:28] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 12:22:28] DEBUG: FileValidationService initialized
+[2025-05-30 12:22:28] DEBUG: File validation passed | Context: {"filename":"convertre_6839a304433a7.png","size":7320,"mime":"image/png"}
+[2025-05-30 12:22:28] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 12:22:28] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-30 12:22:28] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 12:22:28] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-30 12:22:28] DEBUG: File operation: upload | Context: {"filename":"convertre_6839a304433a7_1748607748_b3fa72e9.png","success":true}
+[2025-05-30 12:22:28] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839a304433a7_1748607748_b3fa72e9.png"}
+[2025-05-30 12:22:28] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 12:22:28] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-30 12:22:31] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-30 12:22:31] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"convertre_6839a304433a7_1748607748_b3fa72e9.png","output":"convertre_6839a304433a7_1748607748_654ef1ee.jpg","quality":85}
+[2025-05-30 12:22:31] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839a304433a7_1748607748_b3fa72e9.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_6839a304433a7_1748607748_654ef1ee.jpg\"","timeout":60}
+[2025-05-30 12:22:31] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839a304433a7_1748607748_b3fa72e9.png","processing_time":"3.3708920478821s"}
+[2025-05-30 12:22:31] DEBUG: File operation: delete | Context: {"filename":"convertre_6839a304433a7_1748607748_b3fa72e9.png","success":true}
+[2025-05-30 12:22:34] INFO: File downloaded | Context: {"filename":"convertre_6839a304433a7_1748607748_654ef1ee.jpg","size":12641}
+[2025-05-30 13:50:29] DEBUG: RateLimitService initialized
+[2025-05-30 13:50:29] DEBUG: RateLimitService initialized
+[2025-05-30 13:50:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 13:50:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 13:50:29] DEBUG: FileValidationService initialized
+[2025-05-30 13:50:29] DEBUG: FileValidationService initialized
+[2025-05-30 13:50:29] DEBUG: File validation passed | Context: {"filename":"convertre_6839b7a4d16e8.pdf","size":23502,"mime":"application/pdf"}
+[2025-05-30 13:50:29] DEBUG: File validation passed | Context: {"filename":"convertre_6839b7a4d3ed7.pdf","size":23502,"mime":"application/pdf"}
+[2025-05-30 13:50:29] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 13:50:29] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 13:50:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-30 13:50:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-30 13:50:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 13:50:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 13:50:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-30 13:50:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-05-30 13:50:29] DEBUG: File operation: upload | Context: {"filename":"convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf","success":true}
+[2025-05-30 13:50:29] DEBUG: File operation: upload | Context: {"filename":"convertre_6839b7a4d16e8_1748613029_45d4926b.pdf","success":true}
+[2025-05-30 13:50:29] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf"}
+[2025-05-30 13:50:29] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_6839b7a4d16e8_1748613029_45d4926b.pdf"}
+[2025-05-30 13:50:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --version","timeout":10}
+[2025-05-30 13:50:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --version","timeout":10}
+[2025-05-30 13:50:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 13:50:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 13:50:35] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-30 13:50:35] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-05-30 13:50:35] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"convertre_6839b7a4d16e8_1748613029_45d4926b.pdf","temp_dir":"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd65f5","command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd65f5\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7a4d16e8_1748613029_45d4926b.pdf\""}
+[2025-05-30 13:50:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd65f5\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7a4d16e8_1748613029_45d4926b.pdf\"","timeout":300}
+[2025-05-30 13:50:35] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf","temp_dir":"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd6633","command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd6633\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf\""}
+[2025-05-30 13:50:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd6633\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf\"","timeout":300}
+[2025-05-30 13:50:38] ERROR: LibreOffice conversion failed | Context: {"command":"\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd65f5\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7a4d16e8_1748613029_45d4926b.pdf\"","exit_code":1,"error":""}
+[2025-05-30 13:50:38] ERROR: LibreOffice failed to convert PDF to PNG
+[2025-05-30 13:50:38] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["convertre_6839b7a4d3ed7_1748613029_3ba83379.png"]}
+[2025-05-30 13:50:38] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_6839b7a4d16e8_1748613029_45d4926b.pdf","error":"Conversion process failed"}
+[2025-05-30 13:50:38] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-05-30 13:50:38] DEBUG: ImageMagick optimization | Context: {"input":"convertre_6839b7a4d3ed7_1748613029_3ba83379.png","output":"convertre_6839b7a4d3ed7_1748613029_e74e7baa.jpg","format":"jpg"}
+[2025-05-30 13:50:38] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\Users\\nicks\\AppData\\Local\\Temp/convertre_pdf_6839b7abd6633/convertre_6839b7a4d3ed7_1748613029_3ba83379.png\" -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_6839b7a4d3ed7_1748613029_e74e7baa.jpg\"","timeout":60}
+[2025-05-30 13:50:38] DEBUG: File operation: delete | Context: {"filename":"convertre_6839b7a4d16e8_1748613029_45d4926b.pdf","success":true}
+[2025-05-30 13:50:38] DEBUG: Cleaned up temp PNG file | Context: {"file":"convertre_6839b7a4d3ed7_1748613029_3ba83379.png"}
+[2025-05-30 13:50:38] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_6839b7abd6633"}
+[2025-05-30 13:50:38] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf","processing_time":"9.2679440975189s"}
+[2025-05-30 13:50:38] DEBUG: File operation: delete | Context: {"filename":"convertre_6839b7a4d3ed7_1748613029_3ba83379.pdf","success":true}
+[2025-05-30 13:50:59] DEBUG: RateLimitService initialized
+[2025-05-30 13:50:59] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 13:50:59] DEBUG: FileValidationService initialized
+[2025-05-30 13:50:59] DEBUG: File validation passed | Context: {"filename":"convertre_6839b7c315619.png","size":7320,"mime":"image/png"}
+[2025-05-30 13:50:59] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 13:50:59] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-30 13:50:59] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 13:50:59] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-30 13:50:59] DEBUG: File operation: upload | Context: {"filename":"convertre_6839b7c315619_1748613059_d3410fef.png","success":true}
+[2025-05-30 13:50:59] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839b7c315619_1748613059_d3410fef.png"}
+[2025-05-30 13:50:59] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 13:50:59] DEBUG: RateLimitService initialized
+[2025-05-30 13:50:59] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 13:50:59] DEBUG: FileValidationService initialized
+[2025-05-30 13:50:59] DEBUG: File validation passed | Context: {"filename":"convertre_6839b7c316bca.png","size":7320,"mime":"image/png"}
+[2025-05-30 13:50:59] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 13:50:59] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-30 13:50:59] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 13:50:59] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-30 13:50:59] DEBUG: File operation: upload | Context: {"filename":"convertre_6839b7c316bca_1748613059_746cff8c.png","success":true}
+[2025-05-30 13:50:59] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839b7c316bca_1748613059_746cff8c.png"}
+[2025-05-30 13:50:59] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 13:50:59] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-30 13:50:59] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-30 13:51:02] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-30 13:51:02] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-30 13:51:02] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"convertre_6839b7c315619_1748613059_d3410fef.png","output":"convertre_6839b7c315619_1748613059_74a992e1.jpg","quality":85}
+[2025-05-30 13:51:02] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"convertre_6839b7c316bca_1748613059_746cff8c.png","output":"convertre_6839b7c316bca_1748613059_6a2e5a92.jpg","quality":85}
+[2025-05-30 13:51:02] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7c315619_1748613059_d3410fef.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_6839b7c315619_1748613059_74a992e1.jpg\"","timeout":60}
+[2025-05-30 13:51:02] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839b7c316bca_1748613059_746cff8c.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_6839b7c316bca_1748613059_6a2e5a92.jpg\"","timeout":60}
+[2025-05-30 13:51:02] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839b7c315619_1748613059_d3410fef.png","processing_time":"3.1165540218353s"}
+[2025-05-30 13:51:02] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839b7c316bca_1748613059_746cff8c.png","processing_time":"3.1089680194855s"}
+[2025-05-30 13:51:02] DEBUG: File operation: delete | Context: {"filename":"convertre_6839b7c316bca_1748613059_746cff8c.png","success":true}
+[2025-05-30 13:51:02] DEBUG: File operation: delete | Context: {"filename":"convertre_6839b7c315619_1748613059_d3410fef.png","success":true}
+[2025-05-30 14:29:19] DEBUG: RateLimitService initialized
+[2025-05-30 14:29:19] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 14:29:19] DEBUG: FileValidationService initialized
+[2025-05-30 14:29:19] DEBUG: File validation passed | Context: {"filename":"convertre_6839c0bf952d5.png","size":6641,"mime":"image/png"}
+[2025-05-30 14:29:19] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 14:29:19] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-05-30 14:29:19] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 14:29:19] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-05-30 14:29:19] DEBUG: File operation: upload | Context: {"filename":"convertre_6839c0bf952d5_1748615359_b9b58723.png","success":true}
+[2025-05-30 14:29:19] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839c0bf952d5_1748615359_b9b58723.png"}
+[2025-05-30 14:29:19] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 14:29:19] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-30 14:29:20] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-05-30 14:29:20] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"convertre_6839c0bf952d5_1748615359_b9b58723.png","output":"convertre_6839c0bf952d5_1748615359_d9ca06b2.jpg","quality":85}
+[2025-05-30 14:29:20] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839c0bf952d5_1748615359_b9b58723.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_6839c0bf952d5_1748615359_d9ca06b2.jpg\"","timeout":60}
+[2025-05-30 14:29:20] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"convertre_6839c0bf952d5_1748615359_b9b58723.png","processing_time":"0.59463810920715s"}
+[2025-05-30 14:29:20] DEBUG: File operation: delete | Context: {"filename":"convertre_6839c0bf952d5_1748615359_b9b58723.png","success":true}
+[2025-05-30 14:29:25] INFO: File downloaded | Context: {"filename":"convertre_6839c0bf952d5_1748615359_d9ca06b2.jpg","size":9322}
+[2025-05-30 14:30:22] DEBUG: RateLimitService initialized
+[2025-05-30 14:30:22] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-05-30 14:30:22] DEBUG: FileValidationService initialized
+[2025-05-30 14:30:22] DEBUG: File validation passed | Context: {"filename":"convertre_6839c0fe8c4c5.jpg","size":30662,"mime":"image/jpeg"}
+[2025-05-30 14:30:22] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-05-30 14:30:22] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"pdf","file_count":1}}
+[2025-05-30 14:30:22] DEBUG: ModuleFactory initialized with 35 modules
+[2025-05-30 14:30:22] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-05-30 14:30:22] DEBUG: File operation: upload | Context: {"filename":"convertre_6839c0fe8c4c5_1748615422_dd5ad209.jpg","success":true}
+[2025-05-30 14:30:22] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"pdf","filename":"convertre_6839c0fe8c4c5_1748615422_dd5ad209.jpg"}
+[2025-05-30 14:30:22] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-05-30 14:30:22] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-05-30 14:30:23] DEBUG: ImageMagick available for JPG to pdf conversion
+[2025-05-30 14:30:23] DEBUG: ImageMagick JPG to PDF conversion | Context: {"input":"convertre_6839c0fe8c4c5_1748615422_dd5ad209.jpg","output":"convertre_6839c0fe8c4c5_1748615422_1c0d1841.pdf","quality":85}
+[2025-05-30 14:30:23] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_6839c0fe8c4c5_1748615422_dd5ad209.jpg\" -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_6839c0fe8c4c5_1748615422_1c0d1841.pdf\"","timeout":120}
+[2025-05-30 14:30:23] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"pdf","filename":"convertre_6839c0fe8c4c5_1748615422_dd5ad209.jpg","processing_time":"0.57072615623474s"}
+[2025-05-30 14:30:23] DEBUG: File operation: delete | Context: {"filename":"convertre_6839c0fe8c4c5_1748615422_dd5ad209.jpg","success":true}

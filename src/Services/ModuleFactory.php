@@ -30,7 +30,7 @@ class ModuleFactory
      * Get module for specific conversion with proper instantiation
      * NOTE: This method has the constructor mismatch issue - will be fixed in step 2
      */
-    public static function getModule(string $fromFormat, string $toFormat): AbstractConversionModule
+   /*  public static function getModule(string $fromFormat, string $toFormat): AbstractConversionModule
     {
         if (!self::$initialized) {
             self::init();
@@ -62,8 +62,58 @@ class ModuleFactory
         if ($moduleClass === 'Convertre\\Services\\Modules\\JpgMultiFormatModule') {
             return new $moduleClass($toFormat); // Pass target format to constructor
         }
-        
+
+    
         // Standard modules (no constructor parameters) - THIS WILL FAIL due to constructor mismatch
+        return new $moduleClass();
+    } */
+
+    public static function getModule(string $fromFormat, string $toFormat): AbstractConversionModule
+    {
+        if (!self::$initialized) {
+            self::init();
+        }
+        
+        $key = strtolower($fromFormat) . '_to_' . strtolower($toFormat);
+        
+        if (!isset(self::$modules[$key])) {
+            throw new ConversionException(
+                "No module available for {$fromFormat} to {$toFormat} conversion",
+                $fromFormat,
+                $toFormat
+            );
+        }
+        
+        $moduleClass = self::$modules[$key];
+        
+        if (!class_exists($moduleClass)) {
+            throw new ConversionException(
+                "Module class not found: {$moduleClass}",
+                $fromFormat,
+                $toFormat
+            );
+        }
+        
+        Logger::debug("Creating module", ['class' => $moduleClass, 'conversion' => $key]);
+        
+        // Handle ALL multi-format modules (they need target format parameter)
+        $multiFormatModules = [
+            'Convertre\\Services\\Modules\\HeicMultiFormatModule',
+            'Convertre\\Services\\Modules\\JpgMultiFormatModule',
+            'Convertre\\Services\\Modules\\PngMultiFormatModule',
+            'Convertre\\Services\\Modules\\WebpMultiFormatModule',
+            'Convertre\\Services\\Modules\\GifMultiFormatModule',
+            'Convertre\\Services\\Modules\\BmpMultiFormatModule',
+            'Convertre\\Services\\Modules\\TiffMultiFormatModule',
+            'Convertre\\Services\\Modules\\SvgMultiFormatModule',
+            'Convertre\\Services\\Modules\\PdfMultiFormatModule'
+        ];
+        
+        if (in_array($moduleClass, $multiFormatModules)) {
+            return new $moduleClass($toFormat);
+        }
+        
+        // Standard modules (document converters with no constructor parameters)
         return new $moduleClass();
     }
     

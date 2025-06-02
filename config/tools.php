@@ -76,11 +76,20 @@ if ($isWindows) {
 }
 
 // Fallback to PATH if not found
-if (!$imageMagickPath) {
+/* if (!$imageMagickPath) {
     // Check if magick is in PATH
     $pathCheck = shell_exec($isWindows ? 'where magick 2>nul' : 'which magick 2>/dev/null');
     if ($pathCheck) {
         $imageMagickPath = $isWindows ? 'magick' : trim($pathCheck);
+    }
+} */
+
+// Fallback to PATH if not found
+if (!$imageMagickPath) {
+    // Check if magick is in PATH
+    $pathCheck = shell_exec($isWindows ? 'where magick 2>nul' : 'which magick 2>/dev/null');
+    if ($pathCheck) {
+        $imageMagickPath = 'magick'; // Use simple 'magick' command
     }
 }
 
@@ -96,10 +105,10 @@ if (!$libreOfficePath) {
 return [
     // ImageMagick Configuration
     'imagemagick' => [
-        'binary_path' => $imageMagickPath ? ($isWindows && strpos($imageMagickPath, ' ') !== false ? '"' . $imageMagickPath . '"' : $imageMagickPath) : 'magick',
-        'magick_path' => $imageMagickPath ? ($isWindows && strpos($imageMagickPath, ' ') !== false ? '"' . $imageMagickPath . '"' : $imageMagickPath) : 'magick',
-        'identify_path' => $imageMagickPath ? ($isWindows && strpos($imageMagickPath, ' ') !== false ? '"' . $imageMagickPath . '" identify' : $imageMagickPath . ' identify') : 'magick identify',
-        'version_check' => $imageMagickPath ? ($isWindows && strpos($imageMagickPath, ' ') !== false ? '"' . $imageMagickPath . '" -version' : $imageMagickPath . ' -version') : 'magick -version',
+        'binary_path' => 'magick',  // Force simple command
+        'magick_path' => 'magick',  // Force simple command
+        'identify_path' => 'magick identify',
+        'version_check' => 'magick -version',
         'required_version' => '7.0',
         'timeout' => 120,
         'memory_limit' => '256MB',

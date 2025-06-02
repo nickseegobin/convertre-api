@@ -271,7 +271,13 @@ class HeicMultiFormatModule extends AbstractConversionModule
      */
     private function checkHeicInputSupport(string $convertPath): bool
     {
-        $result = $this->executeCommand($convertPath . ' -list format | grep -i heic', 10);
+        // In checkHeicInputSupport() method, replace:
+        $isWindows = strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
+        $grepCommand = $isWindows ? 'findstr /i' : 'grep -i';
+        $result = $this->executeCommand($convertPath . ' -list format | ' . $grepCommand . ' heic', 10);
+
+        // And for the HEIF fallback:
+        $heifResult = $this->executeCommand($convertPath . ' -list format | ' . $grepCommand . ' heif', 10);
         
         if (!$result['success'] || empty(trim($result['output']))) {
             // Also try HEIF format (alternative name)

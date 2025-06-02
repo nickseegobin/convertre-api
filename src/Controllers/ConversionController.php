@@ -427,17 +427,36 @@ class ConversionController
     /**
      * Generate download URL for converted file - FIXED for localhost
      */
-    private static function generateDownloadUrl(string $filename): string
+  /*   private static function generateDownloadUrl(string $filename): string
     {
         // For development, use localhost
-        $baseUrl = 'http://localhost/convertre-api/public/download';
+        //$baseUrl = 'http://localhost/convertre-api/public/download';
         
         // For production, this would be:
-        // $baseUrl = ConfigLoader::get('api.download.base_url', 'https://api.convertre.com/download');
+         $baseUrl = ConfigLoader::get('api.download.base_url', 'https://api.convertre.com/download');
         
         return $baseUrl . '/' . $filename;
+    } */
+
+    /**
+     * Generate download URL for converted file - FIXED for Laragon
+     */
+    private static function generateDownloadUrl(string $filename): string
+    {
+        // Build base URL from current request
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+        $host = $_SERVER['HTTP_HOST'];
+        
+        // For Laragon setup, we don't need complex path detection
+        // Just build the URL directly
+        $baseUrl = $protocol . '://' . $host;
+        
+        // Add /download path
+        $downloadUrl = $baseUrl . '/download/' . $filename;
+        
+        return $downloadUrl;
     }
-    
+        
     /**
      * Get file expiration time (ISO 8601 format)
      */

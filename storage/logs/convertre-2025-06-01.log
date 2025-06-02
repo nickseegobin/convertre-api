@@ -1,0 +1,532 @@
+[2025-06-01 12:24:00] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-06-01 12:24:00] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 12:25:28] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-06-01 12:25:28] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 12:25:39] DEBUG: RateLimitService initialized
+[2025-06-01 12:25:39] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 12:25:39] DEBUG: FileValidationService initialized
+[2025-06-01 12:25:39] DEBUG: File validation passed | Context: {"filename":"convertre_683c46c3dc3e1.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 12:25:39] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 12:25:39] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 12:25:39] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 12:25:39] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 12:25:39] DEBUG: File operation: upload | Context: {"filename":"convertre_683c46c3dc3e1_1748780739_bf04f36e.jpg","success":true}
+[2025-06-01 12:25:39] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"convertre_683c46c3dc3e1_1748780739_bf04f36e.jpg"}
+[2025-06-01 12:25:39] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 12:25:40] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 12:25:42] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 12:25:42] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"convertre_683c46c3dc3e1_1748780739_bf04f36e.jpg","output":"convertre_683c46c3dc3e1_1748780739_af9a9f6d.png","compression":9}
+[2025-06-01 12:25:42] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_683c46c3dc3e1_1748780739_bf04f36e.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_683c46c3dc3e1_1748780739_af9a9f6d.png\"","timeout":60}
+[2025-06-01 12:25:43] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"convertre_683c46c3dc3e1_1748780739_bf04f36e.jpg","processing_time":"3.3282599449158s"}
+[2025-06-01 12:25:43] DEBUG: File operation: delete | Context: {"filename":"convertre_683c46c3dc3e1_1748780739_bf04f36e.jpg","success":true}
+[2025-06-01 12:25:46] INFO: File downloaded | Context: {"filename":"convertre_683c46c3dc3e1_1748780739_af9a9f6d.png","size":3301993}
+[2025-06-01 12:45:06] DEBUG: RateLimitService initialized
+[2025-06-01 12:45:06] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 12:45:06] DEBUG: FileValidationService initialized
+[2025-06-01 12:45:06] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 12:45:06] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 12:45:06] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 12:45:06] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 12:45:06] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 12:45:06] DEBUG: File operation: upload | Context: {"filename":"sample2_1748781906_3f2cd1e2.jpg","success":true}
+[2025-06-01 12:45:06] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748781906_3f2cd1e2.jpg"}
+[2025-06-01 12:45:06] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 12:45:06] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 12:45:06] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 12:45:06] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748781906_3f2cd1e2.jpg","output":"sample2_1748781906_c0b2fa8d.png","compression":9}
+[2025-06-01 12:45:06] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748781906_3f2cd1e2.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748781906_c0b2fa8d.png\"","timeout":60}
+[2025-06-01 12:45:06] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748781906_3f2cd1e2.jpg","processing_time":"0.70366787910461s"}
+[2025-06-01 12:45:06] DEBUG: File operation: delete | Context: {"filename":"sample2_1748781906_3f2cd1e2.jpg","success":true}
+[2025-06-01 12:46:01] DEBUG: RateLimitService initialized
+[2025-06-01 12:46:01] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 12:46:01] DEBUG: FileValidationService initialized
+[2025-06-01 12:46:01] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 12:46:01] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 12:46:01] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 12:46:01] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 12:46:01] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 12:46:01] DEBUG: File operation: upload | Context: {"filename":"sample2_1748781961_99e926d7.jpg","success":true}
+[2025-06-01 12:46:01] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748781961_99e926d7.jpg"}
+[2025-06-01 12:46:01] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 12:46:01] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 12:46:02] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 12:46:02] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748781961_99e926d7.jpg","output":"sample2_1748781961_d7b62860.png","compression":9}
+[2025-06-01 12:46:02] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748781961_99e926d7.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748781961_d7b62860.png\"","timeout":60}
+[2025-06-01 12:46:02] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748781961_99e926d7.jpg","processing_time":"0.70780277252197s"}
+[2025-06-01 12:46:02] DEBUG: File operation: delete | Context: {"filename":"sample2_1748781961_99e926d7.jpg","success":true}
+[2025-06-01 13:11:28] DEBUG: RateLimitService initialized
+[2025-06-01 13:11:28] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:11:28] DEBUG: FileValidationService initialized
+[2025-06-01 13:11:28] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 13:11:28] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:11:28] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:11:28] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:11:28] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:11:28] DEBUG: File operation: upload | Context: {"filename":"sample2_1748783488_c52228e0.jpg","success":true}
+[2025-06-01 13:11:28] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783488_c52228e0.jpg"}
+[2025-06-01 13:11:28] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:11:28] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:11:28] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:11:28] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748783488_c52228e0.jpg","output":"sample2_1748783488_cb38efce.png","compression":9}
+[2025-06-01 13:11:28] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748783488_c52228e0.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748783488_cb38efce.png\"","timeout":60}
+[2025-06-01 13:11:29] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783488_c52228e0.jpg","processing_time":"0.80346989631653s"}
+[2025-06-01 13:11:29] DEBUG: File operation: delete | Context: {"filename":"sample2_1748783488_c52228e0.jpg","success":true}
+[2025-06-01 13:13:19] DEBUG: RateLimitService initialized
+[2025-06-01 13:13:19] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:13:19] DEBUG: FileValidationService initialized
+[2025-06-01 13:13:19] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 13:13:19] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:13:19] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:13:19] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:13:19] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:13:19] DEBUG: File operation: upload | Context: {"filename":"sample2_1748783599_5a425ad9.jpg","success":true}
+[2025-06-01 13:13:19] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783599_5a425ad9.jpg"}
+[2025-06-01 13:13:19] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:13:19] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:13:20] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:13:20] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748783599_5a425ad9.jpg","output":"sample2_1748783599_52e88a52.png","compression":9}
+[2025-06-01 13:13:20] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748783599_5a425ad9.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748783599_52e88a52.png\"","timeout":60}
+[2025-06-01 13:13:20] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783599_5a425ad9.jpg","processing_time":"0.70634007453918s"}
+[2025-06-01 13:13:20] DEBUG: File operation: delete | Context: {"filename":"sample2_1748783599_5a425ad9.jpg","success":true}
+[2025-06-01 13:14:29] DEBUG: RateLimitService initialized
+[2025-06-01 13:14:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:14:29] DEBUG: FileValidationService initialized
+[2025-06-01 13:14:29] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 13:14:29] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:14:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:14:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:14:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:14:29] DEBUG: File operation: upload | Context: {"filename":"sample2_1748783669_75370565.jpg","success":true}
+[2025-06-01 13:14:29] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783669_75370565.jpg"}
+[2025-06-01 13:14:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:14:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:14:30] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:14:30] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748783669_75370565.jpg","output":"sample2_1748783669_5f49d246.png","compression":9}
+[2025-06-01 13:14:30] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748783669_75370565.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748783669_5f49d246.png\"","timeout":60}
+[2025-06-01 13:14:30] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783669_75370565.jpg","processing_time":"0.83357787132263s"}
+[2025-06-01 13:14:30] DEBUG: File operation: delete | Context: {"filename":"sample2_1748783669_75370565.jpg","success":true}
+[2025-06-01 13:15:15] DEBUG: RateLimitService initialized
+[2025-06-01 13:15:15] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:15:15] DEBUG: FileValidationService initialized
+[2025-06-01 13:15:15] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 13:15:15] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:15:15] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:15:15] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:15:15] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:15:15] DEBUG: File operation: upload | Context: {"filename":"sample2_1748783715_f31fcb89.jpg","success":true}
+[2025-06-01 13:15:15] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783715_f31fcb89.jpg"}
+[2025-06-01 13:15:15] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:15:15] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:15:16] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:15:16] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748783715_f31fcb89.jpg","output":"sample2_1748783715_e9d10daa.png","compression":9}
+[2025-06-01 13:15:16] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748783715_f31fcb89.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748783715_e9d10daa.png\"","timeout":60}
+[2025-06-01 13:15:16] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783715_f31fcb89.jpg","processing_time":"0.70912909507751s"}
+[2025-06-01 13:15:16] DEBUG: File operation: delete | Context: {"filename":"sample2_1748783715_f31fcb89.jpg","success":true}
+[2025-06-01 13:16:26] DEBUG: RateLimitService initialized
+[2025-06-01 13:16:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:16:26] DEBUG: FileValidationService initialized
+[2025-06-01 13:16:26] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 13:16:26] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:16:26] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:16:26] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:16:26] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:16:26] DEBUG: File operation: upload | Context: {"filename":"sample2_1748783786_e5b8002f.jpg","success":true}
+[2025-06-01 13:16:26] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783786_e5b8002f.jpg"}
+[2025-06-01 13:16:26] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:16:26] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:16:26] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:16:26] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748783786_e5b8002f.jpg","output":"sample2_1748783786_bceb9806.png","compression":9}
+[2025-06-01 13:16:26] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748783786_e5b8002f.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748783786_bceb9806.png\"","timeout":60}
+[2025-06-01 13:16:26] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748783786_e5b8002f.jpg","processing_time":"0.71267795562744s"}
+[2025-06-01 13:16:26] DEBUG: File operation: delete | Context: {"filename":"sample2_1748783786_e5b8002f.jpg","success":true}
+[2025-06-01 13:19:51] INFO: File downloaded | Context: {"filename":"sample2_1748783715_e9d10daa.png","size":3301993}
+[2025-06-01 13:22:33] INFO: File downloaded | Context: {"filename":"sample2_1748783786_bceb9806.png","size":3301993}
+[2025-06-01 13:23:49] DEBUG: RateLimitService initialized
+[2025-06-01 13:23:49] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:23:49] DEBUG: FileValidationService initialized
+[2025-06-01 13:23:49] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 13:23:49] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:23:49] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:23:49] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:23:49] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:23:49] DEBUG: File operation: upload | Context: {"filename":"sample2_1748784229_c1ec08a3.jpg","success":true}
+[2025-06-01 13:23:49] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748784229_c1ec08a3.jpg"}
+[2025-06-01 13:23:49] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:23:50] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:23:50] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:23:50] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748784229_c1ec08a3.jpg","output":"sample2_1748784229_47b4a88a.png","compression":9}
+[2025-06-01 13:23:50] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748784229_c1ec08a3.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748784229_47b4a88a.png\"","timeout":60}
+[2025-06-01 13:23:50] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748784229_c1ec08a3.jpg","processing_time":"0.83225703239441s"}
+[2025-06-01 13:23:50] DEBUG: File operation: delete | Context: {"filename":"sample2_1748784229_c1ec08a3.jpg","success":true}
+[2025-06-01 13:24:00] INFO: File downloaded | Context: {"filename":"sample2_1748784229_47b4a88a.png","size":3301993}
+[2025-06-01 13:26:16] DEBUG: RateLimitService initialized
+[2025-06-01 13:26:16] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:26:16] DEBUG: FileValidationService initialized
+[2025-06-01 13:26:16] DEBUG: File validation passed | Context: {"filename":"convertre_683c54f83f42f.jpg","size":1511625,"mime":"image/jpeg"}
+[2025-06-01 13:26:16] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:26:16] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:26:16] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:26:16] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 13:26:16] DEBUG: File operation: upload | Context: {"filename":"convertre_683c54f83f42f_1748784376_497745d0.jpg","success":true}
+[2025-06-01 13:26:16] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"convertre_683c54f83f42f_1748784376_497745d0.jpg"}
+[2025-06-01 13:26:16] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:26:16] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 13:26:16] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 13:26:16] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"convertre_683c54f83f42f_1748784376_497745d0.jpg","output":"convertre_683c54f83f42f_1748784376_dbba7c5b.png","compression":9}
+[2025-06-01 13:26:16] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_683c54f83f42f_1748784376_497745d0.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_683c54f83f42f_1748784376_dbba7c5b.png\"","timeout":60}
+[2025-06-01 13:26:19] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"convertre_683c54f83f42f_1748784376_497745d0.jpg","processing_time":"3.0527579784393s"}
+[2025-06-01 13:26:19] DEBUG: File operation: delete | Context: {"filename":"convertre_683c54f83f42f_1748784376_497745d0.jpg","success":true}
+[2025-06-01 13:26:38] INFO: File downloaded | Context: {"filename":"convertre_683c54f83f42f_1748784376_dbba7c5b.png","size":28498665}
+[2025-06-01 13:27:29] DEBUG: RateLimitService initialized
+[2025-06-01 13:27:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:27:29] DEBUG: FileValidationService initialized
+[2025-06-01 13:27:29] DEBUG: File validation passed | Context: {"filename":"convertre_683c5541a3acd.heic","size":293608,"mime":"image/heif"}
+[2025-06-01 13:27:29] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:27:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 13:27:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:27:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 13:27:29] DEBUG: File operation: upload | Context: {"filename":"convertre_683c5541a3acd_1748784449_42b1a9f3.heic","success":true}
+[2025-06-01 13:27:29] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683c5541a3acd_1748784449_42b1a9f3.heic"}
+[2025-06-01 13:27:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:27:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 13:27:29] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 13:27:30] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 13:27:30] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683c5541a3acd_1748784449_42b1a9f3.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 13:27:30] DEBUG: File operation: delete | Context: {"filename":"convertre_683c5541a3acd_1748784449_42b1a9f3.heic","success":true}
+[2025-06-01 13:28:00] DEBUG: RateLimitService initialized
+[2025-06-01 13:28:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:28:00] DEBUG: FileValidationService initialized
+[2025-06-01 13:28:00] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 13:28:00] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:28:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 13:28:00] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:28:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_png"}
+[2025-06-01 13:28:00] DEBUG: File operation: upload | Context: {"filename":"sample2_1748784480_9e2249d2.heic","success":true}
+[2025-06-01 13:28:00] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748784480_9e2249d2.heic"}
+[2025-06-01 13:28:00] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:28:01] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 13:28:01] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 13:28:01] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 13:28:01] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748784480_9e2249d2.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 13:28:01] DEBUG: File operation: delete | Context: {"filename":"sample2_1748784480_9e2249d2.heic","success":true}
+[2025-06-01 13:28:14] DEBUG: RateLimitService initialized
+[2025-06-01 13:28:14] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 13:28:14] DEBUG: FileValidationService initialized
+[2025-06-01 13:28:14] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 13:28:14] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 13:28:14] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 13:28:14] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 13:28:14] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 13:28:14] DEBUG: File operation: upload | Context: {"filename":"sample2_1748784494_01755dcb.heic","success":true}
+[2025-06-01 13:28:14] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748784494_01755dcb.heic"}
+[2025-06-01 13:28:14] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 13:28:14] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 13:28:14] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 13:28:14] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 13:28:14] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748784494_01755dcb.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 13:28:14] DEBUG: File operation: delete | Context: {"filename":"sample2_1748784494_01755dcb.heic","success":true}
+[2025-06-01 23:06:55] DEBUG: RateLimitService initialized
+[2025-06-01 23:06:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:06:55] DEBUG: FileValidationService initialized
+[2025-06-01 23:06:55] DEBUG: File validation passed | Context: {"filename":"convertre_683cdd0ed145e.heic","size":42984,"mime":"image/heic"}
+[2025-06-01 23:06:55] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:06:55] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:06:55] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:06:55] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:06:55] DEBUG: File operation: upload | Context: {"filename":"convertre_683cdd0ed145e_1748819215_fcbe4ecf.heic","success":true}
+[2025-06-01 23:06:55] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683cdd0ed145e_1748819215_fcbe4ecf.heic"}
+[2025-06-01 23:06:55] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:06:55] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:06:55] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:06:55] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:06:55] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683cdd0ed145e_1748819215_fcbe4ecf.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:06:55] DEBUG: File operation: delete | Context: {"filename":"convertre_683cdd0ed145e_1748819215_fcbe4ecf.heic","success":true}
+[2025-06-01 23:15:26] DEBUG: RateLimitService initialized
+[2025-06-01 23:15:26] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:15:26] DEBUG: FileValidationService initialized
+[2025-06-01 23:15:26] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:15:26] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:15:26] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:15:26] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:15:26] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:15:26] DEBUG: File operation: upload | Context: {"filename":"sample2_1748819726_f8db4e46.heic","success":true}
+[2025-06-01 23:15:26] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748819726_f8db4e46.heic"}
+[2025-06-01 23:15:26] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:15:26] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:15:26] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:15:26] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:15:26] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748819726_f8db4e46.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:15:26] DEBUG: File operation: delete | Context: {"filename":"sample2_1748819726_f8db4e46.heic","success":true}
+[2025-06-01 23:15:34] DEBUG: RateLimitService initialized
+[2025-06-01 23:15:34] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:15:34] DEBUG: FileValidationService initialized
+[2025-06-01 23:15:34] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:15:34] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:15:34] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 23:15:34] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:15:34] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_png"}
+[2025-06-01 23:15:34] DEBUG: File operation: upload | Context: {"filename":"sample2_1748819734_8b17bef5.heic","success":true}
+[2025-06-01 23:15:34] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748819734_8b17bef5.heic"}
+[2025-06-01 23:15:34] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:15:34] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:15:35] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:15:35] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:15:35] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748819734_8b17bef5.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:15:35] DEBUG: File operation: delete | Context: {"filename":"sample2_1748819734_8b17bef5.heic","success":true}
+[2025-06-01 23:16:11] DEBUG: RateLimitService initialized
+[2025-06-01 23:16:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:16:11] DEBUG: FileValidationService initialized
+[2025-06-01 23:16:11] DEBUG: File validation passed | Context: {"filename":"sample2.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-01 23:16:11] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:16:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 23:16:11] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:16:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_png"}
+[2025-06-01 23:16:11] DEBUG: File operation: upload | Context: {"filename":"sample2_1748819771_0d5d3bfd.jpg","success":true}
+[2025-06-01 23:16:11] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748819771_0d5d3bfd.jpg"}
+[2025-06-01 23:16:11] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:16:11] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 23:16:13] DEBUG: ImageMagick available for JPG to png conversion
+[2025-06-01 23:16:13] DEBUG: ImageMagick JPG to PNG conversion | Context: {"input":"sample2_1748819771_0d5d3bfd.jpg","output":"sample2_1748819771_4d3c1d40.png","compression":9}
+[2025-06-01 23:16:13] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/sample2_1748819771_0d5d3bfd.jpg\" -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/sample2_1748819771_4d3c1d40.png\"","timeout":60}
+[2025-06-01 23:16:14] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"png","filename":"sample2_1748819771_0d5d3bfd.jpg","processing_time":"3.1861970424652s"}
+[2025-06-01 23:16:14] DEBUG: File operation: delete | Context: {"filename":"sample2_1748819771_0d5d3bfd.jpg","success":true}
+[2025-06-01 23:36:56] DEBUG: RateLimitService initialized
+[2025-06-01 23:36:56] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:36:56] DEBUG: FileValidationService initialized
+[2025-06-01 23:36:56] DEBUG: File validation passed | Context: {"filename":"sample1 (1).heic","size":42984,"mime":"image/heic"}
+[2025-06-01 23:36:56] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:36:56] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"png","file_count":1}}
+[2025-06-01 23:36:56] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:36:56] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_png"}
+[2025-06-01 23:36:56] DEBUG: File operation: upload | Context: {"filename":"sample1__1__1748821016_da66e992.heic","success":true}
+[2025-06-01 23:36:56] INFO: Conversion started | Context: {"from_format":"heic","to_format":"png","filename":"sample1__1__1748821016_da66e992.heic"}
+[2025-06-01 23:36:56] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:36:56] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:36:57] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:36:57] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:36:57] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"png","filename":"sample1__1__1748821016_da66e992.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:36:57] DEBUG: File operation: delete | Context: {"filename":"sample1__1__1748821016_da66e992.heic","success":true}
+[2025-06-01 23:37:04] DEBUG: RateLimitService initialized
+[2025-06-01 23:37:04] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:37:04] DEBUG: FileValidationService initialized
+[2025-06-01 23:37:04] DEBUG: File validation passed | Context: {"filename":"sample1 (1).heic","size":42984,"mime":"image/heic"}
+[2025-06-01 23:37:04] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:37:04] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:37:04] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:37:04] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:37:04] DEBUG: File operation: upload | Context: {"filename":"sample1__1__1748821024_955adea6.heic","success":true}
+[2025-06-01 23:37:04] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1__1__1748821024_955adea6.heic"}
+[2025-06-01 23:37:04] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:37:04] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:37:04] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:37:05] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:37:05] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample1__1__1748821024_955adea6.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:37:05] DEBUG: File operation: delete | Context: {"filename":"sample1__1__1748821024_955adea6.heic","success":true}
+[2025-06-01 23:39:12] DEBUG: RateLimitService initialized
+[2025-06-01 23:39:12] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:39:12] DEBUG: FileValidationService initialized
+[2025-06-01 23:39:12] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-06-01 23:39:12] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:39:12] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:39:12] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:39:12] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-06-01 23:39:12] DEBUG: File operation: upload | Context: {"filename":"check_1748821152_5f686fe8.png","success":true}
+[2025-06-01 23:39:12] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748821152_5f686fe8.png"}
+[2025-06-01 23:39:12] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:39:12] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 23:39:12] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-06-01 23:39:12] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"check_1748821152_5f686fe8.png","output":"check_1748821152_6a0170f9.jpg","quality":85}
+[2025-06-01 23:39:12] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748821152_5f686fe8.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748821152_6a0170f9.jpg\"","timeout":60}
+[2025-06-01 23:39:13] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748821152_5f686fe8.png","processing_time":"0.56866908073425s"}
+[2025-06-01 23:39:13] DEBUG: File operation: delete | Context: {"filename":"check_1748821152_5f686fe8.png","success":true}
+[2025-06-01 23:40:47] DEBUG: RateLimitService initialized
+[2025-06-01 23:40:47] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:40:47] DEBUG: FileValidationService initialized
+[2025-06-01 23:40:47] DEBUG: File validation passed | Context: {"filename":"SampleGIFImage_135kbmb.gif","size":138380,"mime":"image/gif"}
+[2025-06-01 23:40:47] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:40:47] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:40:47] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:40:47] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-06-01 23:40:47] DEBUG: File operation: upload | Context: {"filename":"SampleGIFImage_135kbmb_1748821247_61088c6d.gif","success":true}
+[2025-06-01 23:40:47] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"SampleGIFImage_135kbmb_1748821247_61088c6d.gif"}
+[2025-06-01 23:40:47] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:40:47] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 23:40:48] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-06-01 23:40:48] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"SampleGIFImage_135kbmb_1748821247_61088c6d.gif","output":"SampleGIFImage_135kbmb_1748821247_9200dd4d.jpg","quality":85}
+[2025-06-01 23:40:48] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/SampleGIFImage_135kbmb_1748821247_61088c6d.gif\"[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/SampleGIFImage_135kbmb_1748821247_9200dd4d.jpg\"","timeout":60}
+[2025-06-01 23:40:48] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"SampleGIFImage_135kbmb_1748821247_61088c6d.gif","processing_time":"0.55005812644958s"}
+[2025-06-01 23:40:48] DEBUG: File operation: delete | Context: {"filename":"SampleGIFImage_135kbmb_1748821247_61088c6d.gif","success":true}
+[2025-06-01 23:40:55] DEBUG: RateLimitService initialized
+[2025-06-01 23:40:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:40:55] DEBUG: FileValidationService initialized
+[2025-06-01 23:40:55] DEBUG: File validation passed | Context: {"filename":"file_example_TIFF_1MB.tiff","size":1131930,"mime":"image/tiff"}
+[2025-06-01 23:40:55] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:40:55] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:40:55] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:40:55] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_jpg"}
+[2025-06-01 23:40:55] DEBUG: File operation: upload | Context: {"filename":"file_example_TIFF_1MB_1748821255_b98efc1b.tiff","success":true}
+[2025-06-01 23:40:55] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"jpg","filename":"file_example_TIFF_1MB_1748821255_b98efc1b.tiff"}
+[2025-06-01 23:40:55] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:40:56] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 23:40:56] DEBUG: ImageMagick available for TIFF to jpg conversion
+[2025-06-01 23:40:56] DEBUG: ImageMagick TIFF to JPG conversion | Context: {"input":"file_example_TIFF_1MB_1748821255_b98efc1b.tiff","output":"file_example_TIFF_1MB_1748821255_b67c145d.jpg","quality":85}
+[2025-06-01 23:40:56] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/file_example_TIFF_1MB_1748821255_b98efc1b.tiff\"[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/file_example_TIFF_1MB_1748821255_b67c145d.jpg\"","timeout":60}
+[2025-06-01 23:40:56] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"jpg","filename":"file_example_TIFF_1MB_1748821255_b98efc1b.tiff","processing_time":"0.57293701171875s"}
+[2025-06-01 23:40:56] DEBUG: File operation: delete | Context: {"filename":"file_example_TIFF_1MB_1748821255_b98efc1b.tiff","success":true}
+[2025-06-01 23:41:39] DEBUG: RateLimitService initialized
+[2025-06-01 23:41:39] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:41:39] DEBUG: FileValidationService initialized
+[2025-06-01 23:41:39] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:41:39] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:41:39] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:41:39] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:41:39] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:41:39] DEBUG: File operation: upload | Context: {"filename":"sample2_1748821299_6fffe443.heic","success":true}
+[2025-06-01 23:41:39] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748821299_6fffe443.heic"}
+[2025-06-01 23:41:39] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:41:39] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:41:40] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:41:40] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:41:40] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748821299_6fffe443.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:41:40] DEBUG: File operation: delete | Context: {"filename":"sample2_1748821299_6fffe443.heic","success":true}
+[2025-06-01 23:44:07] DEBUG: RateLimitService initialized
+[2025-06-01 23:44:07] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:44:07] DEBUG: FileValidationService initialized
+[2025-06-01 23:44:07] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:44:07] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:44:07] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:44:07] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:44:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:44:07] DEBUG: File operation: upload | Context: {"filename":"sample2_1748821447_b1feddff.heic","success":true}
+[2025-06-01 23:44:07] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748821447_b1feddff.heic"}
+[2025-06-01 23:44:07] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:44:07] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:44:07] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:44:07] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:44:07] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748821447_b1feddff.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:44:07] DEBUG: File operation: delete | Context: {"filename":"sample2_1748821447_b1feddff.heic","success":true}
+[2025-06-01 23:46:11] DEBUG: RateLimitService initialized
+[2025-06-01 23:46:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:46:11] DEBUG: FileValidationService initialized
+[2025-06-01 23:46:11] DEBUG: File validation passed | Context: {"filename":"SampleGIFImage_40kbmb.gif","size":40316,"mime":"image/gif"}
+[2025-06-01 23:46:11] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:46:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:46:11] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:46:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-06-01 23:46:11] DEBUG: File operation: upload | Context: {"filename":"SampleGIFImage_40kbmb_1748821571_aaecd50e.gif","success":true}
+[2025-06-01 23:46:11] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"SampleGIFImage_40kbmb_1748821571_aaecd50e.gif"}
+[2025-06-01 23:46:11] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:46:11] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format","timeout":10}
+[2025-06-01 23:46:12] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-06-01 23:46:12] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"SampleGIFImage_40kbmb_1748821571_aaecd50e.gif","output":"SampleGIFImage_40kbmb_1748821571_ec3ceb23.jpg","quality":85}
+[2025-06-01 23:46:12] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/SampleGIFImage_40kbmb_1748821571_aaecd50e.gif\"[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/SampleGIFImage_40kbmb_1748821571_ec3ceb23.jpg\"","timeout":60}
+[2025-06-01 23:46:12] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"SampleGIFImage_40kbmb_1748821571_aaecd50e.gif","processing_time":"0.55775594711304s"}
+[2025-06-01 23:46:12] DEBUG: File operation: delete | Context: {"filename":"SampleGIFImage_40kbmb_1748821571_aaecd50e.gif","success":true}
+[2025-06-01 23:51:17] DEBUG: RateLimitService initialized
+[2025-06-01 23:51:17] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:51:17] DEBUG: FileValidationService initialized
+[2025-06-01 23:51:17] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:51:17] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:51:17] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:51:17] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:51:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:51:17] DEBUG: File operation: upload | Context: {"filename":"sample2_1748821877_e21a5b90.heic","success":true}
+[2025-06-01 23:51:17] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748821877_e21a5b90.heic"}
+[2025-06-01 23:51:17] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -version","timeout":5}
+[2025-06-01 23:51:17] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heic","timeout":10}
+[2025-06-01 23:51:17] DEBUG: Executing command | Context: {"command":"\"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" -list format | grep -i heif","timeout":10}
+[2025-06-01 23:51:17] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:51:17] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748821877_e21a5b90.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:51:17] DEBUG: File operation: delete | Context: {"filename":"sample2_1748821877_e21a5b90.heic","success":true}
+[2025-06-01 23:55:51] DEBUG: RateLimitService initialized
+[2025-06-01 23:55:51] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:55:51] DEBUG: FileValidationService initialized
+[2025-06-01 23:55:51] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:55:51] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:55:51] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:55:51] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:55:51] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:55:51] DEBUG: File operation: upload | Context: {"filename":"sample2_1748822151_219053c6.heic","success":true}
+[2025-06-01 23:55:51] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748822151_219053c6.heic"}
+[2025-06-01 23:55:51] DEBUG: Executing command | Context: {"command":"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe -version","timeout":5}
+[2025-06-01 23:55:51] WARNING: ImageMagick not available | Context: {"path":"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe","format":"jpg"}
+[2025-06-01 23:55:51] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748822151_219053c6.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:55:51] DEBUG: File operation: delete | Context: {"filename":"sample2_1748822151_219053c6.heic","success":true}
+[2025-06-01 23:56:07] DEBUG: RateLimitService initialized
+[2025-06-01 23:56:07] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:56:07] DEBUG: FileValidationService initialized
+[2025-06-01 23:56:07] DEBUG: File validation passed | Context: {"filename":"SampleGIFImage_135kbmb.gif","size":138380,"mime":"image/gif"}
+[2025-06-01 23:56:07] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:56:07] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:56:07] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:56:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-06-01 23:56:07] DEBUG: File operation: upload | Context: {"filename":"SampleGIFImage_135kbmb_1748822167_145282b7.gif","success":true}
+[2025-06-01 23:56:07] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"SampleGIFImage_135kbmb_1748822167_145282b7.gif"}
+[2025-06-01 23:56:07] DEBUG: Executing command | Context: {"command":"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe -version","timeout":5}
+[2025-06-01 23:56:07] WARNING: ImageMagick not available | Context: {"path":"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe","format":"jpg"}
+[2025-06-01 23:56:07] ERROR: Conversion failed | Context: {"from_format":"gif","to_format":"jpg","filename":"SampleGIFImage_135kbmb_1748822167_145282b7.gif","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:56:07] DEBUG: File operation: delete | Context: {"filename":"SampleGIFImage_135kbmb_1748822167_145282b7.gif","success":true}
+[2025-06-01 23:56:28] DEBUG: RateLimitService initialized
+[2025-06-01 23:56:28] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:56:28] DEBUG: FileValidationService initialized
+[2025-06-01 23:56:28] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-06-01 23:56:28] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:56:28] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:56:28] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:56:28] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-06-01 23:56:28] DEBUG: File operation: upload | Context: {"filename":"check_1748822188_3375516f.png","success":true}
+[2025-06-01 23:56:28] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748822188_3375516f.png"}
+[2025-06-01 23:56:28] DEBUG: Executing command | Context: {"command":"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe -version","timeout":5}
+[2025-06-01 23:56:28] WARNING: ImageMagick not available | Context: {"path":"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe","format":"jpg"}
+[2025-06-01 23:56:28] ERROR: Conversion failed | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748822188_3375516f.png","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:56:28] DEBUG: File operation: delete | Context: {"filename":"check_1748822188_3375516f.png","success":true}
+[2025-06-01 23:58:11] DEBUG: RateLimitService initialized
+[2025-06-01 23:58:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:58:11] DEBUG: FileValidationService initialized
+[2025-06-01 23:58:11] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-06-01 23:58:11] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:58:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:58:11] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:58:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-06-01 23:58:11] DEBUG: File operation: upload | Context: {"filename":"check_1748822291_569f3b8a.png","success":true}
+[2025-06-01 23:58:11] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748822291_569f3b8a.png"}
+[2025-06-01 23:58:11] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-01 23:58:11] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-01 23:58:11] DEBUG: ImageMagick available for PNG to jpg conversion
+[2025-06-01 23:58:11] DEBUG: ImageMagick PNG to JPG conversion | Context: {"input":"check_1748822291_569f3b8a.png","output":"check_1748822291_acce2870.jpg","quality":85}
+[2025-06-01 23:58:11] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/check_1748822291_569f3b8a.png\" -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/check_1748822291_acce2870.jpg\"","timeout":60}
+[2025-06-01 23:58:11] INFO: Conversion completed successfully | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748822291_569f3b8a.png","processing_time":"0.55407905578613s"}
+[2025-06-01 23:58:11] DEBUG: File operation: delete | Context: {"filename":"check_1748822291_569f3b8a.png","success":true}
+[2025-06-01 23:58:22] DEBUG: RateLimitService initialized
+[2025-06-01 23:58:22] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:58:22] DEBUG: FileValidationService initialized
+[2025-06-01 23:58:22] DEBUG: File validation passed | Context: {"filename":"file_example_TIFF_1MB.tiff","size":1131930,"mime":"image/tiff"}
+[2025-06-01 23:58:22] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:58:22] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:58:22] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:58:22] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_jpg"}
+[2025-06-01 23:58:22] DEBUG: File operation: upload | Context: {"filename":"file_example_TIFF_1MB_1748822302_1294c26e.tiff","success":true}
+[2025-06-01 23:58:22] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"jpg","filename":"file_example_TIFF_1MB_1748822302_1294c26e.tiff"}
+[2025-06-01 23:58:22] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-01 23:58:22] DEBUG: Executing command | Context: {"command":"magick -list format","timeout":10}
+[2025-06-01 23:58:22] DEBUG: ImageMagick available for TIFF to jpg conversion
+[2025-06-01 23:58:22] DEBUG: ImageMagick TIFF to JPG conversion | Context: {"input":"file_example_TIFF_1MB_1748822302_1294c26e.tiff","output":"file_example_TIFF_1MB_1748822302_110f59c4.jpg","quality":85}
+[2025-06-01 23:58:22] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/file_example_TIFF_1MB_1748822302_1294c26e.tiff\"[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/file_example_TIFF_1MB_1748822302_110f59c4.jpg\"","timeout":60}
+[2025-06-01 23:58:22] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"jpg","filename":"file_example_TIFF_1MB_1748822302_1294c26e.tiff","processing_time":"0.57186698913574s"}
+[2025-06-01 23:58:22] DEBUG: File operation: delete | Context: {"filename":"file_example_TIFF_1MB_1748822302_1294c26e.tiff","success":true}
+[2025-06-01 23:58:29] DEBUG: RateLimitService initialized
+[2025-06-01 23:58:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_fb007d2...","requests":1,"limit":60}
+[2025-06-01 23:58:29] DEBUG: FileValidationService initialized
+[2025-06-01 23:58:29] DEBUG: File validation passed | Context: {"filename":"sample2.heic","size":351970,"mime":"image/heic"}
+[2025-06-01 23:58:29] INFO: Request validation completed | Context: {"user_id":"user_68367cb61a70f","type":"single","file_count":1}
+[2025-06-01 23:58:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_68367cb61a70f","target_format":"jpg","file_count":1}}
+[2025-06-01 23:58:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-01 23:58:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-01 23:58:29] DEBUG: File operation: upload | Context: {"filename":"sample2_1748822309_cbc1ead6.heic","success":true}
+[2025-06-01 23:58:29] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748822309_cbc1ead6.heic"}
+[2025-06-01 23:58:29] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-01 23:58:29] DEBUG: Executing command | Context: {"command":"magick -list format | grep -i heic","timeout":10}
+[2025-06-01 23:58:29] DEBUG: Executing command | Context: {"command":"magick -list format | grep -i heif","timeout":10}
+[2025-06-01 23:58:29] WARNING: ImageMagick HEIC/HEIF input support not detected | Context: {"suggestion":"Install libheif-dev and recompile ImageMagick for HEIC support"}
+[2025-06-01 23:58:29] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample2_1748822309_cbc1ead6.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-01 23:58:29] DEBUG: File operation: delete | Context: {"filename":"sample2_1748822309_cbc1ead6.heic","success":true}
