@@ -1,0 +1,153 @@
+[2025-06-04 00:06:10] DEBUG: RateLimitService initialized
+[2025-06-04 00:06:10] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:06:10] DEBUG: FileValidationService initialized
+[2025-06-04 00:06:10] DEBUG: File validation passed | Context: {"filename":"convertre_683f8de070b47.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-04 00:06:10] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:06:10] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:06:10] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:06:10] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-04 00:06:10] DEBUG: File operation: upload | Context: {"filename":"convertre_683f8de070b47_1748995570_f932c516.odt","success":true}
+[2025-06-04 00:06:10] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"convertre_683f8de070b47_1748995570_f932c516.odt"}
+[2025-06-04 00:06:10] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:06:10] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:06:10] DEBUG: LibreOffice ODT conversion | Context: {"input":"convertre_683f8de070b47_1748995570_f932c516.odt","temp_dir":"/tmp/convertre_683f8df2c8364","timeout":300}
+[2025-06-04 00:06:10] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f8df2c8364/user_profile --convert-to pdf --outdir '/tmp/convertre_683f8df2c8364' '/var/www/api/public/../storage/uploads/convertre_683f8de070b47_1748995570_f932c516.odt'","timeout":300}
+[2025-06-04 00:06:12] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f8df2c8364"}
+[2025-06-04 00:06:12] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"convertre_683f8de070b47_1748995570_f932c516.odt","processing_time":"1.6071670055389s"}
+[2025-06-04 00:06:12] DEBUG: File operation: delete | Context: {"filename":"convertre_683f8de070b47_1748995570_f932c516.odt","success":true}
+[2025-06-04 00:08:00] DEBUG: RateLimitService initialized
+[2025-06-04 00:08:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:08:00] DEBUG: FileValidationService initialized
+[2025-06-04 00:08:00] DEBUG: File validation passed | Context: {"filename":"convertre_683f8e4e149ff.rtf","size":100605,"mime":"text/rtf"}
+[2025-06-04 00:08:00] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:08:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:08:00] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:08:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\RtfToPdfModule","conversion":"rtf_to_pdf"}
+[2025-06-04 00:08:00] DEBUG: File operation: upload | Context: {"filename":"convertre_683f8e4e149ff_1748995680_83a01ee7.rtf","success":true}
+[2025-06-04 00:08:00] INFO: Conversion started | Context: {"from_format":"rtf","to_format":"pdf","filename":"convertre_683f8e4e149ff_1748995680_83a01ee7.rtf"}
+[2025-06-04 00:08:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:08:00] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:08:00] DEBUG: LibreOffice RTF conversion | Context: {"input":"convertre_683f8e4e149ff_1748995680_83a01ee7.rtf","temp_dir":"/tmp/convertre_683f8e6036095","timeout":300}
+[2025-06-04 00:08:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f8e6036095/user_profile --convert-to pdf --outdir '/tmp/convertre_683f8e6036095' '/var/www/api/public/../storage/uploads/convertre_683f8e4e149ff_1748995680_83a01ee7.rtf'","timeout":300}
+[2025-06-04 00:08:01] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f8e6036095"}
+[2025-06-04 00:08:01] INFO: Conversion completed successfully | Context: {"from_format":"rtf","to_format":"pdf","filename":"convertre_683f8e4e149ff_1748995680_83a01ee7.rtf","processing_time":"1.5066869258881s"}
+[2025-06-04 00:08:01] DEBUG: File operation: delete | Context: {"filename":"convertre_683f8e4e149ff_1748995680_83a01ee7.rtf","success":true}
+[2025-06-04 00:11:27] DEBUG: RateLimitService initialized
+[2025-06-04 00:11:27] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:11:27] DEBUG: FileValidationService initialized
+[2025-06-04 00:11:27] DEBUG: File validation passed | Context: {"filename":"convertre_683f8f1c5723a.xlsx","size":9793,"mime":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}
+[2025-06-04 00:11:27] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:11:27] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:11:27] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:11:27] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\XlsxToPdfModule","conversion":"xlsx_to_pdf"}
+[2025-06-04 00:11:27] DEBUG: File operation: upload | Context: {"filename":"convertre_683f8f1c5723a_1748995887_c7dafc4c.xlsx","success":true}
+[2025-06-04 00:11:27] INFO: Conversion started | Context: {"from_format":"xlsx","to_format":"pdf","filename":"convertre_683f8f1c5723a_1748995887_c7dafc4c.xlsx"}
+[2025-06-04 00:11:27] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:11:27] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:11:27] DEBUG: LibreOffice XLSX conversion | Context: {"input":"convertre_683f8f1c5723a_1748995887_c7dafc4c.xlsx","temp_dir":"/tmp/convertre_683f8f2f58404","timeout":300}
+[2025-06-04 00:11:27] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f8f2f58404/user_profile --convert-to pdf --outdir '/tmp/convertre_683f8f2f58404' '/var/www/api/public/../storage/uploads/convertre_683f8f1c5723a_1748995887_c7dafc4c.xlsx'","timeout":300}
+[2025-06-04 00:11:28] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f8f2f58404"}
+[2025-06-04 00:11:28] INFO: Conversion completed successfully | Context: {"from_format":"xlsx","to_format":"pdf","filename":"convertre_683f8f1c5723a_1748995887_c7dafc4c.xlsx","processing_time":"1.5068290233612s"}
+[2025-06-04 00:11:28] DEBUG: File operation: delete | Context: {"filename":"convertre_683f8f1c5723a_1748995887_c7dafc4c.xlsx","success":true}
+[2025-06-04 00:16:43] DEBUG: RateLimitService initialized
+[2025-06-04 00:16:43] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:16:43] DEBUG: FileValidationService initialized
+[2025-06-04 00:16:43] DEBUG: File validation passed | Context: {"filename":"convertre_683f90576f865.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-04 00:16:43] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:16:43] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:16:43] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:16:43] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-04 00:16:43] DEBUG: File operation: upload | Context: {"filename":"convertre_683f90576f865_1748996203_04a067cb.pptx","success":true}
+[2025-06-04 00:16:43] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f90576f865_1748996203_04a067cb.pptx"}
+[2025-06-04 00:16:43] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:16:43] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:16:43] DEBUG: LibreOffice PPTX conversion | Context: {"input":"convertre_683f90576f865_1748996203_04a067cb.pptx","temp_dir":"/tmp/convertre_683f906b356de","timeout":300}
+[2025-06-04 00:16:43] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f906b356de/user_profile --convert-to pdf --outdir '/tmp/convertre_683f906b356de' '/var/www/api/public/../storage/uploads/convertre_683f90576f865_1748996203_04a067cb.pptx'","timeout":300}
+[2025-06-04 00:16:44] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f906b356de"}
+[2025-06-04 00:16:44] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f90576f865_1748996203_04a067cb.pptx","processing_time":"1.6068720817566s"}
+[2025-06-04 00:16:44] DEBUG: File operation: delete | Context: {"filename":"convertre_683f90576f865_1748996203_04a067cb.pptx","success":true}
+[2025-06-04 00:17:13] DEBUG: RateLimitService initialized
+[2025-06-04 00:17:13] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:17:13] DEBUG: FileValidationService initialized
+[2025-06-04 00:17:13] DEBUG: File validation passed | Context: {"filename":"convertre_683f90796ecf3.gif","size":138380,"mime":"image/gif"}
+[2025-06-04 00:17:13] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:17:13] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-04 00:17:13] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:17:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-06-04 00:17:13] DEBUG: File operation: upload | Context: {"filename":"convertre_683f90796ecf3_1748996233_017c9c8f.gif","success":true}
+[2025-06-04 00:17:13] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"convertre_683f90796ecf3_1748996233_017c9c8f.gif"}
+[2025-06-04 00:17:13] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-04 00:17:13] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-04 00:17:13] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-06-04 00:17:13] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"convertre_683f90796ecf3_1748996233_017c9c8f.gif","output":"convertre_683f90796ecf3_1748996233_0955f796.jpg","quality":85}
+[2025-06-04 00:17:13] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683f90796ecf3_1748996233_017c9c8f.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/var/www/api/public/../storage/converted/convertre_683f90796ecf3_1748996233_0955f796.jpg'","timeout":60}
+[2025-06-04 00:17:14] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"convertre_683f90796ecf3_1748996233_017c9c8f.gif","processing_time":"0.3014349937439s"}
+[2025-06-04 00:17:14] DEBUG: File operation: delete | Context: {"filename":"convertre_683f90796ecf3_1748996233_017c9c8f.gif","success":true}
+[2025-06-04 00:20:32] DEBUG: RateLimitService initialized
+[2025-06-04 00:20:32] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:20:32] DEBUG: FileValidationService initialized
+[2025-06-04 00:20:32] DEBUG: File validation passed | Context: {"filename":"convertre_683f913e21366.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-04 00:20:32] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:20:32] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:20:32] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:20:32] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-04 00:20:32] DEBUG: File operation: upload | Context: {"filename":"convertre_683f913e21366_1748996432_894185fb.pptx","success":true}
+[2025-06-04 00:20:32] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f913e21366_1748996432_894185fb.pptx"}
+[2025-06-04 00:20:32] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:20:32] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:20:32] DEBUG: LibreOffice PPTX conversion | Context: {"input":"convertre_683f913e21366_1748996432_894185fb.pptx","temp_dir":"/tmp/convertre_683f915051280","timeout":300}
+[2025-06-04 00:20:32] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f915051280/user_profile --convert-to pdf --outdir '/tmp/convertre_683f915051280' '/var/www/api/public/../storage/uploads/convertre_683f913e21366_1748996432_894185fb.pptx'","timeout":300}
+[2025-06-04 00:20:33] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f915051280"}
+[2025-06-04 00:20:33] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f913e21366_1748996432_894185fb.pptx","processing_time":"1.7073199748993s"}
+[2025-06-04 00:20:33] DEBUG: File operation: delete | Context: {"filename":"convertre_683f913e21366_1748996432_894185fb.pptx","success":true}
+[2025-06-04 00:21:49] DEBUG: RateLimitService initialized
+[2025-06-04 00:21:49] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:21:49] DEBUG: FileValidationService initialized
+[2025-06-04 00:21:49] DEBUG: File validation passed | Context: {"filename":"convertre_683f918bed3a0.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-04 00:21:49] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:21:49] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:21:49] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:21:49] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-04 00:21:49] DEBUG: File operation: upload | Context: {"filename":"convertre_683f918bed3a0_1748996509_1b0cbf61.odt","success":true}
+[2025-06-04 00:21:49] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"convertre_683f918bed3a0_1748996509_1b0cbf61.odt"}
+[2025-06-04 00:21:49] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:21:49] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:21:49] DEBUG: LibreOffice ODT conversion | Context: {"input":"convertre_683f918bed3a0_1748996509_1b0cbf61.odt","temp_dir":"/tmp/convertre_683f919d846f6","timeout":300}
+[2025-06-04 00:21:49] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f919d846f6/user_profile --convert-to pdf --outdir '/tmp/convertre_683f919d846f6' '/var/www/api/public/../storage/uploads/convertre_683f918bed3a0_1748996509_1b0cbf61.odt'","timeout":300}
+[2025-06-04 00:21:51] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f919d846f6"}
+[2025-06-04 00:21:51] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"convertre_683f918bed3a0_1748996509_1b0cbf61.odt","processing_time":"1.6069748401642s"}
+[2025-06-04 00:21:51] DEBUG: File operation: delete | Context: {"filename":"convertre_683f918bed3a0_1748996509_1b0cbf61.odt","success":true}
+[2025-06-04 00:23:34] DEBUG: RateLimitService initialized
+[2025-06-04 00:23:34] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:23:34] DEBUG: FileValidationService initialized
+[2025-06-04 00:23:34] DEBUG: File validation passed | Context: {"filename":"convertre_683f91f4d765e.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-04 00:23:34] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:23:34] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-04 00:23:34] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:23:34] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-04 00:23:34] DEBUG: File operation: upload | Context: {"filename":"convertre_683f91f4d765e_1748996614_b26384fc.pptx","success":true}
+[2025-06-04 00:23:34] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f91f4d765e_1748996614_b26384fc.pptx"}
+[2025-06-04 00:23:34] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-04 00:23:34] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-04 00:23:34] DEBUG: LibreOffice PPTX conversion | Context: {"input":"convertre_683f91f4d765e_1748996614_b26384fc.pptx","temp_dir":"/tmp/convertre_683f9206aff00","timeout":300}
+[2025-06-04 00:23:34] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f9206aff00/user_profile --convert-to pdf --outdir '/tmp/convertre_683f9206aff00' '/var/www/api/public/../storage/uploads/convertre_683f91f4d765e_1748996614_b26384fc.pptx'","timeout":300}
+[2025-06-04 00:23:36] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f9206aff00"}
+[2025-06-04 00:23:36] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f91f4d765e_1748996614_b26384fc.pptx","processing_time":"1.6072089672089s"}
+[2025-06-04 00:23:36] DEBUG: File operation: delete | Context: {"filename":"convertre_683f91f4d765e_1748996614_b26384fc.pptx","success":true}
+[2025-06-04 00:30:46] DEBUG: RateLimitService initialized
+[2025-06-04 00:30:46] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-04 00:30:46] DEBUG: FileValidationService initialized
+[2025-06-04 00:30:46] DEBUG: File validation passed | Context: {"filename":"convertre_683f93a541bdd.tiff","size":1131930,"mime":"image/tiff"}
+[2025-06-04 00:30:46] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-04 00:30:46] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"png","file_count":1}}
+[2025-06-04 00:30:46] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-04 00:30:46] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_png"}
+[2025-06-04 00:30:46] DEBUG: File operation: upload | Context: {"filename":"convertre_683f93a541bdd_1748997046_215094c9.tiff","success":true}
+[2025-06-04 00:30:46] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"png","filename":"convertre_683f93a541bdd_1748997046_215094c9.tiff"}
+[2025-06-04 00:30:46] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-04 00:30:46] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-04 00:30:47] DEBUG: ImageMagick available for TIFF to png conversion
+[2025-06-04 00:30:47] DEBUG: ImageMagick TIFF to PNG conversion | Context: {"input":"convertre_683f93a541bdd_1748997046_215094c9.tiff","output":"convertre_683f93a541bdd_1748997046_43f1aaac.png","compression":9}
+[2025-06-04 00:30:47] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683f93a541bdd_1748997046_215094c9.tiff'[0] -strip -auto-orient -colorspace sRGB -compress Zip -quality 9 '/var/www/api/public/../storage/converted/convertre_683f93a541bdd_1748997046_43f1aaac.png'","timeout":60}
+[2025-06-04 00:30:47] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"png","filename":"convertre_683f93a541bdd_1748997046_215094c9.tiff","processing_time":"0.30147099494934s"}
+[2025-06-04 00:30:47] DEBUG: File operation: delete | Context: {"filename":"convertre_683f93a541bdd_1748997046_215094c9.tiff","success":true}

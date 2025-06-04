@@ -8,15 +8,17 @@ use Convertre\Utils\Logger;
 use Convertre\Utils\FileHandler;
 
 /**
- * PdfMultiFormatModule - PDF to JPG, PNG, BMP conversion using LibreOffice + ImageMagick
+ * PdfMultiFormatModule - PDF to JPG, PNG, BMP conversion using ImageMagick
  * 
- * Two-stage conversion process:
- * 1. LibreOffice: PDF → PNG (reliable PDF handling, multi-page support)
- * 2. ImageMagick: PNG → Target format (optimization and format conversion)
+ * Single-stage conversion process using ImageMagick:
+ * 1. ImageMagick: PDF → Target format directly (with page detection)
+ * 2. ZIP: Package all pages into a single downloadable file
  * 
- * This hybrid approach gives us the best of both tools:
- * - LibreOffice: Excellent PDF parsing and page extraction
- * - ImageMagick: Superior image optimization and format conversion
+ * Benefits of ImageMagick-only approach:
+ * - Better PDF page detection
+ * - Higher quality rendering
+ * - Fewer dependencies
+ * - More reliable multi-page handling
  */
 class PdfMultiFormatModule extends AbstractConversionModule
 {
@@ -33,11 +35,11 @@ class PdfMultiFormatModule extends AbstractConversionModule
             );
         }
         
-        parent::__construct('pdf', strtolower($toFormat), 'libreoffice');
+        parent::__construct('pdf', strtolower($toFormat), 'imagemagick');
     }
     
     /**
-     * Check if both LibreOffice and ImageMagick are available
+     * Check if ImageMagick is available with PDF support
      */
     protected function isToolAvailable(): bool
     {
@@ -47,17 +49,8 @@ class PdfMultiFormatModule extends AbstractConversionModule
             return $available;
         }
         
-        // Check LibreOffice availability
-        $librePath = ConfigLoader::get('tools.libreoffice.binary_path', 'soffice');
-        $libreResult = $this->executeCommand($librePath . ' --version', 10);
-        
-        if (!$libreResult['success']) {
-            Logger::warning('LibreOffice not available', ['path' => $librePath]);
-            return $available = false;
-        }
-        
         // Check ImageMagick availability
-        $convertPath = ConfigLoader::get('tools.imagemagick.binary_path', 'magick');
+        $convertPath = ConfigLoader::get('tools.imagemagick.binary_path', 'convert');
         $magickResult = $this->executeCommand($convertPath . ' -version', 5);
         
         if (!$magickResult['success']) {
@@ -65,38 +58,45 @@ class PdfMultiFormatModule extends AbstractConversionModule
             return $available = false;
         }
         
-        Logger::debug('Both LibreOffice and ImageMagick available for PDF conversion');
+        // Check PDF support
+        $formatResult = $this->executeCommand($convertPath . ' -list format', 10);
+        if (!$formatResult['success'] || strpos(strtolower($formatResult['output']), 'pdf') === false) {
+            Logger::warning('ImageMagick PDF support not available');
+            return $available = false;
+        }
+        
+        Logger::debug('ImageMagick with PDF support available');
         return $available = true;
     }
     
     /**
-     * Execute hybrid PDF conversion - LibreOffice + ImageMagick
+     * Execute PDF conversion using ImageMagick
      */
     protected function executeConversion(string $inputFile, string $outputFile): bool
     {
         try {
-            // Step 1: Use LibreOffice to convert PDF to PNG(s)
-            $tempPngFiles = $this->convertPdfToPngWithLibreOffice($inputFile);
+            // Step 1: Convert PDF to target format using ImageMagick
+            $convertedFiles = $this->convertPdfWithImageMagick($inputFile, $outputFile);
             
-            if (empty($tempPngFiles)) {
-                Logger::error('LibreOffice failed to convert PDF to PNG');
+            if (empty($convertedFiles)) {
+                Logger::error('ImageMagick failed to convert PDF');
                 return false;
             }
             
-            Logger::info('LibreOffice conversion successful', [
-                'pages_converted' => count($tempPngFiles)
+            Logger::info('ImageMagick PDF conversion successful', [
+                'pages_converted' => count($convertedFiles)
             ]);
             
-            // Step 2: Use ImageMagick to optimize and convert to target format
-            $success = $this->optimizeAndConvertWithImageMagick($tempPngFiles, $outputFile);
+            // Step 2: Handle single vs multi-page results
+            $success = $this->handleConversionResults($convertedFiles, $outputFile);
             
-            // Step 3: Cleanup temporary PNG files
-            $this->cleanupTempFiles($tempPngFiles);
+            // Step 3: Cleanup temporary files
+            $this->cleanupTempFiles($convertedFiles);
             
             return $success;
             
         } catch (\Exception $e) {
-            Logger::error('Hybrid PDF conversion failed', [
+            Logger::error('PDF conversion failed', [
                 'error' => $e->getMessage(),
                 'input' => basename($inputFile),
                 'output_format' => $this->toFormat
@@ -106,193 +106,89 @@ class PdfMultiFormatModule extends AbstractConversionModule
     }
     
     /**
-     * Step 1: Convert PDF to PNG using LibreOffice
+     * Convert PDF to target format using ImageMagick
      */
-    private function convertPdfToPngWithLibreOffice(string $inputFile): array
+    private function convertPdfWithImageMagick(string $inputFile, string $outputFile): array
     {
-        $librePath = ConfigLoader::get('tools.libreoffice.binary_path', 'soffice');
-        $timeout = ConfigLoader::get('tools.libreoffice.timeout', 300);
+        $convertPath = ConfigLoader::get('tools.imagemagick.binary_path', 'convert');
         
         // Create temporary output directory
         $tempDir = sys_get_temp_dir() . '/convertre_pdf_' . uniqid();
         mkdir($tempDir, 0755, true);
         
-        try {
-            // LibreOffice command to convert PDF to PNG
-            $command = $this->buildLibreOfficeCommand($librePath, $inputFile, $tempDir);
-            
-            Logger::debug('LibreOffice PDF to PNG conversion', [
-                'input' => basename($inputFile),
-                'temp_dir' => $tempDir,
-                'command' => $command
-            ]);
-            
-            $result = $this->executeCommand($command, $timeout);
-            
-            if (!$result['success']) {
-                Logger::error('LibreOffice conversion failed', [
-                    'command' => $command,
-                    'exit_code' => $result['exit_code'],
-                    'error' => $result['error']
-                ]);
-                return [];
-            }
-            
-            // Find generated PNG files
-            $pngFiles = $this->findGeneratedPngFiles($tempDir);
-            
-            if (empty($pngFiles)) {
-                Logger::error('No PNG files generated by LibreOffice', [
-                    'temp_dir' => $tempDir,
-                    'dir_contents' => scandir($tempDir)
-                ]);
-                return [];
-            }
-            
-            // Check page limit
-            if (count($pngFiles) > $this->maxPages) {
-                Logger::error('PDF has too many pages', [
-                    'pages' => count($pngFiles),
-                    'max_allowed' => $this->maxPages
-                ]);
-                return [];
-            }
-            
-            Logger::debug('LibreOffice generated PNG files', [
-                'count' => count($pngFiles),
-                'files' => array_map('basename', $pngFiles)
-            ]);
-            
-            return $pngFiles;
-            
-        } finally {
-            // Note: We don't cleanup tempDir here because we're returning the PNG files
-            // Cleanup happens in cleanupTempFiles() after ImageMagick processing
-        }
-    }
-    
-    /**
-     * Step 2: Optimize and convert PNG files using ImageMagick
-     */
-    private function optimizeAndConvertWithImageMagick(array $pngFiles, string $outputFile): bool
-    {
-        $convertPath = ConfigLoader::get('tools.imagemagick.binary_path', 'magick');
-        $successCount = 0;
-        $createdFiles = [];
+        $baseName = pathinfo($outputFile, PATHINFO_FILENAME);
+        $outputPattern = $tempDir . '/' . $baseName . '-page-%03d.' . $this->toFormat;
         
-        if (count($pngFiles) === 1) {
-            // Single page - direct conversion
-            $success = $this->convertSinglePngFile($convertPath, $pngFiles[0], $outputFile);
-            return $success;
-        } else {
-            // Multi-page - create separate files
-            $outputDir = dirname($outputFile);
-            $baseName = pathinfo($outputFile, PATHINFO_FILENAME);
-            $extension = pathinfo($outputFile, PATHINFO_EXTENSION);
-            
-            foreach ($pngFiles as $index => $pngFile) {
-                $pageNumber = $index + 1;
-                $pageOutputFile = sprintf('%s/%s-page-%03d.%s', $outputDir, $baseName, $pageNumber, $extension);
-                
-                $success = $this->convertSinglePngFile($convertPath, $pngFile, $pageOutputFile);
-                
-                if ($success && file_exists($pageOutputFile)) {
-                    $createdFiles[] = $pageOutputFile;
-                    $successCount++;
-                    Logger::debug("Page {$pageNumber} optimized and converted successfully");
-                } else {
-                    Logger::warning("Failed to convert page {$pageNumber}");
-                }
-            }
-            
-            // Create summary file
-            $this->createPageSummary($outputFile, $createdFiles, count($pngFiles));
-            
-            Logger::info('Multi-page ImageMagick optimization completed', [
-                'total_pages' => count($pngFiles),
-                'successful_pages' => $successCount
-            ]);
-            
-            return $successCount > 0;
-        }
-    }
-    
-    /**
-     * Convert and optimize single PNG file with ImageMagick
-     */
-    private function convertSinglePngFile(string $convertPath, string $pngFile, string $outputFile): bool
-    {
-        $command = $this->buildImageMagickCommand($convertPath, $pngFile, $outputFile);
+        // Build ImageMagick command for PDF conversion
+        $command = $this->buildImageMagickCommand($convertPath, $inputFile, $outputPattern);
         
-        Logger::debug('ImageMagick optimization', [
-            'input' => basename($pngFile),
-            'output' => basename($outputFile),
-            'format' => $this->toFormat
+        Logger::debug('ImageMagick PDF conversion', [
+            'input' => basename($inputFile),
+            'temp_dir' => $tempDir,
+            'output_pattern' => basename($outputPattern),
+            'command' => $command
         ]);
         
-        $result = $this->executeCommand($command, 60);
+        $result = $this->executeCommand($command, 300);
         
         if (!$result['success']) {
-            Logger::error('ImageMagick optimization failed', [
+            Logger::error('ImageMagick PDF conversion failed', [
                 'command' => $command,
                 'exit_code' => $result['exit_code'],
                 'error' => $result['error']
             ]);
-            return false;
+            return [];
         }
         
-        return true;
+        // Find generated files
+        $convertedFiles = glob($tempDir . '/*.' . $this->toFormat);
+        sort($convertedFiles);
+        
+        if (empty($convertedFiles)) {
+            Logger::error('No files generated by ImageMagick', [
+                'temp_dir' => $tempDir,
+                'dir_contents' => scandir($tempDir)
+            ]);
+            return [];
+        }
+        
+        // Check page limit
+        if (count($convertedFiles) > $this->maxPages) {
+            Logger::error('PDF has too many pages', [
+                'pages' => count($convertedFiles),
+                'max_allowed' => $this->maxPages
+            ]);
+            return [];
+        }
+        
+        Logger::debug('ImageMagick generated files', [
+            'count' => count($convertedFiles),
+            'files' => array_map('basename', $convertedFiles)
+        ]);
+        
+        return $convertedFiles;
     }
     
-    /**
-     * Build LibreOffice command for PDF to PNG conversion
+   /**
+     * Build ImageMagick command for PDF conversion - FIXED
      */
-    private function buildLibreOfficeCommand(string $librePath, string $inputFile, string $tempDir): string
+    private function buildImageMagickCommand(string $convertPath, string $inputFile, string $outputPattern): string
     {
-        $inputFile = escapeshellarg($inputFile);
-        $tempDir = escapeshellarg($tempDir);
-        
-        // LibreOffice options for PDF to PNG conversion
-        $options = [
-            '--headless',
-            '--invisible',
-            '--nodefault',
-            '--nolockcheck',
-            '--nologo',
-            '--norestore',
-            '--convert-to png',  // Convert to PNG format
-            '--outdir ' . $tempDir
-        ];
-        
-        return sprintf(
-            '%s %s %s',
-            $librePath,
-            implode(' ', $options),
-            $inputFile
-        );
-    }
-    
-    /**
-     * Build ImageMagick command for PNG optimization and format conversion
-     */
-    private function buildImageMagickCommand(string $convertPath, string $pngFile, string $outputFile): string
-    {
-        $pngFile = escapeshellarg($pngFile);
-        $outputFile = escapeshellarg($outputFile);
-        
         $options = $this->getImageMagickOptions();
         
+        // IMPORTANT: Input file comes FIRST, then options, then output
+        // This ensures proper multi-page handling
         return sprintf(
-            '%s %s %s %s',
+            '%s -density 300 %s %s %s',
             $convertPath,
-            $pngFile,
+            escapeshellarg($inputFile),
             implode(' ', $options),
-            $outputFile
+            escapeshellarg($outputPattern)
         );
     }
     
-    /**
-     * Get ImageMagick optimization options based on target format
+   /**
+     * Get ImageMagick options based on target format - FIXED
      */
     private function getImageMagickOptions(): array
     {
@@ -300,33 +196,32 @@ class PdfMultiFormatModule extends AbstractConversionModule
             case 'jpg':
                 $quality = ConfigLoader::get('tools.imagemagick.quality_settings.jpg', 85);
                 return [
-                    '-background white',     // Handle transparency
-                    '-flatten',              // Flatten layers
-                    '-strip',                // Remove metadata
-                    '-colorspace sRGB',      // Consistent color space
-                    '-quality ' . $quality,  // JPEG quality
-                    '-sampling-factor 4:2:0', // JPEG subsampling for better compression
-                    '-interlace JPEG'        // Progressive JPEG
+                    '-background white',
+                    // CRITICAL FIX: Only use -flatten for final single-page output, not during multi-page processing
+                    '-strip',
+                    '-colorspace sRGB',
+                    '-quality ' . $quality,
+                    '-sampling-factor 4:2:0',
+                    '-interlace JPEG'
                 ];
                 
             case 'png':
                 $compression = ConfigLoader::get('tools.imagemagick.quality_settings.png', 9);
                 return [
-                    '-strip',                // Remove metadata
-                    '-colorspace sRGB',      // Consistent color space
-                    '-compress Zip',         // PNG compression
-                    '-quality ' . $compression, // PNG compression level
-                    '-colors 256',           // Optimize color palette if possible
-                    '-depth 8'               // 8-bit depth for smaller files
+                    '-strip',
+                    '-colorspace sRGB',
+                    '-compress Zip',
+                    '-quality ' . $compression,
+                    '-colors 256',
+                    '-depth 8'
                 ];
                 
             case 'bmp':
                 return [
-                    '-background white',     // Handle transparency
-                    '-flatten',              // Flatten layers
-                    '-strip',                // Remove metadata
-                    '-colorspace sRGB',      // Consistent color space
-                    '-compress None'         // BMP typically uncompressed
+                    '-background white',
+                    '-strip',
+                    '-colorspace sRGB',
+                    '-compress None'
                 ];
                 
             default:
@@ -334,64 +229,176 @@ class PdfMultiFormatModule extends AbstractConversionModule
         }
     }
     
-    /**
-     * Find PNG files generated by LibreOffice
+   /**
+     * Handle conversion results - single file or ZIP - ENHANCED VERSION
      */
-    private function findGeneratedPngFiles(string $tempDir): array
+    private function handleConversionResults(array $convertedFiles, string $outputFile): bool
     {
-        $pngFiles = glob($tempDir . '/*.png');
+        Logger::debug('handleConversionResults called', [
+            'converted_files_count' => count($convertedFiles),
+            'output_file' => $outputFile,
+            'converted_files' => array_map('basename', $convertedFiles)
+        ]);
         
-        // Sort files to ensure consistent page ordering
-        sort($pngFiles);
-        
-        return $pngFiles;
+        if (count($convertedFiles) === 1) {
+            // Single page - move to final location
+            Logger::debug('Single page detected, moving file', [
+                'source' => $convertedFiles[0],
+                'destination' => $outputFile,
+                'source_exists' => file_exists($convertedFiles[0]),
+                'source_size' => file_exists($convertedFiles[0]) ? filesize($convertedFiles[0]) : 'N/A'
+            ]);
+            
+            $success = rename($convertedFiles[0], $outputFile);
+            
+            if ($success) {
+                Logger::info('Single-page PDF conversion completed', [
+                    'output_file' => basename($outputFile),
+                    'file_size' => filesize($outputFile)
+                ]);
+                return true;
+            } else {
+                Logger::error('Failed to move single page file', [
+                    'source' => $convertedFiles[0],
+                    'destination' => $outputFile,
+                    'error' => error_get_last()
+                ]);
+                return false;
+            }
+        } else {
+            // Multi-page - create ZIP
+            Logger::info('Multi-page detected, creating ZIP', [
+                'page_count' => count($convertedFiles),
+                'original_output_file' => $outputFile
+            ]);
+            
+            // For multi-page, we create a ZIP file but keep the expected output filename
+            // The API expects the file at the original path, so we'll create the ZIP there
+            $zipOutputFile = $outputFile; // Use the original output path
+            
+            Logger::debug('ZIP file paths', [
+                'zip_output_file' => $zipOutputFile,
+                'output_dir' => dirname($zipOutputFile),
+                'output_dir_writable' => is_writable(dirname($zipOutputFile))
+            ]);
+            
+            $zipSuccess = $this->createZipFromPages($convertedFiles, $zipOutputFile);
+            
+            if ($zipSuccess) {
+                Logger::info('Multi-page PDF conversion completed - ZIP created', [
+                    'total_pages' => count($convertedFiles),
+                    'zip_file' => basename($zipOutputFile),
+                    'zip_size' => file_exists($zipOutputFile) ? filesize($zipOutputFile) : 'unknown',
+                    'zip_path' => $zipOutputFile
+                ]);
+                return true;
+            } else {
+                Logger::error('Failed to create ZIP file from converted pages', [
+                    'zip_path' => $zipOutputFile,
+                    'pages_to_zip' => count($convertedFiles)
+                ]);
+                return false;
+            }
+        }
     }
     
     /**
-     * Create summary file for multi-page conversion
+     * Create ZIP file containing all converted pages
      */
-    private function createPageSummary(string $originalOutputFile, array $createdFiles, int $totalPages): void
+    private function createZipFromPages(array $pageFiles, string $zipOutputPath): bool
     {
-        $summaryFile = str_replace(
-            '.' . pathinfo($originalOutputFile, PATHINFO_EXTENSION),
-            '-pages-summary.json',
-            $originalOutputFile
-        );
+        if (!class_exists('ZipArchive')) {
+            Logger::error('ZipArchive not available - cannot create ZIP file');
+            return false;
+        }
         
-        $summary = [
-            'conversion_type' => 'hybrid_pdf_conversion',
-            'method' => 'LibreOffice + ImageMagick',
-            'total_pages' => $totalPages,
-            'successful_conversions' => count($createdFiles),
-            'created_files' => array_map('basename', $createdFiles),
-            'conversion_time' => date('Y-m-d H:i:s'),
-            'output_format' => $this->toFormat,
-            'process' => [
-                'step_1' => 'LibreOffice PDF → PNG',
-                'step_2' => 'ImageMagick PNG → ' . strtoupper($this->toFormat) . ' (optimized)'
-            ]
-        ];
+        $zip = new \ZipArchive();
+        $result = $zip->open($zipOutputPath, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
         
-        file_put_contents($summaryFile, json_encode($summary, JSON_PRETTY_PRINT));
+        if ($result !== TRUE) {
+            Logger::error('Failed to create ZIP file', [
+                'zip_path' => $zipOutputPath,
+                'error_code' => $result
+            ]);
+            return false;
+        }
         
-        Logger::debug('Created hybrid conversion summary', ['summary_file' => basename($summaryFile)]);
-    }
-    
-    /**
-     * Cleanup temporary PNG files and directories
-     */
-    private function cleanupTempFiles(array $pngFiles): void
-    {
-        foreach ($pngFiles as $pngFile) {
-            if (file_exists($pngFile)) {
-                unlink($pngFile);
-                Logger::debug('Cleaned up temp PNG file', ['file' => basename($pngFile)]);
+        $addedFiles = 0;
+        
+        foreach ($pageFiles as $pageFile) {
+            if (file_exists($pageFile)) {
+                $filename = basename($pageFile);
+                $success = $zip->addFile($pageFile, $filename);
+                
+                if ($success) {
+                    $addedFiles++;
+                    Logger::debug('Added page to ZIP', ['page' => $filename]);
+                } else {
+                    Logger::warning('Failed to add page to ZIP', ['page' => $filename]);
+                }
             }
         }
         
-        // Remove temp directory if empty
-        if (!empty($pngFiles)) {
-            $tempDir = dirname($pngFiles[0]);
+        // Add summary info as text file in ZIP
+        $summaryInfo = sprintf(
+            "PDF Conversion Summary\n" .
+            "======================\n" .
+            "Original format: PDF\n" .
+            "Output format: %s\n" .
+            "Total pages: %d\n" .
+           /*  "Conversion method: ImageMagick\n" . */
+            "Resolution: 300 DPI\n" .
+            "Created: %s\n\n" .
+            "Files in this archive:\n" .
+            "%s\n",
+            strtoupper($this->toFormat),
+            count($pageFiles),
+            date('Y-m-d H:i:s'),
+            implode("\n", array_map('basename', $pageFiles))
+        );
+        
+        $zip->addFromString('README.txt', $summaryInfo);
+        
+        $closeResult = $zip->close();
+        
+        if ($closeResult && $addedFiles > 0) {
+            Logger::info('ZIP file created successfully', [
+                'zip_file' => basename($zipOutputPath),
+                'pages_included' => $addedFiles,
+                'zip_size' => file_exists($zipOutputPath) ? filesize($zipOutputPath) : 'unknown'
+            ]);
+            return true;
+        } else {
+            Logger::error('Failed to finalize ZIP file', [
+                'close_result' => $closeResult,
+                'added_files' => $addedFiles
+            ]);
+            return false;
+        }
+    }
+    
+    /**
+     * Cleanup temporary files and directories
+     */
+    private function cleanupTempFiles(array $tempFiles): void
+    {
+        $tempDirs = [];
+        
+        foreach ($tempFiles as $tempFile) {
+            if (file_exists($tempFile)) {
+                unlink($tempFile);
+                Logger::debug('Cleaned up temp file', ['file' => basename($tempFile)]);
+                
+                // Track directories for cleanup
+                $dir = dirname($tempFile);
+                if (!in_array($dir, $tempDirs)) {
+                    $tempDirs[] = $dir;
+                }
+            }
+        }
+        
+        // Remove temp directories if empty
+        foreach ($tempDirs as $tempDir) {
             if (is_dir($tempDir) && count(scandir($tempDir)) <= 2) { // Only . and ..
                 rmdir($tempDir);
                 Logger::debug('Cleaned up temp directory', ['dir' => basename($tempDir)]);

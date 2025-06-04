@@ -116,3 +116,360 @@
 [2025-06-02 00:09:50] DEBUG: Executing command | Context: {"command":"magick \"C:\\laragon\\www\\convertre-api\\public/../storage/uploads/convertre_683cebcd89b54_1748822989_e99667be.heic\" -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center \"C:\\laragon\\www\\convertre-api\\public/../storage/converted/convertre_683cebcd89b54_1748822989_72db8d74.pdf\"","timeout":120}
 [2025-06-02 00:09:50] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"pdf","filename":"convertre_683cebcd89b54_1748822989_e99667be.heic","processing_time":"0.98013305664062s"}
 [2025-06-02 00:09:50] DEBUG: File operation: delete | Context: {"filename":"convertre_683cebcd89b54_1748822989_e99667be.heic","success":true}
+[2025-06-02 22:32:04] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-06-02 22:32:04] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 22:35:14] DEBUG: RateLimitService initialized
+[2025-06-02 22:35:14] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 22:35:14] DEBUG: FileValidationService initialized
+[2025-06-02 22:35:14] DEBUG: File validation passed | Context: {"filename":"check.png","size":6641,"mime":"image/png"}
+[2025-06-02 22:35:14] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 22:35:14] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 22:35:14] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 22:35:14] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PngMultiFormatModule","conversion":"png_to_jpg"}
+[2025-06-02 22:35:14] DEBUG: File operation: upload | Context: {"filename":"check_1748903714_4b76b7cc.png","success":true}
+[2025-06-02 22:35:14] INFO: Conversion started | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748903714_4b76b7cc.png"}
+[2025-06-02 22:35:14] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 22:35:14] WARNING: ImageMagick not available | Context: {"path":"magick","format":"jpg"}
+[2025-06-02 22:35:14] ERROR: Conversion failed | Context: {"from_format":"png","to_format":"jpg","filename":"check_1748903714_4b76b7cc.png","error":"Tool 'imagemagick' not available"}
+[2025-06-02 22:35:14] DEBUG: File operation: delete | Context: {"filename":"check_1748903714_4b76b7cc.png","success":true}
+[2025-06-02 22:35:50] DEBUG: RateLimitService initialized
+[2025-06-02 22:35:50] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 22:35:50] DEBUG: FileValidationService initialized
+[2025-06-02 22:35:50] DEBUG: File validation passed | Context: {"filename":"sample3.heic","size":539090,"mime":"image/heic"}
+[2025-06-02 22:35:50] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 22:35:50] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 22:35:50] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 22:35:50] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-02 22:35:50] DEBUG: File operation: upload | Context: {"filename":"sample3_1748903750_5e207c80.heic","success":true}
+[2025-06-02 22:35:50] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample3_1748903750_5e207c80.heic"}
+[2025-06-02 22:35:50] DEBUG: Executing command | Context: {"command":"magick -version","timeout":5}
+[2025-06-02 22:35:50] WARNING: ImageMagick not available | Context: {"path":"magick","format":"jpg"}
+[2025-06-02 22:35:50] ERROR: Conversion failed | Context: {"from_format":"heic","to_format":"jpg","filename":"sample3_1748903750_5e207c80.heic","error":"Tool 'imagemagick' not available"}
+[2025-06-02 22:35:50] DEBUG: File operation: delete | Context: {"filename":"sample3_1748903750_5e207c80.heic","success":true}
+[2025-06-02 22:55:06] DEBUG: RateLimitService initialized
+[2025-06-02 22:55:06] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 22:55:06] DEBUG: FileValidationService initialized
+[2025-06-02 22:55:06] DEBUG: File validation passed | Context: {"filename":"sample3.heic","size":539090,"mime":"image/heic"}
+[2025-06-02 22:55:06] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 22:55:06] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 22:55:06] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 22:55:06] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-02 22:55:06] DEBUG: File operation: upload | Context: {"filename":"sample3_1748904906_bb906438.heic","success":true}
+[2025-06-02 22:55:06] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample3_1748904906_bb906438.heic"}
+[2025-06-02 22:55:06] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-02 22:55:06] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format | grep -i heic","timeout":10}
+[2025-06-02 22:55:07] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format | grep -i heif","timeout":10}
+[2025-06-02 22:55:07] DEBUG: HEIC input support confirmed
+[2025-06-02 22:55:07] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-02 22:55:07] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-06-02 22:55:07] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"sample3_1748904906_bb906438.heic","output":"sample3_1748904906_8b2db0e1.jpg","quality":85}
+[2025-06-02 22:55:07] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/sample3_1748904906_bb906438.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/var/www/api/public/../storage/converted/sample3_1748904906_8b2db0e1.jpg'","timeout":60}
+[2025-06-02 22:55:07] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample3_1748904906_bb906438.heic","processing_time":"0.80265212059021s"}
+[2025-06-02 22:55:07] DEBUG: File operation: delete | Context: {"filename":"sample3_1748904906_bb906438.heic","success":true}
+[2025-06-02 22:58:18] DEBUG: RateLimitService initialized
+[2025-06-02 22:58:18] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 22:58:18] DEBUG: FileValidationService initialized
+[2025-06-02 22:58:18] DEBUG: File validation passed | Context: {"filename":"sample3.heic","size":539090,"mime":"image/heic"}
+[2025-06-02 22:58:18] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 22:58:18] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 22:58:18] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 22:58:18] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-02 22:58:18] DEBUG: File operation: upload | Context: {"filename":"sample3_1748905098_49b4def5.heic","success":true}
+[2025-06-02 22:58:18] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"sample3_1748905098_49b4def5.heic"}
+[2025-06-02 22:58:18] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-02 22:58:18] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format | grep -i heic","timeout":10}
+[2025-06-02 22:58:18] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format | grep -i heif","timeout":10}
+[2025-06-02 22:58:18] DEBUG: HEIC input support confirmed
+[2025-06-02 22:58:18] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-02 22:58:18] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-06-02 22:58:18] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"sample3_1748905098_49b4def5.heic","output":"sample3_1748905098_1020ac2f.jpg","quality":85}
+[2025-06-02 22:58:18] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/sample3_1748905098_49b4def5.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/var/www/api/public/../storage/converted/sample3_1748905098_1020ac2f.jpg'","timeout":60}
+[2025-06-02 22:58:18] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"sample3_1748905098_49b4def5.heic","processing_time":"0.6022891998291s"}
+[2025-06-02 22:58:18] DEBUG: File operation: delete | Context: {"filename":"sample3_1748905098_49b4def5.heic","success":true}
+[2025-06-02 22:59:52] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-06-02 22:59:52] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:00:06] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-06-02 23:00:06] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:00:09] DEBUG: RateLimitService initialized
+[2025-06-02 23:00:09] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:00:09] DEBUG: FileValidationService initialized
+[2025-06-02 23:00:09] DEBUG: File validation passed | Context: {"filename":"convertre_683e2ce72f880.jpg","size":428355,"mime":"image/jpeg"}
+[2025-06-02 23:00:09] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:00:09] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:00:09] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:00:09] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\JpgMultiFormatModule","conversion":"jpg_to_pdf"}
+[2025-06-02 23:00:09] DEBUG: File operation: upload | Context: {"filename":"convertre_683e2ce72f880_1748905209_6ee3dca7.jpg","success":true}
+[2025-06-02 23:00:09] INFO: Conversion started | Context: {"from_format":"jpg","to_format":"pdf","filename":"convertre_683e2ce72f880_1748905209_6ee3dca7.jpg"}
+[2025-06-02 23:00:09] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-02 23:00:09] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-02 23:00:09] DEBUG: ImageMagick available for JPG to pdf conversion
+[2025-06-02 23:00:09] DEBUG: ImageMagick JPG to PDF conversion | Context: {"input":"convertre_683e2ce72f880_1748905209_6ee3dca7.jpg","output":"convertre_683e2ce72f880_1748905209_b1b99b9b.pdf","quality":85}
+[2025-06-02 23:00:09] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683e2ce72f880_1748905209_6ee3dca7.jpg' -strip -auto-orient -colorspace sRGB -quality 85 -density 300 -compress JPEG -page A4 -gravity center '/var/www/api/public/../storage/converted/convertre_683e2ce72f880_1748905209_b1b99b9b.pdf'","timeout":120}
+[2025-06-02 23:00:09] INFO: Conversion completed successfully | Context: {"from_format":"jpg","to_format":"pdf","filename":"convertre_683e2ce72f880_1748905209_6ee3dca7.jpg","processing_time":"0.301353931427s"}
+[2025-06-02 23:00:09] DEBUG: File operation: delete | Context: {"filename":"convertre_683e2ce72f880_1748905209_6ee3dca7.jpg","success":true}
+[2025-06-02 23:00:15] INFO: File downloaded | Context: {"filename":"convertre_683e2ce72f880_1748905209_b1b99b9b.pdf","size":403732}
+[2025-06-02 23:00:43] DEBUG: RateLimitService initialized
+[2025-06-02 23:00:43] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:00:43] DEBUG: FileValidationService initialized
+[2025-06-02 23:00:43] DEBUG: File validation passed | Context: {"filename":"convertre_683e2d0994ca2.gif","size":138380,"mime":"image/gif"}
+[2025-06-02 23:00:43] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:00:43] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 23:00:43] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:00:43] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-06-02 23:00:43] DEBUG: File operation: upload | Context: {"filename":"convertre_683e2d0994ca2_1748905243_0a56cd14.gif","success":true}
+[2025-06-02 23:00:43] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"convertre_683e2d0994ca2_1748905243_0a56cd14.gif"}
+[2025-06-02 23:00:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-02 23:00:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-02 23:00:44] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-06-02 23:00:44] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"convertre_683e2d0994ca2_1748905243_0a56cd14.gif","output":"convertre_683e2d0994ca2_1748905243_a43f8fed.jpg","quality":85}
+[2025-06-02 23:00:44] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683e2d0994ca2_1748905243_0a56cd14.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/var/www/api/public/../storage/converted/convertre_683e2d0994ca2_1748905243_a43f8fed.jpg'","timeout":60}
+[2025-06-02 23:00:44] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"convertre_683e2d0994ca2_1748905243_0a56cd14.gif","processing_time":"0.30129194259644s"}
+[2025-06-02 23:00:44] DEBUG: File operation: delete | Context: {"filename":"convertre_683e2d0994ca2_1748905243_0a56cd14.gif","success":true}
+[2025-06-02 23:00:49] INFO: File downloaded | Context: {"filename":"convertre_683e2d0994ca2_1748905243_a43f8fed.jpg","size":39233}
+[2025-06-02 23:01:38] DEBUG: RateLimitService initialized
+[2025-06-02 23:01:38] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:01:38] DEBUG: FileValidationService initialized
+[2025-06-02 23:01:38] DEBUG: File validation passed | Context: {"filename":"convertre_683e2d4266d31.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-02 23:01:38] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:01:38] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 23:01:38] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:01:38] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-02 23:01:38] DEBUG: File operation: upload | Context: {"filename":"convertre_683e2d4266d31_1748905298_b13d96f2.pdf","success":true}
+[2025-06-02 23:01:38] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_683e2d4266d31_1748905298_b13d96f2.pdf"}
+[2025-06-02 23:01:38] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:01:38] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-02 23:01:39] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-02 23:01:39] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"convertre_683e2d4266d31_1748905298_b13d96f2.pdf","temp_dir":"/tmp/convertre_pdf_683e2d53037ee","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/tmp/convertre_pdf_683e2d53037ee' '/var/www/api/public/../storage/uploads/convertre_683e2d4266d31_1748905298_b13d96f2.pdf'"}
+[2025-06-02 23:01:39] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/tmp/convertre_pdf_683e2d53037ee' '/var/www/api/public/../storage/uploads/convertre_683e2d4266d31_1748905298_b13d96f2.pdf'","timeout":300}
+[2025-06-02 23:01:39] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/tmp/convertre_pdf_683e2d53037ee' '/var/www/api/public/../storage/uploads/convertre_683e2d4266d31_1748905298_b13d96f2.pdf'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:21935): dconf-CRITICAL **: 19:01:39.086: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-02 23:01:39] ERROR: LibreOffice failed to convert PDF to PNG
+[2025-06-02 23:01:39] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_683e2d4266d31_1748905298_b13d96f2.pdf","error":"Conversion process failed"}
+[2025-06-02 23:01:39] DEBUG: File operation: delete | Context: {"filename":"convertre_683e2d4266d31_1748905298_b13d96f2.pdf","success":true}
+[2025-06-02 23:02:01] DEBUG: RateLimitService initialized
+[2025-06-02 23:02:01] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:02:01] DEBUG: FileValidationService initialized
+[2025-06-02 23:02:01] DEBUG: File validation passed | Context: {"filename":"convertre_683e2d583be70.tiff","size":1131930,"mime":"image/tiff"}
+[2025-06-02 23:02:01] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:02:01] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-02 23:02:01] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:02:01] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\TiffMultiFormatModule","conversion":"tiff_to_jpg"}
+[2025-06-02 23:02:01] DEBUG: File operation: upload | Context: {"filename":"convertre_683e2d583be70_1748905321_f645d7a5.tiff","success":true}
+[2025-06-02 23:02:01] INFO: Conversion started | Context: {"from_format":"tiff","to_format":"jpg","filename":"convertre_683e2d583be70_1748905321_f645d7a5.tiff"}
+[2025-06-02 23:02:01] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-02 23:02:01] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-02 23:02:02] DEBUG: ImageMagick available for TIFF to jpg conversion
+[2025-06-02 23:02:02] DEBUG: ImageMagick TIFF to JPG conversion | Context: {"input":"convertre_683e2d583be70_1748905321_f645d7a5.tiff","output":"convertre_683e2d583be70_1748905321_71f3ca8f.jpg","quality":85}
+[2025-06-02 23:02:02] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683e2d583be70_1748905321_f645d7a5.tiff'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/var/www/api/public/../storage/converted/convertre_683e2d583be70_1748905321_71f3ca8f.jpg'","timeout":60}
+[2025-06-02 23:02:02] INFO: Conversion completed successfully | Context: {"from_format":"tiff","to_format":"jpg","filename":"convertre_683e2d583be70_1748905321_f645d7a5.tiff","processing_time":"0.30153393745422s"}
+[2025-06-02 23:02:02] DEBUG: File operation: delete | Context: {"filename":"convertre_683e2d583be70_1748905321_f645d7a5.tiff","success":true}
+[2025-06-02 23:07:37] DEBUG: RateLimitService initialized
+[2025-06-02 23:07:37] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:07:37] DEBUG: FileValidationService initialized
+[2025-06-02 23:07:37] DEBUG: File validation passed | Context: {"filename":"convertre_683e2ea9d1c0e.xlsx","size":9793,"mime":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}
+[2025-06-02 23:07:37] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:07:37] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:07:37] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:07:37] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\XlsxToPdfModule","conversion":"xlsx_to_pdf"}
+[2025-06-02 23:07:37] DEBUG: File operation: upload | Context: {"filename":"convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx","success":true}
+[2025-06-02 23:07:37] INFO: Conversion started | Context: {"from_format":"xlsx","to_format":"pdf","filename":"convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx"}
+[2025-06-02 23:07:37] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:07:38] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:07:38] DEBUG: LibreOffice XLSX conversion | Context: {"input":"convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx","temp_dir":"/tmp/convertre_683e2eba0badc","timeout":300}
+[2025-06-02 23:07:38] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e2eba0badc' '/var/www/api/public/../storage/uploads/convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx'","timeout":300}
+[2025-06-02 23:07:38] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e2eba0badc' '/var/www/api/public/../storage/uploads/convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:21987): dconf-CRITICAL **: 19:07:38.117: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-02 23:07:38] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e2eba0badc"}
+[2025-06-02 23:07:38] ERROR: Conversion failed | Context: {"from_format":"xlsx","to_format":"pdf","filename":"convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx","error":"Conversion process failed"}
+[2025-06-02 23:07:38] DEBUG: File operation: delete | Context: {"filename":"convertre_683e2ea9d1c0e_1748905657_73deda06.xlsx","success":true}
+[2025-06-02 23:09:01] DEBUG: RateLimitService initialized
+[2025-06-02 23:09:01] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:09:01] DEBUG: FileValidationService initialized
+[2025-06-02 23:09:01] DEBUG: File validation passed | Context: {"filename":"convertre_683e2efa8f20a.doc","size":100352,"mime":"application/msword"}
+[2025-06-02 23:09:01] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:09:01] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:09:01] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:09:01] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-02 23:09:01] DEBUG: File operation: upload | Context: {"filename":"convertre_683e2efa8f20a_1748905741_2a4b645a.doc","success":true}
+[2025-06-02 23:09:01] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"convertre_683e2efa8f20a_1748905741_2a4b645a.doc"}
+[2025-06-02 23:09:01] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:09:01] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:09:01] DEBUG: LibreOffice DOC conversion | Context: {"input":"convertre_683e2efa8f20a_1748905741_2a4b645a.doc","temp_dir":"/tmp/convertre_683e2f0d6b575","timeout":300}
+[2025-06-02 23:09:01] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e2f0d6b575' '/var/www/api/public/../storage/uploads/convertre_683e2efa8f20a_1748905741_2a4b645a.doc'","timeout":300}
+[2025-06-02 23:09:01] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e2f0d6b575' '/var/www/api/public/../storage/uploads/convertre_683e2efa8f20a_1748905741_2a4b645a.doc'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22069): dconf-CRITICAL **: 19:09:01.509: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-02 23:09:01] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e2f0d6b575"}
+[2025-06-02 23:09:01] ERROR: Conversion failed | Context: {"from_format":"doc","to_format":"pdf","filename":"convertre_683e2efa8f20a_1748905741_2a4b645a.doc","error":"Conversion process failed"}
+[2025-06-02 23:09:01] DEBUG: File operation: delete | Context: {"filename":"convertre_683e2efa8f20a_1748905741_2a4b645a.doc","success":true}
+[2025-06-02 23:18:17] DEBUG: RateLimitService initialized
+[2025-06-02 23:18:17] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:18:17] DEBUG: FileValidationService initialized
+[2025-06-02 23:18:17] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-02 23:18:17] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:18:17] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:18:17] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:18:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-02 23:18:17] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748906297_97899739.docx","success":true}
+[2025-06-02 23:18:17] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906297_97899739.docx"}
+[2025-06-02 23:18:17] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:18:17] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:18:17] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_500kB_1748906297_97899739.docx","temp_dir":"/tmp/convertre_683e31395debe","timeout":300}
+[2025-06-02 23:18:17] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e31395debe' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906297_97899739.docx'","timeout":300}
+[2025-06-02 23:18:17] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e31395debe' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906297_97899739.docx'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22112): dconf-CRITICAL **: 19:18:17.453: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-02 23:18:17] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e31395debe"}
+[2025-06-02 23:18:17] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906297_97899739.docx","error":"Conversion process failed"}
+[2025-06-02 23:18:17] DEBUG: File operation: delete | Context: {"filename":"file-sample_500kB_1748906297_97899739.docx","success":true}
+[2025-06-02 23:24:52] DEBUG: RateLimitService initialized
+[2025-06-02 23:24:52] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:24:52] DEBUG: FileValidationService initialized
+[2025-06-02 23:24:52] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-02 23:24:52] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:24:52] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:24:52] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:24:52] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-02 23:24:52] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748906692_0043bbb9.docx","success":true}
+[2025-06-02 23:24:52] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906692_0043bbb9.docx"}
+[2025-06-02 23:24:52] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:24:52] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:24:52] DEBUG: LibreOffice DOCX conversion | Context: {"input":"file-sample_500kB_1748906692_0043bbb9.docx","temp_dir":"/tmp/convertre_683e32c45ce4c","timeout":300}
+[2025-06-02 23:24:52] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e32c45ce4c' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906692_0043bbb9.docx'","timeout":300}
+[2025-06-02 23:24:52] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e32c45ce4c' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906692_0043bbb9.docx'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22242): dconf-CRITICAL **: 19:24:52.450: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-02 23:24:52] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e32c45ce4c"}
+[2025-06-02 23:24:52] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906692_0043bbb9.docx","error":"Conversion process failed"}
+[2025-06-02 23:24:52] DEBUG: File operation: delete | Context: {"filename":"file-sample_500kB_1748906692_0043bbb9.docx","success":true}
+[2025-06-02 23:27:00] DEBUG: RateLimitService initialized
+[2025-06-02 23:27:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:27:00] DEBUG: FileValidationService initialized
+[2025-06-02 23:27:00] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-02 23:27:00] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:27:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:27:00] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:27:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-02 23:27:00] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748906820_617315e7.docx","success":true}
+[2025-06-02 23:27:00] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906820_617315e7.docx"}
+[2025-06-02 23:27:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:27:00] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:27:00] DEBUG: About to execute LibreOffice command | Context: {"command":null,"input_file_exists":true,"temp_dir_exists":false,"temp_dir_writable":false}
+[2025-06-02 23:29:35] DEBUG: RateLimitService initialized
+[2025-06-02 23:29:35] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:29:35] DEBUG: FileValidationService initialized
+[2025-06-02 23:29:35] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-02 23:29:35] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:29:35] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:29:35] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:29:35] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-02 23:29:35] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748906975_fe86fc93.docx","success":true}
+[2025-06-02 23:29:35] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906975_fe86fc93.docx"}
+[2025-06-02 23:29:35] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:29:35] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:29:35] DEBUG: LibreOffice DOCX conversion starting | Context: {"input":"file-sample_500kB_1748906975_fe86fc93.docx","input_file_exists":true,"input_size":551820,"temp_dir":"/tmp/convertre_683e33df7f125","temp_dir_exists":true,"temp_dir_writable":true,"libre_path":"/usr/bin/soffice","timeout":300,"current_user":"www-data","process_uid":33}
+[2025-06-02 23:29:35] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e33df7f125' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906975_fe86fc93.docx'","timeout":300}
+[2025-06-02 23:29:35] DEBUG: LibreOffice command result | Context: {"success":false,"exit_code":77,"output":"","error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22421): dconf-CRITICAL **: 19:29:35.592: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e33df7f125' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906975_fe86fc93.docx'"}
+[2025-06-02 23:29:35] ERROR: LibreOffice conversion failed with details | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e33df7f125' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748906975_fe86fc93.docx'","exit_code":77,"output":"","error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22421): dconf-CRITICAL **: 19:29:35.592: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n","input_file":"/var/www/api/public/../storage/uploads/file-sample_500kB_1748906975_fe86fc93.docx","temp_dir":"/tmp/convertre_683e33df7f125"}
+[2025-06-02 23:29:35] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e33df7f125"}
+[2025-06-02 23:29:35] ERROR: Conversion failed | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748906975_fe86fc93.docx","error":"Conversion process failed"}
+[2025-06-02 23:29:35] DEBUG: File operation: delete | Context: {"filename":"file-sample_500kB_1748906975_fe86fc93.docx","success":true}
+[2025-06-02 23:30:13] DEBUG: RateLimitService initialized
+[2025-06-02 23:30:13] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:30:13] DEBUG: FileValidationService initialized
+[2025-06-02 23:30:13] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-02 23:30:13] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:30:13] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:30:13] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:30:13] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-02 23:30:13] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748907013_398c2779.docx","success":true}
+[2025-06-02 23:30:13] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748907013_398c2779.docx"}
+[2025-06-02 23:30:13] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:30:13] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:30:13] DEBUG: LibreOffice DOCX conversion starting | Context: {"input":"file-sample_500kB_1748907013_398c2779.docx","input_file_exists":true,"input_size":551820,"temp_dir":"/tmp/convertre_683e34058dd5e","temp_dir_exists":true,"temp_dir_writable":true,"libre_path":"/usr/bin/soffice","timeout":300,"current_user":"www-data","process_uid":33}
+[2025-06-02 23:30:13] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683e34058dd5e/user_profile --convert-to pdf --outdir '/tmp/convertre_683e34058dd5e' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748907013_398c2779.docx'","timeout":300}
+[2025-06-02 23:30:15] DEBUG: LibreOffice command result | Context: {"success":true,"exit_code":0,"output":"convert /var/www/api/public/../storage/uploads/file-sample_500kB_1748907013_398c2779.docx as a Writer document -> /tmp/convertre_683e34058dd5e/file-sample_500kB_1748907013_398c2779.pdf using filter : writer_pdf_Export\n","error":"\n(process:22488): dconf-CRITICAL **: 19:30:13.788: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n\n(process:22492): dconf-CRITICAL **: 19:30:14.063: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683e34058dd5e/user_profile --convert-to pdf --outdir '/tmp/convertre_683e34058dd5e' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748907013_398c2779.docx'"}
+[2025-06-02 23:30:15] DEBUG: Temp directory contents after conversion | Context: {"temp_dir":"/tmp/convertre_683e34058dd5e","files":{"2":"file-sample_500kB_1748907013_398c2779.pdf","3":"user_profile"},"file_count":2}
+[2025-06-02 23:30:15] DEBUG: PDF conversion completed successfully | Context: {"output_file":"/var/www/api/public/../storage/converted/file-sample_500kB_1748907013_4e848ce9.pdf","output_size":338385}
+[2025-06-02 23:30:15] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e34058dd5e"}
+[2025-06-02 23:30:15] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748907013_398c2779.docx","processing_time":"2.2074611186981s"}
+[2025-06-02 23:30:15] DEBUG: File operation: delete | Context: {"filename":"file-sample_500kB_1748907013_398c2779.docx","success":true}
+[2025-06-02 23:36:02] DEBUG: RateLimitService initialized
+[2025-06-02 23:36:02] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:36:02] DEBUG: FileValidationService initialized
+[2025-06-02 23:36:02] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-02 23:36:02] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:36:02] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:36:02] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:36:02] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-02 23:36:02] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748907362_0b60d9dc.doc","success":true}
+[2025-06-02 23:36:02] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907362_0b60d9dc.doc"}
+[2025-06-02 23:36:02] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:36:02] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:36:02] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748907362_0b60d9dc.doc","temp_dir":"/tmp/convertre_683e3562691f5","timeout":300}
+[2025-06-02 23:36:02] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e3562691f5' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748907362_0b60d9dc.doc'","timeout":300}
+[2025-06-02 23:36:02] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to pdf --outdir '/tmp/convertre_683e3562691f5' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748907362_0b60d9dc.doc'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22581): dconf-CRITICAL **: 19:36:02.500: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-02 23:36:02] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e3562691f5"}
+[2025-06-02 23:36:02] ERROR: Conversion failed | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907362_0b60d9dc.doc","error":"Conversion process failed"}
+[2025-06-02 23:36:02] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748907362_0b60d9dc.doc","success":true}
+[2025-06-02 23:37:33] DEBUG: RateLimitService initialized
+[2025-06-02 23:37:33] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:37:33] DEBUG: FileValidationService initialized
+[2025-06-02 23:37:33] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-02 23:37:33] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:37:33] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:37:33] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:37:33] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-02 23:37:33] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748907453_514cc883.doc","success":true}
+[2025-06-02 23:37:33] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907453_514cc883.doc"}
+[2025-06-02 23:37:33] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:37:33] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:37:33] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748907453_514cc883.doc","temp_dir":"/tmp/convertre_683e35bdce414","timeout":300}
+[2025-06-02 23:37:33] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:// --convert-to pdf --outdir '/tmp/convertre_683e35bdce414' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748907453_514cc883.doc'","timeout":300}
+[2025-06-02 23:37:33] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:// --convert-to pdf --outdir '/tmp/convertre_683e35bdce414' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748907453_514cc883.doc'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:22665): dconf-CRITICAL **: 19:37:33.914: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nLibreOffice user installation could not be processed due to missing access rights. Please make sure that you have sufficient access rights for the following location and restart LibreOffice:\n\n/\n"}
+[2025-06-02 23:37:33] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e35bdce414"}
+[2025-06-02 23:37:33] ERROR: Conversion failed | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907453_514cc883.doc","error":"Conversion process failed"}
+[2025-06-02 23:37:33] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748907453_514cc883.doc","success":true}
+[2025-06-02 23:40:17] DEBUG: RateLimitService initialized
+[2025-06-02 23:40:17] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:40:17] DEBUG: FileValidationService initialized
+[2025-06-02 23:40:17] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-02 23:40:17] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:40:17] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:40:17] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:40:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-02 23:40:17] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748907617_e3b6add3.doc","success":true}
+[2025-06-02 23:40:17] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907617_e3b6add3.doc"}
+[2025-06-02 23:40:17] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:40:18] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:40:18] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e366212e6c"}
+[2025-06-02 23:40:28] DEBUG: RateLimitService initialized
+[2025-06-02 23:40:28] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:40:28] DEBUG: FileValidationService initialized
+[2025-06-02 23:40:28] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-02 23:40:28] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:40:28] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:40:28] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:40:28] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-02 23:40:28] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748907628_34b309bc.doc","success":true}
+[2025-06-02 23:40:28] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907628_34b309bc.doc"}
+[2025-06-02 23:40:28] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:40:29] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:40:29] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748907628_34b309bc.doc","temp_dir":"/tmp/convertre_683e366d131c6","timeout":300}
+[2025-06-02 23:40:29] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683e366d131c6/user_profile --convert-to pdf --outdir '/tmp/convertre_683e366d131c6' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748907628_34b309bc.doc'","timeout":300}
+[2025-06-02 23:40:30] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e366d131c6"}
+[2025-06-02 23:40:30] INFO: Conversion completed successfully | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748907628_34b309bc.doc","processing_time":"1.6033048629761s"}
+[2025-06-02 23:40:30] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748907628_34b309bc.doc","success":true}
+[2025-06-02 23:49:31] DEBUG: RateLimitService initialized
+[2025-06-02 23:49:31] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-02 23:49:31] DEBUG: FileValidationService initialized
+[2025-06-02 23:49:31] DEBUG: File validation passed | Context: {"filename":"convertre_683e387c03b0c.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-02 23:49:31] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-02 23:49:31] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-02 23:49:31] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-02 23:49:31] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-02 23:49:31] DEBUG: File operation: upload | Context: {"filename":"convertre_683e387c03b0c_1748908171_6a26e519.docx","success":true}
+[2025-06-02 23:49:31] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"convertre_683e387c03b0c_1748908171_6a26e519.docx"}
+[2025-06-02 23:49:31] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-02 23:49:31] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-02 23:49:31] DEBUG: LibreOffice DOCX conversion starting | Context: {"input":"convertre_683e387c03b0c_1748908171_6a26e519.docx","input_file_exists":true,"input_size":551820,"temp_dir":"/tmp/convertre_683e388b9bfa6","temp_dir_exists":true,"temp_dir_writable":true,"libre_path":"/usr/bin/soffice","timeout":300,"current_user":"www-data","process_uid":33}
+[2025-06-02 23:49:31] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683e388b9bfa6/user_profile --convert-to pdf --outdir '/tmp/convertre_683e388b9bfa6' '/var/www/api/public/../storage/uploads/convertre_683e387c03b0c_1748908171_6a26e519.docx'","timeout":300}
+[2025-06-02 23:49:37] DEBUG: LibreOffice command result | Context: {"success":true,"exit_code":0,"output":"convert /var/www/api/public/../storage/uploads/convertre_683e387c03b0c_1748908171_6a26e519.docx as a Writer document -> /tmp/convertre_683e388b9bfa6/convertre_683e387c03b0c_1748908171_6a26e519.pdf using filter : writer_pdf_Export\n","error":"\n(process:22891): dconf-CRITICAL **: 19:49:31.770: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n\n(process:22895): dconf-CRITICAL **: 19:49:31.963: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683e388b9bfa6/user_profile --convert-to pdf --outdir '/tmp/convertre_683e388b9bfa6' '/var/www/api/public/../storage/uploads/convertre_683e387c03b0c_1748908171_6a26e519.docx'"}
+[2025-06-02 23:49:37] DEBUG: Temp directory contents after conversion | Context: {"temp_dir":"/tmp/convertre_683e388b9bfa6","files":{"2":"convertre_683e387c03b0c_1748908171_6a26e519.pdf","3":"user_profile"},"file_count":2}
+[2025-06-02 23:49:37] DEBUG: PDF conversion completed successfully | Context: {"output_file":"/var/www/api/public/../storage/converted/convertre_683e387c03b0c_1748908171_918e5ce5.pdf","output_size":338385}
+[2025-06-02 23:49:37] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683e388b9bfa6"}
+[2025-06-02 23:49:37] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"convertre_683e387c03b0c_1748908171_6a26e519.docx","processing_time":"5.4897048473358s"}
+[2025-06-02 23:49:37] DEBUG: File operation: delete | Context: {"filename":"convertre_683e387c03b0c_1748908171_6a26e519.docx","success":true}
+[2025-06-02 23:49:47] INFO: File downloaded | Context: {"filename":"convertre_683e387c03b0c_1748908171_918e5ce5.pdf","size":338385}

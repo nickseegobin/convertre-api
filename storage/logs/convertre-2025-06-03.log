@@ -1,0 +1,902 @@
+[2025-06-03 10:15:38] DEBUG: RateLimitService initialized
+[2025-06-03 10:15:38] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:15:38] DEBUG: FileValidationService initialized
+[2025-06-03 10:15:38] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-03 10:15:38] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:15:38] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:15:38] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:15:38] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-03 10:15:38] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748945738_24aafd6a.doc","success":true}
+[2025-06-03 10:15:38] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748945738_24aafd6a.doc"}
+[2025-06-03 10:15:38] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:15:38] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:15:38] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748945738_24aafd6a.doc","temp_dir":"/tmp/convertre_683ecb4a90fcb","timeout":300}
+[2025-06-03 10:15:38] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ecb4a90fcb/user_profile --convert-to pdf --outdir '/tmp/convertre_683ecb4a90fcb' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748945738_24aafd6a.doc'","timeout":300}
+[2025-06-03 10:15:40] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ecb4a90fcb"}
+[2025-06-03 10:15:40] INFO: Conversion completed successfully | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748945738_24aafd6a.doc","processing_time":"1.9085199832916s"}
+[2025-06-03 10:15:40] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748945738_24aafd6a.doc","success":true}
+[2025-06-03 10:15:43] DEBUG: RateLimitService initialized
+[2025-06-03 10:15:43] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:15:43] DEBUG: FileValidationService initialized
+[2025-06-03 10:15:43] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-03 10:15:43] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:15:43] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:15:43] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:15:43] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-03 10:15:43] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748945743_41f77de6.doc","success":true}
+[2025-06-03 10:15:43] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748945743_41f77de6.doc"}
+[2025-06-03 10:15:43] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:15:43] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:15:43] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748945743_41f77de6.doc","temp_dir":"/tmp/convertre_683ecb4f5731a","timeout":300}
+[2025-06-03 10:15:43] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ecb4f5731a/user_profile --convert-to pdf --outdir '/tmp/convertre_683ecb4f5731a' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748945743_41f77de6.doc'","timeout":300}
+[2025-06-03 10:15:44] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ecb4f5731a"}
+[2025-06-03 10:15:44] INFO: Conversion completed successfully | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748945743_41f77de6.doc","processing_time":"1.5070300102234s"}
+[2025-06-03 10:15:44] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748945743_41f77de6.doc","success":true}
+[2025-06-03 10:16:00] DEBUG: RateLimitService initialized
+[2025-06-03 10:16:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:16:00] DEBUG: FileValidationService initialized
+[2025-06-03 10:16:00] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-03 10:16:00] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:16:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:16:00] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:16:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-03 10:16:00] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748945760_1e8bc512.docx","success":true}
+[2025-06-03 10:16:00] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748945760_1e8bc512.docx"}
+[2025-06-03 10:16:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:16:00] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:16:00] DEBUG: LibreOffice DOCX conversion starting | Context: {"input":"file-sample_500kB_1748945760_1e8bc512.docx","input_file_exists":true,"input_size":551820,"temp_dir":"/tmp/convertre_683ecb60a28bf","temp_dir_exists":true,"temp_dir_writable":true,"libre_path":"/usr/bin/soffice","timeout":300,"current_user":"www-data","process_uid":33}
+[2025-06-03 10:16:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ecb60a28bf/user_profile --convert-to pdf --outdir '/tmp/convertre_683ecb60a28bf' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748945760_1e8bc512.docx'","timeout":300}
+[2025-06-03 10:16:02] DEBUG: LibreOffice command result | Context: {"success":true,"exit_code":0,"output":"convert /var/www/api/public/../storage/uploads/file-sample_500kB_1748945760_1e8bc512.docx as a Writer document -> /tmp/convertre_683ecb60a28bf/file-sample_500kB_1748945760_1e8bc512.pdf using filter : writer_pdf_Export\n","error":"\n(process:24509): dconf-CRITICAL **: 06:16:00.794: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n\n(process:24513): dconf-CRITICAL **: 06:16:00.992: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ecb60a28bf/user_profile --convert-to pdf --outdir '/tmp/convertre_683ecb60a28bf' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748945760_1e8bc512.docx'"}
+[2025-06-03 10:16:02] DEBUG: Temp directory contents after conversion | Context: {"temp_dir":"/tmp/convertre_683ecb60a28bf","files":{"2":"file-sample_500kB_1748945760_1e8bc512.pdf","3":"user_profile"},"file_count":2}
+[2025-06-03 10:16:02] DEBUG: PDF conversion completed successfully | Context: {"output_file":"/var/www/api/public/../storage/converted/file-sample_500kB_1748945760_8a26d399.pdf","output_size":338385}
+[2025-06-03 10:16:06] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ecb60a28bf"}
+[2025-06-03 10:16:06] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748945760_1e8bc512.docx","processing_time":"5.4879341125488s"}
+[2025-06-03 10:16:06] DEBUG: File operation: delete | Context: {"filename":"file-sample_500kB_1748945760_1e8bc512.docx","success":true}
+[2025-06-03 10:18:19] DEBUG: RateLimitService initialized
+[2025-06-03 10:18:19] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:18:19] DEBUG: FileValidationService initialized
+[2025-06-03 10:18:19] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads.xlsx","size":9793,"mime":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}
+[2025-06-03 10:18:19] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:18:19] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:18:19] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:18:19] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\XlsxToPdfModule","conversion":"xlsx_to_pdf"}
+[2025-06-03 10:18:19] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_1748945899_f403e86a.xlsx","success":true}
+[2025-06-03 10:18:19] INFO: Conversion started | Context: {"from_format":"xlsx","to_format":"pdf","filename":"Adoorable_Leads_1748945899_f403e86a.xlsx"}
+[2025-06-03 10:18:19] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:18:19] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:18:19] DEBUG: LibreOffice XLSX conversion | Context: {"input":"Adoorable_Leads_1748945899_f403e86a.xlsx","temp_dir":"/tmp/convertre_683ecbeb32a12","timeout":300}
+[2025-06-03 10:18:19] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ecbeb32a12/user_profile --convert-to pdf --outdir '/tmp/convertre_683ecbeb32a12' '/var/www/api/public/../storage/uploads/Adoorable_Leads_1748945899_f403e86a.xlsx'","timeout":300}
+[2025-06-03 10:18:20] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ecbeb32a12"}
+[2025-06-03 10:18:20] INFO: Conversion completed successfully | Context: {"from_format":"xlsx","to_format":"pdf","filename":"Adoorable_Leads_1748945899_f403e86a.xlsx","processing_time":"1.6068050861359s"}
+[2025-06-03 10:18:20] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_1748945899_f403e86a.xlsx","success":true}
+[2025-06-03 10:28:23] DEBUG: RateLimitService initialized
+[2025-06-03 10:28:23] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:28:23] DEBUG: FileValidationService initialized
+[2025-06-03 10:28:23] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 10:28:23] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:28:23] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:28:23] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:28:23] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-03 10:28:23] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748946503_6cd6c01d.odt","success":true}
+[2025-06-03 10:28:23] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748946503_6cd6c01d.odt"}
+[2025-06-03 10:28:23] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:28:23] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:28:23] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748946503_6cd6c01d.odt","temp_dir":"/tmp/convertre_683ece476f2a5","timeout":300}
+[2025-06-03 10:28:23] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ece476f2a5/user_profile --convert-to pdf --outdir '/tmp/convertre_683ece476f2a5' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748946503_6cd6c01d.odt'","timeout":300}
+[2025-06-03 10:28:24] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ece476f2a5"}
+[2025-06-03 10:28:24] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748946503_6cd6c01d.odt","processing_time":"1.7071619033813s"}
+[2025-06-03 10:28:24] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748946503_6cd6c01d.odt","success":true}
+[2025-06-03 10:28:31] DEBUG: RateLimitService initialized
+[2025-06-03 10:28:31] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:28:31] DEBUG: FileValidationService initialized
+[2025-06-03 10:28:31] DEBUG: File validation passed | Context: {"filename":"sample3.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 10:28:31] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:28:31] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:28:31] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:28:31] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 10:28:31] DEBUG: File operation: upload | Context: {"filename":"sample3_1748946511_0a3a8f0c.pptx","success":true}
+[2025-06-03 10:28:31] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748946511_0a3a8f0c.pptx"}
+[2025-06-03 10:28:31] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:28:32] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:28:32] DEBUG: LibreOffice PPTX conversion | Context: {"input":"sample3_1748946511_0a3a8f0c.pptx","temp_dir":"/tmp/convertre_683ece500ca53","timeout":300}
+[2025-06-03 10:28:32] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ece500ca53/user_profile --convert-to pdf --outdir '/tmp/convertre_683ece500ca53' '/var/www/api/public/../storage/uploads/sample3_1748946511_0a3a8f0c.pptx'","timeout":300}
+[2025-06-03 10:28:33] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ece500ca53"}
+[2025-06-03 10:28:33] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748946511_0a3a8f0c.pptx","processing_time":"1.7074189186096s"}
+[2025-06-03 10:28:33] DEBUG: File operation: delete | Context: {"filename":"sample3_1748946511_0a3a8f0c.pptx","success":true}
+[2025-06-03 10:29:00] DEBUG: RateLimitService initialized
+[2025-06-03 10:29:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:29:00] DEBUG: FileValidationService initialized
+[2025-06-03 10:29:00] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.rtf","size":100605,"mime":"text/rtf"}
+[2025-06-03 10:29:00] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:29:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:29:00] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:29:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\RtfToPdfModule","conversion":"rtf_to_pdf"}
+[2025-06-03 10:29:00] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748946540_eaa75fb4.rtf","success":true}
+[2025-06-03 10:29:00] INFO: Conversion started | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748946540_eaa75fb4.rtf"}
+[2025-06-03 10:29:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:29:00] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:29:00] DEBUG: LibreOffice RTF conversion | Context: {"input":"file-sample_100kB_1748946540_eaa75fb4.rtf","temp_dir":"/tmp/convertre_683ece6cc966a","timeout":300}
+[2025-06-03 10:29:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ece6cc966a/user_profile --convert-to pdf --outdir '/tmp/convertre_683ece6cc966a' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748946540_eaa75fb4.rtf'","timeout":300}
+[2025-06-03 10:29:02] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ece6cc966a"}
+[2025-06-03 10:29:02] INFO: Conversion completed successfully | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748946540_eaa75fb4.rtf","processing_time":"1.5068378448486s"}
+[2025-06-03 10:29:02] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748946540_eaa75fb4.rtf","success":true}
+[2025-06-03 10:29:16] DEBUG: RateLimitService initialized
+[2025-06-03 10:29:16] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:29:16] DEBUG: FileValidationService initialized
+[2025-06-03 10:29:16] DEBUG: File validation passed | Context: {"filename":"Around the World in 28 Languages.epub","size":3246310,"mime":"application/epub+zip"}
+[2025-06-03 10:29:16] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:29:16] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 10:29:16] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:29:16] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\EpubToPdfModule","conversion":"epub_to_pdf"}
+[2025-06-03 10:29:16] DEBUG: File operation: upload | Context: {"filename":"Around_the_World_in_28_Languages_1748946556_a6b3356a.epub","success":true}
+[2025-06-03 10:29:16] INFO: Conversion started | Context: {"from_format":"epub","to_format":"pdf","filename":"Around_the_World_in_28_Languages_1748946556_a6b3356a.epub"}
+[2025-06-03 10:29:16] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:29:17] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 10:29:17] DEBUG: LibreOffice EPUB conversion | Context: {"input":"Around_the_World_in_28_Languages_1748946556_a6b3356a.epub","temp_dir":"/tmp/convertre_683ece7d143ad","timeout":300}
+[2025-06-03 10:29:17] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ece7d143ad/user_profile --convert-to pdf --outdir '/tmp/convertre_683ece7d143ad' '/var/www/api/public/../storage/uploads/Around_the_World_in_28_Languages_1748946556_a6b3356a.epub'","timeout":300}
+[2025-06-03 10:29:18] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/tmp/convertre_683ece7d143ad"}
+[2025-06-03 10:29:18] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ece7d143ad"}
+[2025-06-03 10:29:18] ERROR: Conversion failed | Context: {"from_format":"epub","to_format":"pdf","filename":"Around_the_World_in_28_Languages_1748946556_a6b3356a.epub","error":"Conversion process failed"}
+[2025-06-03 10:29:18] DEBUG: File operation: delete | Context: {"filename":"Around_the_World_in_28_Languages_1748946556_a6b3356a.epub","success":true}
+[2025-06-03 10:33:11] DEBUG: RateLimitService initialized
+[2025-06-03 10:33:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:33:11] DEBUG: FileValidationService initialized
+[2025-06-03 10:33:11] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 10:33:11] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:33:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:33:11] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:33:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:33:11] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf","success":true}
+[2025-06-03 10:33:11] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf"}
+[2025-06-03 10:33:11] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:33:11] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:33:11] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-03 10:33:11] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf","temp_dir":"/tmp/convertre_pdf_683ecf6743bfb","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/tmp/convertre_pdf_683ecf6743bfb' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf'"}
+[2025-06-03 10:33:11] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/tmp/convertre_pdf_683ecf6743bfb' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf'","timeout":300}
+[2025-06-03 10:33:11] ERROR: LibreOffice conversion failed | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore --convert-to png --outdir '/tmp/convertre_pdf_683ecf6743bfb' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf'","exit_code":77,"error":"javaldx failed!\nWarning: failed to read path from javaldx\n\n(process:25279): dconf-CRITICAL **: 06:33:11.349: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nLibreOffice 24.2 - Fatal Error: The application cannot be started. \nUser installation could not be completed. \n"}
+[2025-06-03 10:33:11] ERROR: LibreOffice failed to convert PDF to PNG
+[2025-06-03 10:33:11] ERROR: Conversion failed | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf","error":"Conversion process failed"}
+[2025-06-03 10:33:11] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748946791_12f54e23.pdf","success":true}
+[2025-06-03 10:40:44] DEBUG: RateLimitService initialized
+[2025-06-03 10:40:44] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:40:44] DEBUG: FileValidationService initialized
+[2025-06-03 10:40:44] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 10:40:44] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:40:44] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:40:44] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:40:44] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:40:44] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748947244_f4e688e5.pdf","success":true}
+[2025-06-03 10:40:44] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748947244_f4e688e5.pdf"}
+[2025-06-03 10:40:44] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:40:44] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:40:44] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-03 10:40:44] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947244_f4e688e5.pdf","temp_dir":"/tmp/convertre_pdf_683ed12ca09c5","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed12ca09c5/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed12ca09c5' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947244_f4e688e5.pdf'"}
+[2025-06-03 10:40:44] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed12ca09c5/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed12ca09c5' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947244_f4e688e5.pdf'","timeout":300}
+[2025-06-03 10:40:46] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Adoorable_Leads_-_Property_Renters_1748947244_f4e688e5.png"]}
+[2025-06-03 10:40:46] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-06-03 10:42:42] DEBUG: RateLimitService initialized
+[2025-06-03 10:42:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:42:42] DEBUG: FileValidationService initialized
+[2025-06-03 10:42:42] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 10:42:42] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:42:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:42:42] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:42:42] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:42:42] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748947362_77a92673.pdf","success":true}
+[2025-06-03 10:42:42] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748947362_77a92673.pdf"}
+[2025-06-03 10:42:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:42:42] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:42:42] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-03 10:42:42] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947362_77a92673.pdf","temp_dir":"/tmp/convertre_pdf_683ed1a2a1dd3","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed1a2a1dd3/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed1a2a1dd3' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947362_77a92673.pdf'"}
+[2025-06-03 10:42:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed1a2a1dd3/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed1a2a1dd3' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947362_77a92673.pdf'","timeout":300}
+[2025-06-03 10:42:44] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Adoorable_Leads_-_Property_Renters_1748947362_77a92673.png"]}
+[2025-06-03 10:42:44] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-06-03 10:42:44] DEBUG: ImageMagick optimization | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947362_77a92673.png","output":"Adoorable_Leads_-_Property_Renters_1748947362_1d28a156.jpg","format":"jpg"}
+[2025-06-03 10:42:44] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/tmp/convertre_pdf_683ed1a2a1dd3/Adoorable_Leads_-_Property_Renters_1748947362_77a92673.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748947362_1d28a156.jpg'","timeout":60}
+[2025-06-03 10:43:41] DEBUG: RateLimitService initialized
+[2025-06-03 10:43:41] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:43:41] DEBUG: FileValidationService initialized
+[2025-06-03 10:43:41] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 10:43:41] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:43:41] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:43:41] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:43:41] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:43:41] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.pdf","success":true}
+[2025-06-03 10:43:41] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.pdf"}
+[2025-06-03 10:43:41] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:43:42] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:43:42] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-03 10:43:42] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.pdf","temp_dir":"/tmp/convertre_pdf_683ed1de1887b","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed1de1887b/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed1de1887b' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.pdf'"}
+[2025-06-03 10:43:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed1de1887b/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed1de1887b' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.pdf'","timeout":300}
+[2025-06-03 10:43:43] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.png"]}
+[2025-06-03 10:43:43] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-06-03 10:43:43] DEBUG: ImageMagick optimization | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.png","output":"Adoorable_Leads_-_Property_Renters_1748947421_a0cba435.jpg","format":"jpg"}
+[2025-06-03 10:43:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/tmp/convertre_pdf_683ed1de1887b/Adoorable_Leads_-_Property_Renters_1748947421_2e7ab9eb.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748947421_a0cba435.jpg'","timeout":60}
+[2025-06-03 10:45:49] DEBUG: RateLimitService initialized
+[2025-06-03 10:45:49] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:45:49] DEBUG: FileValidationService initialized
+[2025-06-03 10:45:49] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 10:45:49] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:45:49] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:45:49] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:45:49] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:45:49] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf","success":true}
+[2025-06-03 10:45:49] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf"}
+[2025-06-03 10:45:49] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:45:49] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:45:49] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-03 10:45:49] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf","temp_dir":"/tmp/convertre_pdf_683ed25daa440","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed25daa440/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed25daa440' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf'"}
+[2025-06-03 10:45:49] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed25daa440/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed25daa440' '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf'","timeout":300}
+[2025-06-03 10:45:51] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.png"]}
+[2025-06-03 10:45:51] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-06-03 10:45:51] DEBUG: ImageMagick optimization | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.png","output":"Adoorable_Leads_-_Property_Renters_1748947549_a421c499.jpg","format":"jpg"}
+[2025-06-03 10:45:51] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/tmp/convertre_pdf_683ed25daa440/Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748947549_a421c499.jpg'","timeout":60}
+[2025-06-03 10:45:51] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.png"}
+[2025-06-03 10:45:51] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf","processing_time":"1.9047639369965s"}
+[2025-06-03 10:45:51] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748947549_21c190ca.pdf","success":true}
+[2025-06-03 10:50:58] DEBUG: RateLimitService initialized
+[2025-06-03 10:50:58] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:50:58] DEBUG: FileValidationService initialized
+[2025-06-03 10:50:58] DEBUG: File validation passed | Context: {"filename":"HEIC to JPG Converter WordPress Plugin_ Plugin Specification Document.pdf","size":114981,"mime":"application/pdf"}
+[2025-06-03 10:50:58] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:50:58] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:50:58] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:50:58] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:50:58] DEBUG: File operation: upload | Context: {"filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf","success":true}
+[2025-06-03 10:50:58] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf"}
+[2025-06-03 10:50:58] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 10:50:58] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:50:58] DEBUG: Both LibreOffice and ImageMagick available for PDF conversion
+[2025-06-03 10:50:58] DEBUG: LibreOffice PDF to PNG conversion | Context: {"input":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf","temp_dir":"/tmp/convertre_pdf_683ed392759d1","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed392759d1/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed392759d1' '/var/www/api/public/../storage/uploads/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf'"}
+[2025-06-03 10:50:58] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_pdf_683ed392759d1/user_profile --convert-to png --outdir '/tmp/convertre_pdf_683ed392759d1' '/var/www/api/public/../storage/uploads/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf'","timeout":300}
+[2025-06-03 10:51:00] DEBUG: LibreOffice generated PNG files | Context: {"count":1,"files":["HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.png"]}
+[2025-06-03 10:51:00] INFO: LibreOffice conversion successful | Context: {"pages_converted":1}
+[2025-06-03 10:51:00] DEBUG: ImageMagick optimization | Context: {"input":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.png","output":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_1b18c722.jpg","format":"jpg"}
+[2025-06-03 10:51:00] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/tmp/convertre_pdf_683ed392759d1/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.png' -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/converted/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_1b18c722.jpg'","timeout":60}
+[2025-06-03 10:51:00] DEBUG: Cleaned up temp file | Context: {"file":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.png"}
+[2025-06-03 10:51:00] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf","processing_time":"1.9047758579254s"}
+[2025-06-03 10:51:00] DEBUG: File operation: delete | Context: {"filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_86ecead3.pdf","success":true}
+[2025-06-03 10:51:14] INFO: File downloaded | Context: {"filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748947858_1b18c722.jpg","size":85131}
+[2025-06-03 10:54:01] DEBUG: RateLimitService initialized
+[2025-06-03 10:54:01] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 10:54:01] DEBUG: FileValidationService initialized
+[2025-06-03 10:54:01] DEBUG: File validation passed | Context: {"filename":"HEIC to JPG Converter WordPress Plugin_ Plugin Specification Document.pdf","size":114981,"mime":"application/pdf"}
+[2025-06-03 10:54:01] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 10:54:01] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 10:54:01] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 10:54:01] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 10:54:01] DEBUG: File operation: upload | Context: {"filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf","success":true}
+[2025-06-03 10:54:01] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf"}
+[2025-06-03 10:54:01] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 10:54:01] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 10:54:01] DEBUG: ImageMagick with PDF support available
+[2025-06-03 10:54:01] DEBUG: ImageMagick PDF conversion | Context: {"input":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf","temp_dir":"/tmp/convertre_pdf_683ed449a7282","output_pattern":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_6620ba59-page-%03d.jpg","command":"/usr/bin/convert -density 300 -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/uploads/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf' '/tmp/convertre_pdf_683ed449a7282/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_6620ba59-page-%03d.jpg'"}
+[2025-06-03 10:54:01] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/uploads/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf' '/tmp/convertre_pdf_683ed449a7282/HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_6620ba59-page-%03d.jpg'","timeout":300}
+[2025-06-03 10:54:04] DEBUG: ImageMagick generated files | Context: {"count":1,"files":["HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_6620ba59-page-000.jpg"]}
+[2025-06-03 10:54:04] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":1}
+[2025-06-03 10:54:04] INFO: Single-page PDF conversion completed | Context: {"output_file":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_6620ba59.jpg","file_size":226372}
+[2025-06-03 10:54:04] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf","processing_time":"2.8046479225159s"}
+[2025-06-03 10:54:04] DEBUG: File operation: delete | Context: {"filename":"HEIC_to_JPG_Converter_WordPress_Plugin__Plugin_Specification_Document_1748948041_3257d6c8.pdf","success":true}
+[2025-06-03 11:10:07] DEBUG: RateLimitService initialized
+[2025-06-03 11:10:07] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:10:07] DEBUG: FileValidationService initialized
+[2025-06-03 11:10:07] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:10:07] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:10:07] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:10:07] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 11:10:07] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 11:10:07] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf","success":true}
+[2025-06-03 11:10:07] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf"}
+[2025-06-03 11:10:07] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:10:07] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:10:08] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:10:08] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf","temp_dir":"/tmp/convertre_pdf_683ed81003592","output_pattern":"Adoorable_Leads_-_Property_Renters_1748949007_94dafa30-page-%03d.jpg","command":"/usr/bin/convert -density 300 -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf' '/tmp/convertre_pdf_683ed81003592/Adoorable_Leads_-_Property_Renters_1748949007_94dafa30-page-%03d.jpg'"}
+[2025-06-03 11:10:08] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 -background white -flatten -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf' '/tmp/convertre_pdf_683ed81003592/Adoorable_Leads_-_Property_Renters_1748949007_94dafa30-page-%03d.jpg'","timeout":300}
+[2025-06-03 11:10:09] DEBUG: ImageMagick generated files | Context: {"count":1,"files":["Adoorable_Leads_-_Property_Renters_1748949007_94dafa30-page-000.jpg"]}
+[2025-06-03 11:10:09] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":1}
+[2025-06-03 11:10:09] INFO: Single-page PDF conversion completed | Context: {"output_file":"Adoorable_Leads_-_Property_Renters_1748949007_94dafa30.jpg","file_size":530638}
+[2025-06-03 11:10:09] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf","processing_time":"1.5032188892365s"}
+[2025-06-03 11:10:09] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748949007_ce9fbdae.pdf","success":true}
+[2025-06-03 11:13:27] DEBUG: RateLimitService initialized
+[2025-06-03 11:13:27] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:13:27] DEBUG: FileValidationService initialized
+[2025-06-03 11:13:27] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:13:27] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:13:27] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:13:27] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 11:13:27] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 11:13:27] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf","success":true}
+[2025-06-03 11:13:27] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf"}
+[2025-06-03 11:13:27] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:13:27] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:13:27] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:13:27] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf","temp_dir":"/tmp/convertre_pdf_683ed8d7ca573","output_pattern":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-%03d.jpg","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ed8d7ca573/Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-%03d.jpg'"}
+[2025-06-03 11:13:27] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ed8d7ca573/Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-%03d.jpg'","timeout":300}
+[2025-06-03 11:13:29] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-001.jpg"]}
+[2025-06-03 11:13:29] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 11:13:29] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5.jpg","converted_files":["Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-001.jpg"]}
+[2025-06-03 11:13:29] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5.jpg"}
+[2025-06-03 11:13:29] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5.jpg","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 11:13:29] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-000.jpg"}
+[2025-06-03 11:13:29] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-001.jpg"}
+[2025-06-03 11:13:29] INFO: ZIP file created successfully | Context: {"zip_file":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5.jpg","pages_included":2,"zip_size":398423}
+[2025-06-03 11:13:29] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5.jpg","zip_size":398423,"zip_path":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5.jpg"}
+[2025-06-03 11:13:29] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-000.jpg"}
+[2025-06-03 11:13:29] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748949207_5fcde0d5-page-001.jpg"}
+[2025-06-03 11:13:29] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683ed8d7ca573"}
+[2025-06-03 11:13:29] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf","processing_time":"1.419723033905s"}
+[2025-06-03 11:13:29] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748949207_f8fbcf17.pdf","success":true}
+[2025-06-03 11:29:29] DEBUG: RateLimitService initialized
+[2025-06-03 11:29:29] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:29:29] DEBUG: FileValidationService initialized
+[2025-06-03 11:29:29] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:29:29] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:29:29] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:29:29] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 11:29:29] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 11:29:29] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748950169_ab9a7111.pdf","success":true}
+[2025-06-03 11:29:29] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748950169_ab9a7111.pdf"}
+[2025-06-03 11:29:29] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:29:29] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:29:29] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:29:29] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748950169_ab9a7111.pdf","temp_dir":"/tmp/convertre_pdf_683edc99d0795","output_pattern":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-%03d.jpg","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748950169_ab9a7111.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683edc99d0795/Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-%03d.jpg'"}
+[2025-06-03 11:29:29] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748950169_ab9a7111.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683edc99d0795/Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-%03d.jpg'","timeout":300}
+[2025-06-03 11:29:34] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-001.jpg"]}
+[2025-06-03 11:29:34] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 11:29:34] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6.jpg","converted_files":["Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-001.jpg"]}
+[2025-06-03 11:29:34] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6.jpg"}
+[2025-06-03 11:29:34] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6.jpg","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 11:29:34] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-000.jpg"}
+[2025-06-03 11:29:34] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-001.jpg"}
+[2025-06-03 11:29:34] INFO: ZIP file created successfully | Context: {"zip_file":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6.jpg","pages_included":2,"zip_size":398423}
+[2025-06-03 11:29:34] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6.jpg","zip_size":398423,"zip_path":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6.jpg"}
+[2025-06-03 11:29:34] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-000.jpg"}
+[2025-06-03 11:29:34] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748950169_b5bc35b6-page-001.jpg"}
+[2025-06-03 11:29:34] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683edc99d0795"}
+[2025-06-03 11:29:34] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748950169_ab9a7111.pdf","processing_time":"5.1036479473114s"}
+[2025-06-03 11:31:06] DEBUG: RateLimitService initialized
+[2025-06-03 11:31:06] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:31:06] DEBUG: FileValidationService initialized
+[2025-06-03 11:31:06] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:31:06] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:31:06] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:31:06] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 11:31:06] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 11:31:06] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf","success":true}
+[2025-06-03 11:31:06] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf"}
+[2025-06-03 11:31:06] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:31:06] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:31:06] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:31:06] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf","temp_dir":"/tmp/convertre_pdf_683edcfadd4a7","output_pattern":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-%03d.jpg","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683edcfadd4a7/Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-%03d.jpg'"}
+[2025-06-03 11:31:06] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683edcfadd4a7/Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-%03d.jpg'","timeout":300}
+[2025-06-03 11:31:08] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-001.jpg"]}
+[2025-06-03 11:31:08] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 11:31:08] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.jpg","converted_files":["Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-001.jpg"]}
+[2025-06-03 11:31:08] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.jpg"}
+[2025-06-03 11:31:08] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.jpg","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 11:31:08] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-000.jpg"}
+[2025-06-03 11:31:08] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-001.jpg"}
+[2025-06-03 11:31:08] INFO: ZIP file created successfully | Context: {"zip_file":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.jpg","pages_included":2,"zip_size":398423}
+[2025-06-03 11:31:08] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.jpg","zip_size":398423,"zip_path":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.jpg"}
+[2025-06-03 11:31:08] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-000.jpg"}
+[2025-06-03 11:31:08] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69-page-001.jpg"}
+[2025-06-03 11:31:08] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683edcfadd4a7"}
+[2025-06-03 11:31:08] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf","processing_time":"1.5186400413513s"}
+[2025-06-03 11:31:08] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748950266_a13f4c12.pdf","success":true}
+[2025-06-03 11:31:46] INFO: File downloaded | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.zip","download_filename":"Adoorable_Leads_-_Property_Renters_1748950266_d9ed1a69.zip","size":398423,"content_type":"application/zip","is_zip":true}
+[2025-06-03 11:34:00] DEBUG: RateLimitService initialized
+[2025-06-03 11:34:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:34:00] DEBUG: FileValidationService initialized
+[2025-06-03 11:34:00] DEBUG: File validation passed | Context: {"filename":"sample3.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 11:34:00] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:34:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:34:00] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 11:34:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 11:34:00] DEBUG: File operation: upload | Context: {"filename":"sample3_1748950440_5c0101af.pptx","success":true}
+[2025-06-03 11:34:00] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748950440_5c0101af.pptx"}
+[2025-06-03 11:34:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:34:00] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:34:00] DEBUG: LibreOffice PPTX conversion | Context: {"input":"sample3_1748950440_5c0101af.pptx","temp_dir":"/tmp/convertre_683edda873212","timeout":300}
+[2025-06-03 11:34:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683edda873212/user_profile --convert-to pdf --outdir '/tmp/convertre_683edda873212' '/var/www/api/public/../storage/uploads/sample3_1748950440_5c0101af.pptx'","timeout":300}
+[2025-06-03 11:34:02] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683edda873212"}
+[2025-06-03 11:34:02] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748950440_5c0101af.pptx","processing_time":"1.8070571422577s"}
+[2025-06-03 11:34:02] DEBUG: File operation: delete | Context: {"filename":"sample3_1748950440_5c0101af.pptx","success":true}
+[2025-06-03 11:40:40] DEBUG: RateLimitService initialized
+[2025-06-03 11:40:40] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:40:40] DEBUG: FileValidationService initialized
+[2025-06-03 11:40:40] DEBUG: File validation passed | Context: {"filename":"Around the World in 28 Languages.epub","size":3246310,"mime":"application/epub+zip"}
+[2025-06-03 11:40:40] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:40:40] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:40:40] DEBUG: ModuleFactory initialized with 35 modules
+[2025-06-03 11:40:40] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\EpubToPdfModule","conversion":"epub_to_pdf"}
+[2025-06-03 11:40:40] DEBUG: File operation: upload | Context: {"filename":"Around_the_World_in_28_Languages_1748950840_f151a156.epub","success":true}
+[2025-06-03 11:40:40] INFO: Conversion started | Context: {"from_format":"epub","to_format":"pdf","filename":"Around_the_World_in_28_Languages_1748950840_f151a156.epub"}
+[2025-06-03 11:40:40] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:40:40] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:40:40] DEBUG: LibreOffice EPUB conversion | Context: {"input":"Around_the_World_in_28_Languages_1748950840_f151a156.epub","temp_dir":"/tmp/convertre_683edf385f379","timeout":300}
+[2025-06-03 11:40:40] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683edf385f379/user_profile --convert-to pdf --outdir '/tmp/convertre_683edf385f379' '/var/www/api/public/../storage/uploads/Around_the_World_in_28_Languages_1748950840_f151a156.epub'","timeout":300}
+[2025-06-03 11:40:41] ERROR: LibreOffice PDF not generated | Context: {"temp_dir":"/tmp/convertre_683edf385f379"}
+[2025-06-03 11:40:41] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683edf385f379"}
+[2025-06-03 11:40:41] ERROR: Conversion failed | Context: {"from_format":"epub","to_format":"pdf","filename":"Around_the_World_in_28_Languages_1748950840_f151a156.epub","error":"Conversion process failed"}
+[2025-06-03 11:40:41] DEBUG: File operation: delete | Context: {"filename":"Around_the_World_in_28_Languages_1748950840_f151a156.epub","success":true}
+[2025-06-03 11:43:45] DEBUG: RateLimitService initialized
+[2025-06-03 11:43:45] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:43:45] DEBUG: FileValidationService initialized
+[2025-06-03 11:43:45] DEBUG: File validation passed | Context: {"filename":"Around the World in 28 Languages.epub","size":3246310,"mime":"application/epub+zip"}
+[2025-06-03 11:43:45] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:43:45] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:43:45] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:43:45] ERROR: Conversion endpoint error | Context: {"error":"No module available for epub to pdf conversion","file":"/var/www/api/src/Services/ModuleFactory.php","line":44}
+[2025-06-03 11:44:23] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-06-03 11:44:23] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:44:24] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-06-03 11:44:24] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:44:42] DEBUG: RateLimitService initialized
+[2025-06-03 11:44:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:44:42] DEBUG: FileValidationService initialized
+[2025-06-03 11:44:42] DEBUG: File validation passed | Context: {"filename":"convertre_683ee01910f8a.heic","size":351970,"mime":"image/heic"}
+[2025-06-03 11:44:42] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:44:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:44:42] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:44:42] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\HeicMultiFormatModule","conversion":"heic_to_jpg"}
+[2025-06-03 11:44:42] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee01910f8a_1748951082_2ee2d3a4.heic","success":true}
+[2025-06-03 11:44:42] INFO: Conversion started | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683ee01910f8a_1748951082_2ee2d3a4.heic"}
+[2025-06-03 11:44:42] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:44:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format | grep -i heic","timeout":10}
+[2025-06-03 11:44:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format | grep -i heif","timeout":10}
+[2025-06-03 11:44:43] DEBUG: HEIC input support confirmed
+[2025-06-03 11:44:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:44:43] DEBUG: ImageMagick available for HEIC to jpg conversion
+[2025-06-03 11:44:43] DEBUG: ImageMagick HEIC to JPG conversion | Context: {"input":"convertre_683ee01910f8a_1748951082_2ee2d3a4.heic","output":"convertre_683ee01910f8a_1748951082_fc8129e3.jpg","quality":85}
+[2025-06-03 11:44:43] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683ee01910f8a_1748951082_2ee2d3a4.heic' -strip -auto-orient -colorspace sRGB -quality 85 '/var/www/api/public/../storage/converted/convertre_683ee01910f8a_1748951082_fc8129e3.jpg'","timeout":60}
+[2025-06-03 11:44:43] INFO: Conversion completed successfully | Context: {"from_format":"heic","to_format":"jpg","filename":"convertre_683ee01910f8a_1748951082_2ee2d3a4.heic","processing_time":"0.60273599624634s"}
+[2025-06-03 11:44:43] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee01910f8a_1748951082_2ee2d3a4.heic","success":true}
+[2025-06-03 11:44:55] DEBUG: RateLimitService initialized
+[2025-06-03 11:44:55] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:44:55] DEBUG: FileValidationService initialized
+[2025-06-03 11:44:55] DEBUG: File validation passed | Context: {"filename":"convertre_683ee02734596.gif","size":138380,"mime":"image/gif"}
+[2025-06-03 11:44:55] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:44:55] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:44:55] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:44:55] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\GifMultiFormatModule","conversion":"gif_to_jpg"}
+[2025-06-03 11:44:55] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee02734596_1748951095_974d29c5.gif","success":true}
+[2025-06-03 11:44:55] INFO: Conversion started | Context: {"from_format":"gif","to_format":"jpg","filename":"convertre_683ee02734596_1748951095_974d29c5.gif"}
+[2025-06-03 11:44:55] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:44:55] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:44:55] DEBUG: ImageMagick available for GIF to jpg conversion
+[2025-06-03 11:44:55] DEBUG: ImageMagick GIF to JPG conversion | Context: {"input":"convertre_683ee02734596_1748951095_974d29c5.gif","output":"convertre_683ee02734596_1748951095_97a1f5f0.jpg","quality":85}
+[2025-06-03 11:44:55] DEBUG: Executing command | Context: {"command":"/usr/bin/convert '/var/www/api/public/../storage/uploads/convertre_683ee02734596_1748951095_974d29c5.gif'[0] -strip -auto-orient -colorspace sRGB -background white -flatten -quality 85 '/var/www/api/public/../storage/converted/convertre_683ee02734596_1748951095_97a1f5f0.jpg'","timeout":60}
+[2025-06-03 11:44:55] INFO: Conversion completed successfully | Context: {"from_format":"gif","to_format":"jpg","filename":"convertre_683ee02734596_1748951095_974d29c5.gif","processing_time":"0.30161094665527s"}
+[2025-06-03 11:44:55] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee02734596_1748951095_974d29c5.gif","success":true}
+[2025-06-03 11:45:42] DEBUG: RateLimitService initialized
+[2025-06-03 11:45:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:45:42] DEBUG: FileValidationService initialized
+[2025-06-03 11:45:42] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 11:45:42] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:45:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:45:42] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:45:42] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-03 11:45:42] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748951142_8051e286.odt","success":true}
+[2025-06-03 11:45:42] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748951142_8051e286.odt"}
+[2025-06-03 11:45:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:45:42] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:45:42] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748951142_8051e286.odt","temp_dir":"/tmp/convertre_683ee0667dc29","timeout":300}
+[2025-06-03 11:45:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0667dc29/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0667dc29' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748951142_8051e286.odt'","timeout":300}
+[2025-06-03 11:45:44] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee0667dc29"}
+[2025-06-03 11:45:44] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748951142_8051e286.odt","processing_time":"1.606673002243s"}
+[2025-06-03 11:45:44] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748951142_8051e286.odt","success":true}
+[2025-06-03 11:45:54] DEBUG: RateLimitService initialized
+[2025-06-03 11:45:54] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:45:54] DEBUG: FileValidationService initialized
+[2025-06-03 11:45:54] DEBUG: File validation passed | Context: {"filename":"sample3.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 11:45:54] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:45:54] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:45:54] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:45:54] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 11:45:54] DEBUG: File operation: upload | Context: {"filename":"sample3_1748951154_6c666d20.pptx","success":true}
+[2025-06-03 11:45:54] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748951154_6c666d20.pptx"}
+[2025-06-03 11:45:54] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:45:55] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:45:55] DEBUG: LibreOffice PPTX conversion | Context: {"input":"sample3_1748951154_6c666d20.pptx","temp_dir":"/tmp/convertre_683ee07304f4d","timeout":300}
+[2025-06-03 11:45:55] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee07304f4d/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee07304f4d' '/var/www/api/public/../storage/uploads/sample3_1748951154_6c666d20.pptx'","timeout":300}
+[2025-06-03 11:45:56] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee07304f4d"}
+[2025-06-03 11:45:56] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748951154_6c666d20.pptx","processing_time":"1.6069321632385s"}
+[2025-06-03 11:45:56] DEBUG: File operation: delete | Context: {"filename":"sample3_1748951154_6c666d20.pptx","success":true}
+[2025-06-03 11:46:01] DEBUG: RateLimitService initialized
+[2025-06-03 11:46:01] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:46:01] DEBUG: FileValidationService initialized
+[2025-06-03 11:46:01] DEBUG: File validation passed | Context: {"filename":"sample3.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 11:46:01] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:46:01] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:46:01] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:46:01] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 11:46:01] DEBUG: File operation: upload | Context: {"filename":"sample3_1748951161_d2bab6d7.pptx","success":true}
+[2025-06-03 11:46:01] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748951161_d2bab6d7.pptx"}
+[2025-06-03 11:46:01] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:46:01] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:46:01] DEBUG: LibreOffice PPTX conversion | Context: {"input":"sample3_1748951161_d2bab6d7.pptx","temp_dir":"/tmp/convertre_683ee0798e216","timeout":300}
+[2025-06-03 11:46:01] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0798e216/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0798e216' '/var/www/api/public/../storage/uploads/sample3_1748951161_d2bab6d7.pptx'","timeout":300}
+[2025-06-03 11:46:03] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee0798e216"}
+[2025-06-03 11:46:03] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748951161_d2bab6d7.pptx","processing_time":"1.6071798801422s"}
+[2025-06-03 11:46:03] DEBUG: File operation: delete | Context: {"filename":"sample3_1748951161_d2bab6d7.pptx","success":true}
+[2025-06-03 11:46:11] DEBUG: RateLimitService initialized
+[2025-06-03 11:46:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:46:11] DEBUG: FileValidationService initialized
+[2025-06-03 11:46:11] DEBUG: File validation passed | Context: {"filename":"file-sample_500kB.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-03 11:46:11] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:46:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:46:11] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:46:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-03 11:46:11] DEBUG: File operation: upload | Context: {"filename":"file-sample_500kB_1748951171_a4465eb6.docx","success":true}
+[2025-06-03 11:46:11] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748951171_a4465eb6.docx"}
+[2025-06-03 11:46:11] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:46:11] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:46:11] DEBUG: LibreOffice DOCX conversion starting | Context: {"input":"file-sample_500kB_1748951171_a4465eb6.docx","input_file_exists":true,"input_size":551820,"temp_dir":"/tmp/convertre_683ee0836e507","temp_dir_exists":true,"temp_dir_writable":true,"libre_path":"/usr/bin/soffice","timeout":300,"current_user":"www-data","process_uid":33}
+[2025-06-03 11:46:11] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0836e507/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0836e507' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748951171_a4465eb6.docx'","timeout":300}
+[2025-06-03 11:46:13] DEBUG: LibreOffice command result | Context: {"success":true,"exit_code":0,"output":"convert /var/www/api/public/../storage/uploads/file-sample_500kB_1748951171_a4465eb6.docx as a Writer document -> /tmp/convertre_683ee0836e507/file-sample_500kB_1748951171_a4465eb6.pdf using filter : writer_pdf_Export\n","error":"\n(process:97521): dconf-CRITICAL **: 07:46:11.582: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n\n(process:97525): dconf-CRITICAL **: 07:46:11.777: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0836e507/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0836e507' '/var/www/api/public/../storage/uploads/file-sample_500kB_1748951171_a4465eb6.docx'"}
+[2025-06-03 11:46:13] DEBUG: Temp directory contents after conversion | Context: {"temp_dir":"/tmp/convertre_683ee0836e507","files":{"2":"file-sample_500kB_1748951171_a4465eb6.pdf","3":"user_profile"},"file_count":2}
+[2025-06-03 11:46:13] DEBUG: PDF conversion completed successfully | Context: {"output_file":"/var/www/api/public/../storage/converted/file-sample_500kB_1748951171_7848ab9e.pdf","output_size":338385}
+[2025-06-03 11:46:13] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee0836e507"}
+[2025-06-03 11:46:13] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"file-sample_500kB_1748951171_a4465eb6.docx","processing_time":"1.9074900150299s"}
+[2025-06-03 11:46:13] DEBUG: File operation: delete | Context: {"filename":"file-sample_500kB_1748951171_a4465eb6.docx","success":true}
+[2025-06-03 11:46:32] DEBUG: RateLimitService initialized
+[2025-06-03 11:46:32] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:46:32] DEBUG: FileValidationService initialized
+[2025-06-03 11:46:32] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.doc","size":100352,"mime":"application/msword"}
+[2025-06-03 11:46:32] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:46:32] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:46:32] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:46:32] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-03 11:46:32] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748951192_9458e2af.doc","success":true}
+[2025-06-03 11:46:32] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748951192_9458e2af.doc"}
+[2025-06-03 11:46:32] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:46:32] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:46:32] DEBUG: LibreOffice DOC conversion | Context: {"input":"file-sample_100kB_1748951192_9458e2af.doc","temp_dir":"/tmp/convertre_683ee0984d698","timeout":300}
+[2025-06-03 11:46:32] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0984d698/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0984d698' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748951192_9458e2af.doc'","timeout":300}
+[2025-06-03 11:46:33] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee0984d698"}
+[2025-06-03 11:46:33] INFO: Conversion completed successfully | Context: {"from_format":"doc","to_format":"pdf","filename":"file-sample_100kB_1748951192_9458e2af.doc","processing_time":"1.5068230628967s"}
+[2025-06-03 11:46:33] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748951192_9458e2af.doc","success":true}
+[2025-06-03 11:46:54] DEBUG: RateLimitService initialized
+[2025-06-03 11:46:54] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:46:54] DEBUG: FileValidationService initialized
+[2025-06-03 11:46:54] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:46:54] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:46:54] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"png","file_count":1}}
+[2025-06-03 11:46:54] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:46:54] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_png"}
+[2025-06-03 11:46:54] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf","success":true}
+[2025-06-03 11:46:54] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"png","filename":"Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf"}
+[2025-06-03 11:46:54] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:46:54] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:46:54] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:46:54] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf","temp_dir":"/tmp/convertre_pdf_683ee0ae88820","output_pattern":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-%03d.png","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf' -strip -colorspace sRGB -compress Zip -quality 9 -colors 256 -depth 8 '/tmp/convertre_pdf_683ee0ae88820/Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-%03d.png'"}
+[2025-06-03 11:46:54] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf' -strip -colorspace sRGB -compress Zip -quality 9 -colors 256 -depth 8 '/tmp/convertre_pdf_683ee0ae88820/Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-%03d.png'","timeout":300}
+[2025-06-03 11:46:57] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-000.png","Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-001.png"]}
+[2025-06-03 11:46:57] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 11:46:57] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951214_2b14397b.png","converted_files":["Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-000.png","Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-001.png"]}
+[2025-06-03 11:46:57] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951214_2b14397b.png"}
+[2025-06-03 11:46:57] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951214_2b14397b.png","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 11:46:57] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-000.png"}
+[2025-06-03 11:46:57] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-001.png"}
+[2025-06-03 11:46:57] INFO: ZIP file created successfully | Context: {"zip_file":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b.png","pages_included":2,"zip_size":238490}
+[2025-06-03 11:46:57] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b.png","zip_size":238490,"zip_path":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951214_2b14397b.png"}
+[2025-06-03 11:46:57] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-000.png"}
+[2025-06-03 11:46:57] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748951214_2b14397b-page-001.png"}
+[2025-06-03 11:46:57] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683ee0ae88820"}
+[2025-06-03 11:46:57] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"png","filename":"Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf","processing_time":"3.3495101928711s"}
+[2025-06-03 11:46:57] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748951214_659bdcc1.pdf","success":true}
+[2025-06-03 11:47:04] DEBUG: RateLimitService initialized
+[2025-06-03 11:47:04] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:47:04] DEBUG: FileValidationService initialized
+[2025-06-03 11:47:04] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:47:04] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:47:04] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:47:04] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:47:04] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 11:47:04] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf","success":true}
+[2025-06-03 11:47:04] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf"}
+[2025-06-03 11:47:04] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:47:04] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:47:04] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:47:04] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf","temp_dir":"/tmp/convertre_pdf_683ee0b877c4f","output_pattern":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-%03d.jpg","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ee0b877c4f/Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-%03d.jpg'"}
+[2025-06-03 11:47:04] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ee0b877c4f/Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-%03d.jpg'","timeout":300}
+[2025-06-03 11:47:05] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-001.jpg"]}
+[2025-06-03 11:47:05] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 11:47:05] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a.jpg","converted_files":["Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-001.jpg"]}
+[2025-06-03 11:47:05] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a.jpg"}
+[2025-06-03 11:47:05] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a.jpg","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 11:47:05] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-000.jpg"}
+[2025-06-03 11:47:05] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-001.jpg"}
+[2025-06-03 11:47:05] INFO: ZIP file created successfully | Context: {"zip_file":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a.jpg","pages_included":2,"zip_size":398424}
+[2025-06-03 11:47:05] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a.jpg","zip_size":398424,"zip_path":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a.jpg"}
+[2025-06-03 11:47:05] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-000.jpg"}
+[2025-06-03 11:47:05] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748951224_4fcad48a-page-001.jpg"}
+[2025-06-03 11:47:05] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683ee0b877c4f"}
+[2025-06-03 11:47:05] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf","processing_time":"1.519464969635s"}
+[2025-06-03 11:47:05] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748951224_4823666a.pdf","success":true}
+[2025-06-03 11:47:22] DEBUG: RateLimitService initialized
+[2025-06-03 11:47:22] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:47:22] DEBUG: FileValidationService initialized
+[2025-06-03 11:47:22] DEBUG: File validation passed | Context: {"filename":"convertre_683ee0ba20237.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 11:47:22] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:47:22] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:47:22] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:47:22] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 11:47:22] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee0ba20237_1748951242_24b25740.pdf","success":true}
+[2025-06-03 11:47:22] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_683ee0ba20237_1748951242_24b25740.pdf"}
+[2025-06-03 11:47:22] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 11:47:22] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 11:47:22] DEBUG: ImageMagick with PDF support available
+[2025-06-03 11:47:22] DEBUG: ImageMagick PDF conversion | Context: {"input":"convertre_683ee0ba20237_1748951242_24b25740.pdf","temp_dir":"/tmp/convertre_pdf_683ee0ca639d1","output_pattern":"convertre_683ee0ba20237_1748951242_f3d16461-page-%03d.jpg","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/convertre_683ee0ba20237_1748951242_24b25740.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ee0ca639d1/convertre_683ee0ba20237_1748951242_f3d16461-page-%03d.jpg'"}
+[2025-06-03 11:47:22] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/convertre_683ee0ba20237_1748951242_24b25740.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ee0ca639d1/convertre_683ee0ba20237_1748951242_f3d16461-page-%03d.jpg'","timeout":300}
+[2025-06-03 11:47:23] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["convertre_683ee0ba20237_1748951242_f3d16461-page-000.jpg","convertre_683ee0ba20237_1748951242_f3d16461-page-001.jpg"]}
+[2025-06-03 11:47:23] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 11:47:23] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/convertre_683ee0ba20237_1748951242_f3d16461.jpg","converted_files":["convertre_683ee0ba20237_1748951242_f3d16461-page-000.jpg","convertre_683ee0ba20237_1748951242_f3d16461-page-001.jpg"]}
+[2025-06-03 11:47:23] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/convertre_683ee0ba20237_1748951242_f3d16461.jpg"}
+[2025-06-03 11:47:23] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/convertre_683ee0ba20237_1748951242_f3d16461.jpg","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 11:47:23] DEBUG: Added page to ZIP | Context: {"page":"convertre_683ee0ba20237_1748951242_f3d16461-page-000.jpg"}
+[2025-06-03 11:47:23] DEBUG: Added page to ZIP | Context: {"page":"convertre_683ee0ba20237_1748951242_f3d16461-page-001.jpg"}
+[2025-06-03 11:47:23] INFO: ZIP file created successfully | Context: {"zip_file":"convertre_683ee0ba20237_1748951242_f3d16461.jpg","pages_included":2,"zip_size":398369}
+[2025-06-03 11:47:23] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"convertre_683ee0ba20237_1748951242_f3d16461.jpg","zip_size":398369,"zip_path":"/var/www/api/public/../storage/converted/convertre_683ee0ba20237_1748951242_f3d16461.jpg"}
+[2025-06-03 11:47:23] DEBUG: Cleaned up temp file | Context: {"file":"convertre_683ee0ba20237_1748951242_f3d16461-page-000.jpg"}
+[2025-06-03 11:47:23] DEBUG: Cleaned up temp file | Context: {"file":"convertre_683ee0ba20237_1748951242_f3d16461-page-001.jpg"}
+[2025-06-03 11:47:23] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683ee0ca639d1"}
+[2025-06-03 11:47:23] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"convertre_683ee0ba20237_1748951242_24b25740.pdf","processing_time":"1.5180809497833s"}
+[2025-06-03 11:47:23] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee0ba20237_1748951242_24b25740.pdf","success":true}
+[2025-06-03 11:47:32] INFO: File downloaded | Context: {"filename":"convertre_683ee0ba20237_1748951242_f3d16461.zip","download_filename":"convertre_683ee0ba20237_1748951242_f3d16461.zip","size":398369,"content_type":"application/zip","is_zip":true}
+[2025-06-03 11:48:06] DEBUG: RateLimitService initialized
+[2025-06-03 11:48:06] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:48:06] DEBUG: FileValidationService initialized
+[2025-06-03 11:48:06] DEBUG: File validation passed | Context: {"filename":"convertre_683ee0e2e75d6.docx","size":551820,"mime":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+[2025-06-03 11:48:06] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:48:06] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:48:06] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:48:06] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocxToPdfModule","conversion":"docx_to_pdf"}
+[2025-06-03 11:48:06] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee0e2e75d6_1748951286_2163be9b.docx","success":true}
+[2025-06-03 11:48:06] INFO: Conversion started | Context: {"from_format":"docx","to_format":"pdf","filename":"convertre_683ee0e2e75d6_1748951286_2163be9b.docx"}
+[2025-06-03 11:48:06] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:48:06] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:48:06] DEBUG: LibreOffice DOCX conversion starting | Context: {"input":"convertre_683ee0e2e75d6_1748951286_2163be9b.docx","input_file_exists":true,"input_size":551820,"temp_dir":"/tmp/convertre_683ee0f67d3d9","temp_dir_exists":true,"temp_dir_writable":true,"libre_path":"/usr/bin/soffice","timeout":300,"current_user":"www-data","process_uid":33}
+[2025-06-03 11:48:06] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0f67d3d9/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0f67d3d9' '/var/www/api/public/../storage/uploads/convertre_683ee0e2e75d6_1748951286_2163be9b.docx'","timeout":300}
+[2025-06-03 11:48:08] DEBUG: LibreOffice command result | Context: {"success":true,"exit_code":0,"output":"convert /var/www/api/public/../storage/uploads/convertre_683ee0e2e75d6_1748951286_2163be9b.docx as a Writer document -> /tmp/convertre_683ee0f67d3d9/convertre_683ee0e2e75d6_1748951286_2163be9b.pdf using filter : writer_pdf_Export\n","error":"\n(process:97761): dconf-CRITICAL **: 07:48:06.724: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n\n(process:97765): dconf-CRITICAL **: 07:48:07.012: unable to create directory '/var/www/.cache/dconf': Permission denied.  dconf will not work properly.\nFontconfig error: No writable cache directories\nFontconfig error: No writable cache directories\n","command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee0f67d3d9/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee0f67d3d9' '/var/www/api/public/../storage/uploads/convertre_683ee0e2e75d6_1748951286_2163be9b.docx'"}
+[2025-06-03 11:48:08] DEBUG: Temp directory contents after conversion | Context: {"temp_dir":"/tmp/convertre_683ee0f67d3d9","files":{"2":"convertre_683ee0e2e75d6_1748951286_2163be9b.pdf","3":"user_profile"},"file_count":2}
+[2025-06-03 11:48:08] DEBUG: PDF conversion completed successfully | Context: {"output_file":"/var/www/api/public/../storage/converted/convertre_683ee0e2e75d6_1748951286_f34263c1.pdf","output_size":338385}
+[2025-06-03 11:48:08] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee0f67d3d9"}
+[2025-06-03 11:48:08] INFO: Conversion completed successfully | Context: {"from_format":"docx","to_format":"pdf","filename":"convertre_683ee0e2e75d6_1748951286_2163be9b.docx","processing_time":"2.6084079742432s"}
+[2025-06-03 11:48:08] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee0e2e75d6_1748951286_2163be9b.docx","success":true}
+[2025-06-03 11:48:20] DEBUG: RateLimitService initialized
+[2025-06-03 11:48:20] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:48:20] DEBUG: FileValidationService initialized
+[2025-06-03 11:48:20] DEBUG: File validation passed | Context: {"filename":"convertre_683ee0f2e792a.doc","size":100352,"mime":"application/msword"}
+[2025-06-03 11:48:20] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:48:20] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:48:20] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:48:20] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\DocToPdfModule","conversion":"doc_to_pdf"}
+[2025-06-03 11:48:20] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee0f2e792a_1748951300_948fe06e.doc","success":true}
+[2025-06-03 11:48:20] INFO: Conversion started | Context: {"from_format":"doc","to_format":"pdf","filename":"convertre_683ee0f2e792a_1748951300_948fe06e.doc"}
+[2025-06-03 11:48:20] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:48:20] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:48:20] DEBUG: LibreOffice DOC conversion | Context: {"input":"convertre_683ee0f2e792a_1748951300_948fe06e.doc","temp_dir":"/tmp/convertre_683ee10495e0e","timeout":300}
+[2025-06-03 11:48:20] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee10495e0e/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee10495e0e' '/var/www/api/public/../storage/uploads/convertre_683ee0f2e792a_1748951300_948fe06e.doc'","timeout":300}
+[2025-06-03 11:48:22] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee10495e0e"}
+[2025-06-03 11:48:22] INFO: Conversion completed successfully | Context: {"from_format":"doc","to_format":"pdf","filename":"convertre_683ee0f2e792a_1748951300_948fe06e.doc","processing_time":"1.6071119308472s"}
+[2025-06-03 11:48:22] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee0f2e792a_1748951300_948fe06e.doc","success":true}
+[2025-06-03 11:53:51] DEBUG: RateLimitService initialized
+[2025-06-03 11:53:51] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:53:51] DEBUG: FileValidationService initialized
+[2025-06-03 11:53:51] DEBUG: File validation passed | Context: {"filename":"convertre_683ee23eeae69.xlsx","size":9793,"mime":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}
+[2025-06-03 11:53:51] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:53:51] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:53:51] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:53:51] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\XlsxToPdfModule","conversion":"xlsx_to_pdf"}
+[2025-06-03 11:53:51] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee23eeae69_1748951631_13e9522d.xlsx","success":true}
+[2025-06-03 11:53:51] INFO: Conversion started | Context: {"from_format":"xlsx","to_format":"pdf","filename":"convertre_683ee23eeae69_1748951631_13e9522d.xlsx"}
+[2025-06-03 11:53:51] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:53:51] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:53:51] DEBUG: LibreOffice XLSX conversion | Context: {"input":"convertre_683ee23eeae69_1748951631_13e9522d.xlsx","temp_dir":"/tmp/convertre_683ee24fa81d2","timeout":300}
+[2025-06-03 11:53:51] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee24fa81d2/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee24fa81d2' '/var/www/api/public/../storage/uploads/convertre_683ee23eeae69_1748951631_13e9522d.xlsx'","timeout":300}
+[2025-06-03 11:53:53] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee24fa81d2"}
+[2025-06-03 11:53:53] INFO: Conversion completed successfully | Context: {"from_format":"xlsx","to_format":"pdf","filename":"convertre_683ee23eeae69_1748951631_13e9522d.xlsx","processing_time":"1.6069748401642s"}
+[2025-06-03 11:53:53] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee23eeae69_1748951631_13e9522d.xlsx","success":true}
+[2025-06-03 11:54:18] DEBUG: RateLimitService initialized
+[2025-06-03 11:54:18] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:54:18] DEBUG: FileValidationService initialized
+[2025-06-03 11:54:18] DEBUG: File validation passed | Context: {"filename":"convertre_683ee2588780f.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 11:54:18] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:54:18] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:54:18] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:54:18] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 11:54:18] DEBUG: File operation: upload | Context: {"filename":"convertre_683ee2588780f_1748951658_909d20a2.pptx","success":true}
+[2025-06-03 11:54:18] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683ee2588780f_1748951658_909d20a2.pptx"}
+[2025-06-03 11:54:18] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:54:18] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:54:18] DEBUG: LibreOffice PPTX conversion | Context: {"input":"convertre_683ee2588780f_1748951658_909d20a2.pptx","temp_dir":"/tmp/convertre_683ee26a491b2","timeout":300}
+[2025-06-03 11:54:18] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee26a491b2/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee26a491b2' '/var/www/api/public/../storage/uploads/convertre_683ee2588780f_1748951658_909d20a2.pptx'","timeout":300}
+[2025-06-03 11:54:19] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee26a491b2"}
+[2025-06-03 11:54:19] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683ee2588780f_1748951658_909d20a2.pptx","processing_time":"1.7067489624023s"}
+[2025-06-03 11:54:19] DEBUG: File operation: delete | Context: {"filename":"convertre_683ee2588780f_1748951658_909d20a2.pptx","success":true}
+[2025-06-03 11:58:44] DEBUG: RateLimitService initialized
+[2025-06-03 11:58:44] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:58:44] DEBUG: FileValidationService initialized
+[2025-06-03 11:58:44] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 11:58:44] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:58:44] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 11:58:44] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:58:44] ERROR: Conversion endpoint error | Context: {"error":"No module available for odt to jpg conversion","file":"/var/www/api/src/Services/ModuleFactory.php","line":44}
+[2025-06-03 11:59:00] DEBUG: RateLimitService initialized
+[2025-06-03 11:59:00] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 11:59:00] DEBUG: FileValidationService initialized
+[2025-06-03 11:59:00] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 11:59:00] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 11:59:00] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 11:59:00] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 11:59:00] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-03 11:59:00] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748951940_b3b296fc.odt","success":true}
+[2025-06-03 11:59:00] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748951940_b3b296fc.odt"}
+[2025-06-03 11:59:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 11:59:00] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 11:59:00] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748951940_b3b296fc.odt","temp_dir":"/tmp/convertre_683ee384d7201","timeout":300}
+[2025-06-03 11:59:00] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683ee384d7201/user_profile --convert-to pdf --outdir '/tmp/convertre_683ee384d7201' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748951940_b3b296fc.odt'","timeout":300}
+[2025-06-03 11:59:02] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683ee384d7201"}
+[2025-06-03 11:59:02] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748951940_b3b296fc.odt","processing_time":"1.606803894043s"}
+[2025-06-03 11:59:02] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748951940_b3b296fc.odt","success":true}
+[2025-06-03 12:00:50] DEBUG: RateLimitService initialized
+[2025-06-03 12:00:50] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 12:00:50] DEBUG: FileValidationService initialized
+[2025-06-03 12:00:50] DEBUG: File validation passed | Context: {"filename":"Adoorable Leads - Property Renters.pdf","size":60011,"mime":"application/pdf"}
+[2025-06-03 12:00:50] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 12:00:50] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 12:00:50] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 12:00:50] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PdfMultiFormatModule","conversion":"pdf_to_jpg"}
+[2025-06-03 12:00:50] DEBUG: File operation: upload | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf","success":true}
+[2025-06-03 12:00:50] INFO: Conversion started | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf"}
+[2025-06-03 12:00:50] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -version","timeout":5}
+[2025-06-03 12:00:50] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -list format","timeout":10}
+[2025-06-03 12:00:50] DEBUG: ImageMagick with PDF support available
+[2025-06-03 12:00:50] DEBUG: ImageMagick PDF conversion | Context: {"input":"Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf","temp_dir":"/tmp/convertre_pdf_683ee3f26d08a","output_pattern":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-%03d.jpg","command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ee3f26d08a/Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-%03d.jpg'"}
+[2025-06-03 12:00:50] DEBUG: Executing command | Context: {"command":"/usr/bin/convert -density 300 '/var/www/api/public/../storage/uploads/Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf' -background white -strip -colorspace sRGB -quality 85 -sampling-factor 4:2:0 -interlace JPEG '/tmp/convertre_pdf_683ee3f26d08a/Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-%03d.jpg'","timeout":300}
+[2025-06-03 12:00:51] DEBUG: ImageMagick generated files | Context: {"count":2,"files":["Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-001.jpg"]}
+[2025-06-03 12:00:51] INFO: ImageMagick PDF conversion successful | Context: {"pages_converted":2}
+[2025-06-03 12:00:51] DEBUG: handleConversionResults called | Context: {"converted_files_count":2,"output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2.jpg","converted_files":["Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-000.jpg","Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-001.jpg"]}
+[2025-06-03 12:00:51] INFO: Multi-page detected, creating ZIP | Context: {"page_count":2,"original_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2.jpg"}
+[2025-06-03 12:00:51] DEBUG: ZIP file paths | Context: {"zip_output_file":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2.jpg","output_dir":"/var/www/api/public/../storage/converted","output_dir_writable":true}
+[2025-06-03 12:00:51] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-000.jpg"}
+[2025-06-03 12:00:51] DEBUG: Added page to ZIP | Context: {"page":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-001.jpg"}
+[2025-06-03 12:00:51] INFO: ZIP file created successfully | Context: {"zip_file":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2.jpg","pages_included":2,"zip_size":398405}
+[2025-06-03 12:00:51] INFO: Multi-page PDF conversion completed - ZIP created | Context: {"total_pages":2,"zip_file":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2.jpg","zip_size":398405,"zip_path":"/var/www/api/public/../storage/converted/Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2.jpg"}
+[2025-06-03 12:00:51] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-000.jpg"}
+[2025-06-03 12:00:51] DEBUG: Cleaned up temp file | Context: {"file":"Adoorable_Leads_-_Property_Renters_1748952050_1630a6a2-page-001.jpg"}
+[2025-06-03 12:00:51] DEBUG: Cleaned up temp directory | Context: {"dir":"convertre_pdf_683ee3f26d08a"}
+[2025-06-03 12:00:51] INFO: Conversion completed successfully | Context: {"from_format":"pdf","to_format":"jpg","filename":"Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf","processing_time":"1.5184459686279s"}
+[2025-06-03 12:00:51] DEBUG: File operation: delete | Context: {"filename":"Adoorable_Leads_-_Property_Renters_1748952050_236b2826.pdf","success":true}
+[2025-06-03 23:44:33] DEBUG: RateLimitService initialized
+[2025-06-03 23:44:33] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:44:33] DEBUG: FileValidationService initialized
+[2025-06-03 23:44:33] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 23:44:33] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:44:33] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"jpg","file_count":1}}
+[2025-06-03 23:44:33] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:44:33] ERROR: Conversion endpoint error | Context: {"error":"No module available for odt to jpg conversion","file":"/var/www/api/src/Services/ModuleFactory.php","line":44}
+[2025-06-03 23:44:42] DEBUG: RateLimitService initialized
+[2025-06-03 23:44:42] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:44:42] DEBUG: FileValidationService initialized
+[2025-06-03 23:44:42] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 23:44:42] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:44:42] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:44:42] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:44:42] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-03 23:44:42] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748994282_89ddaf07.odt","success":true}
+[2025-06-03 23:44:42] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748994282_89ddaf07.odt"}
+[2025-06-03 23:44:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:44:42] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:44:42] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748994282_89ddaf07.odt","temp_dir":"/tmp/convertre_683f88ea57bfd","timeout":300}
+[2025-06-03 23:44:42] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f88ea57bfd/user_profile --convert-to pdf --outdir '/tmp/convertre_683f88ea57bfd' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748994282_89ddaf07.odt'","timeout":300}
+[2025-06-03 23:44:43] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f88ea57bfd"}
+[2025-06-03 23:44:43] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748994282_89ddaf07.odt","processing_time":"1.7077488899231s"}
+[2025-06-03 23:44:43] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748994282_89ddaf07.odt","success":true}
+[2025-06-03 23:45:39] DEBUG: RateLimitService initialized
+[2025-06-03 23:45:39] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:45:39] DEBUG: FileValidationService initialized
+[2025-06-03 23:45:39] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.rtf","size":100605,"mime":"text/rtf"}
+[2025-06-03 23:45:39] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:45:39] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:45:39] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:45:39] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\RtfToPdfModule","conversion":"rtf_to_pdf"}
+[2025-06-03 23:45:39] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748994339_6534ff80.rtf","success":true}
+[2025-06-03 23:45:39] INFO: Conversion started | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748994339_6534ff80.rtf"}
+[2025-06-03 23:45:39] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:45:39] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:45:39] DEBUG: LibreOffice RTF conversion | Context: {"input":"file-sample_100kB_1748994339_6534ff80.rtf","temp_dir":"/tmp/convertre_683f8923f059a","timeout":300}
+[2025-06-03 23:45:39] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f8923f059a/user_profile --convert-to pdf --outdir '/tmp/convertre_683f8923f059a' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748994339_6534ff80.rtf'","timeout":300}
+[2025-06-03 23:45:41] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f8923f059a"}
+[2025-06-03 23:45:41] INFO: Conversion completed successfully | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748994339_6534ff80.rtf","processing_time":"1.5074338912964s"}
+[2025-06-03 23:45:41] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748994339_6534ff80.rtf","success":true}
+[2025-06-03 23:46:05] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"simple"}}
+[2025-06-03 23:46:05] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:46:20] INFO: API request | Context: {"endpoint":"/formats","method":"GET","params":{"view":"detailed"}}
+[2025-06-03 23:46:20] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:46:41] DEBUG: RateLimitService initialized
+[2025-06-03 23:46:41] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:46:41] DEBUG: FileValidationService initialized
+[2025-06-03 23:46:41] DEBUG: File validation passed | Context: {"filename":"convertre_683f89511cdfb.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 23:46:41] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:46:41] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:46:41] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:46:41] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 23:46:41] DEBUG: File operation: upload | Context: {"filename":"convertre_683f89511cdfb_1748994401_3449c17b.pptx","success":true}
+[2025-06-03 23:46:41] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f89511cdfb_1748994401_3449c17b.pptx"}
+[2025-06-03 23:46:41] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:46:41] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:46:41] DEBUG: LibreOffice PPTX conversion | Context: {"input":"convertre_683f89511cdfb_1748994401_3449c17b.pptx","temp_dir":"/tmp/convertre_683f8961e4cd9","timeout":300}
+[2025-06-03 23:46:41] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f8961e4cd9/user_profile --convert-to pdf --outdir '/tmp/convertre_683f8961e4cd9' '/var/www/api/public/../storage/uploads/convertre_683f89511cdfb_1748994401_3449c17b.pptx'","timeout":300}
+[2025-06-03 23:46:43] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f8961e4cd9"}
+[2025-06-03 23:46:43] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"convertre_683f89511cdfb_1748994401_3449c17b.pptx","processing_time":"1.6067841053009s"}
+[2025-06-03 23:46:43] DEBUG: File operation: delete | Context: {"filename":"convertre_683f89511cdfb_1748994401_3449c17b.pptx","success":true}
+[2025-06-03 23:47:17] DEBUG: RateLimitService initialized
+[2025-06-03 23:47:17] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:47:17] DEBUG: FileValidationService initialized
+[2025-06-03 23:47:17] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 23:47:17] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:47:17] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:47:17] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:47:17] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-03 23:47:17] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748994437_284357e3.odt","success":true}
+[2025-06-03 23:47:17] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748994437_284357e3.odt"}
+[2025-06-03 23:47:17] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:47:17] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:47:17] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748994437_284357e3.odt","temp_dir":"/tmp/convertre_683f898595e86","timeout":300}
+[2025-06-03 23:47:17] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f898595e86/user_profile --convert-to pdf --outdir '/tmp/convertre_683f898595e86' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748994437_284357e3.odt'","timeout":300}
+[2025-06-03 23:47:19] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f898595e86"}
+[2025-06-03 23:47:19] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748994437_284357e3.odt","processing_time":"1.6064960956573s"}
+[2025-06-03 23:47:19] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748994437_284357e3.odt","success":true}
+[2025-06-03 23:47:56] DEBUG: RateLimitService initialized
+[2025-06-03 23:47:56] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:47:56] DEBUG: FileValidationService initialized
+[2025-06-03 23:47:56] DEBUG: File validation passed | Context: {"filename":"sample3.pptx","size":45680,"mime":"application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+[2025-06-03 23:47:56] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:47:56] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:47:56] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:47:56] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\PptxToPdfModule","conversion":"pptx_to_pdf"}
+[2025-06-03 23:47:56] DEBUG: File operation: upload | Context: {"filename":"sample3_1748994476_e80289cb.pptx","success":true}
+[2025-06-03 23:47:56] INFO: Conversion started | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748994476_e80289cb.pptx"}
+[2025-06-03 23:47:56] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:47:56] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:47:56] DEBUG: LibreOffice PPTX conversion | Context: {"input":"sample3_1748994476_e80289cb.pptx","temp_dir":"/tmp/convertre_683f89acd881a","timeout":300}
+[2025-06-03 23:47:56] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f89acd881a/user_profile --convert-to pdf --outdir '/tmp/convertre_683f89acd881a' '/var/www/api/public/../storage/uploads/sample3_1748994476_e80289cb.pptx'","timeout":300}
+[2025-06-03 23:47:58] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f89acd881a"}
+[2025-06-03 23:47:58] INFO: Conversion completed successfully | Context: {"from_format":"pptx","to_format":"pdf","filename":"sample3_1748994476_e80289cb.pptx","processing_time":"1.6066520214081s"}
+[2025-06-03 23:47:58] DEBUG: File operation: delete | Context: {"filename":"sample3_1748994476_e80289cb.pptx","success":true}
+[2025-06-03 23:48:11] DEBUG: RateLimitService initialized
+[2025-06-03 23:48:11] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:48:11] DEBUG: FileValidationService initialized
+[2025-06-03 23:48:11] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.rtf","size":100605,"mime":"text/rtf"}
+[2025-06-03 23:48:11] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:48:11] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:48:11] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:48:11] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\RtfToPdfModule","conversion":"rtf_to_pdf"}
+[2025-06-03 23:48:11] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748994491_8ce1f5d4.rtf","success":true}
+[2025-06-03 23:48:11] INFO: Conversion started | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748994491_8ce1f5d4.rtf"}
+[2025-06-03 23:48:11] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:48:11] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:48:11] DEBUG: LibreOffice RTF conversion | Context: {"input":"file-sample_100kB_1748994491_8ce1f5d4.rtf","temp_dir":"/tmp/convertre_683f89bb93560","timeout":300}
+[2025-06-03 23:48:11] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f89bb93560/user_profile --convert-to pdf --outdir '/tmp/convertre_683f89bb93560' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748994491_8ce1f5d4.rtf'","timeout":300}
+[2025-06-03 23:48:13] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f89bb93560"}
+[2025-06-03 23:48:13] INFO: Conversion completed successfully | Context: {"from_format":"rtf","to_format":"pdf","filename":"file-sample_100kB_1748994491_8ce1f5d4.rtf","processing_time":"1.5067670345306s"}
+[2025-06-03 23:48:13] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748994491_8ce1f5d4.rtf","success":true}
+[2025-06-03 23:49:18] DEBUG: RateLimitService initialized
+[2025-06-03 23:49:18] DEBUG: Rate limit check passed | Context: {"api_key":"ck_7d8f5f5...","requests":1,"limit":60}
+[2025-06-03 23:49:18] DEBUG: FileValidationService initialized
+[2025-06-03 23:49:18] DEBUG: File validation passed | Context: {"filename":"file-sample_100kB.odt","size":116076,"mime":"application/vnd.oasis.opendocument.text"}
+[2025-06-03 23:49:18] INFO: Request validation completed | Context: {"user_id":"user_683e26bdc47dc","type":"single","file_count":1}
+[2025-06-03 23:49:18] INFO: API request | Context: {"endpoint":"/convert","method":"POST","params":{"user_id":"user_683e26bdc47dc","target_format":"pdf","file_count":1}}
+[2025-06-03 23:49:18] DEBUG: ModuleFactory initialized with 34 modules
+[2025-06-03 23:49:18] DEBUG: Creating module | Context: {"class":"Convertre\\Services\\Modules\\OdtToPdfModule","conversion":"odt_to_pdf"}
+[2025-06-03 23:49:18] DEBUG: File operation: upload | Context: {"filename":"file-sample_100kB_1748994558_2512ab8a.odt","success":true}
+[2025-06-03 23:49:18] INFO: Conversion started | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748994558_2512ab8a.odt"}
+[2025-06-03 23:49:18] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --version","timeout":10}
+[2025-06-03 23:49:18] DEBUG: LibreOffice available | Context: {"version":"24.2.7"}
+[2025-06-03 23:49:18] DEBUG: LibreOffice ODT conversion | Context: {"input":"file-sample_100kB_1748994558_2512ab8a.odt","temp_dir":"/tmp/convertre_683f89fe7e58a","timeout":300}
+[2025-06-03 23:49:18] DEBUG: Executing command | Context: {"command":"/usr/bin/soffice --headless --invisible --nodefault --nolockcheck --nologo --norestore -env:UserInstallation=file:///tmp/convertre_683f89fe7e58a/user_profile --convert-to pdf --outdir '/tmp/convertre_683f89fe7e58a' '/var/www/api/public/../storage/uploads/file-sample_100kB_1748994558_2512ab8a.odt'","timeout":300}
+[2025-06-03 23:49:20] DEBUG: Cleaned up temp directory | Context: {"dir":"/tmp/convertre_683f89fe7e58a"}
+[2025-06-03 23:49:20] INFO: Conversion completed successfully | Context: {"from_format":"odt","to_format":"pdf","filename":"file-sample_100kB_1748994558_2512ab8a.odt","processing_time":"1.6069531440735s"}
+[2025-06-03 23:49:20] DEBUG: File operation: delete | Context: {"filename":"file-sample_100kB_1748994558_2512ab8a.odt","success":true}

@@ -1,8 +1,8 @@
 <?php
 
 /**
- * External Tools Configuration - Windows Compatible
- * Simple, reliable configuration without complex includes
+ * External Tools Configuration - Cross-Platform Compatible
+ * Updated to properly detect ImageMagick on Linux systems
  */
 
 // Detect platform
@@ -43,18 +43,20 @@ if ($isWindows) {
         }
     }
 } else {
-    // Unix/Mac detection
+    // Unix/Linux/Mac detection - CHECK BOTH magick AND convert
     $unixImageMagickPaths = [
         '/opt/homebrew/bin/magick',
         '/usr/local/bin/magick',
         '/usr/bin/magick',
-        '/usr/bin/convert'
+        '/usr/bin/convert',  // Traditional ImageMagick command
+        '/usr/local/bin/convert'
     ];
     
     $unixLibreOfficePaths = [
         '/opt/homebrew/bin/soffice',
         '/usr/local/bin/soffice',
         '/usr/bin/soffice',
+        '/usr/bin/libreoffice',
         '/Applications/LibreOffice.app/Contents/MacOS/soffice'
     ];
     
@@ -75,29 +77,32 @@ if ($isWindows) {
     }
 }
 
-// Fallback to PATH if not found
-/* if (!$imageMagickPath) {
-    // Check if magick is in PATH
-    $pathCheck = shell_exec($isWindows ? 'where magick 2>nul' : 'which magick 2>/dev/null');
-    if ($pathCheck) {
-        $imageMagickPath = $isWindows ? 'magick' : trim($pathCheck);
-    }
-} */
-
-// Fallback to PATH if not found
+// Fallback to PATH detection with better logic
 if (!$imageMagickPath) {
-    // Check if magick is in PATH
-    $pathCheck = shell_exec($isWindows ? 'where magick 2>nul' : 'which magick 2>/dev/null');
-    if ($pathCheck) {
-        $imageMagickPath = 'magick'; // Use simple 'magick' command
+    // Try 'magick' first, then fall back to 'convert'
+    $magickCheck = shell_exec($isWindows ? 'where magick 2>nul' : 'which magick 2>/dev/null');
+    if ($magickCheck && trim($magickCheck)) {
+        $imageMagickPath = 'magick';
+    } else {
+        // Fall back to 'convert' command
+        $convertCheck = shell_exec($isWindows ? 'where convert 2>nul' : 'which convert 2>/dev/null');
+        if ($convertCheck && trim($convertCheck)) {
+            $imageMagickPath = 'convert';
+        }
     }
 }
 
 if (!$libreOfficePath) {
     // Check if soffice is in PATH
     $pathCheck = shell_exec($isWindows ? 'where soffice 2>nul' : 'which soffice 2>/dev/null');
-    if ($pathCheck) {
-        $libreOfficePath = $isWindows ? 'soffice' : trim($pathCheck);
+    if ($pathCheck && trim($pathCheck)) {
+        $libreOfficePath = 'soffice';
+    } else {
+        // Try libreoffice command
+        $pathCheck = shell_exec($isWindows ? 'where libreoffice 2>nul' : 'which libreoffice 2>/dev/null');
+        if ($pathCheck && trim($pathCheck)) {
+            $libreOfficePath = 'libreoffice';
+        }
     }
 }
 
@@ -105,11 +110,11 @@ if (!$libreOfficePath) {
 return [
     // ImageMagick Configuration
     'imagemagick' => [
-        'binary_path' => 'magick',  // Force simple command
-        'magick_path' => 'magick',  // Force simple command
-        'identify_path' => 'magick identify',
-        'version_check' => 'magick -version',
-        'required_version' => '7.0',
+        'binary_path' => $imageMagickPath ?: 'convert',  // Use detected path or default to 'convert'
+        'magick_path' => $imageMagickPath ?: 'convert',
+        'identify_path' => ($imageMagickPath === 'magick') ? 'magick identify' : 'identify',
+        'version_check' => ($imageMagickPath ?: 'convert') . ' -version',
+        'required_version' => '6.9',  // Lowered for compatibility with older versions
         'timeout' => 120,
         'memory_limit' => '256MB',
         'quality_settings' => [
@@ -133,9 +138,9 @@ return [
     
     // LibreOffice Configuration
     'libreoffice' => [
-        'binary_path' => $libreOfficePath ? ($isWindows && strpos($libreOfficePath, ' ') !== false ? '"' . $libreOfficePath . '"' : $libreOfficePath) : 'soffice',
+        'binary_path' => $libreOfficePath ?: 'libreoffice',
         'headless_mode' => true,
-        'version_check' => $libreOfficePath ? ($isWindows && strpos($libreOfficePath, ' ') !== false ? '"' . $libreOfficePath . '" --version' : $libreOfficePath . ' --version') : 'soffice --version',
+        'version_check' => ($libreOfficePath ?: 'libreoffice') . ' --version',
         'required_version' => '7.0',
         'timeout' => 300,
         'temp_profile_dir' => sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'libreoffice_profiles',
@@ -160,6 +165,7 @@ return [
         'platform' => $isWindows ? 'Windows' : PHP_OS,
         'imagemagick_found' => !is_null($imageMagickPath),
         'imagemagick_path' => $imageMagickPath,
+        'imagemagick_command' => $imageMagickPath ?: 'convert',
         'libreoffice_found' => !is_null($libreOfficePath),
         'libreoffice_path' => $libreOfficePath,
         'current_user' => get_current_user(),

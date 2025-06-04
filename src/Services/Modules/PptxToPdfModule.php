@@ -112,15 +112,20 @@ class PptxToPdfModule extends AbstractConversionModule
     }
     
     /**
-     * Build LibreOffice conversion command
+     * Build LibreOffice conversion command with proper user directory handling
      */
     private function buildLibreOfficeCommand(string $librePath, string $inputFile, string $tempDir): string
     {
+        // Create a dedicated user directory for this process
+        $userDir = $tempDir . '/user_profile';
+        mkdir($userDir, 0755, true);
+        
         // Escape paths
         $inputFile = escapeshellarg($inputFile);
         $tempDir = escapeshellarg($tempDir);
+        $userDir = escapeshellarg($userDir);
         
-        // LibreOffice headless options
+        // LibreOffice headless options with user directory
         $options = [
             '--headless',
             '--invisible',
@@ -128,6 +133,7 @@ class PptxToPdfModule extends AbstractConversionModule
             '--nolockcheck',
             '--nologo',
             '--norestore',
+            '-env:UserInstallation=file://' . trim($userDir, "'\""), // Remove quotes for this part
             '--convert-to pdf',
             '--outdir ' . $tempDir
         ];
@@ -168,26 +174,40 @@ class PptxToPdfModule extends AbstractConversionModule
         return null;
     }
     
-    /**
-     * Cleanup temporary directory
-     */
+   // AFTER (Enhanced):
     private function cleanupTempDir(string $tempDir): void
     {
         if (!is_dir($tempDir)) {
             return;
         }
         
-        // Remove all files in temp dir
-        $files = glob($tempDir . '/*');
+        // ADDED: Recursive cleanup for user profile subdirectories
+        $this->removeDirectoryRecursive($tempDir);
+        
+        Logger::debug('Cleaned up temp directory', ['dir' => $tempDir]);
+    }
+
+    // ADDED: New method for recursive cleanup
+    private function removeDirectoryRecursive(string $dir): void
+    {
+        if (!is_dir($dir)) {
+            return;
+        }
+        
+        $files = scandir($dir);
         foreach ($files as $file) {
-            if (is_file($file)) {
-                unlink($file);
+            if ($file === '.' || $file === '..') {
+                continue;
+            }
+            
+            $filePath = $dir . '/' . $file;
+            if (is_dir($filePath)) {
+                $this->removeDirectoryRecursive($filePath); // Recursive call
+            } else {
+                unlink($filePath);
             }
         }
         
-        // Remove directory
-        rmdir($tempDir);
-        
-        Logger::debug('Cleaned up temp directory', ['dir' => $tempDir]);
+        rmdir($dir);
     }
 }

@@ -16,7 +16,7 @@ use Convertre\Utils\ConfigLoader;
 class ConversionController
 {
     /**
-     * POST /convert - Single file conversion endpoint
+     * POST /convert - Single file conversion endpoint - FIXED VERSION
      */
     public static function convert(): void
     {
@@ -38,7 +38,6 @@ class ConversionController
             // Get conversion module
             ModuleFactory::init();
             $module = ModuleFactory::getModule($sourceFormat, $targetFormat);
-            
             
             // Handle file upload and get paths
             $uploadResult = FileHandler::handleUpload($_FILES['file']);
@@ -63,24 +62,38 @@ class ConversionController
                 );
             }
             
-            // Generate download URL
-            $downloadUrl = self::generateDownloadUrl($outputFilename);
+            // CRITICAL FIX: Check if the actual output is a ZIP file
+            $actualOutputFile = self::findActualOutputFile($outputPath, $sourceFormat, $targetFormat);
+            $isZipFile = self::isZipFile($actualOutputFile);
+            
+            // Generate download URL with correct filename
+            $downloadFilename = $isZipFile ? self::adjustFilenameForZip($outputFilename) : $outputFilename;
+            $downloadUrl = self::generateDownloadUrl($downloadFilename);
             $expiresAt = self::getExpirationTime();
+            
+            // If we created a ZIP but filename doesn't reflect it, rename the file
+            if ($isZipFile && $actualOutputFile !== FileHandler::getConvertedPath() . '/' . $downloadFilename) {
+                $newPath = FileHandler::getConvertedPath() . '/' . $downloadFilename;
+                rename($actualOutputFile, $newPath);
+                $actualOutputFile = $newPath;
+            }
             
             // Cleanup input file (keep output for download)
             FileHandler::deleteFile($inputPath);
             
-            // Send success response
+            // ENHANCED: Send success response with correct file type indication
             ResponseFormatter::sendJson(
                 ResponseFormatter::conversionSuccess(
                     $downloadUrl,
                     $uploadResult['original_name'],
-                    $outputFilename,
+                    $downloadFilename,
                     $expiresAt,
                     [
                         'processing_time' => round($conversionResult->getProcessingTime(), 3) . 's',
-                        'file_size' => filesize($outputPath) . ' bytes',
-                        'conversion' => $sourceFormat . ' → ' . $targetFormat
+                        'file_size' => filesize($actualOutputFile) . ' bytes',
+                        'conversion' => $sourceFormat . ' → ' . $targetFormat,
+                        'delivery_format' => $isZipFile ? 'ZIP archive' : strtoupper($targetFormat),
+                        'contains_multiple_pages' => $isZipFile
                     ]
                 )
             );
@@ -97,7 +110,7 @@ class ConversionController
             );
         }
     }
-    
+
     /**
      * POST /convert-batch - Batch file conversion endpoint
      * SIMPLIFIED: Just handle multiple files sent as files[0], files[1], etc.
@@ -363,8 +376,8 @@ class ConversionController
         return $files;
     }
     
-    /**
-     * GET /download/{filename} - File download endpoint
+   /**
+     * GET /download/{filename} - File download endpoint - ENHANCED VERSION
      */
     public static function download(string $filename): void
     {
@@ -395,21 +408,38 @@ class ConversionController
                 return;
             }
             
-            // Determine content type
+            // CRITICAL FIX: Determine content type based on actual file content
             $contentType = self::getContentType($filename);
+            $isZipFile = self::isZipFile($filePath);
             
-            // Send file
+            // Set appropriate filename for download
+            $downloadFilename = $filename;
+            if ($isZipFile && !str_ends_with($filename, '.zip')) {
+                // If it's a ZIP but doesn't have .zip extension, suggest the correct extension
+                $downloadFilename = pathinfo($filename, PATHINFO_FILENAME) . '.zip';
+            }
+            
+            // Send file with correct headers
             header('Content-Type: ' . $contentType);
-            header('Content-Disposition: attachment; filename="' . $filename . '"');
+            header('Content-Disposition: attachment; filename="' . $downloadFilename . '"');
             header('Content-Length: ' . filesize($filePath));
             header('Cache-Control: no-cache, must-revalidate');
             header('Expires: ' . gmdate('D, d M Y H:i:s', time() + $maxAge) . ' GMT');
+            
+            // Add ZIP-specific headers if needed
+            if ($isZipFile) {
+                header('X-Content-Type: application/zip');
+                header('X-Archive-Type: PDF-Pages');
+            }
             
             readfile($filePath);
             
             Logger::info('File downloaded', [
                 'filename' => $filename,
-                'size' => filesize($filePath)
+                'download_filename' => $downloadFilename,
+                'size' => filesize($filePath),
+                'content_type' => $contentType,
+                'is_zip' => $isZipFile
             ]);
             
         } catch (\Exception $e) {
@@ -423,20 +453,97 @@ class ConversionController
             );
         }
     }
-    
+        
     /**
-     * Generate download URL for converted file - FIXED for localhost
+     * Get file expiration time (ISO 8601 format)
      */
-  /*   private static function generateDownloadUrl(string $filename): string
+    private static function getExpirationTime(): string
     {
-        // For development, use localhost
-        //$baseUrl = 'http://localhost/convertre-api/public/download';
+        $hours = ConfigLoader::get('api.download.expiry_hours', 3);
+        return gmdate('c', time() + ($hours * 3600));
+    }
+    
+   /**
+     * Get content type for file download - FIXED VERSION
+     */
+    private static function getContentType(string $filename): string
+    {
+        $filePath = FileHandler::getConvertedPath() . '/' . $filename;
         
-        // For production, this would be:
-         $baseUrl = ConfigLoader::get('api.download.base_url', 'https://api.convertre.com/download');
+        // CRITICAL FIX: Check actual file content, not just extension
+        if (self::isZipFile($filePath)) {
+            return 'application/zip';
+        }
         
-        return $baseUrl . '/' . $filename;
-    } */
+        $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        
+        $mimeTypes = [
+            'jpg' => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'png' => 'image/png',
+            'gif' => 'image/gif',
+            'webp' => 'image/webp',
+            'pdf' => 'application/pdf',
+            'heic' => 'image/heic',
+            'zip' => 'application/zip'  // Added ZIP support
+        ];
+        
+        return $mimeTypes[$extension] ?? 'application/octet-stream';
+    }
+
+    /**
+     * Find the actual output file (might be renamed by module)
+     */
+    private static function findActualOutputFile(string $expectedPath, string $sourceFormat, string $targetFormat): string
+    {
+        // Check if expected file exists
+        if (file_exists($expectedPath)) {
+            return $expectedPath;
+        }
+        
+        // For PDF conversions, check if a ZIP was created instead
+        if ($sourceFormat === 'pdf') {
+            $pathInfo = pathinfo($expectedPath);
+            $zipPath = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.zip';
+            
+            if (file_exists($zipPath)) {
+                return $zipPath;
+            }
+        }
+        
+        return $expectedPath; // Return expected path even if it doesn't exist
+    }
+
+    /**
+     * Check if a file is actually a ZIP archive
+     */
+    private static function isZipFile(string $filePath): bool
+    {
+        if (!file_exists($filePath)) {
+            return false;
+        }
+        
+        // Check file signature (magic bytes)
+        $handle = fopen($filePath, 'rb');
+        if (!$handle) {
+            return false;
+        }
+        
+        $bytes = fread($handle, 4);
+        fclose($handle);
+        
+        // ZIP files start with "PK" (0x504B)
+        return substr($bytes, 0, 2) === 'PK';
+    }
+
+    /**
+     * Adjust filename for ZIP delivery
+     */
+    private static function adjustFilenameForZip(string $originalFilename): string
+    {
+        $pathInfo = pathinfo($originalFilename);
+        return $pathInfo['filename'] . '.zip';
+    }
 
     /**
      * Generate download URL for converted file - FIXED for Laragon
@@ -456,33 +563,5 @@ class ConversionController
         
         return $downloadUrl;
     }
-        
-    /**
-     * Get file expiration time (ISO 8601 format)
-     */
-    private static function getExpirationTime(): string
-    {
-        $hours = ConfigLoader::get('api.download.expiry_hours', 3);
-        return gmdate('c', time() + ($hours * 3600));
-    }
-    
-    /**
-     * Get content type for file download
-     */
-    private static function getContentType(string $filename): string
-    {
-        $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-        
-        $mimeTypes = [
-            'jpg' => 'image/jpeg',
-            'jpeg' => 'image/jpeg',
-            'png' => 'image/png',
-            'gif' => 'image/gif',
-            'webp' => 'image/webp',
-            'pdf' => 'application/pdf',
-            'heic' => 'image/heic'
-        ];
-        
-        return $mimeTypes[$extension] ?? 'application/octet-stream';
-    }
+
 }

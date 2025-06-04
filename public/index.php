@@ -79,9 +79,11 @@ if (file_exists($basePath . 'Services/Modules/XlsxToPdfModule.php')) {
 if (file_exists($basePath . 'Services/Modules/PptxToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/PptxToPdfModule.php';
 }
+/*
+EPUB Needs Fix
 if (file_exists($basePath . 'Services/Modules/EpubToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/EpubToPdfModule.php';
-}
+} */
 if (file_exists($basePath . 'Services/Modules/RtfToPdfModule.php')) {
     require_once $basePath . 'Services/Modules/RtfToPdfModule.php';
 }

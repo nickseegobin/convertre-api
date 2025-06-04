@@ -30,43 +30,7 @@ class ModuleFactory
      * Get module for specific conversion with proper instantiation
      * NOTE: This method has the constructor mismatch issue - will be fixed in step 2
      */
-   /*  public static function getModule(string $fromFormat, string $toFormat): AbstractConversionModule
-    {
-        if (!self::$initialized) {
-            self::init();
-        }
-        
-        $key = strtolower($fromFormat) . '_to_' . strtolower($toFormat);
-        
-        if (!isset(self::$modules[$key])) {
-            throw new ConversionException(
-                "No module available for {$fromFormat} to {$toFormat} conversion",
-                $fromFormat,
-                $toFormat
-            );
-        }
-        
-        $moduleClass = self::$modules[$key];
-        
-        if (!class_exists($moduleClass)) {
-            throw new ConversionException(
-                "Module class not found: {$moduleClass}",
-                $fromFormat,
-                $toFormat
-            );
-        }
-        
-        Logger::debug("Creating module", ['class' => $moduleClass, 'conversion' => $key]);
-        
-        // EXISTING CODE: Handle JpgMultiFormatModule special case (constructor mismatch still exists)
-        if ($moduleClass === 'Convertre\\Services\\Modules\\JpgMultiFormatModule') {
-            return new $moduleClass($toFormat); // Pass target format to constructor
-        }
-
-    
-        // Standard modules (no constructor parameters) - THIS WILL FAIL due to constructor mismatch
-        return new $moduleClass();
-    } */
+   
 
     public static function getModule(string $fromFormat, string $toFormat): AbstractConversionModule
     {
@@ -129,7 +93,7 @@ class ModuleFactory
             'odt_to_pdf' => 'Convertre\\Services\\Modules\\OdtToPdfModule',
             'xlsx_to_pdf' => 'Convertre\\Services\\Modules\\XlsxToPdfModule',
             'pptx_to_pdf' => 'Convertre\\Services\\Modules\\PptxToPdfModule',
-            'epub_to_pdf' => 'Convertre\\Services\\Modules\\EpubToPdfModule',
+            //'epub_to_pdf' => 'Convertre\\Services\\Modules\\EpubToPdfModule', TODO: EPUB NEEDS FIX
             'rtf_to_pdf' => 'Convertre\\Services\\Modules\\RtfToPdfModule',
             'txt_to_pdf' => 'Convertre\\Services\\Modules\\TxtToPdfModule',
             
